@@ -1,8 +1,8 @@
-import Link from "next/link";
+"use client"
+
 import SectionTitle from "../Common/SectionTitle";
 import SingleFeature from "./SingleFeature";
 import featuresData from "./featuresData";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Features = () => {
   return (
@@ -12,6 +12,7 @@ const Features = () => {
           subtitle="Features"
           title="Innovative Solutions for Smarter Healthcare"
           paragraph="Transforming the way medical professionals work with cutting-edge technology that drives accuracy, efficiency and seamless workflows"
+          center
         />
 
         <div className="-mx-4 mt-12 flex flex-wrap lg:mt-20">
@@ -19,12 +20,6 @@ const Features = () => {
             <SingleFeature key={i} feature={feature} />
           ))}
         </div>
-        <Link
-          className="primary-cta w-1/3 cursor-pointer items-center justify-center rounded-md border border-secondary bg-secondary px-5 py-3 text-base text-white transition duration-300 ease-in-out hover:flex"
-          href={""}
-        >
-          Learn More
-        </Link>
       </div>
     </section>
   );
