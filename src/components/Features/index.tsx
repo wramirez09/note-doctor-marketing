@@ -2,11 +2,12 @@ import Link from "next/link";
 import SectionTitle from "../Common/SectionTitle";
 import SingleFeature from "./SingleFeature";
 import featuresData from "./featuresData";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Features = () => {
   return (
-    <section className="pb-8 pt-20 dark:bg-dark lg:pb-[70px] lg:pt-[120px]">
-      <div className="mx-lg:px-40 container mx-auto">
+    <section className=" pb-8 pt-20 dark:bg-dark lg:pb-[70px] lg:pt-[120px]">
+      <div className="container md:px-12">
         <SectionTitle
           subtitle="Features"
           title="Innovative Solutions for Smarter Healthcare"

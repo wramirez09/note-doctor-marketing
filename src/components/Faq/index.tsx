@@ -4,10 +4,10 @@ import SingleFaq from "./SingleFaq";
 const Faq = () => {
   return (
     <section className="relative z-20 overflow-hidden bg-white pb-8 pt-20 dark:bg-dark lg:pb-[50px] lg:pt-[120px]">
-      <div className="container">
+      <div className="container md:px-12">
         <SectionTitle
-          subtitle="FAQ"
-          title="Any Questions? Answered"
+          subtitle=""
+          title="Why Choose NoteDoctor.AI?"
           paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
           width="640px"
           center
@@ -16,31 +16,23 @@ const Faq = () => {
         <div className="-mx-4 mt-[60px] flex flex-wrap lg:mt-20">
           <div className="w-full px-4 lg:w-1/2">
             <SingleFaq
-              question="How to use TailGrids?"
-              answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              question="Unparalleled Accuracy"
+              answer="With our state-of-the-art AI technology, we deliver unparalleled accuracy in medical coding, significantly reducing errors and minimizing revenue loss."
             />
             <SingleFaq
-              question="How to download icons from LineIcons?"
-              answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
-            />
-            <SingleFaq
-              question="Is GrayGrids part of UIdeck?"
-              answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              question="Efficiency Redefined"
+              answer="Say goodbye to time-consuming manual coding processes. Our platform processes notes in seconds, freeing up valuable time for healthcare professionals to focus on patient care."
             />
           </div>
 
           <div className="w-full px-4 lg:w-1/2">
             <SingleFaq
-              question="Can I use this template for commercial project?"
-              answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              question="Data Security"
+              answer="Your data is our top priority. We adhere to the highest standards of security and confidentiality, ensuring that your information remains protected at all times."
             />
             <SingleFaq
-              question="Do you have plan to releasing Play Pro?"
-              answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
-            />
-            <SingleFaq
-              question="Where and how to host this template?"
-              answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              question="Cost-Effectiveness"
+              answer="By improving coding accuracy and streamlining workflows, NoteDoctor.AI helps healthcare organizations save costs and optimize revenue streams."
             />
           </div>
         </div>

@@ -11,6 +11,11 @@
   },
   "dependencies": {
     "@auth/prisma-adapter": "^1.5.0",
+    "@fortawesome/fontawesome-svg-core": "^6.6.0",
+    "@fortawesome/free-brands-svg-icons": "^6.6.0",
+    "@fortawesome/free-regular-svg-icons": "^6.6.0",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "@nextui-org/navbar": "^2.0.37",
     "@nextui-org/theme": "^2.2.11",
     "@prisma/client": "^5.11.0",
