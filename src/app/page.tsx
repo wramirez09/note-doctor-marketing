@@ -1,15 +1,9 @@
-import About from "@/components/About";
-import HomeBlogSection from "@/components/Blog/HomeBlogSection";
-import CallToAction from "@/components/CallToAction";
-import Clients from "@/components/Clients";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Contact from "@/components/Contact";
+import { CTASection } from "@/components/CTASection";
 import Faq from "@/components/Faq";
 import Features from "@/components/Features";
 import Hero from "@/components/Hero";
-import Pricing from "@/components/Pricing";
-import Team from "@/components/Team";
-import Testimonials from "@/components/Testimonials";
 import { getAllPosts } from "@/utils/markdown";
 import { Metadata } from "next";
 
@@ -31,6 +25,10 @@ export default function Home() {
       <CallToAction /> */}
       {/* <Pricing /> */}
       {/* <Testimonials /> */}
+      <CTASection
+        title={"Real-Time AI Support for Unmatched Coding Precision"}
+        body={"Minimize errors with real-time AI assistance, providing accurate coding suggestions in seconds. Improve precision and efficiency with automated, intelligent support."}
+      />
       <Faq />
       {/* <Team /> */}
       {/* <HomeBlogSection posts={posts} /> */}
