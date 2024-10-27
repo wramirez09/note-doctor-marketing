@@ -71,7 +71,7 @@ const Header = () => {
                       className="header-logo w-1/3 dark:hidden"
                     />
                     <Image
-                      src={`/images/logo/logo-3x.png`}
+                      src={`/images/logo/nd-ai-logo.svg`}
                       alt="logo"
                       width={140}
                       height={30}
