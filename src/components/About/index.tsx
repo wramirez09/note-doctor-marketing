@@ -18,14 +18,14 @@ const About = () => {
         </Text>
 
         <Group className={classes.controls}>
-          <Button
+          {/* <Button
             size="l"
             className={classes.control}
             variant="gradient"
             gradient={{ from: "blue", to: "cyan" }}
           >
             Lear More
-          </Button>
+          </Button> */}
         </Group>
       </Container>
       <AboutFeatures />

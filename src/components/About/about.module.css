@@ -3,10 +3,7 @@
   padding-bottom: 3rem;
   position: relative;
   box-sizing: border-box;
-  background-color: light-dark(
-    var(--mantine-color-white),
-    var(--mantine-color-dark-8)
-  );
+  background-color: #061729;
 }
 
 .inner {

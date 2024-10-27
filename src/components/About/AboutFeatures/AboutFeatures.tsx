@@ -11,33 +11,38 @@ import {
   rem,
   useMantineTheme,
 } from "@mantine/core";
-import { IconGauge, IconUser, IconCookie } from "@tabler/icons-react";
+import {
+  IconHearts,
+  IconUsers,
+  IconTelescope,
+  IconEye,
+} from "@tabler/icons-react";
 import classes from "./aboutFeatrures.module.css";
 
 const mockdata = [
   {
-    title: "Extreme performance",
+    title: "Who We Are",
     description:
-      "This dust is actually a powerful poison that will even make a pro wrestler sick, Regice cloaks itself with frigid air of -328 degrees Fahrenheit",
-    icon: IconGauge,
+      "NoteDoctor.AI is a leading provider of AI-powered solutions for the healthcare industry. Founded with a vision to revolutionize medical coding, our team combines expertise in artificial intelligence, healthcare, and technology to deliver cutting-edge solutions that drive efficiency, accuracy, and profitability for healthcare organizations worldwide.",
+    icon: IconUsers,
   },
   {
-    title: "Privacy focused",
+    title: "Our Mission",
     description:
-      "People say it can run at the same speed as lightning striking, Its icy body is so cold, it will not melt even if it is immersed in magma",
-    icon: IconUser,
+      "At NoteDoctor.AI, our mission is to revolutionize the healthcare industry through the power of artificial intelligence. We are committed to empowering healthcare organizations with innovative solutions that enhance efficiency, accuracy, and profitability.",
+    icon: IconTelescope,
   },
   {
-    title: "No third parties",
+    title: "Our Vision",
     description:
-      "They’re popular, but they’re rare. Trainers who show them off recklessly may be targeted by thieves",
-    icon: IconCookie,
+      "Our vision is to create a future where healthcare providers can focus on what matters most – delivering high-quality care to patients. We envision a world where coding processes are streamlined, errors are minimized, and revenue cycle management is optimized.",
+    icon: IconEye,
   },
   {
-    title: "No third parties 2",
+    title: "Our Values",
     description:
-      "They’re popular, but they’re rare. Trainers who show them off recklessly may be targeted by thieves",
-    icon: IconCookie,
+      "At NoteDoctor.AI, we are guided by a set of core values that define who we are and how we operate: Excellence - Integrity - Innovation Collaboration - Impact",
+    icon: IconHearts,
   },
 ];
 
@@ -69,7 +74,7 @@ export function AboutFeatures() {
     <Container size="lg" py="xl" className="mt-12">
       <Group justify="center">
         <Badge variant="filled" size="lg">
-          Best company ever
+          NoteDoctor.Ai
         </Badge>
       </Group>
 
