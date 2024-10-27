@@ -64,7 +64,7 @@ const Header = () => {
                 {pathUrl !== "/" ? (
                   <>
                     <Image
-                      src={`/images/logo/logo.svg`}
+                      src={`/images/logo/nd-ai-logo.svg`}
                       alt="logo"
                       width={140}
                       height={30}
@@ -83,7 +83,7 @@ const Header = () => {
                     <Image
                       src={`${
                         sticky
-                          ? "/images/logo/logo.svg"
+                          ? "/images/logo/nd-ai-logo.svg"
                           : "/images/logo/nd-ai-logo.svg"
                       }`}
                       alt="logo"
@@ -260,7 +260,7 @@ const Header = () => {
               </div>
               <div className="hidden items-center justify-end pr-16 sm:flex lg:pr-0">
                 {/* theme toggler */}
-                {/* <button
+                <button
                   aria-label="theme toggler"
                   onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                   className="flex h-8 w-8 items-center justify-center text-body-color duration-300 dark:text-white"
@@ -284,7 +284,7 @@ const Header = () => {
                       </g>
                     </svg>
                   </span>
-                </button> */}
+                </button>
 
                 {session?.user ? (
                   <>
