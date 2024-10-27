@@ -30,7 +30,7 @@ body {
 }
 
 .sticky-menu .signUpBtn {
-  @apply bg-primary hover:bg-dark text-white hover:text-white;
+  @apply bg-primary text-white hover:bg-dark hover:text-white;
 }
 
 .navbarTogglerActive > span:nth-child(1) {
@@ -45,7 +45,7 @@ body {
 
 .blog-details,
 .blog-details p {
-  @apply text-body-color dark:text-dark-6 text-base leading-relaxed;
+  @apply text-base leading-relaxed text-body-color dark:text-dark-6;
 }
 
 .blog-details p {
@@ -53,7 +53,7 @@ body {
 }
 
 .blog-details strong {
-  @apply text-dark font-bold dark:text-white;
+  @apply font-bold text-dark dark:text-white;
 }
 
 .blog-details ul {
@@ -65,13 +65,52 @@ body {
 }
 
 .blog-details h1 {
-  @apply text-dark mb-8 text-3xl font-bold dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.28];
+  @apply mb-8 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.28];
 }
 
 .blog-details h2 {
-  @apply text-dark mb-8 text-2xl font-bold dark:text-white sm:text-3xl md:text-[35px] md:leading-[1.28];
+  @apply mb-8 text-2xl font-bold text-dark dark:text-white sm:text-3xl md:text-[35px] md:leading-[1.28];
 }
 
 .blog-details h3 {
-  @apply text-dark mb-6 text-2xl font-bold dark:text-white sm:text-[28px] sm:leading-[40px];
+  @apply mb-6 text-2xl font-bold text-dark dark:text-white sm:text-[28px] sm:leading-[40px];
+}
+
+.bg-primary {
+  background-color: #061729;
+}
+
+.bg-secondary {
+  background-color: #228dd2;
+}
+
+.text-secondary {
+  color: #228dd2 !important;
+}
+
+.border-secondary {
+  --tw-border-opacity: 1;
+  border-color: #228dd2;
+}
+
+.bg-hover-cta {
+  background-color: #5ab1ff;
+}
+
+.primary-cta:hover {
+  background-color: #5ab1ff;
+}
+
+.\!text-primary {
+  color: #228dd2 !important;
+}
+
+.dark\:hover\:text-secondary:hover:is(.dark *),
+.group:hover .dark\:group-hover\:text-primary:is(.dark *),
+.group:hover .dark\:group-hover\:text-secondary:is(.dark *) {
+  color: #228dd2 !important;
+}
+
+.text-white {
+  color: #fff;
 }

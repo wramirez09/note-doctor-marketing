@@ -52,7 +52,7 @@ const Header = () => {
             : "absolute bg-transparent"
         }`}
       >
-        <div className="container">
+        <div className="container px-40">
           <div className="relative -mx-4 flex items-center justify-between">
             <div className="w-60 max-w-full px-4">
               <Link
@@ -66,16 +66,16 @@ const Header = () => {
                     <Image
                       src={`/images/logo/logo.svg`}
                       alt="logo"
-                      width={240}
+                      width={140}
                       height={30}
-                      className="header-logo w-full dark:hidden"
+                      className="header-logo w-1/3 dark:hidden"
                     />
                     <Image
-                      src={`/images/logo/logo-white.svg`}
+                      src={`/images/logo/logo-3x.png`}
                       alt="logo"
-                      width={240}
+                      width={140}
                       height={30}
-                      className="header-logo hidden w-full dark:block"
+                      className="header-logo hidden w-1/3 dark:block"
                     />
                   </>
                 ) : (
@@ -84,19 +84,19 @@ const Header = () => {
                       src={`${
                         sticky
                           ? "/images/logo/logo.svg"
-                          : "/images/logo/logo-white.svg"
+                          : "/images/logo/nd-ai-logo.svg"
                       }`}
                       alt="logo"
                       width={140}
                       height={30}
-                      className="header-logo w-full dark:hidden"
+                      className="header-logo w-1/3 dark:hidden"
                     />
                     <Image
-                      src={"/images/logo/logo-white.svg"}
+                      src={"/images/logo/nd-ai-logo.svg"}
                       alt="logo"
                       width={140}
                       height={30}
-                      className="header-logo hidden w-full dark:block"
+                      className="header-logo hidden w-1/3 dark:block"
                     />
                   </>
                 )}
@@ -155,8 +155,8 @@ const Header = () => {
                               onClick={navbarToggleHandler}
                               scroll={false}
                               href={menuItem.path}
-                              className={`ud-menu-scroll flex py-2 text-base text-dark group-hover:text-primary dark:text-white dark:group-hover:text-primary lg:inline-flex lg:px-0 lg:py-6 ${
-                                pathUrl === menuItem?.path && "text-primary"
+                              className={`ud-menu-scroll flex py-2 text-base text-dark group-hover:text-secondary dark:text-white dark:group-hover:text-secondary lg:inline-flex lg:px-0 lg:py-6 ${
+                                pathUrl === menuItem?.path && "text-secondary"
                               }`}
                             >
                               {menuItem.title}
@@ -209,7 +209,7 @@ const Header = () => {
                               onClick={() => handleSubmenu(index)}
                               className={`ud-menu-scroll flex items-center justify-between py-2 text-base lg:inline-flex lg:px-0 lg:py-6 ${
                                 sticky
-                                  ? "text-dark group-hover:text-primary dark:text-white dark:group-hover:text-primary"
+                                  ? "text-dark group-hover:text-secondary dark:text-white dark:group-hover:text-secondary"
                                   : "text-white"
                               }`}
                             >
@@ -245,7 +245,7 @@ const Header = () => {
                                 className={`block rounded px-4 py-[10px] text-sm ${
                                   pathUrl === submenuItem.path
                                     ? "text-primary"
-                                    : "text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                                    : "text-body-color hover:text-white dark:text-dark-6 dark:hover:text-white"
                                 }`}
                               >
                                 {submenuItem.title}
@@ -260,7 +260,7 @@ const Header = () => {
               </div>
               <div className="hidden items-center justify-end pr-16 sm:flex lg:pr-0">
                 {/* theme toggler */}
-                <button
+                {/* <button
                   aria-label="theme toggler"
                   onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                   className="flex h-8 w-8 items-center justify-center text-body-color duration-300 dark:text-white"
@@ -284,7 +284,7 @@ const Header = () => {
                       </g>
                     </svg>
                   </span>
-                </button>
+                </button> */}
 
                 {session?.user ? (
                   <>
@@ -321,12 +321,12 @@ const Header = () => {
                         >
                           Sign In
                         </Link>
-                        <Link
+                        {/* <Link
                           href="/signup"
                           className="rounded-lg bg-primary px-6 py-3 text-base font-medium text-white duration-300 ease-in-out hover:bg-primary/90 dark:bg-white/10 dark:hover:bg-white/20"
                         >
                           Sign Up
-                        </Link>
+                        </Link> */}
                       </>
                     ) : (
                       <>
@@ -338,7 +338,7 @@ const Header = () => {
                         >
                           Sign In
                         </Link>
-                        <Link
+                        {/* <Link
                           href="/signup"
                           className={`rounded-lg px-6 py-3 text-base font-medium text-white duration-300 ease-in-out ${
                             sticky
@@ -347,7 +347,7 @@ const Header = () => {
                           }`}
                         >
                           Sign Up
-                        </Link>
+                        </Link> */}
                       </>
                     )}
                   </>
