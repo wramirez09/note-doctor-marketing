@@ -1,14 +1,20 @@
 import { Feature } from "@/types/feature";
-import Link from "next/link";
+import { rem, useMantineTheme } from "@mantine/core";
 
 const SingleFeature = ({ feature }: { feature: Feature }) => {
-  const { icon, title, paragraph, btn, btnLink } = feature;
+  const theme = useMantineTheme();
+
+  const { title, paragraph, btn, btnLink } = feature;
   return (
-    <div className="w-full px-5 md:w-1/3 lg:w-1/3">
+    <div className="w-full px-5 md:w-1/3 lg:w-1/3 text-center mx-auto">
       <div className="wow fadeInUp group mb-12" data-wow-delay=".15s">
-        <div className="relative z-10 mb-8 flex h-[70px] w-[70px] items-center justify-center  rounded-2xl bg-primary">
+        <div className="relative z-10 mb-8 flex h-[70px] w-[70px] items-center justify-center mx-auto rounded-2xl bg-primary">
           <span className="absolute left-0 top-0 z-[-1] mb-8 flex h-[70px] w-[70px] rotate-[25deg] items-center justify-center rounded-2xl bg-primary bg-opacity-20 duration-300 group-hover:rotate-45"></span>
-          {icon}
+          <feature.icon
+            style={{ width: rem(35), height: rem(35) }}
+            stroke={2}
+            color={theme.colors.blue[6]}
+          />
         </div>
         <h3 className="mb-3 text-xl font-bold text-dark dark:text-white">
           {title}
@@ -16,12 +22,6 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
         <p className="mb-8 text-body-color dark:text-dark-6 lg:mb-11">
           {paragraph}
         </p>
-        {/* <Link
-          href={btnLink}
-          className="primary-cta w-1/3 cursor-pointer items-center justify-center rounded-md border border-secondary bg-secondary px-5 py-3 text-base text-white transition duration-300 ease-in-out hover:flex"
-        >
-          {btn}
-        </Link> */}
       </div>
     </div>
   );
