@@ -1,3 +1,5 @@
+"use client";
+
 // import Image from "next/image";
 import { Container, Text, Button, Group } from "@mantine/core";
 import classes from "./about.module.css";
@@ -17,7 +19,7 @@ const About = () => {
           excellence.
         </Text>
 
-        <Group className={classes.controls}>
+        <Group className={`${classes.controls}, mt-12`}>
           {/* <Button
             size="l"
             className={classes.control}
@@ -27,7 +29,9 @@ const About = () => {
             Lear More
           </Button> */}
         </Group>
+        <hr />
       </Container>
+
       <AboutFeatures />
     </div>
   );

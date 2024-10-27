@@ -1,39 +1,26 @@
 import { TeamType } from "@/types/team";
 import SectionTitle from "../Common/SectionTitle";
 import SingleTeam from "./SingleTeam";
+import { Container, Grid } from "@mantine/core";
 
 const teamData: TeamType[] = [
   {
     id: 1,
-    name: "Adveen Desuza",
-    designation: "UI Designer",
-    image: "/images/team/team-01.png",
-    facebookLink: "/#",
-    twitterLink: "/#",
-    instagramLink: "/#",
-  },
-  {
-    id: 2,
-    name: "Jezmin uniya",
-    designation: "Product Designer",
+    name: "Mitesh Patel M.D.",
+    designation: "Founder / President",
+    description:
+      "With over a decade immersed in hospital environments, I've witnessed firsthand the adverse effects of inaccurate coding and hospital status on revenue streams and the vital task of patient care. Recognizing the toll it exacts on providers and Clinical Documentation Improvement (CDI) teams, I embarked on a mission to develop a solution. The inception of NoteDoctor.AI arose from a deep-seated commitment to empower healthcare professionals with tools that enhance both accuracy and efficiency, while liberating valuable time for patient interaction. My aspiration was to create an application that not only alleviates the complexities of coding queries but also enables CDI teams to navigate workflows with newfound ease and precision.",
     image: "/images/team/team-02.png",
     facebookLink: "/#",
     twitterLink: "/#",
     instagramLink: "/#",
   },
   {
-    id: 3,
-    name: "Andrieo Gloree",
-    designation: "App Developer",
-    image: "/images/team/team-03.png",
-    facebookLink: "/#",
-    twitterLink: "/#",
-    instagramLink: "/#",
-  },
-  {
-    id: 4,
-    name: "Jackie Sanders",
-    designation: "Content Writer",
+    id: 2,
+    name: "Pinal Patel",
+    designation: "Co-Founder / Vice-President",
+    description:
+      "At NoteDoctor.AI, Pinal leads our technical initiatives, drawing from over a decade of experience in Technical Consulting with renowned organizations like HPE, IBM and esteemed NSA”s CAE-CD designated military institution UNG. Armed with a BS in Computer Science, he steers our company towards innovative solutions and technically excellence.",
     image: "/images/team/team-04.png",
     facebookLink: "/#",
     twitterLink: "/#",
@@ -58,7 +45,7 @@ const Team = () => {
           />
         </div>
 
-        <div className="-mx-4 flex flex-wrap justify-center">
+        <div className="-mx-4 flex justify-center">
           {teamData.map((team, i) => (
             <SingleTeam key={i} team={team} />
           ))}

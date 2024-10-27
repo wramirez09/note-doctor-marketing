@@ -71,7 +71,7 @@ export function AboutFeatures() {
   ));
 
   return (
-    <Container size="lg" py="xl" className="mt-12">
+    <Container size="lg" py="xl" className="bgAlt mt-12">
       <Group justify="center">
         <Badge variant="filled" size="lg">
           NoteDoctor.Ai

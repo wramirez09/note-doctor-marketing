@@ -26,15 +26,24 @@
 .card {
   border: rem(1px) solid
     light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-5));
+  background-color: var(--mantine-color-dark-5);
 }
 
 .cardTitle {
   &::after {
     content: "";
     display: block;
-    background-color: var(--mantine-color-blue-filled);
+    background-color: rgb(17 25 40);
     width: rem(45px);
     height: rem(2px);
     margin-top: var(--mantine-spacing-sm);
   }
+}
+
+.cardTitle {
+  color: #fff;
+}
+
+.bgAlt {
+  background-color: rgb(17 25 40);
 }
