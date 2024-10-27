@@ -10,6 +10,7 @@ import "../styles/prism-vsc-dark-plus.css";
 import ToasterContext from "./api/contex/ToasetContex";
 import { useEffect, useState } from "react";
 import PreLoader from "@/components/Common/PreLoader";
+import NavbarMenuComp from "@/components/Navbar";
 
 export default function RootLayout({
   children,
@@ -42,6 +43,7 @@ export default function RootLayout({
             >
               <ToasterContext />
               <Header />
+              {/* <NavbarMenuComp /> */}
               {children}
               {/* <Footer /> */}
               <ScrollToTop />

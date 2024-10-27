@@ -52,7 +52,7 @@ const Header = () => {
             : "absolute bg-transparent"
         }`}
       >
-        <div className="container px-40">
+        <div className="mx-lg: container">
           <div className="relative -mx-4 flex items-center justify-between">
             <div className="w-60 max-w-full px-4">
               <Link
