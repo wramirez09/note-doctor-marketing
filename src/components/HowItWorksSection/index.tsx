@@ -95,7 +95,7 @@ export default function HowItWorksSection() {
       mt={30}
       mb={30}
       size="lg"
-      style={{ backgroundColor: "rgb(37 37 37)" }}
+      style={{ backgroundColor: "rgb(17 25 40)" }}
     >
       <Headline />
       <hr style={{ borderColor: "#3b3b3b" }} />

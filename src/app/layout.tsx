@@ -11,6 +11,7 @@ import { useEffect, useState } from "react";
 import "../styles/index.css";
 import "../styles/prism-vsc-dark-plus.css";
 import ToasterContext from "./api/contex/ToasetContex";
+import Footer from "@/components/Footer";
 
 export default function RootLayout({
   children,
@@ -52,7 +53,7 @@ export default function RootLayout({
                 <ToasterContext />
                 <HeaderWithMenu />
                 {children}
-                {/* <Footer /> */}
+                <Footer />
                 <ScrollToTop />
               </MantineProvider>
             </ThemeProvider>

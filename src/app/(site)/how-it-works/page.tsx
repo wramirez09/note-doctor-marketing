@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const HowItWorks = () => {
   return (
-    <div style={{ backgroundColor: "rgb(37 37 37)" }}>
+    <div style={{ backgroundColor: "rgb(17 25 40)" }}>
       <Breadcrumb pageName="How It Works Page" />
       <HowItWorksSection />
     </div>

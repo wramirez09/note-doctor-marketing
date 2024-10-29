@@ -90,21 +90,19 @@ export function Titledfeatures() {
 
   return (
     <div className={classes.wrapper}>
+      <hr className={classes.rule} />
       <Title className={classes.title}>
-        Sign up now to revolutionize your coding processes and transform your
-        healthcare organization.
+        Explore the full potential of medical coding with NoteDoctor.AI.
       </Title>
 
-      <Container size={560} p={0}>
-        <Text size="sm" className={classes.description}>
-          Every once in a while, you’ll see a Golbat that’s missing some fangs.
-          This happens when hunger drives it to try biting a Steel-type Pokémon.
-        </Text>
-      </Container>
+      <Text size="sm" className={classes.description}>
+        Sign up now to revolutionize your coding processes and transform your
+        healthcare organization.
+      </Text>
 
-      <Container className="mt-5 flex justify-center">
+      <div className="mt-5 flex justify-start">
         <Button>Get Started Today</Button>
-      </Container>
+      </div>
 
       <SimpleGrid
         mt={60}
