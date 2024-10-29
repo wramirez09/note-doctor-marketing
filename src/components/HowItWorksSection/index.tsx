@@ -12,6 +12,7 @@ import {
 } from "@tabler/icons-react";
 import classes from "./styles.module.css";
 import { Headline } from "../Headline";
+import { Titledfeatures } from "../Titledfeatures";
 
 interface FeatureProps extends React.ComponentPropsWithoutRef<"div"> {
   icon: React.FC<any>;
@@ -114,6 +115,7 @@ export default function HowItWorksSection() {
       <SimpleGrid cols={{ base: 1, sm: 3 }} spacing={50}>
         {items}
       </SimpleGrid>
+      <Titledfeatures />
     </Container>
   );
 }
