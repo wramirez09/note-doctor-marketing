@@ -6,7 +6,7 @@ export function NewsletterSignUp() {
   return (
     <section className="relative z-20 overflow-hidden bg-white pb-8 pt-20 dark:bg-dark lg:pb-[50px] lg:pt-[120px]">
       <SectionTitle
-        title="Transform Your Practice with AI - Subscribe for Insights and Discounts"
+        title="Transform Your Practice with AI"
         paragraph="Sign up to receive exclusive AI healthcare updates and unlock your discount."
         width="640px"
         center

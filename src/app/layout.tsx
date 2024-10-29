@@ -49,7 +49,11 @@ export default function RootLayout({
             >
               <MantineProvider theme={theme}>
                 {/* <ToasterContext /> */}
+                {/* <Header /> */}
+
+                <ToasterContext />
                 <Header />
+                {/* <HeaderWithMenu /> */}
                 {/* <NavbarMenuComp /> */}
                 {children}
                 {/* <Footer /> */}
