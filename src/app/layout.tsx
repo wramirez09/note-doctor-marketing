@@ -1,7 +1,7 @@
 "use client";
 
 import PreLoader from "@/components/Common/PreLoader";
-import Header from "@/components/Header";
+import { HeaderWithMenu } from "@/components/HeaderWithMenu";
 import ScrollToTop from "@/components/ScrollToTop";
 import { ColorSchemeScript, createTheme, MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
@@ -49,12 +49,8 @@ export default function RootLayout({
             >
               <MantineProvider theme={theme}>
                 {/* <ToasterContext /> */}
-                {/* <Header /> */}
-
                 <ToasterContext />
-                <Header />
-                {/* <HeaderWithMenu /> */}
-                {/* <NavbarMenuComp /> */}
+                <HeaderWithMenu />
                 {children}
                 {/* <Footer /> */}
                 <ScrollToTop />
