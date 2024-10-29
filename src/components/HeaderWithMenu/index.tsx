@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   Box,
@@ -9,17 +9,18 @@ import {
   Group,
   ScrollArea,
   rem,
-  useMantineTheme
-} from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
-import classNames from 'classnames';
+  useMantineTheme,
+} from "@mantine/core";
+import { useDisclosure } from "@mantine/hooks";
+import classNames from "classnames";
 import Image from "next/image";
-import { usePathname, useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
-import classes from './index.module.css';
+import { usePathname, useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import classes from "./index.module.css";
 
 export function HeaderWithMenu() {
-  const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
+  const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
+    useDisclosure(false);
   const [sticky, setSticky] = useState(false);
   const theme = useMantineTheme();
   const pathUrl = usePathname();
@@ -41,9 +42,10 @@ export function HeaderWithMenu() {
   const headerClasses = classNames(
     "ud-header left-0 top-0 z-40 flex w-full items-center",
     {
-      "shadow-nav fixed z-[999] border-b border-stroke bg-white/80 backdrop-blur-[5px] dark:border-dark-3/20 dark:bg-dark/10": sticky,
+      "shadow-nav fixed z-[999] border-b border-stroke bg-white/80 backdrop-blur-[5px] dark:border-dark-3/20 dark:bg-dark/10":
+        sticky,
       "absolute bg-transparent": !sticky,
-    }
+    },
   );
 
   const isActiveLink = (path: string) => pathUrl === path;
@@ -53,9 +55,14 @@ export function HeaderWithMenu() {
       <header className={headerClasses}>
         <div className="container md:px-12">
           <div className="relative -mx-4 flex items-center justify-between">
-            <Group justify="space-between" h="100%" className='w-full'>
-              <div className="w-60 max-w-full px-4" onClick={() => router.push("/")}>
-                <div className={`navbar-logo block w-full ${sticky ? "py-2" : "py-5"}`}>
+            <Group justify="space-between" h="100%" className="w-full">
+              <div
+                className="w-60 max-w-full px-4"
+                onClick={() => router.push("/")}
+              >
+                <div
+                  className={`navbar-logo block w-full ${sticky ? "py-2" : "py-5"}`}
+                >
                   <Image
                     src={`/images/logo/nd-ai-logo.svg`}
                     alt="logo"
@@ -75,25 +82,25 @@ export function HeaderWithMenu() {
 
               <Group h="100%" gap={0} visibleFrom="md">
                 <div
-                  className={`${classes.link} ${isActiveLink('/') ? classes.activeLink : ''}`}
+                  className={`${classes.link} ${isActiveLink("/") ? classes.activeLink : ""}`}
                   onClick={() => router.push("/")}
                 >
                   Home
                 </div>
                 <div
-                  className={`${classes.link} ${isActiveLink('/how-it-works') ? classes.activeLink : ''}`}
+                  className={`${classes.link} ${isActiveLink("/how-it-works") ? classes.activeLink : ""}`}
                   onClick={() => router.push("/how-it-works")}
                 >
                   How It Works
                 </div>
                 <div
-                  className={`${classes.link} ${isActiveLink('/about') ? classes.activeLink : ''}`}
+                  className={`${classes.link} ${isActiveLink("/about") ? classes.activeLink : ""}`}
                   onClick={() => router.push("/about")}
                 >
                   About Us
                 </div>
                 <div
-                  className={`${classes.link} ${isActiveLink('/contact') ? classes.activeLink : ''}`}
+                  className={`${classes.link} ${isActiveLink("/contact") ? classes.activeLink : ""}`}
                   onClick={() => router.push("/contact")}
                 >
                   Contact Us
@@ -105,7 +112,12 @@ export function HeaderWithMenu() {
                 <Button>Sign up</Button>
               </Group>
 
-              <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="md" color="white" />
+              <Burger
+                opened={drawerOpened}
+                onClick={toggleDrawer}
+                hiddenFrom="md"
+                color="white"
+              />
             </Group>
           </div>
         </div>
@@ -120,14 +132,14 @@ export function HeaderWithMenu() {
         zIndex={1000000}
         classNames={{
           body: classes.drawerBody,
-          header: classes.drawerHeader
+          header: classes.drawerHeader,
         }}
       >
         <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
           <Divider my="sm" />
 
           <div
-            className={`${classes.link} ${isActiveLink('/') ? classes.activeLink : ''}`}
+            className={`${classes.link} ${isActiveLink("/") ? classes.activeLink : ""}`}
             onClick={() => {
               router.push("/");
               closeDrawer();
@@ -136,7 +148,7 @@ export function HeaderWithMenu() {
             Home
           </div>
           <div
-            className={`${classes.link} ${isActiveLink('/how-it-works') ? classes.activeLink : ''}`}
+            className={`${classes.link} ${isActiveLink("/how-it-works") ? classes.activeLink : ""}`}
             onClick={() => {
               router.push("/how-it-works");
               closeDrawer();
@@ -145,7 +157,7 @@ export function HeaderWithMenu() {
             How It Works
           </div>
           <div
-            className={`${classes.link} ${isActiveLink('/about') ? classes.activeLink : ''}`}
+            className={`${classes.link} ${isActiveLink("/about") ? classes.activeLink : ""}`}
             onClick={() => {
               router.push("/about");
               closeDrawer();
@@ -154,7 +166,7 @@ export function HeaderWithMenu() {
             About Us
           </div>
           <div
-            className={`${classes.link} ${isActiveLink('/contact') ? classes.activeLink : ''}`}
+            className={`${classes.link} ${isActiveLink("/contact") ? classes.activeLink : ""}`}
             onClick={() => {
               router.push("/contact");
               closeDrawer();

@@ -114,3 +114,7 @@ body {
 .text-white {
   color: #fff;
 }
+
+.bg-gray-dark {
+  background-color: rgb(30 35 46);
+}

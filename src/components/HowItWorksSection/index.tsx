@@ -101,9 +101,7 @@ export default function HowItWorksSection() {
       <hr style={{ borderColor: "#3b3b3b" }} />
       <Title
         order={2}
-        size="h1"
         style={{
-          fontFamily: "Greycliff CF, var(--mantine-font-family)",
           color: "#FFF",
         }}
         fw={900}

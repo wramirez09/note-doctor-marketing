@@ -1,5 +1,5 @@
 import ScrollUp from "@/components/Common/ScrollUp";
-import Contact from "@/components/Contact";
+import Contact from "@/components/ContactSingleForm";
 import { CTASection } from "@/components/CTASection";
 import Faq from "@/components/Faq";
 import Features from "@/components/Features";
@@ -28,7 +28,9 @@ export default function Home() {
       {/* <Testimonials /> */}
       <CTASection
         title={"Real-Time AI Support for Unmatched Coding Precision"}
-        body={"Minimize errors with real-time AI assistance, providing accurate coding suggestions in seconds. Improve precision and efficiency with automated, intelligent support."}
+        body={
+          "Minimize errors with real-time AI assistance, providing accurate coding suggestions in seconds. Improve precision and efficiency with automated, intelligent support."
+        }
       />
       <Faq />
       {/* <Team /> */}
