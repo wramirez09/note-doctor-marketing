@@ -1,8 +1,9 @@
 import { Title, Text, Button, Container } from "@mantine/core";
 
 import classes from "./styles.module.css";
-import { Dots } from "./dots";
+
 import React from "react";
+import { Dots } from "./Dots";
 
 type ButtonsData = {
   text: string;
