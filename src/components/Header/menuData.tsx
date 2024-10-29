@@ -29,7 +29,7 @@ const menuData: Menu[] = [
   {
     id: 6,
     title: "How it works",
-    path: "/solutions",
+    path: "/how-it-works",
     newTab: false,
     // submenu: [
     //   {
