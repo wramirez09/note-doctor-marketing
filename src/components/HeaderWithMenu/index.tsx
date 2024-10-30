@@ -108,8 +108,8 @@ export function HeaderWithMenu() {
               </Group>
 
               <Group visibleFrom="md">
-                <Button variant="default">Log in</Button>
-                <Button>Sign up</Button>
+                <Button className="button-light">Log in</Button>
+                <Button className="button-primary">Sign up</Button>
               </Group>
 
               <Burger
