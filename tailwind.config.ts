@@ -8,6 +8,10 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {},
-  plugins: ["tailwindcss/nesting", require("tailgrids/plugin")],
+  plugins: [
+    require("postcss-import"),
+    require("tailwindcss/nesting"),
+    require("tailgrids/plugin"),
+  ],
 };
 export default config;

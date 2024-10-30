@@ -6,7 +6,7 @@ import { HeaderWithMenu } from "@/components/HeaderWithMenu";
 import ScrollToTop from "@/components/ScrollToTop";
 import { ColorSchemeScript, createTheme, MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
-import { SessionProvider } from "next-auth/react";
+
 import { ThemeProvider } from "next-themes";
 import { useEffect, useState } from "react";
 import "../styles/index.css";
@@ -41,20 +41,18 @@ export default function RootLayout({
         {loading ? (
           <PreLoader />
         ) : (
-          <SessionProvider>
-            <ThemeProvider
-              attribute="class"
-              enableSystem={false}
-              defaultTheme="dark"
-            >
-              <MantineProvider theme={theme}>
-                <HeaderWithMenu />
-                {children}
-                <Footer />
-                <ScrollToTop />
-              </MantineProvider>
-            </ThemeProvider>
-          </SessionProvider>
+          <ThemeProvider
+            attribute="class"
+            enableSystem={false}
+            defaultTheme="dark"
+          >
+            <MantineProvider theme={theme}>
+              <HeaderWithMenu />
+              {children}
+              <Footer />
+              <ScrollToTop />
+            </MantineProvider>
+          </ThemeProvider>
         )}
       </body>
     </html>
