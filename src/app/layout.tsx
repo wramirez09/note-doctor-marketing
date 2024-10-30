@@ -11,7 +11,6 @@ import { ThemeProvider } from "next-themes";
 import { useEffect, useState } from "react";
 import "../styles/index.css";
 import "../styles/prism-vsc-dark-plus.css";
-import ToasterContext from "./api/contex/ToasetContex";
 
 export default function RootLayout({
   children,
@@ -49,8 +48,6 @@ export default function RootLayout({
               defaultTheme="dark"
             >
               <MantineProvider theme={theme}>
-                {/* <ToasterContext /> */}
-                <ToasterContext />
                 <HeaderWithMenu />
                 {children}
                 <Footer />

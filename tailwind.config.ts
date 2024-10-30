@@ -8,6 +8,6 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {},
-  plugins: [require("tailgrids/plugin"), "postcss-import"],
+  plugins: [require("postcss-import", "tailgrids/plugin")],
 };
 export default config;
