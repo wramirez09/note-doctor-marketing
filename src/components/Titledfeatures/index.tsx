@@ -8,53 +8,48 @@ import {
   Button,
 } from "@mantine/core";
 import {
-  IconGauge,
-  IconCookie,
-  IconUser,
-  IconMessage2,
-  IconLock,
+  IconArcheryArrow,
+  IconCalendarStats,
+  IconAffiliate,
+  IconAB2,
+  IconRefresh,
+  IconShape,
 } from "@tabler/icons-react";
 import classes from "./styles.module.css";
 
 export const MOCKDATA = [
   {
-    icon: IconGauge,
+    icon: IconArcheryArrow,
     title: "Predictive Coding Accuracy",
     description:
       "Experience coding accuracy like never before with NoteDoctor.AI. Our AI-powered platform analyzes provider notes with precision, predicting the correct ICD 11 codes and minimizing errors. Ensure comprehensive documentation and maximize revenue potential with our advanced solution...",
   },
   {
-    icon: IconUser,
+    icon: IconCalendarStats,
     title: "Hospital Status Accuracy",
     description:
       "NoteDoctor.AI can help accurately determine inpatient vs observation status for hospital settings with data to support it. Avoid long delays with insurance companies as the first pass will have the data to support hospital status.",
   },
   {
-    icon: IconCookie,
+    icon: IconAffiliate,
     title: "Streamlined Workflow",
     description:
       "Optimize your coding workflow with NoteDoctor.AI's streamlined solution. From rapid note processing to intuitive coding suggestions, our platform simplifies the entire coding process. Say goodbye to manual tasks and hello to efficiency and productivity.",
   },
   {
-    icon: IconLock,
+    icon: IconAB2,
     title: "Real-Time Feedback and Suggestions",
     description:
       "With NoteDoctor.AI, you're never alone in the coding process. It provides real-time feedback and coding suggestions, empowering you to make informed decisions and produce comprehensive documentation. Improve coding accuracy and efficiency with our intelligent solution.",
   },
   {
-    icon: IconMessage2,
+    icon: IconRefresh,
     title: "Continuous Improvement and Updates",
     description:
       "At NoteDoctor.AI, we're committed to continuous improvement and innovation. Our platform is regularly updated with the latest advancements in AI technology and coding practices to ensure maximum effectiveness and accuracy. Stay ahead of the curve with NoteDoctor.AI's cutting-edge solutions.",
   },
   {
-    icon: IconMessage2,
-    title: "Scalability for Growth",
-    description:
-      "Whether you're a small clinic or a large healthcare system, NoteDoctor.AI scales to meet your needs. Our platform is designed to accommodate growth, allowing you to expand your operations without sacrificing efficiency or accuracy. Scale your coding capabilities with confidence with NoteDoctor.AI.",
-  },
-  {
-    icon: IconMessage2,
+    icon: IconShape,
     title: "Scalability for Growth",
     description:
       "Whether you're a small clinic or a large healthcare system, NoteDoctor.AI scales to meet your needs. Our platform is designed to accommodate growth, allowing you to expand your operations without sacrificing efficiency or accuracy. Scale your coding capabilities with confidence with NoteDoctor.AI.",

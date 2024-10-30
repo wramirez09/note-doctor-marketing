@@ -1,5 +1,6 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import HowItWorksSection from "@/components/HowItWorksSection";
+
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

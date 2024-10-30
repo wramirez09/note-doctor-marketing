@@ -13,6 +13,7 @@ import {
 import classes from "./styles.module.css";
 import { Headline } from "../Headline";
 import { Titledfeatures } from "../Titledfeatures";
+import { NewsletterSignUp } from "../NewsletterSignUp";
 
 interface FeatureProps extends React.ComponentPropsWithoutRef<"div"> {
   icon: React.FC<any>;
@@ -114,6 +115,7 @@ export default function HowItWorksSection() {
         {items}
       </SimpleGrid>
       <Titledfeatures />
+      <NewsletterSignUp />
     </Container>
   );
 }

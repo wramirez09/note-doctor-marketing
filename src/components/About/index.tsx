@@ -29,7 +29,7 @@ const About = () => {
             Lear More
           </Button> */}
         </Group>
-        <hr />
+        <hr style={{ opacity: "15%" }} />
       </Container>
 
       <AboutFeatures />

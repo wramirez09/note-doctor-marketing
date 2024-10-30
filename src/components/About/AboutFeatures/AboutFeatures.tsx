@@ -18,6 +18,7 @@ import {
   IconEye,
 } from "@tabler/icons-react";
 import classes from "./aboutFeatrures.module.css";
+import { NewsletterSignUp } from "@/components/NewsletterSignUp";
 
 const mockdata = [
   {
@@ -90,6 +91,14 @@ export function AboutFeatures() {
       <SimpleGrid cols={{ base: 1, md: 2 }} spacing="xl" mt={50}>
         {features}
       </SimpleGrid>
+      <div className="mt-11">
+        <NewsletterSignUp
+          title="Join Us on Our Journey"
+          paragraph="Join us on our journey to transform healthcare with NoteDoctor.AI"
+          width="70%"
+          pb="0"
+        />
+      </div>
     </Container>
   );
 }
