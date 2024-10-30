@@ -16,15 +16,18 @@ body {
   @apply bg-dark dark:bg-white;
 }
 
-.sticky-menu #navbarCollapse li > a {
+.sticky-menu #navbarCollapse li>a {
   @apply text-dark hover:text-primary hover:opacity-100 dark:text-white;
 }
+
 #navbarCollapse li .ud-menu-scroll.active {
   @apply opacity-70;
 }
+
 .sticky-menu #navbarCollapse li .ud-menu-scroll.active {
   @apply text-primary opacity-100 dark:text-white;
 }
+
 .sticky-menu .loginBtn {
   @apply text-dark hover:text-primary hover:opacity-100 dark:text-white;
 }
@@ -33,13 +36,15 @@ body {
   @apply bg-primary text-white hover:bg-dark hover:text-white;
 }
 
-.navbarTogglerActive > span:nth-child(1) {
+.navbarTogglerActive>span:nth-child(1) {
   @apply top-[7px] rotate-45 transform;
 }
-.navbarTogglerActive > span:nth-child(2) {
+
+.navbarTogglerActive>span:nth-child(2) {
   @apply opacity-0;
 }
-.navbarTogglerActive > span:nth-child(3) {
+
+.navbarTogglerActive>span:nth-child(3) {
   @apply top-[-8px] rotate-[135deg];
 }
 
@@ -117,4 +122,8 @@ body {
 
 .bg-gray-dark {
   background-color: rgb(30 35 46);
+}
+
+footer {
+  border-top: 1px solid #3b3b3b;
 }

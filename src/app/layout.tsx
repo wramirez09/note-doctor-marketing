@@ -1,6 +1,7 @@
 "use client";
 
 import PreLoader from "@/components/Common/PreLoader";
+import Footer from "@/components/Footer";
 import { HeaderWithMenu } from "@/components/HeaderWithMenu";
 import ScrollToTop from "@/components/ScrollToTop";
 import { ColorSchemeScript, createTheme, MantineProvider } from "@mantine/core";
@@ -11,7 +12,6 @@ import { useEffect, useState } from "react";
 import "../styles/index.css";
 import "../styles/prism-vsc-dark-plus.css";
 import ToasterContext from "./api/contex/ToasetContex";
-import Footer from "@/components/Footer";
 
 export default function RootLayout({
   children,
