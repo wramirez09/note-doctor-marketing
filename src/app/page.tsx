@@ -1,5 +1,5 @@
 import ScrollUp from "@/components/Common/ScrollUp";
-import Contact from "@/components/ContactSingleForm";
+import Contact from "@/components/Contact";
 import { CTASection } from "@/components/CTASection";
 import Faq from "@/components/Faq";
 import Features from "@/components/Features";
@@ -36,7 +36,7 @@ export default function Home() {
       {/* <Team /> */}
       {/* <HomeBlogSection posts={posts} /> */}
       <NewsletterSignUp />
-      <Contact />
+      <Contact showNewsLetterSignUp={false} />
       {/* <Clients /> */}
     </main>
   );
