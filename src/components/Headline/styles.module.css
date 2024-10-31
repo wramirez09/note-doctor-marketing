@@ -31,13 +31,13 @@
 .title {
   text-align: center;
   font-weight: 800;
-  font-size: rem(40px);
+  font-size: 40px;
   letter-spacing: -1px;
   color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
   margin-bottom: var(--mantine-spacing-xs);
 
   @media (max-width: $mantine-breakpoint-xs) {
-    font-size: rem(28px);
+    font-size: rem(18px) !important;
     text-align: left;
   }
 }
@@ -66,10 +66,6 @@
 }
 
 .control {
-  &:not(:first-of-type) {
-    margin-left: var(--mantine-spacing-md);
-  }
-
   @media (max-width: $mantine-breakpoint-xs) {
     height: rem(42px);
     font-size: var(--mantine-font-size-md);

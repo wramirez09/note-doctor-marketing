@@ -12,11 +12,7 @@ const NewsLatterBox = () => {
       </h3>
       <p className="mb-11 border-b border-body-color border-opacity-25 pb-11 text-base leading-relaxed text-body-color dark:border-white dark:border-opacity-25">
         Sign up for our newsletter and enjoy a special discounted rate on your
-        first project with us! As a new client, you’ll get access to premium
-        digital services at a reduced price. Whether its web development, API
-        integration, or digital marketing, we’re here to help you kickstart your
-        project and deliver exceptional results. Subscribe today and start
-        saving!
+        first project with us!
       </p>
       <div>
         <input

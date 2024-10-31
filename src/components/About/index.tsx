@@ -9,7 +9,7 @@ const About = () => {
   return (
     <div className={`${classes.wrapper} md:px-12`}>
       <Container>
-        <h1 className={`${classes.title} max-xs:text-xs`}>
+        <h1 className={`${classes.title} max-sm:text-xs`}>
           Bringing Change, Making Waves
         </h1>
 

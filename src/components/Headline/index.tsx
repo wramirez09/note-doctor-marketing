@@ -29,7 +29,7 @@ export const Headline: React.FC<{
       <Dots className={classes.dots} style={{ right: 0, top: 60 }} />
 
       <div className={classes.inner} style={{ marginTop: 0 }}>
-        <Title className={classes.title}>
+        <Title className={`${classes.title}`}>
           {headline}{" "}
           <Text component="span" className={classes.highlight} inherit>
             {subHeadline}
@@ -42,16 +42,17 @@ export const Headline: React.FC<{
           </Text>
         </Container>
 
-        <div className={classes.controls}>
+        <div className={`${classes.controls} max-sm:flex-col`}>
           <Button
-            className={`${classes.control} button-light`}
+            className={`${classes.control} button-light max-sm:mb-5 max-xs:w-full`}
             size="md"
-            variant="default"
-            color="gray"
           >
             Book a demo
           </Button>
-          <Button className={`${classes.control} button-primary`} size="md">
+          <Button
+            className={`${classes.control} button-primary ml-0 max-xs:w-full`}
+            size="md"
+          >
             contact
           </Button>
         </div>

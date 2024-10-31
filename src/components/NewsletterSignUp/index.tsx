@@ -18,7 +18,7 @@ export const NewsletterSignUp: React.FC<{
   return (
     <div className="w-full bg-dark">
       <Container
-        className={`relative z-20 overflow-hidden bg-white pt-5 pt-[50px] dark:bg-dark md:pt-20 lg:pb-[${pb}]  lg:pt-[50px]`}
+        className={`relative z-20 overflow-hidden bg-white pt-5 pt-[50px] dark:bg-dark max-sm:mb-10 md:pt-20 lg:pb-[${pb}]  lg:pt-[50px]`}
       >
         <SectionTitle
           title={title}

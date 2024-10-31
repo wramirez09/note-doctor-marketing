@@ -180,8 +180,8 @@ export function HeaderWithMenu() {
             <Divider my="sm" />
 
             <Group justify="center" grow pb="xl" px="md" mt="xl">
-              <Button variant="default">Log in</Button>
-              <Button>Sign up</Button>
+              <Button className="button-light">Log in</Button>
+              <Button className="button-primary">Sign up</Button>
             </Group>
           </ScrollArea>
         </Drawer>
