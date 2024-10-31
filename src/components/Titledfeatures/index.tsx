@@ -84,8 +84,8 @@ export function Titledfeatures() {
   ));
 
   return (
-    <div className={classes.wrapper}>
-      <hr className={classes.rule} />
+    <Container size="xl">
+      <hr className={`max-xs:mt-1 ${classes.rule} `} />
       <Title className={classes.title}>
         Explore the full potential of medical coding with NoteDoctor.AI.
       </Title>
@@ -107,6 +107,6 @@ export function Titledfeatures() {
       >
         {features}
       </SimpleGrid>
-    </div>
+    </Container>
   );
 }

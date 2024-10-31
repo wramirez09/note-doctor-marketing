@@ -94,8 +94,8 @@ export default function HowItWorksSection() {
   return (
     <Container
       mt={30}
-      mb={30}
-      size="lg"
+      mb={0}
+      size="xl"
       style={{ backgroundColor: "rgb(17 25 40)" }}
     >
       <Headline />
@@ -111,7 +111,7 @@ export default function HowItWorksSection() {
       >
         How it Works
       </Title>
-      <SimpleGrid cols={{ base: 1, sm: 3 }} spacing={50}>
+      <SimpleGrid cols={{ base: 1, sm: 3 }} spacing={50} className="pb-10">
         {items}
       </SimpleGrid>
       <Titledfeatures />

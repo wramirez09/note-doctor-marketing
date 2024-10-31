@@ -1,16 +1,17 @@
+import { Container } from "@mantine/core";
 import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
   return (
     <footer
-      className="wow fadeInUp relative z-10 bg-[#090E34] pt-10 bg-dark"
+      className="wow fadeInUp relative z-10 bg-[#090E34] bg-dark pt-10"
       data-wow-delay=".15s"
     >
-      <div className="container">
+      <Container>
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2">
-            <div className="mb-10 w-full flex">
+            <div className="mb-10 flex w-full">
               <Link href="/" className="inline-block max-w-[160px]">
                 <Image
                   src="/images/logo/nd-ai-logo.svg"
@@ -90,11 +91,13 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 flex justify-end">
-            <p className="text-white text-right">©2024 Notedoctor.ai. All Rights Reserved</p>
+          <div className="flex w-full justify-end px-4 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2">
+            <p className="text-right text-xs text-white">
+              ©2024 Notedoctor.ai. All Rights Reserved
+            </p>
           </div>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 };

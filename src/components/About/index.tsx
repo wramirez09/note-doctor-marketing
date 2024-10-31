@@ -9,7 +9,9 @@ const About = () => {
   return (
     <div className={`${classes.wrapper} md:px-12`}>
       <Container>
-        <h1 className={classes.title}>Bringing Change, Making Waves</h1>
+        <h1 className={`${classes.title} max-xs:text-xs`}>
+          Bringing Change, Making Waves
+        </h1>
 
         <Text className={classes.description} color="dimmed">
           Through AI-driven applications, we are bringing change and making
