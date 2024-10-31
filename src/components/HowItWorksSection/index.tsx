@@ -106,8 +106,7 @@ export default function HowItWorksSection() {
           color: "#FFF",
         }}
         fw={900}
-        ta="left"
-        className="pb-8 pt-8"
+        className="pb-1 pt-8 max-sm:text-center md:pb-8 md:pl-9"
       >
         How it Works
       </Title>

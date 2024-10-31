@@ -91,7 +91,7 @@ export function AboutFeatures() {
       <SimpleGrid cols={{ base: 1, md: 2 }} spacing="xl" mt={50}>
         {features}
       </SimpleGrid>
-      <div className="mt-11">
+      <div className="pb-0 md:mt-11">
         <NewsletterSignUp
           title="Join Us on Our Journey"
           paragraph="Join us on our journey to transform healthcare with NoteDoctor.AI"
