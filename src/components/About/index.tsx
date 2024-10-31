@@ -8,7 +8,7 @@ import { AboutFeatures } from "./AboutFeatures/AboutFeatures";
 const About = () => {
   return (
     <div className={`${classes.wrapper} md:px-12`}>
-      <Container className={classes.inner}>
+      <Container>
         <h1 className={classes.title}>Bringing Change, Making Waves</h1>
 
         <Text className={classes.description} color="dimmed">

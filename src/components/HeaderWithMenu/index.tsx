@@ -53,8 +53,8 @@ export function HeaderWithMenu() {
   return (
     <Box>
       <header className={headerClasses}>
-        <div className="container md:px-12">
-          <div className="relative -mx-4 flex items-center justify-between">
+        <div className="container px-12 pb-10">
+          <div className="relative -mx-4 mb-6 flex items-center justify-between">
             <Group justify="space-between" h="100%" className="w-full">
               <div
                 className="w-60 max-w-full px-4"

@@ -44,7 +44,7 @@ const Team = () => {
           />
         </div>
 
-        <div className="-mx-4 flex justify-center">
+        <div className="-mx-4 flex justify-center max-sm:flex-col">
           {teamData.map((team, i) => (
             <SingleTeam key={i} team={team} />
           ))}

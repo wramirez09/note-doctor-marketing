@@ -4,7 +4,7 @@
   padding-bottom: 80px;
 
   @media (max-width: $mantine-breakpoint-sm) {
-    padding-top: rem(80px);
+    padding-top: 0;
     padding-bottom: rem(60px);
   }
 }
