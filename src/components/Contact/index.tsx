@@ -10,8 +10,10 @@ const Contact: React.FC<{ showNewsLetterSignUp?: boolean }> = ({
       style={{ backgroundColor: "#061729" }}
     >
       <div className="container">
-        <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4 lg:w-7/12 xl:w-8/12">
+        <div
+          className={`-mx-4 flex flex-wrap ${!showNewsLetterSignUp ? "items-center justify-center" : ""}`}
+        >
+          <div className={`w-full px-4 lg:w-7/12 xl:w-8/12`}>
             <div
               className="bg-gray-dark mb-12 rounded-sm bg-white px-8 py-11 shadow-three sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]"
               data-wow-delay=".15s
@@ -83,9 +85,11 @@ const Contact: React.FC<{ showNewsLetterSignUp?: boolean }> = ({
               </form>
             </div>
           </div>
-          <div className="w-full px-4 lg:w-5/12 xl:w-4/12">
-            {showNewsLetterSignUp && <NewsLatterBox />}
-          </div>
+          {showNewsLetterSignUp && (
+            <div className="w-full px-4 lg:w-5/12 xl:w-4/12">
+              <NewsLatterBox />
+            </div>
+          )}
         </div>
       </div>
     </section>
