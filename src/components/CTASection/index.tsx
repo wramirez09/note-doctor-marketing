@@ -5,8 +5,8 @@ import classes from "./index.module.css";
 
 export function CTASection({ title, body, onClick }: CTASectionProps) {
   return (
-    <Container className="relative z-20 overflow-hidden bg-white pb-8 pt-20 dark:bg-dark lg:pb-[50px] lg:pt-[50px]">
-      <SectionTitle title={title} paragraph={body} width="640px" center />
+    <Container className="relative z-20 overflow-hidden pb-8 pt-20 dark:bg-dark lg:pb-[50px] lg:pt-[50px]">
+      <SectionTitle title={title} paragraph={body} center />
       <div className={classes.controls}>
         <Button className="button-primary" size="lg">
           Try It Now

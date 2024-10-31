@@ -6,6 +6,7 @@
 
 body {
   font-family: "Inter", sans-serif;
+  background-color: rgb(17 25 40) !important;
 }
 
 .sticky-menu .navbar-logo {
@@ -16,7 +17,7 @@ body {
   @apply bg-dark dark:bg-white;
 }
 
-.sticky-menu #navbarCollapse li>a {
+.sticky-menu #navbarCollapse li > a {
   @apply text-dark hover:text-primary hover:opacity-100 dark:text-white;
 }
 
@@ -36,15 +37,15 @@ body {
   @apply bg-primary text-white hover:bg-dark hover:text-white;
 }
 
-.navbarTogglerActive>span:nth-child(1) {
+.navbarTogglerActive > span:nth-child(1) {
   @apply top-[7px] rotate-45 transform;
 }
 
-.navbarTogglerActive>span:nth-child(2) {
+.navbarTogglerActive > span:nth-child(2) {
   @apply opacity-0;
 }
 
-.navbarTogglerActive>span:nth-child(3) {
+.navbarTogglerActive > span:nth-child(3) {
   @apply top-[-8px] rotate-[135deg];
 }
 
