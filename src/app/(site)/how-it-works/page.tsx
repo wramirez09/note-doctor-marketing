@@ -4,8 +4,10 @@ import HowItWorksSection from "@/components/HowItWorksSection";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Solutions Page | ",
-  description: "This is solutions page description",
+  title:
+    "How NoteDoctor.AI Works | AI-Driven Medical Coding for Healthcare Efficiency",
+  description:
+    "Discover how NoteDoctor.AI's advanced AI technology revolutionizes medical coding. Learn how our solutions drive efficiency, accuracy, and profitability for healthcare organizations globally.",
 };
 
 const HowItWorks = () => {

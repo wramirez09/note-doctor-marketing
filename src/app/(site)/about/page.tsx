@@ -5,8 +5,9 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "About Us | Play SaaS Starter Kit and Boilerplate for Next.js",
-  description: "This is About page description",
+    "About NoteDoctor.AI | Transforming Healthcare with AI-Powered Innovation",
+  description:
+    "Learn about NoteDoctor.AI, a pioneer in AI-driven healthcare solutions. Our mission is to revolutionize medical coding with cutting-edge technology, enhancing accuracy, efficiency, and profitability for healthcare organizations globally.",
 };
 
 const AboutPage = () => {
