@@ -66,14 +66,14 @@ export function HeaderWithMenu() {
                     alt="logo"
                     width={140}
                     height={30}
-                    className="header-logo w-1/3 dark:hidden"
+                    className="header-logo w-1/4 dark:hidden"
                   />
                   <Image
                     src={`/images/logo/nd-ai-logo.svg`}
                     alt="logo"
                     width={140}
                     height={30}
-                    className="header-logo hidden w-1/3 dark:block"
+                    className="header-logo hidden w-1/4 dark:block"
                   />
                 </div>
               </div>
