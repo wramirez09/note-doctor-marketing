@@ -22,9 +22,8 @@
     Greycliff CF,
     var(--mantine-font-family);
   font-size: 3rem;
-  font-weight: 900;
+  margin: 5rem 0 0;
   line-height: 1.1;
-  margin: 0;
   padding: 0;
   color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
 
