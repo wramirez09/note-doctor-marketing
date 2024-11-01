@@ -29,7 +29,10 @@ const Contact: React.FC<{ showNewsLetterSignUp?: boolean }> = ({
                 we can help your business grow, our team is here to assist you.
                 Reach out to us through the form below.
               </p>
-              <form>
+              <form
+                action="endpoint=https://healthappcommunicationservice.unitedstates.communication.azure.com/;accesskey=Bbw/3hnL5yq73WLHD9EhxJGuGWm8CKwIPRlPA3CFOXreUgbQkwp3OaUWM6ROn67opLuGeW1XNfnRUXv18MdMQw==
+ "
+              >
                 <div className="-mx-4 flex flex-wrap">
                   <div className="w-full px-4 md:w-1/2">
                     <div className="mb-8">
@@ -78,7 +81,9 @@ const Contact: React.FC<{ showNewsLetterSignUp?: boolean }> = ({
                     </div>
                   </div>
                   <div className="w-full px-4">
-                    <Button className="button-primary">Submit</Button>
+                    <Button className="button-primary" type="submit">
+                      Submit
+                    </Button>
                   </div>
                 </div>
               </form>
