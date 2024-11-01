@@ -91,7 +91,9 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className={`${styles.copyContainer} flex items-center w-full justify-end px-4 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2`}>
+          <div
+            className={`${styles.copyContainer} flex w-full items-center justify-end px-4 max-sm:justify-center sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2`}
+          >
             <p className="text-right text-xs text-white">
               ©2024 Notedoctor.ai. All Rights Reserved
             </p>
