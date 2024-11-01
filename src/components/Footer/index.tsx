@@ -1,18 +1,18 @@
-import { Container } from "@mantine/core";
 import Image from "next/image";
 import Link from "next/link";
+import styles from "./index.module.css";
 
 const Footer = () => {
   return (
     <footer
-      className="wow fadeInUp relative z-10 bg-[#090E34] bg-dark pt-10"
+      className="wow fadeInUp relative z-10 bg-[#090E34] bg-dark py-10"
       data-wow-delay=".15s"
     >
-      <Container>
-        <div className="-mx-4 flex flex-wrap items-center">
-          <div className="flex w-full items-center px-4 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2">
-            <div className="mb-5 flex w-full items-center">
-              <Link href="/" className="inline-block max-w-[160px]">
+      <div className="container md:px-12">
+        <div className={`${styles.container} -mx-4 flex flex-wrap`}>
+          <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2">
+            <div className={`${styles.containerIcons} flex w-full`}>
+              <Link href="/" className={`${styles.logo} max-w-[160px]`}>
                 <Image
                   src="/images/logo/nd-ai-logo.svg"
                   alt="logo"
@@ -91,13 +91,13 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="flex w-full justify-end px-4 max-sm:mb-5 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2">
+          <div className={`${styles.copyContainer} flex items-center w-full justify-end px-4 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2`}>
             <p className="text-right text-xs text-white">
               ©2024 Notedoctor.ai. All Rights Reserved
             </p>
           </div>
         </div>
-      </Container>
+      </div>
     </footer>
   );
 };
