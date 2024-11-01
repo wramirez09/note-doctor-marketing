@@ -1,12 +1,12 @@
 import { CTASectionProps } from "@/types/cta-section";
-import { Button, Container } from "@mantine/core";
+import { Button } from "@mantine/core";
 import SectionTitle from "../Common/SectionTitle";
 import classes from "./index.module.css";
 
 export function CTASection({ title, body, onClick }: CTASectionProps) {
   return (
-    <div className="w-full bg-dark">
-      <Container className="relative z-20 overflow-hidden pb-8 pt-20 dark:bg-dark lg:pb-[50px] lg:pt-[50px]">
+    <section className="relative z-20 overflow-hidden bg-white pb-8 pt-20 dark:bg-dark lg:pb-[50px] lg:pt-[120px]">
+      <div className="container md:px-12">
         <SectionTitle title={title} paragraph={body} center />
         <div className={classes.controls}>
           <Button
@@ -18,7 +18,7 @@ export function CTASection({ title, body, onClick }: CTASectionProps) {
             Learn More
           </Button>
         </div>
-      </Container>
-    </div>
+      </div>
+    </section>
   );
 }
