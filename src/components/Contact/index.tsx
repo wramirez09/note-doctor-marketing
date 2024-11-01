@@ -10,11 +10,11 @@ const Contact: React.FC<{ showNewsLetterSignUp?: boolean }> = ({
       className="overflow-hidden py-16 md:py-20 lg:py-28"
       style={{ backgroundColor: "#061729" }}
     >
-      <div className="container">
+      <div className="container md:px-12">
         <div
           className={`-mx-4 flex flex-wrap ${!showNewsLetterSignUp ? "items-center justify-center" : ""}`}
         >
-          <div className={`w-full px-4 lg:w-7/12 xl:w-8/12`}>
+          <div className={`px-4 lg:w-7/12 xl:w-8/12`}>
             <div
               className="bg-gray-dark mb-12 rounded-sm bg-white px-8 py-11 shadow-three sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]"
               data-wow-delay=".15s
