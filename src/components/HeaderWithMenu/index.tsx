@@ -55,7 +55,7 @@ export function HeaderWithMenu() {
     <Box>
       <Container>
         <header className={headerClasses}>
-          <div className="container px-6 md:px-12">
+          <div className="container px-6 lg:px-12">
             <div className="relative -mx-4 mb-6 flex items-center justify-between">
               <Group justify="space-between" h="100%" className="w-full">
                 <div
@@ -82,7 +82,7 @@ export function HeaderWithMenu() {
                   </div>
                 </div>
 
-                <Group h="100%" gap={0} visibleFrom="md">
+                <Group h="100%" gap={0} visibleFrom="lg">
                   <div
                     className={`${classes.link} ${isActiveLink("/") ? classes.activeLink : ""}`}
                     onClick={() => router.push("/")}
@@ -109,7 +109,7 @@ export function HeaderWithMenu() {
                   </div>
                 </Group>
 
-                <Group visibleFrom="md">
+                <Group visibleFrom="lg">
                   <Button
                     target="_blank"
                     className="button-light"
@@ -130,7 +130,7 @@ export function HeaderWithMenu() {
                 <Burger
                   opened={drawerOpened}
                   onClick={toggleDrawer}
-                  hiddenFrom="md"
+                  hiddenFrom="lg"
                   color="white"
                 />
               </Group>
@@ -142,16 +142,16 @@ export function HeaderWithMenu() {
           opened={drawerOpened}
           onClose={closeDrawer}
           size="100%"
-          padding="md"
-          hiddenFrom="sm"
+          padding="lg"
+          hiddenFrom="lg"
           zIndex={1000000}
           classNames={{
             body: classes.drawerBody,
             header: classes.drawerHeader,
           }}
         >
-          <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
-            <Divider my="sm" />
+          <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-lg">
+            <Divider my="lg" />
 
             <div
               className={`${classes.link} ${isActiveLink("/") ? classes.activeLink : ""}`}
@@ -190,9 +190,9 @@ export function HeaderWithMenu() {
               Contact Us
             </div>
 
-            <Divider my="sm" />
+            <Divider my="lg" />
 
-            <Group justify="center" grow pb="xl" px="md" mt="xl">
+            <Group justify="center" grow pb="xl" px="lg" mt="xl">
               <Button
                 className="button-light"
                 component="a"
