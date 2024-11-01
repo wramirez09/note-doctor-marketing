@@ -1,8 +1,15 @@
+"use client"
+
 import { Button } from "@mantine/core";
+import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
+    >
       <section
         id="home"
         className="relative overflow-hidden bg-primary pb-7 pt-[120px] md:pt-[130px] lg:pb-[100px] lg:pt-[160px]"
@@ -1368,7 +1375,7 @@ const Hero = () => {
           </div>
         </div>
       </section>
-    </>
+    </motion.div>
   );
 };
 
