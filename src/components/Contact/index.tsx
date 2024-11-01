@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Button } from "@mantine/core";
 import NewsLatterBox from "./NewsLetterBox";
@@ -92,8 +92,8 @@ const Contact: React.FC<{ showNewsLetterSignUp?: boolean }> = ({
             </div>
           )}
         </div>
-      </div>
-    </section>
+      </div >
+    </section >
   );
 };
 
