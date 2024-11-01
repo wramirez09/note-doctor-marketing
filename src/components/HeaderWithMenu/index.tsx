@@ -55,12 +55,9 @@ export function HeaderWithMenu() {
     <Box>
       <header className={headerClasses}>
         <div className="container px-6 lg:px-12">
-          <div className="container relative -mx-4 mb-6 flex items-center justify-between">
+          <div className="container relative mb-6 flex items-center justify-between max-sm:p-0">
             <Group justify="space-between" h="100%" className="w-full">
-              <div
-                className="w-60 max-w-full px-4"
-                onClick={() => router.push("/")}
-              >
+              <div className="w-60 max-w-full" onClick={() => router.push("/")}>
                 <div
                   className={`navbar-logo block w-full ${sticky ? "py-2" : "py-5"}`}
                 >

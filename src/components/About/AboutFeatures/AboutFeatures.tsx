@@ -72,7 +72,7 @@ export function AboutFeatures() {
   ));
 
   return (
-    <Container size="lg" py="xl" className="bgAlt mt-12">
+    <section className="bgAlt container mt-12 px-[60px]">
       <Group justify="center">
         <Badge variant="filled" size="lg">
           NoteDoctor.Ai
@@ -99,6 +99,6 @@ export function AboutFeatures() {
           pb="0"
         />
       </div>
-    </Container>
+    </section>
   );
 }
