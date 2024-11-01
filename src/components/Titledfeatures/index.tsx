@@ -96,7 +96,9 @@ export function Titledfeatures() {
       </Text>
 
       <div className="mt-5 flex justify-start">
-        <Button>Get Started Today</Button>
+        <Button component="a" href="/contact">
+          Get Started Today
+        </Button>
       </div>
 
       <SimpleGrid

@@ -1,3 +1,4 @@
+import { Button } from "@mantine/core";
 import NewsLatterBox from "./NewsLetterBox";
 
 const Contact: React.FC<{ showNewsLetterSignUp?: boolean }> = ({
@@ -77,9 +78,9 @@ const Contact: React.FC<{ showNewsLetterSignUp?: boolean }> = ({
                     </div>
                   </div>
                   <div className="w-full px-4">
-                    <button className="shadow-submit dark:shadow-submit-dark rounded-sm bg-primary px-9 py-4 text-base font-medium text-white duration-300 hover:bg-primary/90">
+                    <Button className="shadow-submit dark:shadow-submit-dark rounded-sm bg-primary px-9 py-4 text-base font-medium text-white duration-300 hover:bg-primary/90">
                       Submit Ticket
-                    </button>
+                    </Button>
                   </div>
                 </div>
               </form>

@@ -16,7 +16,7 @@ export const NewsletterSignUp: React.FC<{
   pb = "70px",
 }) => {
   return (
-    <div className="w-full bg-dark">
+    <div className="w-full bg-dark" id="newsLetter">
       <Container
         className={`relative z-20 overflow-hidden bg-white pt-5 pt-[50px] dark:bg-dark max-sm:mb-10 md:pt-20 lg:pb-[${pb}]  lg:pt-[50px]`}
       >

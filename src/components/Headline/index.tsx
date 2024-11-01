@@ -44,16 +44,20 @@ export const Headline: React.FC<{
 
         <div className={`${classes.controls} max-sm:flex-col`}>
           <Button
-            className={`${classes.control} button-light max-sm:mb-5 max-xs:w-full`}
+            className={`${classes.control} button-light max-sm:mb-5 max-xs:w-full md:mr-5`}
             size="md"
+            component="a"
+            href="/contact"
           >
             Book a demo
-          </Button>
+          </Button>{" "}
           <Button
             className={`${classes.control} button-primary ml-0 max-xs:w-full`}
             size="md"
+            component="a"
+            href="#newsLetter"
           >
-            contact
+            Subscribe to our newsletter
           </Button>
         </div>
       </div>

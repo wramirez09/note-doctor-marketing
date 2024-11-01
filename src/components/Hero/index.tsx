@@ -1,3 +1,4 @@
+import { Button } from "@mantine/core";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -24,12 +25,14 @@ const Hero = () => {
                   medical coding!
                 </p>
                 <div className="flex w-full items-center justify-center">
-                  <button
+                  <Button
                     type="submit"
                     className="primary-cta mx-sm:w-full  mx-lg:w-1/3 cursor-pointer items-center justify-center rounded-md border border-secondary bg-secondary px-5 py-3 text-base text-white transition duration-300 ease-in-out hover:flex"
+                    component="a"
+                    href="#contact"
                   >
                     Book a Demo Now!
-                  </button>
+                  </Button>
                 </div>
                 {/* <ul className="mb-10 flex flex-wrap items-center justify-center gap-5">
                   <li>
