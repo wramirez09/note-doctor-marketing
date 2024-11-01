@@ -67,3 +67,9 @@
     flex-direction: column;
   }
 }
+
+@media (max-width: 769px) {
+  .hrContainer {
+    display: none;
+  }
+}

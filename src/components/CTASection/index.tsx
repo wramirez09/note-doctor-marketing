@@ -14,7 +14,7 @@ export function CTASection({ title, body, onClick }: CTASectionProps) {
       transition={{ duration: 1.5 }}
     >
       <section className="relative z-20 overflow-hidden bg-white pb-8 pt-10 dark:bg-dark lg:pb-[50px] ">
-        <Container>
+        <Container className={classes.hrContainer}>
           <hr />
         </Container>
         <div className="container mt-12 md:px-12">

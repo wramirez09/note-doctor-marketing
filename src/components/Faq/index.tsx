@@ -4,6 +4,7 @@ import { Container } from "@mantine/core";
 import { motion } from 'framer-motion';
 import SectionTitle from "../Common/SectionTitle";
 import SingleFaq from "./SingleFaq";
+import classes from "./index.module.css";
 
 const Faq = () => {
   return (
@@ -13,7 +14,7 @@ const Faq = () => {
       transition={{ duration: 1.5 }}
     >
       <section className="container relative z-20 overflow-hidden bg-white pb-8 pt-20 dark:bg-dark lg:pb-[50px] lg:pt-[50px]">
-        <Container>
+        <Container className={classes.hrContainer}>
           <hr />
         </Container>
         <div className="mt-12 md:px-12">

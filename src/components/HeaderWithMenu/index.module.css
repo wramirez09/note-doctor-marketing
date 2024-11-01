@@ -17,10 +17,8 @@
   }
 
   @mixin hover {
-    background-color: light-dark(
-      var(--mantine-color-gray-0),
-      var(--mantine-color-dark-6)
-    );
+    background-color: light-dark(var(--mantine-color-gray-0),
+        var(--mantine-color-dark-6));
   }
 }
 
@@ -30,10 +28,8 @@
 }
 
 .dropdownFooter {
-  background-color: light-dark(
-    var(--mantine-color-gray-0),
-    var(--mantine-color-dark-7)
-  );
+  background-color: light-dark(var(--mantine-color-gray-0),
+      var(--mantine-color-dark-7));
   margin: calc(var(--mantine-spacing-md) * -1);
   margin-top: var(--mantine-spacing-sm);
   padding: var(--mantine-spacing-md) calc(var(--mantine-spacing-md) * 2);
@@ -52,4 +48,8 @@
 
 .drawerHeader {
   background-color: rgb(17 25 40) !important;
+}
+
+.group {
+  flex-wrap: nowrap !important;
 }

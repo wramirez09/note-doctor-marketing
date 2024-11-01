@@ -1,0 +1,5 @@
+@media (max-width: 769px) {
+  .hrContainer {
+    display: none;
+  }
+}

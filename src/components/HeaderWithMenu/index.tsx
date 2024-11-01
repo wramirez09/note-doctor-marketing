@@ -4,13 +4,12 @@ import {
   Box,
   Burger,
   Button,
-  Container,
   Divider,
   Drawer,
   Group,
   ScrollArea,
   rem,
-  useMantineTheme,
+  useMantineTheme
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import classNames from "classnames";
@@ -56,7 +55,7 @@ export function HeaderWithMenu() {
       <header className={headerClasses}>
         <div className="container px-6 lg:px-12">
           <div className="container relative mb-6 flex items-center justify-between max-sm:p-0">
-            <Group justify="space-between" h="100%" className="w-full">
+            <Group justify="space-between" h="100%" className={`${classes.group} w-full`}>
               <div className="w-60 max-w-full" onClick={() => router.push("/")}>
                 <div
                   className={`navbar-logo block w-full ${sticky ? "py-2" : "py-5"}`}
