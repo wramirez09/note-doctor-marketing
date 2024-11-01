@@ -10,7 +10,7 @@ const About = () => {
     <>
       <div className="container mt-7">
         <Container>
-          <h1 className={`${classes.title} max-sm:text-xs`}>
+          <h1 className={`${classes.title} mb-10 max-sm:text-xs`}>
             Bringing Change, Making Waves
           </h1>
 

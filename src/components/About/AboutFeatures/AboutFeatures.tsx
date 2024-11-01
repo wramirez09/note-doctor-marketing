@@ -96,6 +96,7 @@ export function AboutFeatures() {
           title="Join Us on Our Journey"
           paragraph="Join us on our journey to transform healthcare with NoteDoctor.AI"
           width="100%"
+          mt={"50px"}
         />
       </div>
     </section>

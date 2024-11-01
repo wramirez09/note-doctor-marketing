@@ -37,7 +37,7 @@
 .description {
   margin-top: var(--mantine-spacing-xl);
   font-size: rem(24px);
-
+  margin-bottom: 5rem;
   @media (max-width: $mantine-breakpoint-sm) {
     font-size: rem(18px);
   }
