@@ -9,9 +9,9 @@ const Footer = () => {
       data-wow-delay=".15s"
     >
       <Container>
-        <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2">
-            <div className="mb-10 flex w-full">
+        <div className="-mx-4 flex flex-wrap items-center">
+          <div className="flex w-full items-center px-4 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2">
+            <div className="mb-5 flex w-full items-center">
               <Link href="/" className="inline-block max-w-[160px]">
                 <Image
                   src="/images/logo/nd-ai-logo.svg"
@@ -91,7 +91,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="flex w-full justify-end px-4 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2">
+          <div className="flex w-full justify-end px-4 max-sm:mb-5 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2">
             <p className="text-right text-xs text-white">
               ©2024 Notedoctor.ai. All Rights Reserved
             </p>

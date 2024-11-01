@@ -2,8 +2,15 @@ import { TeamType } from "@/types/team";
 import Image from "next/image";
 
 const SingleTeam = ({ team }: { team: TeamType }) => {
-  const { image, name, designation, facebookLink, twitterLink, instagramLink } =
-    team;
+  const {
+    image,
+    name,
+    designation,
+    facebookLink,
+    twitterLink,
+    instagramLink,
+    description,
+  } = team;
   return (
     <div className="w-full px-4 sm:w-1/2 lg:w-1/4 xl:w-1/4">
       <div className="group mb-8 rounded-xl bg-white px-5 pb-10 pt-12 shadow-testimonial dark:bg-dark dark:shadow-none">
@@ -244,8 +251,8 @@ const SingleTeam = ({ team }: { team: TeamType }) => {
           <p className="mb-5 text-sm text-body-color dark:text-dark-6">
             {designation}
           </p>
-          <p className="mb-5 text-sm text-body-color dark:text-dark-6">
-            {designation}
+          <p className="mb-5 text-left text-sm text-body-color dark:text-dark-6">
+            {description}
           </p>
           <div className="flex items-center justify-center gap-5">
             <a

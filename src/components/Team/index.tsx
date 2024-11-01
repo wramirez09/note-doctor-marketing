@@ -8,7 +8,7 @@ const teamData: TeamType[] = [
     name: "Mitesh Patel M.D.",
     designation: "Founder / President",
     description:
-      "With over a decade immersed in hospital environments, I've witnessed firsthand the adverse effects of inaccurate coding and hospital status on revenue streams and the vital task of patient care. Recognizing the toll it exacts on providers and Clinical Documentation Improvement (CDI) teams, I embarked on a mission to develop a solution. The inception of NoteDoctor.AI arose from a deep-seated commitment to empower healthcare professionals with tools that enhance both accuracy and efficiency, while liberating valuable time for patient interaction. My aspiration was to create an application that not only alleviates the complexities of coding queries but also enables CDI teams to navigate workflows with newfound ease and precision.",
+      "With over a decade immersed in hospital environments, I've witnessed firsthand the adverse effects of inaccurate coding and hospital status on revenue streams and the vital task of patient care. Recognizing the toll it exacts on providers and Clinical Documentation Improvement (CDI) teams, I embarked on a mission to develop a solution.",
     image: "/images/about/profile-holder.png",
     facebookLink: "/#",
     twitterLink: "/#",
