@@ -78,9 +78,7 @@ const Contact: React.FC<{ showNewsLetterSignUp?: boolean }> = ({
                     </div>
                   </div>
                   <div className="w-full px-4">
-                    <Button className="shadow-submit dark:shadow-submit-dark rounded-sm bg-primary px-9 py-4 text-base font-medium text-white duration-300 hover:bg-primary/90">
-                      Submit Ticket
-                    </Button>
+                    <Button className="button-primary">Submit</Button>
                   </div>
                 </div>
               </form>

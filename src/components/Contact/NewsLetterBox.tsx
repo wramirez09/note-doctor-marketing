@@ -28,7 +28,7 @@ const NewsLatterBox = () => {
           placeholder="Enter your email"
           className="dark:text-body-color-dark mb-4 w-full rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
         />
-        <Button className="mb-3">Subscribe</Button>
+        <Button className="button-primary">Subscribe</Button>
         <p className="dark:text-body-color-dark  text-center text-base leading-relaxed text-body-color">
           So please don’t send any spam mail.
         </p>

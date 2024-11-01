@@ -27,7 +27,7 @@ const Hero = () => {
                 <div className="flex w-full items-center justify-center">
                   <Button
                     type="submit"
-                    className="primary-cta mx-sm:w-full  mx-lg:w-1/3 cursor-pointer items-center justify-center rounded-md border border-secondary bg-secondary px-5 py-3 text-base text-white transition duration-300 ease-in-out hover:flex"
+                    className="button-primary"
                     component="a"
                     href="#contact"
                   >
