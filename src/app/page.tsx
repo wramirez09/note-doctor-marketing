@@ -36,7 +36,7 @@ export default function Home() {
       <Faq />
       {/* <Team /> */}
       {/* <HomeBlogSection posts={posts} /> */}
-      <NewsletterSignUp />
+      <NewsletterSignUp mt="20px" />
       <Contact showNewsLetterSignUp={false} />
       {/* <Clients /> */}
     </main>

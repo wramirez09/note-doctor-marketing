@@ -6,7 +6,7 @@ import featuresData from "./featuresData";
 
 const Features = () => {
   return (
-    <section className="container pb-8 pt-20 dark:bg-dark lg:pb-[70px] lg:pt-[120px]">
+    <section className="container pb-8 pt-20 dark:bg-dark lg:pb-[20px] lg:pt-[120px]">
       <div className="md:px-12">
         <SectionTitle
           subtitle="Features"

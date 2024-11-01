@@ -7,16 +7,18 @@ export const NewsletterSignUp: React.FC<{
   paragraph?: string;
   btnText?: string;
   width?: string;
-  pb?: string | number;
+  mt?: string | number;
 }> = ({
   title = "Transform Your Practice with AI",
   paragraph = "Sign up to receive exclusive AI healthcare updates and unlock your discount.",
   btnText = "Subscribe",
   width = "680px",
-  pb = "70px",
+  mt = "120px",
 }) => {
   return (
-    <section className="relative z-20 overflow-hidden bg-white pb-8 pt-20 dark:bg-dark lg:pb-[50px] lg:pt-[120px]">
+    <section
+      className={`relative z-20 overflow-hidden bg-white pb-8  dark:bg-dark lg:pb-[50px] lg:pt-[${mt}]`}
+    >
       <div className="container md:px-12">
         <SectionTitle
           title={title}

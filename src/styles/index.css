@@ -138,3 +138,7 @@ footer {
   background-color: var(--mantine-primary-color-filled) !important;
   color: var(--mantine-color-white) !important;
 }
+
+hr {
+  border-color: rgb(59, 59, 59);
+}
