@@ -1,8 +1,5 @@
-import { Text, SimpleGrid, Container, rem, Title } from "@mantine/core";
+import { Text, SimpleGrid, rem, Title } from "@mantine/core";
 import {
-  IconTruck,
-  IconCertificate,
-  IconCoin,
   IconNumber1,
   IconNumber2,
   IconNumber3,
@@ -92,12 +89,13 @@ export default function HowItWorksSection() {
   const items = mockdata.map((item) => <Feature {...item} key={item.title} />);
 
   return (
-    <Container
-      mt={30}
-      mb={0}
-      size="xl"
-      style={{ backgroundColor: "rgb(17 25 40)" }}
-    >
+    // <Container
+    //   mt={30}
+    //   mb={0}
+    //   size="xl"
+    //   style={{ backgroundColor: "rgb(17 25 40)" }}
+    // >
+    <>
       <Headline />
       <hr style={{ borderColor: "#3b3b3b" }} />
       <Title
@@ -106,7 +104,7 @@ export default function HowItWorksSection() {
           color: "#FFF",
         }}
         fw={900}
-        className="pb-1 pt-8 max-sm:text-center md:pb-8 md:pl-9"
+        className="pb-1 pt-8 max-sm:text-center md:pb-8"
       >
         How it Works
       </Title>
@@ -115,6 +113,7 @@ export default function HowItWorksSection() {
       </SimpleGrid>
       <Titledfeatures />
       <NewsletterSignUp />
-    </Container>
+    </>
+    // </Container>
   );
 }
