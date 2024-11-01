@@ -12,7 +12,7 @@ const Footer = () => {
         <div className={`${styles.container} -mx-4 flex flex-wrap`}>
           <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2">
             <div className={`${styles.containerIcons} flex w-full`}>
-              <Link href="/" className="flex justify-center max-w-[160px]">
+              <Link href="/" className={`${styles.logo} max-w-[160px]`}>
                 <Image
                   src="/images/logo/nd-ai-logo.svg"
                   alt="logo"
@@ -91,7 +91,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="flex items-center w-full justify-end px-4 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2">
+          <div className={`${styles.copyContainer} flex items-center w-full justify-end px-4 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2`}>
             <p className="text-right text-xs text-white">
               ©2024 Notedoctor.ai. All Rights Reserved
             </p>

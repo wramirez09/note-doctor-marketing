@@ -15,4 +15,13 @@
   .containerIcons img {
     margin-bottom: 1.25rem
   }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+  }
+
+  .copyContainer {
+    justify-content: center;
+  }
 }
