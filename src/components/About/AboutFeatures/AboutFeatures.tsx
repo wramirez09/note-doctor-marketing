@@ -72,7 +72,7 @@ export function AboutFeatures() {
   ));
 
   return (
-    <section className="bgAlt container mt-12 px-[60px]">
+    <section className="bgAlt container mt-12 lg:px-[60px]">
       <Group justify="center">
         <Badge variant="filled" size="lg">
           NoteDoctor.Ai
