@@ -1,0 +1,18 @@
+@media (max-width: 720px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .containerIcons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.25rem;
+  }
+
+  .containerIcons img {
+    margin-bottom: 1.25rem
+  }
+}
