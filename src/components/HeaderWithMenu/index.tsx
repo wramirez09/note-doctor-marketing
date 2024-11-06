@@ -115,7 +115,7 @@ export function HeaderWithMenu() {
               </Group>
 
               <div className="hidden w-60 max-w-full lg:block">
-                <div className="flex justify-between">
+                <div className="flex gap-2">
                   <Button
                     target="_blank"
                     className="button-light"

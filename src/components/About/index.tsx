@@ -21,17 +21,6 @@ const About = () => {
             paradigm of medical coding. We are empowering healthcare through
             innovation and excellence.
           </Text>
-
-          {/* <Group className={`${classes.controls}, mt-12`}> */}
-          {/* <Button
-            size="l"
-            className={classes.control}
-            variant="gradient"
-            gradient={{ from: "blue", to: "cyan" }}
-          >
-            Lear More
-          </Button> */}
-          {/* </Group> */}
           <hr style={{ opacity: "15%" }} className="mt-5" />
         </Container>
       </div>
