@@ -17,7 +17,7 @@ const teamData: TeamType[] = [
   {
     id: 2,
     name: "Pinal Patel",
-    designation: "Co-Founder / Vice-President",
+    designation: "Technical Advisor",
     description:
       "At NoteDoctor.AI, Pinal leads our technical initiatives, drawing from over a decade of experience in Technical Consulting with renowned organizations like HPE, IBM and esteemed NSA”s CAE-CD designated military institution UNG. Armed with a BS in Computer Science, he steers our company towards innovative solutions and technically excellence.",
     image: "/images/about/profile-holder.png",

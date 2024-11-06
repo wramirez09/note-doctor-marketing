@@ -29,21 +29,21 @@ const menuData: Menu[] = [
   {
     id: 6,
     title: "How it works",
-    path: "/how-it-works",
+    // path: "/how-it-works",
     newTab: false,
-    // submenu: [
-    //   {
-    //     id: 61,
-    //     title: "Solutions",
-    //     path: "/solutions",
-    //     newTab: false,
-    //   },
-    //   {
-    //     id: 62,
-    //     title: "Services",
-    //     path: "/services",
-    //     newTab: false,
-    //   },
+    submenu: [
+      {
+        id: 61,
+        title: "Solutions",
+        path: "/solutions",
+        newTab: false,
+      },
+      {
+        id: 62,
+        title: "Security",
+        path: "/security",
+        newTab: false,
+      },
     //   // {
     //   //   id: 63,
     //   //   title: "Contact Page",
@@ -74,7 +74,7 @@ const menuData: Menu[] = [
     //   //   path: "/error",
     //   //   newTab: false,
     //   // },
-    // ],
+    ],
   },
   {
     id: 2,

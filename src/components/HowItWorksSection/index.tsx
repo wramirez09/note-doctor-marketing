@@ -63,7 +63,7 @@ const mockdata = [
     icon: IconNumber3,
     title: "Precision Prediction",
     description:
-      "Armed with a wealth of knowledge, NoteDoctor.AI predicts the correct ICD 11 code with unparalleled precision. It also provides supporting data for diagnosis, empowering you with comprehensive information to make informed decisions.",
+      "Armed with a wealth of knowledge, NoteDoctor.AI predicts the correct ICD 10 but can be forward compatibility with ICD 11 code with unparalleled precision. It also provides supporting data for diagnosis, empowering you with comprehensive information to make informed decisions.",
   },
   {
     icon: IconNumber4,

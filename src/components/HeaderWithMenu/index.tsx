@@ -95,6 +95,12 @@ export function HeaderWithMenu() {
                   How It Works
                 </div>
                 <div
+                  className={`${classes.link} ${isActiveLink("/security") ? classes.activeLink : ""}`}
+                  onClick={() => router.push("/security")}
+                >
+                  Security
+                </div>
+                <div
                   className={`${classes.link} ${isActiveLink("/about") ? classes.activeLink : ""}`}
                   onClick={() => router.push("/about")}
                 >
