@@ -4,7 +4,6 @@ import { CTASection } from "@/components/CTASection";
 import Faq from "@/components/Faq";
 import Features from "@/components/Features";
 import Hero from "@/components/Hero";
-import { NewsletterSignUp } from "@/components/NewsletterSignUp";
 import { getAllPosts } from "@/utils/markdown";
 import { Metadata } from "next";
 
@@ -36,7 +35,6 @@ export default function Home() {
       <Faq />
       {/* <Team /> */}
       {/* <HomeBlogSection posts={posts} /> */}
-      <NewsletterSignUp mt="20px" />
       <Contact showNewsLetterSignUp={false} />
       {/* <Clients /> */}
     </main>

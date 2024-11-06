@@ -2,23 +2,21 @@
 
 import {
   Badge,
-  Group,
-  Title,
-  Text,
   Card,
-  SimpleGrid,
-  Container,
+  Group,
   rem,
-  useMantineTheme,
+  SimpleGrid,
+  Text,
+  Title,
+  useMantineTheme
 } from "@mantine/core";
 import {
-  IconHearts,
-  IconUsers,
-  IconTelescope,
   IconEye,
+  IconHearts,
+  IconTelescope,
+  IconUsers,
 } from "@tabler/icons-react";
 import classes from "./aboutFeatrures.module.css";
-import { NewsletterSignUp } from "@/components/NewsletterSignUp";
 
 const mockdata = [
   {
@@ -91,14 +89,6 @@ export function AboutFeatures() {
       <SimpleGrid cols={{ base: 1, md: 2 }} spacing="xl" mt={50}>
         {features}
       </SimpleGrid>
-      <div className="mt-12 pb-0">
-        <NewsletterSignUp
-          title="Join Us on Our Journey"
-          paragraph="Join us on our journey to transform healthcare with NoteDoctor.AI"
-          width="100%"
-          mt={"50px"}
-        />
-      </div>
     </section>
   );
 }
