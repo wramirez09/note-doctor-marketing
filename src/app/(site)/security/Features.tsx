@@ -95,7 +95,7 @@ export function FeaturesGrid() {
 
       <div className='mb-11'>
         <Text className={classes.description}>
-        If you have any questions, concerns, or feedback regarding our security practices, please don't hesitate to reach out to us. Our security team is here to assist you and address any inquiries you may have.
+        If you have any questions, concerns, or feedback regarding our security practices, please don&apos;t hesitate to reach out to us. Our security team is here to assist you and address any inquiries you may have.
         </Text>
       </div>
     </Container>
