@@ -1,35 +1,35 @@
 import { ThemeIcon, Text, Title, Container, SimpleGrid, rem } from '@mantine/core';
-import { IconGauge, IconCookie, IconUser, IconMessage2, IconLock } from '@tabler/icons-react';
+import { IconMessage2, IconBrandCtemplar, IconCreditCard, IconHomeShield, IconSatellite, IconSpyOff } from '@tabler/icons-react';
 import classes from './FeaturesGrid.module.css';
 import Contact from '@/components/Contact';
 
 export const MOCKDATA = [
   {
-    icon: IconGauge,
+    icon: IconSatellite,
     title: 'HITECH Act',
     description:
       'We comply with the Health Information Technology for Economic and Clinical Health (HITECH) Act, which addresses the security and privacy concerns associated with the electronic transmission of health information.',
   },
   {
-    icon: IconUser,
+    icon: IconCreditCard,
     title: 'PCI DSS',
     description:
       'We adhere to the Payment Card Industry Data Security Standard (PCI DSS) for organizations that handle payment card data, ensuring secure payment transactions.',
   },
   {
-    icon: IconCookie,
+    icon: IconBrandCtemplar,
     title: 'Data Encryption',
     description:
       'All data stored and transmitted through NoteDoctor.AI is encrypted using strong encryption algorithms to protect it from unauthorized access. Encryption ensures that your data remains confidential and secure, both in transit and at rest.',
   },
   {
-    icon: IconLock,
+    icon: IconSpyOff,
     title: 'User Privacy',
     description:
       'We respect your privacy and are committed to transparent data practices. We do not collect or store any information.',
   },
   {
-    icon: IconMessage2,
+    icon: IconHomeShield,
     title: 'Your Trust is Our Priority',
     description:
       'At NoteDoctor.AI, we recognize that trust is earned, and we are committed to earning and maintaining your trust through our unwavering dedication to data security and compliance.',
@@ -69,15 +69,16 @@ export function FeaturesGrid() {
 
   return (
     <div className="container">
+    <Container size="lg">
       <Title className={classes.title} id='more'>Compliance with Industry Regulations</Title>
 
       <div className='mb-11'>
-        <Text size="lg" className={classes.description}>
+        <Text className={classes.description}>
         We comply with the Health Information Technology for Economic and Clinical Health (HITECH) Act, which addresses the security and privacy concerns associated with the electronic transmission of health information.
         </Text>
       </div>
-
-    <Container>
+    </Container>
+    <Container size={"lg"} className={"mb-11"}>
       <SimpleGrid
     
         mt={60}
@@ -89,6 +90,15 @@ export function FeaturesGrid() {
         {features}
       </SimpleGrid>
       </Container>
+      <Container size="lg">
+      <Title className={classes.title} id='more'>Get in Touch</Title>
+
+      <div className='mb-11'>
+        <Text className={classes.description}>
+        If you have any questions, concerns, or feedback regarding our security practices, please don't hesitate to reach out to us. Our security team is here to assist you and address any inquiries you may have.
+        </Text>
+      </div>
+    </Container>
       <Contact showNewsLetterSignUp={false}/>
     </div>
   );

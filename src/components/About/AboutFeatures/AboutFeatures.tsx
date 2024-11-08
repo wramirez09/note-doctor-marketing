@@ -22,13 +22,13 @@ const mockdata = [
   {
     title: "Who We Are",
     description:
-      "NoteDoctor.AI is a leading provider of AI-powered solutions for the healthcare industry. Founded with a vision to revolutionize medical coding, our team combines expertise in artificial intelligence, healthcare, and technology to deliver cutting-edge solutions that drive efficiency, accuracy, and profitability for healthcare organizations worldwide.",
+      "NoteDoctor.AI is a leading provider of AI-powered solutions for the healthcare industry. Founded with a vision to revolutionize medical coding, our team combines expertise in Augmented intelligence, healthcare, and technology to deliver cutting-edge solutions that drive efficiency, accuracy, and profitability for healthcare organizations worldwide.",
     icon: IconUsers,
   },
   {
     title: "Our Mission",
     description:
-      "At NoteDoctor.AI, our mission is to revolutionize the healthcare industry through the power of artificial intelligence. We are committed to empowering healthcare organizations with innovative solutions that enhance efficiency, accuracy, and profitability.",
+      "At NoteDoctor.AI, our mission is to revolutionize the healthcare industry through the power of Augmented intelligence. We are committed to empowering healthcare organizations with innovative solutions that enhance efficiency, accuracy, and profitability.",
     icon: IconTelescope,
   },
   {

@@ -2,6 +2,7 @@ import About from "@/components/About";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import Team from "@/components/Team";
 import { Metadata } from "next";
+import { Services } from "./services";
 
 export const metadata: Metadata = {
   title:
@@ -15,7 +16,9 @@ const AboutPage = () => {
     <main>
       <Breadcrumb pageName="About Us Page" />
       <About />
+      <Services />
       <Team />
+      
     </main>
   );
 };

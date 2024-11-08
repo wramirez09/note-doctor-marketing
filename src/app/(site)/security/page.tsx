@@ -23,7 +23,7 @@ const SecurityPage = () => {
       transition={{ duration: 1.5 }}
     >
        <div className="container mt-11 mb-11 mb-[160px]">
-        
+        <Container size="md">
         <h1 className="mt-[160px] text-3xl font-bold leading-snug text-white sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-[1.2] text-center lg:mb[150px] accent">
           Data Security and Compliance
           </h1>
@@ -35,7 +35,7 @@ const SecurityPage = () => {
           <Button component="a" href="#more">Learn More</Button>
           </div>
           <hr style={{ opacity: "15%" }} className="mt-5" />
-        
+          </Container>
       </div>
     <FeaturesGrid/>
     </motion.div>

@@ -26,7 +26,7 @@ const Hero = () => {
                   Notedoctor.AI
                 </h1>
                 <p className="mx-auto mb-9 max-w-[600px] text-base font-medium text-white sm:text-lg sm:leading-[1.44]">
-                  Unlock the power of artificial intelligence to revolutionize
+                  Unlock the power of Augmented intelligence to revolutionize
                   medical coding!
                 </p>
                 <div className="flex w-full items-center justify-center">

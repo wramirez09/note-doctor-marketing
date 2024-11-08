@@ -12,7 +12,7 @@ const teamData: TeamType[] = [
     image: "/images/about/profile-holder.png",
     facebookLink: "/#",
     twitterLink: "/#",
-    instagramLink: "/#",
+    linkedInLink: "www.linkedin.com/in/miteshkumar-patel-5846b5213",
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const teamData: TeamType[] = [
     image: "/images/about/profile-holder.png",
     facebookLink: "/#",
     twitterLink: "/#",
-    instagramLink: "/#",
+    linkedInLink: "/#",
   },
 ];
 

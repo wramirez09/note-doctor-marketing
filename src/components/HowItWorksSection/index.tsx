@@ -63,7 +63,7 @@ const mockdata = [
     icon: IconNumber3,
     title: "Precision Prediction",
     description:
-      "Armed with a wealth of knowledge, NoteDoctor.AI predicts the correct ICD 10 but can be forward compatibility with ICD 11 code with unparalleled precision. It also provides supporting data for diagnosis, empowering you with comprehensive information to make informed decisions.",
+      "Armed with a wealth of knowledge, NoteDoctor.AI predicts the correct ICD 10 but can be forward compatibility withICD 10 but can be forward compatibility with ICD 11 code with unparalleled precision. It also provides supporting data for diagnosis, empowering you with comprehensive information to make informed decisions.",
   },
   {
     icon: IconNumber4,
@@ -89,12 +89,7 @@ export default function HowItWorksSection() {
   const items = mockdata.map((item) => <Feature {...item} key={item.title} />);
 
   return (
-    // <Container
-    //   mt={30}
-    //   mb={0}
-    //   size="xl"
-    //   style={{ backgroundColor: "rgb(17 25 40)" }}
-    // >
+  
     <>
       <Headline />
       <hr style={{ borderColor: "#3b3b3b" }} />
@@ -104,16 +99,19 @@ export default function HowItWorksSection() {
           color: "#FFF",
         }}
         fw={900}
-        className="pb-1 pt-8 max-sm:text-center md:pb-8"
+        className="pb-1 pt-8 max-sm:text-center md:pb-5"
       >
         How it Works
       </Title>
-      <SimpleGrid cols={{ base: 1, sm: 3 }} spacing={50} className="pb-10">
+      <Title c="#FFF" size={"lg"} className="lg:pr-[250px]">Streamline Concurrent Review and Denials with augmented intelligence. Easily summarize
+        provider notes with data supporting ICD diagnosis and supporting documentation for inpatient
+        vs observation status for patients in acute care.</Title>
+      <SimpleGrid cols={{ base: 1, sm: 3 }} spacing={50} className="pb-10 mt-5 mb-10">
         {items}
       </SimpleGrid>
       <Titledfeatures />
-      <NewsletterSignUp />
+      {/* <NewsletterSignUp /> */}
     </>
-    // </Container>
+  
   );
 }

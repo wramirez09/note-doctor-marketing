@@ -65,18 +65,18 @@ export function HeaderWithMenu() {
                   className={`navbar-logo block w-full ${sticky ? "py-2" : "py-5"}`}
                 >
                   <Image
-                    src={`/images/logo/nd-ai-logo.svg`}
+                    src={`/images/logo/logo-main.svg`}
                     alt="logo"
                     width={140}
                     height={30}
-                    className="header-logo w-1/4 dark:hidden"
+                    className="header-logo w-3/4 dark:hidden"
                   />
                   <Image
-                    src={`/images/logo/nd-ai-logo.svg`}
+                    src={`/images/logo/logo-main.svg`}
                     alt="logo"
                     width={140}
                     height={30}
-                    className="header-logo hidden w-1/4 dark:block"
+                    className="header-logo hidden w-3/4 dark:block"
                   />
                 </div>
               </div>
@@ -176,6 +176,15 @@ export function HeaderWithMenu() {
             }}
           >
             How It Works
+          </div>
+          <div
+            className={`${classes.link} ${isActiveLink("/security") ? classes.activeLink : ""}`}
+            onClick={() => {
+              router.push("/security");
+              closeDrawer();
+            }}
+          >
+            Security
           </div>
           <div
             className={`${classes.link} ${isActiveLink("/about") ? classes.activeLink : ""}`}

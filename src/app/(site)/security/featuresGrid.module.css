@@ -7,7 +7,7 @@
     color: #FFF;
     font-weight: 900;
     margin-bottom: var(--mantine-spacing-md);
-    text-align: center;
+    text-align: left;
   
     @media (max-width: $mantine-breakpoint-sm) {
       font-size: 28px;
@@ -16,7 +16,7 @@
   }
   
   .description {
-    text-align: center;
+    text-align: left;
     color: #FFF;
     @media (max-width: $mantine-breakpoint-sm) {
       text-align: left;
