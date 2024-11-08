@@ -1,6 +1,6 @@
 import { ThemeIcon, Text, Title, Container, SimpleGrid, rem } from '@mantine/core';
 import { IconMessage2, IconBrandCtemplar, IconCreditCard, IconHomeShield, IconSatellite, IconSpyOff } from '@tabler/icons-react';
-import classes from './FeaturesGrid.module.css';
+import classes from './featuresGrid.module.css';
 import Contact from '@/components/Contact';
 
 export const MOCKDATA = [
