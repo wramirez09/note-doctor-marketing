@@ -5,7 +5,7 @@ import { Button, Container } from "@mantine/core";
 import { motion } from "framer-motion";
 import { Metadata } from "next";
 import classes from "./styles.module.css";
-import { FeaturesGrid } from "./Features";
+import { FeaturesGrid } from "./featuresGrid/Features";
 const metadata: Metadata = {
   title: "Security Page | ",
   description: "security",

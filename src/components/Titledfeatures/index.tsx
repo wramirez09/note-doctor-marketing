@@ -22,7 +22,7 @@ export const MOCKDATA = [
     icon: IconArcheryArrow,
     title: "Predictive Coding Accuracy",
     description:
-      "Experience coding accuracy like never before with NoteDoctor.AI. Our AI-powered platform analyzes provider notes with precision, predicting the correctICD 10 but can be forward compatibility with ICD 11 codes and minimizing errors. Ensure comprehensive documentation and maximize revenue potential with our advanced solution...",
+      "Experience coding accuracy like never before with NoteDoctor.AI. Our AI-powered platform analyzes provider notes with precision, predicting the correct ICD 10 but can be forward compatibility with ICD 11 codes and minimizing errors. Ensure comprehensive documentation and maximize revenue potential with our advanced solution...",
   },
   {
     icon: IconCalendarStats,
