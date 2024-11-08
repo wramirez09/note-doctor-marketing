@@ -15,12 +15,13 @@ const Footer = () => {
             <div className={`${styles.containerIcons} flex w-full`}>
               <Link href="/" className={`${styles.logo} max-w-[160px]`}>
                 <Image
-                  src="/images/logo/nd-ai-logo.svg"
+                  src="/images/logo/logo-main.svg"
                   alt="logo"
                   width={140}
                   height={30}
-                  className="header-logo w-1/3"
+                  className="header-logo w-1/3 mx-6"
                 />
+                
               </Link>
               <div className="-mx-3 flex items-center">
                 <a
