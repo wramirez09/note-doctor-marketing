@@ -1,6 +1,7 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import Contact from "@/components/Contact";
 import { Metadata } from "next";
+import { NewsletterSignUp } from '../../../components/NewsletterSignUp/index';
 
 export const metadata: Metadata = {
   title:
@@ -14,7 +15,7 @@ const ContactPage = () => {
     <div style={{ backgroundColor: "rgb(17 25 40)" }}>
       <Breadcrumb pageName="Contact Page" />
 
-      <Contact />
+      <Contact showNewsLetterSignUp={false}/>
     </div>
   );
 };
