@@ -16,7 +16,7 @@ const featuresData: Array<Feature> = [
     icon: IconHourglassEmpty,
     title: "Timely",
     paragraph:
-      "Processing of notes takes seconds, effectively reducing wait times",
+      "Processing of notes takes seconds, effectively reducing wait times.",
     btn: "Learn More",
     btnLink: "/#",
   },

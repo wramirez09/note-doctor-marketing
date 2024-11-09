@@ -6,9 +6,9 @@ import { Services } from "./services";
 
 export const metadata: Metadata = {
   title:
-    "About NoteDoctor.AI | Transforming Healthcare with AI-Powered Innovation",
+    "About NoteDoctorAI | Transforming Healthcare with AI-Powered Innovation",
   description:
-    "Learn about NoteDoctor.AI, a pioneer in AI-driven healthcare solutions. Our mission is to revolutionize medical coding with cutting-edge technology, enhancing accuracy, efficiency, and profitability for healthcare organizations globally.",
+    "Learn about NoteDoctorAI, a pioneer in AI-driven healthcare solutions. Our mission is to revolutionize medical coding with cutting-edge technology, enhancing accuracy, efficiency, and profitability for healthcare organizations globally.",
 };
 
 const AboutPage = () => {

@@ -20,8 +20,8 @@ const Faq = () => {
         <div className="mt-12 md:px-12">
           <SectionTitle
             subtitle=""
-            title="Why Choose NoteDoctor.AI?"
-            paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+            title="Why Choose NoteDoctorAI?"
+            paragraph=""
             width="640px"
             center
           />
@@ -45,7 +45,7 @@ const Faq = () => {
               />
               <SingleFaq
                 question="Cost-Effectiveness"
-                answer="By improving coding accuracy and streamlining workflows, NoteDoctor.AI helps healthcare organizations save costs and optimize revenue streams."
+                answer="By improving coding accuracy and streamlining workflows, NoteDoctorAI helps healthcare organizations save costs and optimize revenue streams."
               />
             </div>
           </div>

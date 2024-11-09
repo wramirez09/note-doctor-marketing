@@ -51,7 +51,7 @@ const mockdata = [
     icon: IconNumber1,
     title: "Effortless Upload",
     description:
-      "With NoteDoctor.AI's drag and drop system, uploading files for processing is a breeze. Simply drag your files into the designated area, sit back, and let the magic unfold. It's like having a personal assistant handle the paperwork, freeing up your time for more important tasks.",
+      "With NoteDoctorAI's drag and drop system, uploading files for processing is a breeze. Simply drag your files into the designated area, sit back, and let the magic unfold. It's like having a personal assistant handle the paperwork, freeing up your time for more important tasks.",
   },
   {
     icon: IconNumber2,
@@ -63,25 +63,25 @@ const mockdata = [
     icon: IconNumber3,
     title: "Precision Prediction",
     description:
-      "Armed with a wealth of knowledge, NoteDoctor.AI predicts the correct ICD 10 but can be forward compatibility withICD 10 but can be forward compatibility with ICD 11 code with unparalleled precision. It also provides supporting data for diagnosis, empowering you with comprehensive information to make informed decisions.",
+      "Armed with a wealth of knowledge, NoteDoctorAI predicts the correct ICD 10 but can be forward compatible with ICD 11 code with unparalleled precision. It also provides supporting data for diagnosis, empowering you with comprehensive information to make informed decisions.",
   },
   {
     icon: IconNumber4,
     title: "Summarizing for Clarity",
     description:
-      "Provider notes can be overwhelming, but fret not – NoteDoctor.AI summarizes the essential information, making it easily digestible for coders by ensuring clarity and focus amidst the complexity.",
+      "Provider notes can be overwhelming, but fret not – NoteDoctorAI summarizes the essential information, making it easily digestible for coders by ensuring clarity and focus amidst the complexity.",
   },
   {
     icon: IconNumber5,
     title: "Export with Ease",
     description:
-      "Once the coding masterpiece is complete, NoteDoctor.AI offers seamless export capabilities in PDF or Word format.. Share your findings with ease, whether it's for collaboration, review, or presentation purposes.",
+      "Once the coding masterpiece is complete, NoteDoctorAI offers seamless export capabilities in PDF or Word format.. Share your findings with ease, whether it's for collaboration, review, or presentation purposes.",
   },
   {
     icon: IconNumber6,
     title: "Experience the Magic",
     description:
-      "Embark on your coding journey with NoteDoctor.AI and unlock the full potential of your coding workflow. Say goodbye to complexity and hello to seamless efficiency, accuracy, and productivity.",
+      "Embark on your coding journey with NoteDoctorAI and unlock the full potential of your coding workflow. Say goodbye to complexity and hello to seamless efficiency, accuracy, and productivity.",
   },
 ];
 

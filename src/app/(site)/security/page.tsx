@@ -29,7 +29,7 @@ const SecurityPage = () => {
           </h1>
 
           <p className="mx-auto mb-9 text-base font-medium text-white sm:text-lg sm:leading-[1.44] text-center">
-          At NoteDoctor.AI, safeguarding your data is our top priority. We understand the critical importance of data security in the healthcare industry and are committed to maintaining the highest standards of protection for your sensitive information.
+          At NoteDoctorAI, safeguarding your data is our top priority. We understand the critical importance of data security in the healthcare industry and are committed to maintaining the highest standards of protection for your sensitive information.
           </p>
           <div className="flex justify-center items-center">
           <Button component="a" href="#more">Learn More</Button>

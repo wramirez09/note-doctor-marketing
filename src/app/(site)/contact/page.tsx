@@ -5,9 +5,9 @@ import { NewsletterSignUp } from '../../../components/NewsletterSignUp/index';
 
 export const metadata: Metadata = {
   title:
-    "Contact NoteDoctor.AI | Get in Touch for AI-Powered Healthcare Solutions",
+    "Contact NoteDoctorAI | Get in Touch for AI-Powered Healthcare Solutions",
   description:
-    "Reach out to NoteDoctor.AI for innovative AI solutions in healthcare. Our team is here to help transform medical coding and enhance efficiency, accuracy, and profitability for healthcare organizations worldwide.",
+    "Reach out to NoteDoctorAI for innovative AI solutions in healthcare. Our team is here to help transform medical coding and enhance efficiency, accuracy, and profitability for healthcare organizations worldwide.",
 };
 
 const ContactPage = () => {

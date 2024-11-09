@@ -51,14 +51,14 @@ export const Headline: React.FC<{
           >
             Book a demo
           </Button>{" "}
-          <Button
+          {/* <Button
             className={`${classes.control} button-primary ml-0 max-xs:w-full`}
             size="md"
             component="a"
             href="#newsLetter"
           >
             Subscribe to our newsletter
-          </Button>
+          </Button> */}
         </div>
       </div>
     </Container>

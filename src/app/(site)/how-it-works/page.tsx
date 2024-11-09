@@ -5,9 +5,9 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "How NoteDoctor.AI Works | AI-Driven Medical Coding for Healthcare Efficiency",
+    "How NoteDoctorAI Works | AI-Driven Medical Coding for Healthcare Efficiency",
   description:
-    "Discover how NoteDoctor.AI's advanced AI technology revolutionizes medical coding. Learn how our solutions drive efficiency, accuracy, and profitability for healthcare organizations globally.",
+    "Discover how NoteDoctorAI's advanced AI technology revolutionizes medical coding. Learn how our solutions drive efficiency, accuracy, and profitability for healthcare organizations globally.",
 };
 
 const HowItWorks = () => {

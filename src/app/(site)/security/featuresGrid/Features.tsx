@@ -20,7 +20,7 @@ export const MOCKDATA = [
     icon: IconBrandCtemplar,
     title: 'Data Encryption',
     description:
-      'All data stored and transmitted through NoteDoctor.AI is encrypted using strong encryption algorithms to protect it from unauthorized access. Encryption ensures that your data remains confidential and secure, both in transit and at rest.',
+      'All data stored and transmitted through NoteDoctorAI is encrypted using strong encryption algorithms to protect it from unauthorized access. Encryption ensures that your data remains confidential and secure, both in transit and at rest.',
   },
   {
     icon: IconSpyOff,
@@ -32,7 +32,7 @@ export const MOCKDATA = [
     icon: IconHomeShield,
     title: 'Your Trust is Our Priority',
     description:
-      'At NoteDoctor.AI, we recognize that trust is earned, and we are committed to earning and maintaining your trust through our unwavering dedication to data security and compliance.',
+      'At NoteDoctorAI, we recognize that trust is earned, and we are committed to earning and maintaining your trust through our unwavering dedication to data security and compliance.',
   },
   {
     icon: IconMessage2,

@@ -22,13 +22,13 @@ const mockdata = [
   {
     title: "Who We Are",
     description:
-      "NoteDoctor.AI is a leading provider of AI-powered solutions for the healthcare industry. Founded with a vision to revolutionize medical coding, our team combines expertise in Augmented intelligence, healthcare, and technology to deliver cutting-edge solutions that drive efficiency, accuracy, and profitability for healthcare organizations worldwide.",
+      "NoteDoctorAI is a leading provider of AI-powered solutions for the healthcare industry. Founded with a vision to revolutionize medical coding, our team combines expertise in Augmented intelligence, healthcare, and technology to deliver cutting-edge solutions that drive efficiency, accuracy, and profitability for healthcare organizations worldwide.",
     icon: IconUsers,
   },
   {
     title: "Our Mission",
     description:
-      "At NoteDoctor.AI, our mission is to revolutionize the healthcare industry through the power of Augmented intelligence. We are committed to empowering healthcare organizations with innovative solutions that enhance efficiency, accuracy, and profitability.",
+      "At NoteDoctorAI, our mission is to revolutionize the healthcare industry through the power of Augmented intelligence. We are committed to empowering healthcare organizations with innovative solutions that enhance efficiency, accuracy, and profitability.",
     icon: IconTelescope,
   },
   {
@@ -40,7 +40,7 @@ const mockdata = [
   {
     title: "Our Values",
     description:
-      "At NoteDoctor.AI, we are guided by a set of core values that define who we are and how we operate: Excellence - Integrity - Innovation Collaboration - Impact",
+      "At NoteDoctorAI, we are guided by a set of core values that define who we are and how we operate: Excellence - Integrity - Innovation Collaboration - Impact",
     icon: IconHearts,
   },
 ];
@@ -73,7 +73,7 @@ export function AboutFeatures() {
     <section className="bgAlt container mt-12 lg:px-[60px]">
       <Group justify="center">
         <Badge variant="filled" size="lg">
-          NoteDoctor.Ai
+          NoteDoctorAI
         </Badge>
       </Group>
 

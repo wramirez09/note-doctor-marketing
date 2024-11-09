@@ -23,11 +23,11 @@ const Hero = () => {
               >
                 <h1 className="mb-6 text-3xl font-bold leading-snug text-white sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-[1.2]">
                   Say goodbye to errors, delays, and revenue loss with
-                  Notedoctor.AI
+                  NoteDoctorAI
                 </h1>
                 <p className="mx-auto mb-9 max-w-[600px] text-base font-medium text-white sm:text-lg sm:leading-[1.44]">
                   Unlock the power of Augmented intelligence to revolutionize
-                  medical coding!
+                  medical coding and utilization review!
                 </p>
                 <div className="flex w-full items-center justify-center">
                   <Button
