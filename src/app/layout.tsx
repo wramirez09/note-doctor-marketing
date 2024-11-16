@@ -40,6 +40,14 @@ export default function RootLayout({
       />
       <meta property="og:image" content="opengraph-image.jpg" />
       <meta property="og:url" content="https://notedoctor.ai/" />
+
+      <meta property="twitter:NoteDoctorAi" content="NoteDoctorAI" />
+      <meta
+        property="twitter:Meet NoteDoctorAI: Revolutionizing healthcare with AI-driven medical coding solutions. Boost accuracy, streamline efficiency, and drive profitability for healthcare organizations across the globe."
+        content="A brief summary of my page"
+      />
+      <meta property="twitter:image" content="opengraph-image.jpg" />
+      <meta property="twitter:url" content="https://notedoctor.ai/" />
       <head>
         <ColorSchemeScript />
       </head>
