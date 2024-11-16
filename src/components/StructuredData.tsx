@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-export function StructuredData({ data }) {
+export function StructuredData(data: any) {
   return (
     <Head>
       <script
