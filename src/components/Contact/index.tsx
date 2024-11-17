@@ -23,7 +23,7 @@ const Contact: React.FC<{ showNewsLetterSignUp?: boolean }> = ({
 
     try {
       const response = await fetch(
-        "https://sendemaildoctorai.azurewebsites.net/api/sendemail?code=HFWBRLa2tP7T_A9GTIJ8O-kQ7JeVt2LymyhiXJSGobKlAzFuMOCfcg==",
+        "https://sendemail-doctorai.azurewebsites.net/api/sendemail?code=-EH4H4t30FS5pZoxRHteBAW8JlU-NBeQoJEiwN371fkmAzFuNPNvIw%3D%3D",
         {
           method: "POST",
           headers: {
