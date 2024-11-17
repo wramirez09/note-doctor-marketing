@@ -2,10 +2,48 @@
 
 import { Button } from "@mantine/core";
 import NewsLatterBox from "./NewsLetterBox";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact: React.FC<{ showNewsLetterSignUp?: boolean }> = ({
   showNewsLetterSignUp = true,
 }) => {
+  const sendEmail = async (formdata: any) => {
+    const senderName = formdata.get("name");
+    const senderEmail = formdata.get("email");
+    const senderMessage = formdata.get("message");
+
+    const emailDetails = JSON.stringify({
+      name: senderName,
+      email: senderEmail,
+      message: senderMessage,
+    });
+    console.log({ emailDetails });
+
+    try {
+      const response = await fetch(
+        "https://sendemaildoctorai.azurewebsites.net/api/sendemail?code=HFWBRLa2tP7T_A9GTIJ8O-kQ7JeVt2LymyhiXJSGobKlAzFuMOCfcg==",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: emailDetails,
+        },
+      );
+      console.log({ response });
+      if (response.ok) {
+        toast.success("email submitted, Thank you");
+        const data = await response.text();
+        return data;
+      } else {
+        toast.error("There was an error");
+      }
+    } catch (error) {
+      toast.error("There was an error");
+      console.error("Error:", error);
+    }
+  };
   return (
     <section
       id="contact"
@@ -31,7 +69,7 @@ const Contact: React.FC<{ showNewsLetterSignUp?: boolean }> = ({
                 we can help your business grow, our team is here to assist you.
                 Reach out to us through the form below.
               </p>
-              <form action="https://sendemail-doctorai.azurewebsites.net/api/sendemail?code=-EH4H4t30FS5pZoxRHteBAW8JlU-">
+              <form action={sendEmail}>
                 <div className="-mx-4 flex flex-wrap">
                   <div className="w-full px-4 md:w-1/2">
                     <div className="mb-8">
@@ -42,7 +80,8 @@ const Contact: React.FC<{ showNewsLetterSignUp?: boolean }> = ({
                         Your Name
                       </label>
                       <input
-                        type="text"
+                        type="name"
+                        name="name"
                         placeholder="Enter your name"
                         className="dark:text-body-color-dark w-full rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                       />
@@ -58,6 +97,7 @@ const Contact: React.FC<{ showNewsLetterSignUp?: boolean }> = ({
                       </label>
                       <input
                         type="email"
+                        name="email"
                         placeholder="Enter your email"
                         className="dark:text-body-color-dark w-full rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                       />
@@ -95,6 +135,7 @@ const Contact: React.FC<{ showNewsLetterSignUp?: boolean }> = ({
           )}
         </div>
       </div>
+      <ToastContainer />
     </section>
   );
 };
