@@ -31,7 +31,7 @@ const Contact: React.FC<{ showNewsLetterSignUp?: boolean }> = ({
                 we can help your business grow, our team is here to assist you.
                 Reach out to us through the form below.
               </p>
-              <form>
+              <form action="https://sendemail-doctorai.azurewebsites.net/api/sendemail?code=-EH4H4t30FS5pZoxRHteBAW8JlU-">
                 <div className="-mx-4 flex flex-wrap">
                   <div className="w-full px-4 md:w-1/2">
                     <div className="mb-8">
@@ -80,7 +80,9 @@ const Contact: React.FC<{ showNewsLetterSignUp?: boolean }> = ({
                     </div>
                   </div>
                   <div className="w-full px-4">
-                    <Button className="button-primary">Submit</Button>
+                    <Button className="button-primary" type="submit">
+                      Submit
+                    </Button>
                   </div>
                 </div>
               </form>
@@ -92,8 +94,8 @@ const Contact: React.FC<{ showNewsLetterSignUp?: boolean }> = ({
             </div>
           )}
         </div>
-      </div >
-    </section >
+      </div>
+    </section>
   );
 };
 
