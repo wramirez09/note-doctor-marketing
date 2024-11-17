@@ -17,6 +17,7 @@ const Contact: React.FC<{ showNewsLetterSignUp?: boolean }> = ({
       name: senderName,
       email: senderEmail,
       message: senderMessage,
+      subject: "NoteDoctorAi | prospective client",
     });
     console.log({ emailDetails });
 
@@ -32,7 +33,7 @@ const Contact: React.FC<{ showNewsLetterSignUp?: boolean }> = ({
         },
       );
       console.log({ response });
-      if (response.ok) {
+      if (response.ok || response.status === 200) {
         toast.success("email submitted, Thank you");
         const data = await response.text();
         return data;
