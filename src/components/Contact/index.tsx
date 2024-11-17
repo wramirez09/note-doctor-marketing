@@ -17,7 +17,6 @@ const Contact: React.FC<{ showNewsLetterSignUp?: boolean }> = ({
       name: senderName,
       email: senderEmail,
       message: senderMessage,
-      subject: "NoteDoctorAi | prospective client",
     });
     console.log({ emailDetails });
 
