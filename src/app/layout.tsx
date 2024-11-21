@@ -33,7 +33,7 @@ export default function RootLayout({
         <head /> will contain the components returned by the nearest parent
         head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
-      <meta property="og:NoteDoctorAi" content="NoteDoctorAI" />
+      {/* <meta property="og:NoteDoctorAi" content="NoteDoctorAI" />
       <meta
         property="og:Meet NoteDoctorAI: Revolutionizing healthcare with AI-driven medical coding solutions. Boost accuracy, streamline efficiency, and drive profitability for healthcare organizations across the globe."
         content="A brief summary of my page"
@@ -47,7 +47,7 @@ export default function RootLayout({
         content="A brief summary of my page"
       />
       <meta property="twitter:image" content="opengraph-image.jpg" />
-      <meta property="twitter:url" content="https://notedoctor.ai/" />
+      <meta property="twitter:url" content="https://notedoctor.ai/" /> */}
       <head>
         <ColorSchemeScript />
       </head>

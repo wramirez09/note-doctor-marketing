@@ -4,6 +4,26 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "404 Page | Play SaaS Starter Kit and Boilerplate for Next.js",
+  description: "404 Page | Play SaaS Starter Kit and Boilerplate for Next.js",
+  openGraph: {
+    type: "website",
+    url: "https://notedoctor.ai/",
+    title: "404 Page | Play SaaS Starter Kit and Boilerplate for Next.js",
+    description: "404 Page | Play SaaS Starter Kit and Boilerplate for Next.js",
+    images: [
+      {
+        url: "https://notedoctor.ai/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "404 Page | Play SaaS Starter Kit and Boilerplate for Next.js",
+    description: "404 Page | Play SaaS Starter Kit and Boilerplate for Next.js",
+    images: ["https://notedoctor.ai/opengraph-image.jpg"],
+  },
 };
 
 const ErrorPage = () => {

@@ -10,7 +10,31 @@ export const metadata: Metadata = {
     "About NoteDoctorAI | Transforming Healthcare with AI-Powered Innovation",
   description:
     "Learn about NoteDoctorAI, a pioneer in AI-driven healthcare solutions. Our mission is to revolutionize medical coding with cutting-edge technology, enhancing accuracy, efficiency, and profitability for healthcare organizations globally.",
+  openGraph: {
+    type: "website",
+    url: "https://notedoctor.ai/",
+    title:
+      "About NoteDoctorAI | Transforming Healthcare with AI-Powered Innovation",
+    description:
+      "Learn about NoteDoctorAI, a pioneer in AI-driven healthcare solutions. Our mission is to revolutionize medical coding with cutting-edge technology, enhancing accuracy, efficiency, and profitability for healthcare organizations globally.",
+    images: [
+      {
+        url: "https://notedoctor.ai/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "About NoteDoctorAI | Transforming Healthcare with AI-Powered Innovation",
+    description:
+      "Learn about NoteDoctorAI, a pioneer in AI-driven healthcare solutions. Our mission is to revolutionize medical coding with cutting-edge technology, enhancing accuracy, efficiency, and profitability for healthcare organizations globally.",
+    images: ["https://notedoctor.ai/opengraph-image.jpg"],
+  },
 };
+
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "about page",
