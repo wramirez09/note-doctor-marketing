@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "404 Page | Play SaaS Starter Kit and Boilerplate for Next.js",
   openGraph: {
     type: "website",
-    url: "https://notedoctor.ai/",
+    url: "https://notedoctor.ai/error",
     title: "404 Page | Play SaaS Starter Kit and Boilerplate for Next.js",
     description: "404 Page | Play SaaS Starter Kit and Boilerplate for Next.js",
     images: [

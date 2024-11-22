@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "Reach out to NoteDoctorAI for innovative AI solutions in healthcare. Our team is here to help transform medical coding and enhance efficiency, accuracy, and profitability for healthcare organizations worldwide.",
   openGraph: {
     type: "website",
-    url: "https://notedoctor.ai/",
+    url: "https://notedoctor.ai/contact",
     title:
       "Contact NoteDoctorAI | Get in Touch for AI-Powered Healthcare Solutions",
     description:

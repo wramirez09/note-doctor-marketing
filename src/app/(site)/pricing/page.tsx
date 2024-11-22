@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: "This is pricing page description",
   openGraph: {
     type: "website",
-    url: "https://notedoctor.ai/",
+    url: "https://notedoctor.ai/pricing",
     title: "Pricing Page | Play SaaS Starter Kit and Boilerplate for Next.js",
     description: "This is pricing page description",
     images: [
