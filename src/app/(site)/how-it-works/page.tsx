@@ -9,6 +9,29 @@ export const metadata: Metadata = {
     "How NoteDoctorAI Works | AI-Driven Medical Coding for Healthcare Efficiency",
   description:
     "Discover how NoteDoctorAI's advanced AI technology revolutionizes medical coding. Learn how our solutions drive efficiency, accuracy, and profitability for healthcare organizations globally.",
+  openGraph: {
+    type: "website",
+    url: "https://notedoctor.ai/how-it-works",
+    title:
+      "How NoteDoctorAI Works | AI-Driven Medical Coding for Healthcare Efficiency",
+    description:
+      "Discover how NoteDoctorAI's advanced AI technology revolutionizes medical coding. Learn how our solutions drive efficiency, accuracy, and profitability for healthcare organizations globally.",
+    images: [
+      {
+        url: "https://notedoctor.ai/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "How NoteDoctorAI Works | AI-Driven Medical Coding for Healthcare Efficiency",
+    description:
+      "Discover how NoteDoctorAI's advanced AI technology revolutionizes medical coding. Learn how our solutions drive efficiency, accuracy, and profitability for healthcare organizations globally.",
+    images: ["https://notedoctor.ai/opengraph-image.jpg"],
+  },
 };
 
 const structuredData = {

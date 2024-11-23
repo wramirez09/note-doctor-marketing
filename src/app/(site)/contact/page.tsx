@@ -9,6 +9,29 @@ export const metadata: Metadata = {
     "Contact NoteDoctorAI | Get in Touch for AI-Powered Healthcare Solutions",
   description:
     "Reach out to NoteDoctorAI for innovative AI solutions in healthcare. Our team is here to help transform medical coding and enhance efficiency, accuracy, and profitability for healthcare organizations worldwide.",
+  openGraph: {
+    type: "website",
+    url: "https://notedoctor.ai/contact",
+    title:
+      "Contact NoteDoctorAI | Get in Touch for AI-Powered Healthcare Solutions",
+    description:
+      "Reach out to NoteDoctorAI for innovative AI solutions in healthcare. Our team is here to help transform medical coding and enhance efficiency, accuracy, and profitability for healthcare organizations worldwide.",
+    images: [
+      {
+        url: "https://notedoctor.ai/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Contact NoteDoctorAI | Get in Touch for AI-Powered Healthcare Solutions",
+    description:
+      "Reach out to NoteDoctorAI for innovative AI solutions in healthcare. Our team is here to help transform medical coding and enhance efficiency, accuracy, and profitability for healthcare organizations worldwide.",
+    images: ["https://notedoctor.ai/opengraph-image.jpg"],
+  },
 };
 
 const structuredData = {
