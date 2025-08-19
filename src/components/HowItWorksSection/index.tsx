@@ -1,6 +1,6 @@
 import { Text, SimpleGrid, rem, Title } from "@mantine/core";
 import {
-  IconNumber1,
+  IconInfoCircle,
   IconNumber2,
   IconNumber3,
   IconNumber4,
@@ -31,11 +31,11 @@ function Feature({
 
       <div className={classes.content}>
         <Icon
-          style={{ width: rem(38), height: rem(38) }}
+          style={{ width: rem(18), height: rem(18) }}
           className={classes.icon}
           stroke={1.5}
         />
-        <Text fw={700} fz="lg" mb="xs" mt={5} className={classes.title}>
+        <Text fw={700} fz="lg" mb="xs" mt={0} className={classes.title}>
           {title}
         </Text>
         <Text c="dimmed" fz="sm">
@@ -48,48 +48,44 @@ function Feature({
 
 const mockdata = [
   {
-    icon: IconNumber1,
-    title: "Effortless Upload",
-    description:
-      "With NoteDoctorAI's drag and drop system, uploading files for processing is a breeze. Simply drag your files into the designated area, sit back, and let the magic unfold. It's like having a personal assistant handle the paperwork, freeing up your time for more important tasks.",
+    icon: IconInfoCircle,
+    title: "93% of physicians say prior auth causes care delays",
+    description: "",
   },
   {
-    icon: IconNumber2,
-    title: "Review and Analyze",
-    description:
-      "It proceeds to meticulously review the information provided in the healthcare provider's note. It's like having a seasoned expert at your fingertips, sifting through the details and unraveling the complexities to reveal valuable insights.",
+    icon: IconInfoCircle,
+    title: "82% report it leads to treatment abandonment",
+    description: "",
   },
   {
-    icon: IconNumber3,
-    title: "Precision Prediction",
-    description:
-      "Armed with a wealth of knowledge, NoteDoctorAI predicts the correct ICD 10 but can be forward compatible with ICD 11 code with unparalleled precision. It also provides supporting data for diagnosis, empowering you with comprehensive information to make informed decisions.",
+    icon: IconInfoCircle,
+    title:
+      "29% have seen it result in a serious adverse event, including death",
+    description: "",
   },
   {
-    icon: IconNumber4,
-    title: "Summarizing for Clarity",
-    description:
-      "Provider notes can be overwhelming, but fret not – NoteDoctorAI summarizes the essential information, making it easily digestible for coders by ensuring clarity and focus amidst the complexity.",
+    icon: IconInfoCircle,
+    title: "89% confirm it fuels physician burnout",
+    description: "",
   },
-  {
-    icon: IconNumber5,
-    title: "Export with Ease",
-    description:
-      "Once the coding masterpiece is complete, NoteDoctorAI offers seamless export capabilities in PDF or Word format.. Share your findings with ease, whether it's for collaboration, review, or presentation purposes.",
-  },
-  {
-    icon: IconNumber6,
-    title: "Experience the Magic",
-    description:
-      "Embark on your coding journey with NoteDoctorAI and unlock the full potential of your coding workflow. Say goodbye to complexity and hello to seamless efficiency, accuracy, and productivity.",
-  },
+  // {
+  //   icon: IconNumber5,
+  //   title: "Export with Ease",
+  //   description:
+  //     "Once the coding masterpiece is complete, NoteDoctorAI offers seamless export capabilities in PDF or Word format.. Share your findings with ease, whether it's for collaboration, review, or presentation purposes.",
+  // },
+  // {
+  //   icon: IconNumber6,
+  //   title: "Experience the Magic",
+  //   description:
+  //     "Embark on your coding journey with NoteDoctorAI and unlock the full potential of your coding workflow. Say goodbye to complexity and hello to seamless efficiency, accuracy, and productivity.",
+  // },
 ];
 
 export default function HowItWorksSection() {
   const items = mockdata.map((item) => <Feature {...item} key={item.title} />);
 
   return (
-  
     <>
       <Headline />
       <hr style={{ borderColor: "#3b3b3b" }} />
@@ -101,17 +97,23 @@ export default function HowItWorksSection() {
         fw={900}
         className="pb-1 pt-8 max-sm:text-center md:pb-5"
       >
-        How it Works
+        The Impact on Healthcare
       </Title>
-      <Title c="#FFF" size={"lg"} className="lg:pr-[250px]">Streamline Concurrent Review and Denials with augmented intelligence. Easily summarize
-        provider notes with data supporting ICD diagnosis and supporting documentation for inpatient
-        vs observation status for patients in acute care.</Title>
-      <SimpleGrid cols={{ base: 1, sm: 3 }} spacing={50} className="pb-10 mt-5 mb-10">
+      <Title c="#FFF" size={"lg"} className="lg:pr-[250px]">
+        {/* Streamline Concurrent Review and Denials with augmented intelligence.
+        Easily summarize provider notes with data supporting ICD diagnosis and
+        supporting documentation for inpatient vs observation status for
+        patients in acute care. */}
+      </Title>
+      <SimpleGrid
+        cols={{ base: 1, sm: 1 }}
+        spacing={5}
+        className="mb-10 mt-1 pb-3"
+      >
         {items}
       </SimpleGrid>
       <Titledfeatures />
       {/* <NewsletterSignUp /> */}
     </>
-  
   );
 }

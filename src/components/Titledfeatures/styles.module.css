@@ -5,7 +5,8 @@
 
 .title {
   font-weight: 900;
-  margin-bottom: var(--mantine-spacing-md);
+  margin-bottom: var(--mantine-spacing-xl);
+  margin-top: var(--mantine-spacing-xl);
   text-align: center;
   color: #e3dcdc;
   text-align: left;

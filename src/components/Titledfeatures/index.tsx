@@ -20,39 +20,23 @@ import classes from "./styles.module.css";
 export const MOCKDATA = [
   {
     icon: IconArcheryArrow,
-    title: "Predictive Coding Accuracy",
-    description:
-      "Experience coding accuracy like never before with NoteDoctorAI. Our AI-powered platform analyzes provider notes with precision, predicting the correct ICD 10 but can be forward compatibility with ICD 11 codes and minimizing errors. Ensure comprehensive documentation and maximize revenue potential with our advanced solution.",
+    title: "Clarity upfront",
+    description: "Know exactly what documentation is required",
   },
   {
     icon: IconCalendarStats,
-    title: "Hospital Status Accuracy",
-    description:
-      "NoteDoctorAI can help accurately determine inpatient vs observation status for hospital settings with data to support it. Avoid long delays with insurance companies as the first pass will have the data to support hospital status.",
+    title: "Smarter workflows",
+    description: "Reduce denials and avoid endless appeals",
   },
   {
     icon: IconAffiliate,
-    title: "Streamlined Workflow",
-    description:
-      "Optimize your coding workflow with NoteDoctorAI's streamlined solution. From rapid note processing to intuitive coding suggestions, our platform simplifies the entire coding process. Say goodbye to manual tasks and hello to efficiency and productivity.",
+    title: "Faster approvals",
+    description: "Move patients to treatment sooner",
   },
   {
     icon: IconAB2,
-    title: "Real-Time Feedback and Suggestions",
-    description:
-      "With NoteDoctorAI, you're never alone in the coding process. It provides real-time feedback and coding suggestions, empowering you to make informed decisions and produce comprehensive documentation. Improve coding accuracy and efficiency with our intelligent solution.",
-  },
-  {
-    icon: IconRefresh,
-    title: "Continuous Improvement and Updates",
-    description:
-      "At NoteDoctorAI, we're committed to continuous improvement and innovation. Our platform is regularly updated with the latest advancements in AI technology and coding practices to ensure maximum effectiveness and accuracy. Stay ahead of the curve with NoteDoctorAI's cutting-edge solutions.",
-  },
-  {
-    icon: IconShape,
-    title: "Scalability for Growth",
-    description:
-      "Whether you're a small clinic or a large healthcare system, NoteDoctorAI scales to meet your needs. Our platform is designed to accommodate growth, allowing you to expand your operations without sacrificing efficiency or accuracy. Scale your coding capabilities with confidence with NoteDoctorAI.",
+    title: "Physician protection",
+    description: "Cut burnout by reducing administrative burden",
   },
 ];
 
@@ -86,29 +70,30 @@ export function Titledfeatures() {
   return (
     <section className="w-full">
       <hr className={`max-xs:mt-1 ${classes.rule} `} />
-      <Title className={classes.title}>
-        Explore the full potential of medical coding with NoteDoctorAI.
-      </Title>
+      <Title className={classes.title}>The Bigger Picture</Title>
 
       <Text size="sm" className={classes.description}>
-        Sign up now to revolutionize your coding processes and transform your
-        healthcare organization.
+        Insurers claim efficiency, but often at patients’ expense. A 2023
+        investigation uncovered 300,000+ instant AI-driven denials in just two
+        months — without reviewing patient files. This isn’t cost savings. It’s
+        care denied.
       </Text>
 
-      <div className="mt-5 flex justify-start">
-        <Button component="a" href="/contact">
-          Get Started Today
-        </Button>
-      </div>
+      <Title className={classes.title}>How NoteDoctor.AI Helps</Title>
 
       <SimpleGrid
         mt={60}
-        cols={{ base: 1, sm: 2, md: 3 }}
+        cols={{ base: 1, sm: 2, md: 2 }}
         spacing={{ base: "xl", md: 50 }}
         verticalSpacing={{ base: "xl", md: 50 }}
       >
         {features}
       </SimpleGrid>
+      <div className="mt-5 mt-9 flex justify-center">
+        <Button component="a" href="/contact">
+          Get Started Today
+        </Button>
+      </div>
     </section>
   );
 }

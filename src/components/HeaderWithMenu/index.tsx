@@ -89,23 +89,23 @@ export function HeaderWithMenu() {
                   Home
                 </div>
                 <div
-                  className={`${classes.link} ${isActiveLink("/how-it-works") ? classes.activeLink : ""}`}
-                  onClick={() => router.push("/how-it-works")}
+                  className={`${classes.link} ${isActiveLink("/for-healthcare") ? classes.activeLink : ""}`}
+                  onClick={() => router.push("/for-healthcare")}
                 >
-                  How It Works
+                  For Healthcare
                 </div>
                 <div
-                  className={`${classes.link} ${isActiveLink("/security") ? classes.activeLink : ""}`}
-                  onClick={() => router.push("/security")}
+                  className={`${classes.link} ${isActiveLink("/for-physicians") ? classes.activeLink : ""}`}
+                  onClick={() => router.push("/for-physicians")}
                 >
-                  Security
+                  For Physicians
                 </div>
-                <div
+                {/* <div
                   className={`${classes.link} ${isActiveLink("/about") ? classes.activeLink : ""}`}
                   onClick={() => router.push("/about")}
                 >
                   About Us
-                </div>
+                </div> */}
                 <div
                   className={`${classes.link} ${isActiveLink("/contact") ? classes.activeLink : ""}`}
                   onClick={() => router.push("/contact")}
@@ -116,14 +116,14 @@ export function HeaderWithMenu() {
 
               <div className="hidden w-60 max-w-full lg:block">
                 <div className="flex gap-2">
-                  <Button
+                  {/* <Button
                     target="_blank"
                     className="button-light"
                     component="a"
                     href="https://login.microsoftonline.com/5ca01929-328f-421e-99f8-51430e1e6eb5/oauth2/v2.0/authorize?response_type=code+id_token&redirect_uri=https%3A%2F%2Fhealthapp0.azurewebsites.net%2F.auth%2Flogin%2Faad%2Fcallback&client_id=1081de41-c6fa-4089-9725-8f927bba46d3&scope=openid+profile+email&response_mode=form_post&nonce=2aec1ade30c8491291e984738ea5e64f_20241031235734&state="
                   >
                     Log in
-                  </Button>
+                  </Button> */}
                   <Button
                     className="button-primary"
                     component="a"
@@ -144,7 +144,7 @@ export function HeaderWithMenu() {
         </div>
       </header>
 
-      <Drawer
+      {/* <Drawer
         opened={drawerOpened}
         onClose={closeDrawer}
         size="100%"
@@ -224,7 +224,7 @@ export function HeaderWithMenu() {
             </Button>
           </Group>
         </ScrollArea>
-      </Drawer>
+      </Drawer> */}
     </Box>
   );
 }
