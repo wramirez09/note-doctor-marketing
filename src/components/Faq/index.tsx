@@ -1,10 +1,15 @@
-"use client"
+"use client";
 
 import { Container } from "@mantine/core";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import SectionTitle from "../Common/SectionTitle";
 import SingleFaq from "./SingleFaq";
+import { Blockquote } from "@mantine/core";
+import { IconInfoCircle } from "@tabler/icons-react";
 import classes from "./index.module.css";
+import classNames from "classnames";
+
+const icon = <IconInfoCircle />;
 
 const Faq = () => {
   return (
@@ -20,35 +25,69 @@ const Faq = () => {
         <div className="mt-12 md:px-12">
           <SectionTitle
             subtitle=""
-            title="Why Choose NoteDoctorAI?"
+            title="What Physicians Are Saying"
             paragraph=""
             width="640px"
             center
           />
 
-          <div className="-mx-4 mt-[60px] flex flex-wrap lg:mt-20">
-            <div className="w-full px-4 lg:w-1/2">
-              <SingleFaq
-                question="Unparalleled Accuracy"
-                answer="With our state-of-the-art AI technology, we deliver unparalleled accuracy in medical coding, significantly reducing errors and minimizing revenue loss."
-              />
-              <SingleFaq
-                question="Efficiency Redefined"
-                answer="Say goodbye to time-consuming manual coding processes. Our platform processes notes in seconds, freeing up valuable time for healthcare professionals to focus on patient care."
-              />
+          <div className="-mx-4 mb-7 mt-[60px] flex flex-wrap lg:mt-20">
+            <div className="mb-9 w-full px-4 lg:w-1/2">
+              <Blockquote
+                color="blue"
+                cite="– Forrest Gump"
+                icon={icon}
+                mt="xl"
+                c={"white"}
+              >
+                “We don’t actually know what piece of information the insurer is
+                looking for.”
+              </Blockquote>
             </div>
 
-            <div className="w-full px-4 lg:w-1/2">
-              <SingleFaq
-                question="Data Security"
-                answer="Your data is our top priority. We adhere to the highest standards of security and confidentiality, ensuring that your information remains protected at all times."
-              />
-              <SingleFaq
-                question="Cost-Effectiveness"
-                answer="By improving coding accuracy and streamlining workflows, NoteDoctorAI helps healthcare organizations save costs and optimize revenue streams."
-              />
+            <div className="mb-9 w-full px-4 lg:w-1/2">
+              <Blockquote
+                color="blue"
+                cite="– Forrest Gump"
+                icon={icon}
+                mt="xl"
+                c={"white"}
+              >
+                “It’s a huge diversion of time and resources.”
+              </Blockquote>
+            </div>
+            <div className="mb-9 w-full px-4 lg:w-1/2">
+              <Blockquote
+                color="blue"
+                cite="– Forrest Gump"
+                icon={icon}
+                mt="xl"
+                c={"white"}
+              >
+                “Many of us have staff who do nothing but focus on prior
+                authorization paperwork.”
+              </Blockquote>
+            </div>
+            <div className="mb-9 w-full px-4 lg:w-1/2">
+              <Blockquote
+                color="blue"
+                cite="– Forrest Gump"
+                icon={icon}
+                mt="xl"
+                c={"white"}
+              >
+                “Many of us have staff who do nothing but focus on prior
+                authorization paperwork.”
+              </Blockquote>
             </div>
           </div>
+          <SectionTitle
+            subtitle="This cycle leaves patients without timely treatment — raising hospitalization risk and worsening outcomes."
+            title=""
+            paragraph=""
+            width="640px"
+            center
+          />
         </div>
 
         <div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import SectionTitle from "../Common/SectionTitle";
 import SingleFeature from "./SingleFeature";
 import featuresData from "./featuresData";
@@ -16,8 +16,8 @@ const Features = () => {
         <div className="md:px-12">
           <SectionTitle
             subtitle="Features"
-            title="Innovative Solutions for Smarter Healthcare"
-            paragraph="Transforming the way medical professionals work with cutting-edge technology that drives accuracy, efficiency and seamless workflows"
+            title="The Problem: Prior Authorization is Broken"
+            paragraph=""
             center
           />
 
@@ -27,6 +27,12 @@ const Features = () => {
             ))}
           </div>
         </div>
+        <SectionTitle
+          subtitle="The result: wasted time, rising costs, physician burnout, and patient
+          harm."
+          title=""
+          paragraph=""
+        />
       </section>
     </motion.div>
   );
