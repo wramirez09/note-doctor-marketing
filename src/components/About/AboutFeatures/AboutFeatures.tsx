@@ -8,40 +8,38 @@ import {
   SimpleGrid,
   Text,
   Title,
-  useMantineTheme
+  useMantineTheme,
 } from "@mantine/core";
 import {
-  IconEye,
-  IconHearts,
-  IconTelescope,
-  IconUsers,
+  IconAmbulance,
+  IconStethoscope,
+  IconFileStack,
+  IconHourglassHigh,
 } from "@tabler/icons-react";
 import classes from "./aboutFeatrures.module.css";
 
 const mockdata = [
   {
-    title: "Who We Are",
-    description:
-      "NoteDoctorAI is a leading provider of AI-powered solutions for the healthcare industry. Founded with a vision to revolutionize medical coding, our team combines expertise in Augmented intelligence, healthcare, and technology to deliver cutting-edge solutions that drive efficiency, accuracy, and profitability for healthcare organizations worldwide.",
-    icon: IconUsers,
+    title: "Delaying Critical Care",
+    description: "93% of physicians say prior auth delays care",
+    icon: IconHourglassHigh,
   },
   {
-    title: "Our Mission",
-    description:
-      "At NoteDoctorAI, our mission is to revolutionize the healthcare industry through the power of Augmented intelligence. We are committed to empowering healthcare organizations with innovative solutions that enhance efficiency, accuracy, and profitability.",
-    icon: IconTelescope,
+    title: "Inefficient and Wasteful",
+    description: "Manual processes waste resources and create inefficiencies",
+    icon: IconFileStack,
   },
   {
-    title: "Our Vision",
+    title: "Driving Worse Outcomes",
     description:
-      "Our vision is to create a future where healthcare providers can focus on what matters most – delivering high-quality care to patients. We envision a world where coding processes are streamlined, errors are minimized, and revenue cycle management is optimized.",
-    icon: IconEye,
+      "Delays lead to higher ER visits, hospitalizations, and readmissions",
+    icon: IconAmbulance,
   },
   {
-    title: "Our Values",
+    title: "Straining the Doctor–Patient Relationship",
     description:
-      "At NoteDoctorAI, we are guided by a set of core values that define who we are and how we operate: Excellence - Integrity - Innovation Collaboration - Impact",
-    icon: IconHearts,
+      "Prior auth erodes trust as patients blame physicians for delays and denials",
+    icon: IconStethoscope,
   },
 ];
 

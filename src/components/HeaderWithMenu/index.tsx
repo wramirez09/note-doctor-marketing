@@ -100,12 +100,12 @@ export function HeaderWithMenu() {
                 >
                   For Physicians
                 </div>
-                {/* <div
-                  className={`${classes.link} ${isActiveLink("/about") ? classes.activeLink : ""}`}
-                  onClick={() => router.push("/about")}
+                <div
+                  className={`${classes.link} ${isActiveLink("/for-health-systems") ? classes.activeLink : ""}`}
+                  onClick={() => router.push("/for-health-systems")}
                 >
-                  About Us
-                </div> */}
+                  For Health Systems
+                </div>
                 <div
                   className={`${classes.link} ${isActiveLink("/contact") ? classes.activeLink : ""}`}
                   onClick={() => router.push("/contact")}
@@ -144,7 +144,7 @@ export function HeaderWithMenu() {
         </div>
       </header>
 
-      {/* <Drawer
+      <Drawer
         opened={drawerOpened}
         onClose={closeDrawer}
         size="100%"
@@ -169,27 +169,27 @@ export function HeaderWithMenu() {
             Home
           </div>
           <div
-            className={`${classes.link} ${isActiveLink("/how-it-works") ? classes.activeLink : ""}`}
+            className={`${classes.link} ${isActiveLink("/for-healthcare") ? classes.activeLink : ""}`}
             onClick={() => {
-              router.push("/how-it-works");
+              router.push("/for-healthcare");
               closeDrawer();
             }}
           >
             How It Works
           </div>
           <div
-            className={`${classes.link} ${isActiveLink("/security") ? classes.activeLink : ""}`}
+            className={`${classes.link} ${isActiveLink("/for-physicans") ? classes.activeLink : ""}`}
             onClick={() => {
-              router.push("/security");
+              router.push("/for-physicans");
               closeDrawer();
             }}
           >
             Security
           </div>
           <div
-            className={`${classes.link} ${isActiveLink("/about") ? classes.activeLink : ""}`}
+            className={`${classes.link} ${isActiveLink("/for-health-systems") ? classes.activeLink : ""}`}
             onClick={() => {
-              router.push("/about");
+              router.push("/for-health-systems");
               closeDrawer();
             }}
           >
@@ -224,7 +224,7 @@ export function HeaderWithMenu() {
             </Button>
           </Group>
         </ScrollArea>
-      </Drawer> */}
+      </Drawer>
     </Box>
   );
 }

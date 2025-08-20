@@ -31,7 +31,7 @@ const SecurityPage = () => {
   return (
     <>
       <StructuredData data={structuredData} />
-      <Breadcrumb pageName="Security Page" />
+      <Breadcrumb pageName="For Physicians" />
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -40,18 +40,16 @@ const SecurityPage = () => {
         <div className="container mb-11 mb-[160px] mt-11">
           <Container size="md">
             <h1 className="lg:mb[150px] accent mt-[160px] text-center text-3xl font-bold leading-snug text-white sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-[1.2]">
-              Data Security and Compliance
+              Less Paperwork. More Patient Care.
             </h1>
 
             <p className="mx-auto mb-9 text-center text-base font-medium text-white sm:text-lg sm:leading-[1.44]">
-              At NoteDoctorAI, safeguarding your data is our top priority. We
-              understand the critical importance of data security in the
-              healthcare industry and are committed to maintaining the highest
-              standards of protection for your sensitive information.
+              Reclaim your time and reduce burnout with transparent, streamlined
+              prior authorization.
             </p>
             <div className="flex items-center justify-center">
               <Button component="a" href="#more">
-                Learn More
+                Take Back Your Time
               </Button>
             </div>
             <hr style={{ opacity: "15%" }} className="mt-5" />

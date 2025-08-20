@@ -3,6 +3,7 @@ import Breadcrumb from "@/components/Common/Breadcrumb";
 import Team from "@/components/Team";
 import { Metadata } from "next";
 import { Services } from "./services";
+import { Services2 } from "./services2";
 import { StructuredData } from "@/components/StructuredData";
 
 export const metadata: Metadata = {
@@ -52,10 +53,11 @@ const AboutPage = () => {
   return (
     <main>
       <StructuredData data={structuredData} />
-      <Breadcrumb pageName="About Us Page" />
+      <Breadcrumb pageName="For Health Systems" />
       <About />
       <Services />
-      <Team />
+      {/* <hr style={{ opacity: "15%" }} className="mt-5" /> */}
+      {/* <Services2 /> */}
     </main>
   );
 };
