@@ -15,11 +15,13 @@ export const Headline: React.FC<{
   subHeadline?: string;
   desc?: string;
   btns?: ButtonsData[];
+  hideBtn?: boolean;
 }> = ({
   headline = "Automated AI",
   subHeadline = "Medical Data",
   desc = "Build more reliable software with AI companion. AI is also trained to detect medical codes do medical analysis.",
   btns = [],
+  hideBtn = false,
 }) => {
   return (
     <Container className={classes.wrapper} size={1400} style={{ marginTop: 0 }}>
@@ -43,14 +45,16 @@ export const Headline: React.FC<{
         </Container>
 
         <div className={`${classes.controls} max-sm:flex-col`}>
-          <Button
-            className={`${classes.control} button-light max-sm:mb-5 max-xs:w-full md:mr-5`}
-            size="md"
-            component="a"
-            href="/contact"
-          >
-            Book a demo
-          </Button>{" "}
+          {!hideBtn && (
+            <Button
+              className={`${classes.control} button-light max-sm:mb-5 max-xs:w-full md:mr-5`}
+              size="md"
+              component="a"
+              href="/contact"
+            >
+              Contact Us
+            </Button>
+          )}
           {/* <Button
             className={`${classes.control} button-primary ml-0 max-xs:w-full`}
             size="md"

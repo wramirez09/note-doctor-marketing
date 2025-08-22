@@ -78,6 +78,16 @@ export function Titledfeatures() {
         months — without reviewing patient files. This isn’t cost savings. It’s
         care denied.
       </Text>
+      <div className="mb-11 mt-9">
+        <p className="text-xs text-white">
+          From Aritcle: <strong>Standing Up to Prior Authorization"</strong>
+        </p>
+        <cite className="text-white dark:text-dark-6">
+          <a href="https://ashpublications.org/ashclinicalnews/news/7981/Standing-Up-to-Prior-Authorization">
+            https://ashpublications.org/ashclinicalnews/news/7981/Standing-Up-to-Prior-Authorization
+          </a>
+        </cite>
+      </div>
 
       <Title className={classes.title}>How NoteDoctor.AI Helps</Title>
 
@@ -89,7 +99,7 @@ export function Titledfeatures() {
       >
         {features}
       </SimpleGrid>
-      <div className="mt-5 mt-9 flex justify-center">
+      <div className="mt-5 mt-9 flex justify-start">
         <Button component="a" href="/contact">
           Get Started Today
         </Button>

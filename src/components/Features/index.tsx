@@ -32,7 +32,15 @@ const Features = () => {
           harm."
           title=""
           paragraph=""
+          center
+          width="100%"
         />
+        <cite className="text-white dark:text-dark-6">
+          <strong className="text-white">Source:</strong>{" "}
+          <a href="https://www.kff.org/medicare/issue-brief/nearly-50-million-prior-authorization-requests-were-sent-to-medicare-advantage-insurers-in-2023/">
+            https://www.kff.org/medicare/issue-brief/nearly-50-million-prior-authorization-requests-were-sent-to-medicare-advantage-insurers-in-2023/
+          </a>
+        </cite>
       </section>
     </motion.div>
   );

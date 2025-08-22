@@ -8,4 +8,5 @@ export type Feature = {
   paragraph: string;
   btn: string;
   btnLink: string;
+  cite?: string; // Optional field for citation
 };

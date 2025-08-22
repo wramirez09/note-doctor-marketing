@@ -23,6 +23,9 @@ const mockdata = [
     title: "Delaying Critical Care",
     description: "93% of physicians say prior auth delays care",
     icon: IconHourglassHigh,
+    cite: "From article: Harnessing informatic's power to cut physician burdens.",
+    citeLink:
+      "https://www.ama-assn.org/practice-management/prior-authorization/harnessing-informatics-power-cut-physician-burdens",
   },
   {
     title: "Inefficient and Wasteful",
@@ -34,6 +37,9 @@ const mockdata = [
     description:
       "Delays lead to higher ER visits, hospitalizations, and readmissions",
     icon: IconAmbulance,
+    cite: "From artricle: Fixing prior auth: Nearly 40 prior authorization a week is to many.",
+    citeLink:
+      "https://www.ama-assn.org/practice-management/prior-authorization/fixing-prior-auth-nearly-40-prior-authorizations-week-way",
   },
   {
     title: "Straining the Doctor–Patient Relationship",
@@ -64,6 +70,14 @@ export function AboutFeatures() {
       <Text fz="sm" c="dimmed" mt="sm">
         {feature.description}
       </Text>
+      {feature.cite && (
+        <p className="mb-3 mt-6 text-xs font-bold text-white">{feature.cite}</p>
+      )}
+      {feature.citeLink && (
+        <cite className="text-xs text-white dark:text-dark-6">
+          <a href={feature.citeLink}>{feature.citeLink}</a>
+        </cite>
+      )}
     </Card>
   ));
 

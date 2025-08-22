@@ -55,7 +55,11 @@ const HowItWorks = () => {
       <section className="container relative z-20 overflow-hidden bg-white pb-8 pt-20 dark:bg-dark lg:pb-[50px] lg:pt-[120px]">
         <div className="container md:px-12">
           <Breadcrumb pageName="For Healthcare" />
-          <HowItWorksSection />
+          <HowItWorksSection
+            headline="The Bigger Picture: "
+            subHeadline="Why This Matters"
+            desc=" Insurers claim success by cutting costs, but often at the expense of care. A 2023 investigation revealed AI-driven instant claim rejections — more than 300,000 denials in two months — without patient files ever being reviewed.This isn’t efficiency. This is harm disguised as savings."
+          />
         </div>
       </section>
     </>

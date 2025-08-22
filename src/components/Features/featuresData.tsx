@@ -1,17 +1,14 @@
 import { Feature } from "@/types/feature";
 import {
-  IconClipboardText,
-  IconHeart,
-  IconHourglassEmpty,
-  IconLayersSubtract,
-  IconRocket,
-  IconTarget,
+  IconClockPause,
+  IconCircleCheck,
+  IconAlertTriangle,
 } from "@tabler/icons-react";
 
 const featuresData: Array<Feature> = [
   {
     id: 1,
-    icon: IconRocket,
+    icon: IconAlertTriangle,
     title: "A System Overloaded",
     paragraph:
       "In 2023, Medicare Advantage processed nearly 50 million prior authorization requests.",
@@ -20,7 +17,7 @@ const featuresData: Array<Feature> = [
   },
   {
     id: 2,
-    icon: IconHourglassEmpty,
+    icon: IconCircleCheck,
     title: "Denials That Don’t Hold Up",
     paragraph:
       "More than 80% of denials from 2019–2023 were later overturned on appeal — showing denials often result from missing documentation, not medical necessity.",
@@ -29,7 +26,7 @@ const featuresData: Array<Feature> = [
   },
   {
     id: 3,
-    icon: IconHeart,
+    icon: IconClockPause,
     title: "Patients Left Waiting",
     paragraph:
       "Physicians and patients still endure weeks of delays, excessive appeals, and denied treatments.",

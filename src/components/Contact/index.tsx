@@ -56,7 +56,7 @@ const Contact: React.FC<{ showNewsLetterSignUp?: boolean }> = ({
       className="overflow-hidden py-16 md:py-20 lg:py-28"
       style={{ backgroundColor: "#061729" }}
     >
-      <div className="container md:px-12">
+      <div className="full-width md:px-12">
         <div
           className={`-mx-4 flex flex-wrap ${!showNewsLetterSignUp ? "items-center justify-center" : ""}`}
         >

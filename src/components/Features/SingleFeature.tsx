@@ -4,7 +4,7 @@ import { rem, useMantineTheme } from "@mantine/core";
 const SingleFeature = ({ feature }: { feature: Feature }) => {
   const theme = useMantineTheme();
 
-  const { title, paragraph, btn, btnLink } = feature;
+  const { title, paragraph, btn, btnLink, cite } = feature;
   return (
     <div className="mx-auto w-full px-5 md:w-1/3  lg:w-1/3">
       <div className="wow fadeInUp group mb-12" data-wow-delay=".15s">
@@ -22,6 +22,9 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
         <p className="mb-5 text-body-color dark:text-dark-6 lg:mb-11">
           {paragraph}
         </p>
+        <cite>
+          <a href={`${cite}`}>{cite}</a>
+        </cite>
       </div>
     </div>
   );

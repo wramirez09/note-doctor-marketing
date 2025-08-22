@@ -39,8 +39,7 @@ export const MOCKDATA = [
   {
     icon: IconClockExclamation,
     title: "Delays in Patient Care",
-    description:
-      "1 in 4 physicians report prior auth has led to serious adverse events.",
+    description: "Physician and staff spent 13 hours completing PA's",
   },
 ];
 
@@ -97,6 +96,16 @@ export function FeaturesGrid() {
         >
           {features}
         </SimpleGrid>
+        <div>
+          <Text c="white" fz="sm">
+            Article: Prior Authorization Physician Survey
+          </Text>
+          <cite className="text-white dark:text-dark-6">
+            <a href="https://www.ama-assn.org/system/files/prior-authorization-survey.pdf">
+              https://www.ama-assn.org/system/files/prior-authorization-survey.pdf
+            </a>
+          </cite>
+        </div>
       </Container>
       <Container size="lg" className="mt-9">
         <hr className="mb-9 mt-9" />

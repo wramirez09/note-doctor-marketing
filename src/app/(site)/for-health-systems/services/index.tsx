@@ -38,19 +38,23 @@ const mockdata = [
     title: "Streamlined Workflows",
     description:
       "Centralized workflows – Standardize processes across departments",
+    icon: IconTruck,
   },
   {
     title: "Faster Care, Better Outcomes",
     description:
       "Fewer delays, better outcomes – Prevent avoidable hospitalizations",
+    icon: IconTruck,
   },
   {
     title: "Built-In Compliance",
     description: "Compliance at scale – Meet payer requirements the first time",
+    icon: IconTruck,
   },
   {
     title: "Protecting Providers",
     description: "Provider protection – Reduce burnout, boost retention",
+    icon: IconTruck,
   },
 ];
 

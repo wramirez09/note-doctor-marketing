@@ -1,21 +1,15 @@
 import { Text, SimpleGrid, rem, Title } from "@mantine/core";
-import {
-  IconInfoCircle,
-  IconNumber2,
-  IconNumber3,
-  IconNumber4,
-  IconNumber5,
-  IconNumber6,
-} from "@tabler/icons-react";
+import { IconInfoCircle } from "@tabler/icons-react";
 import classes from "./styles.module.css";
 import { Headline } from "../Headline";
 import { Titledfeatures } from "../Titledfeatures";
-import { NewsletterSignUp } from "../NewsletterSignUp";
 
 interface FeatureProps extends React.ComponentPropsWithoutRef<"div"> {
   icon: React.FC<any>;
   title: string;
   description: string;
+  cite?: string;
+  citeLink?: string;
 }
 
 function Feature({
@@ -23,13 +17,15 @@ function Feature({
   title,
   description,
   className,
+  cite,
+  citeLink,
   ...others
 }: FeatureProps) {
   return (
     <div className={classes.feature} {...others}>
       <div className={classes.overlay} />
 
-      <div className={classes.content}>
+      <div className={`${classes.content}`}>
         <Icon
           style={{ width: rem(18), height: rem(18) }}
           className={classes.icon}
@@ -38,8 +34,18 @@ function Feature({
         <Text fw={700} fz="lg" mb="xs" mt={0} className={classes.title}>
           {title}
         </Text>
-        <Text c="dimmed" fz="sm">
+        <Text c="dimmed" fz="sm" className={cite ? "flex flex-col" : ""}>
           {description}
+          {cite && (
+            <div>
+              <Text c="white" fz="sm">
+                {cite}
+              </Text>
+              <cite>
+                <a href={citeLink}>{citeLink}</a>
+              </cite>
+            </div>
+          )}
         </Text>
       </div>
     </div>
@@ -62,11 +68,17 @@ const mockdata = [
     title:
       "29% have seen it result in a serious adverse event, including death",
     description: "",
+    cite: "From article: Harnessing informatic's power to cut physician burdens.",
+    citeLink:
+      "https://www.ama-assn.org/practice-management/prior-authorization/harnessing-informatics-power-cut-physician-burdens",
   },
   {
     icon: IconInfoCircle,
     title: "89% confirm it fuels physician burnout",
     description: "",
+    cite: "From artricle: Fixing prior auth: Nearly 40 prior authorization a week is to many.",
+    citeLink:
+      "https://www.ama-assn.org/practice-management/prior-authorization/fixing-prior-auth-nearly-40-prior-authorizations-week-way",
   },
   // {
   //   icon: IconNumber5,
@@ -82,12 +94,16 @@ const mockdata = [
   // },
 ];
 
-export default function HowItWorksSection() {
+const HowItWorksSection: React.FC<{
+  headline?: string;
+  subHeadline?: string;
+  desc: string;
+}> = ({ headline, subHeadline, desc }) => {
   const items = mockdata.map((item) => <Feature {...item} key={item.title} />);
 
   return (
     <>
-      <Headline />
+      <Headline headline={headline} subHeadline={subHeadline} desc={desc} />
       <hr style={{ borderColor: "#3b3b3b" }} />
       <Title
         order={2}
@@ -116,4 +132,6 @@ export default function HowItWorksSection() {
       {/* <NewsletterSignUp /> */}
     </>
   );
-}
+};
+
+export default HowItWorksSection;
