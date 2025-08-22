@@ -24,7 +24,7 @@ import SecurityPage from ".";
 //     images:['https://notedoctor.ai/opengraph-image.jpg'],
 //   }
 // };
-
+export const dynamic = "force-dynamic";
 const SecurityPageWrapper = () => {
   return <SecurityPage />;
 };

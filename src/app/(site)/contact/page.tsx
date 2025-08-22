@@ -47,7 +47,7 @@ import { StructuredData } from "@/components/StructuredData";
 //   ],
 //   datePublished: "2022-09-14T09:00:00.000Z",
 // };
-
+export const dynamic = "force-dynamic";
 const ContactPage = () => {
   return (
     <>

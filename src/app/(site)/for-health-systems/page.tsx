@@ -48,6 +48,7 @@ import { Services } from "./services";
 //   ],
 //   datePublished: "2022-09-14T09:00:00.000Z",
 // };
+export const dynamic = "force-dynamic";
 const AboutPage = () => {
   return (
     <main>

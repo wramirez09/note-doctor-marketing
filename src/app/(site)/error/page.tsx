@@ -25,7 +25,7 @@ import NotFound from "@/components/NotFound";
 //     images: ["https://notedoctor.ai/opengraph-image.jpg"],
 //   },
 // };
-
+export const dynamic = "force-dynamic";
 const ErrorPage = () => {
   return (
     <>
