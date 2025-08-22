@@ -34,25 +34,25 @@ const Faq = () => {
           <div className="-mx-4 mb-7 mt-[60px] flex flex-wrap lg:mt-20">
             <div className="mb-9 w-full px-4 lg:w-1/2">
               <Blockquote color="blue" icon={icon} mt="xl" c={"white"}>
-                “We don’t actually know what piece of information the insurer is
-                looking for.”
+                We don’t actually know what piece of information the insurer is
+                looking for.
               </Blockquote>
             </div>
 
             <div className="mb-9 w-full px-4 lg:w-1/2">
               <Blockquote color="blue" icon={icon} mt="xl" c={"white"}>
-                “It’s a huge diversion of time and resources.”
+                It’s a huge diversion of time and resources.
               </Blockquote>
             </div>
             <div className="mb-9 w-full px-4 lg:w-1/2">
               <Blockquote color="blue" icon={icon} mt="xl" c={"white"}>
-                “Many of us have staff who do nothing but focus on prior
-                authorization paperwork.”
+                Many of us have staff who do nothing but focus on prior
+                authorization paperwork.
               </Blockquote>
             </div>
             <div className="mb-9 w-full px-4 lg:w-1/2">
               <Blockquote color="blue" icon={icon} mt="xl" c={"white"}>
-                "Prior Auth is a guessing game"
+                Prior Auth is a guessing game
               </Blockquote>
             </div>
           </div>

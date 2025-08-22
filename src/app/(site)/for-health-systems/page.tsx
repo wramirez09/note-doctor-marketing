@@ -3,7 +3,7 @@ import Breadcrumb from "@/components/Common/Breadcrumb";
 import Team from "@/components/Team";
 import { Metadata } from "next";
 import { Services } from "./services";
-import { Services2 } from "./services2";
+import { Services2 } from "./services copy";
 import { StructuredData } from "@/components/StructuredData";
 
 export const metadata: Metadata = {
