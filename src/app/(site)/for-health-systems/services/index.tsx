@@ -1,7 +1,6 @@
 import { Text, SimpleGrid, Container, rem, Title, Button } from "@mantine/core";
-import { IconTruck, IconCertificate, IconCoin } from "@tabler/icons-react";
+import { IconTruck } from "@tabler/icons-react";
 import classes from "./styles.module.css";
-import { Services2 } from "../services copy";
 
 interface FeatureProps extends React.ComponentPropsWithoutRef<"div"> {
   icon?: React.FC<any>;
@@ -76,7 +75,7 @@ export function Services() {
           Request a Consultation
         </Button>
       </Container>
-      <Services2 />
+      <Services />
     </div>
   );
 }
