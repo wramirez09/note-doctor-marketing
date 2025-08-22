@@ -12,7 +12,7 @@ interface FeatureProps extends React.ComponentPropsWithoutRef<"div"> {
   citeLink?: string;
 }
 
-function Feature({
+export function Feature({
   icon: Icon,
   title,
   description,

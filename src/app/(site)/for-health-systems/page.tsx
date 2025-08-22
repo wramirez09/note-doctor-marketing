@@ -2,6 +2,7 @@ import About from "@/components/About";
 // import Breadcrumb from "@/components/Common/Breadcrumb";
 // import { Metadata } from "next";
 import { Services } from "./services";
+import { Services2 } from "./services2";
 
 // import { StructuredData } from "@/components/StructuredData";
 
@@ -58,7 +59,7 @@ const AboutPage = () => {
       <About />
       <Services />
       {/* <hr style={{ opacity: "15%" }} className="mt-5" /> */}
-      {/* <Services2 /> */}
+      <Services2 />
     </main>
   );
 };

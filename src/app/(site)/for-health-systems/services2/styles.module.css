@@ -1,25 +1,23 @@
 .feature {
   position: relative;
   padding-top: var(--mantine-spacing-xl);
-  /* padding-left: var(--mantine-spacing-xl); */
-  /* background-color: #3b3b3b; */
+  padding-left: var(--mantine-spacing-xl);
+  @media (max-width: $mantine-breakpoint-sm) {
+    padding-left: 0;
+  }
 }
 
 .overlay {
   position: absolute;
-  height: 100px;
-  width: 160px;
+  height: rem(100px);
+  width: rem(160px);
   top: 0;
   left: 0;
-  background-color: rgb(17 25 40);
+  background-color: var(--mantine-color-blue-light);
   z-index: 1;
 }
 
 .content {
-  align-items: center;
-  justify-content: flex-start;
-  gap: 10px;
-  display: flex;
   position: relative;
   z-index: 2;
 }
@@ -30,6 +28,4 @@
 
 .title {
   color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
-  margin: 0 0 0 1rem !important;
-  padding: 0;
 }
