@@ -175,16 +175,16 @@ export function HeaderWithMenu() {
               closeDrawer();
             }}
           >
-            How It Works
+            For Healthcare
           </div>
           <div
-            className={`${classes.link} ${isActiveLink("/for-physicans") ? classes.activeLink : ""}`}
+            className={`${classes.link} ${isActiveLink("/for-physicians") ? classes.activeLink : ""}`}
             onClick={() => {
-              router.push("/for-physicans");
+              router.push("/for-physicians");
               closeDrawer();
             }}
           >
-            Security
+            For Physicans
           </div>
           <div
             className={`${classes.link} ${isActiveLink("/for-health-systems") ? classes.activeLink : ""}`}
@@ -193,7 +193,7 @@ export function HeaderWithMenu() {
               closeDrawer();
             }}
           >
-            About Us
+            For Health Systems
           </div>
           <div
             className={`${classes.link} ${isActiveLink("/contact") ? classes.activeLink : ""}`}

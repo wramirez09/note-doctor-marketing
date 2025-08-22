@@ -78,14 +78,20 @@ const menuData: Menu[] = [
   },
   {
     id: 2,
-    title: "About Us",
-    path: "/about",
+    title: "For Healcare",
+    path: "/for-healthcare",
     newTab: false,
   },
   {
     id: 63,
-    title: "Contact Us",
-    path: "/contact",
+    title: "For Physicians",
+    path: "/for-physicians",
+    newTab: false,
+  },
+  {
+    id: 63,
+    title: "For Health Systems",
+    path: "/for-health-systems",
     newTab: false,
   },
 ];
