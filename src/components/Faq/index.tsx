@@ -71,8 +71,8 @@ const Faq = () => {
           </div>
           <SectionTitle
             subtitle="This cycle leaves patients without timely treatment — raising hospitalization risk and worsening outcomes."
-            title=""
-            paragraph=""
+            title="&nbsp;"
+            paragraph="&nbsp;"
             width="640px"
             center
           />

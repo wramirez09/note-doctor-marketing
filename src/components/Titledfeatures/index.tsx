@@ -80,7 +80,7 @@ export function Titledfeatures() {
       </Text>
       <div className="mb-11 mt-9">
         <p className="text-xs text-white">
-          From Aritcle: <strong>Standing Up to Prior Authorization"</strong>
+          From Aritcle: <strong>Standing Up to Prior Authorization</strong>
         </p>
         <cite className="text-white dark:text-dark-6">
           <a href="https://ashpublications.org/ashclinicalnews/news/7981/Standing-Up-to-Prior-Authorization">
