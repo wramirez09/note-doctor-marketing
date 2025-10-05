@@ -127,10 +127,11 @@ export function HeaderWithMenu() {
                   <Button
                     className="button-primary"
                     component="a"
-                    href="/contact/"
+                    href="https://langchain-agent-theta.vercel.app/"
                   >
-                    Sign up
+                    PreAuth App
                   </Button>
+
                 </div>
               </div>
               <Burger

@@ -88,7 +88,7 @@ export default function Home() {
         headline="Cut the Red Tape. Deliver Care"
         subHeadline="Without Delays"
         desc="Prior authorization wastes valuable time, burdens physicians, and puts patients at risk. NoteDoctor.AI empowers providers with clarity, speed, and compliance — so you can focus on care, not paperwork."
-        // hideBtn
+      // hideBtn
       />
       <Features />
       {/* <About />
@@ -108,7 +108,7 @@ export default function Home() {
         desc="NoteDoctor.Ai simplifies prior authorization by:"
         hideBtn
       />
-      <Container mt={30} mb={30} size="xl">
+      <Container mt={30} mb={30} size="lg" >
         <SimpleGrid
           cols={{ base: 1, sm: 1 }}
           spacing={5}
