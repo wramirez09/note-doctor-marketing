@@ -1,11 +1,11 @@
 .wrapper {
   position: relative;
   padding-top: 120px;
-  padding-bottom: 80px;
 
-  @media (max-width: $mantine-breakpoint-sm) {
-    padding-top: 0;
-    padding-bottom: rem(60px);
+
+  @media (max-width: 915px) {
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
 }
 
@@ -18,7 +18,7 @@
   position: absolute;
   color: light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-5));
 
-  @media (max-width: $mantine-breakpoint-sm) {
+  @media (max-width: 768px) {
     display: none;
   }
 }

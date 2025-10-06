@@ -224,6 +224,15 @@ export function HeaderWithMenu() {
               Sign up
             </Button>
           </Group>
+          <Group justify="center" grow pb="xl" px="lg" mt="">
+            <Button
+              className="button-primary"
+              component="a"
+              href="https://preauthproduction.vercel.app"
+            >
+              PreAuth App
+            </Button>
+          </Group>
         </ScrollArea>
       </Drawer>
     </Box>

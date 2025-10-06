@@ -108,7 +108,7 @@ export default function Home() {
         desc="NoteDoctor.Ai simplifies prior authorization by:"
         hideBtn
       />
-      <Container mt={30} mb={30} size="lg" >
+      <Container mt={30} mb={30} size="sm" >
         <SimpleGrid
           cols={{ base: 1, sm: 1 }}
           spacing={5}

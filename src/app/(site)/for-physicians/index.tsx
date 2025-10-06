@@ -37,9 +37,9 @@ const SecurityPage = () => {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
       >
-        <div className="container mb-11 mb-[160px] mt-11">
+        <div className="container mb-11 md:mb-[160px] mt-11">
           <Container size="md">
-            <h1 className="lg:mb[150px] accent mt-[160px] text-center text-3xl font-bold leading-snug text-white sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-[1.2]">
+            <h1 className="lg:mb[150px] accent md:mt-[160px] text-center text-3xl font-bold leading-snug text-white sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-[1.2]">
               Less Paperwork. More Patient Care.
             </h1>
 

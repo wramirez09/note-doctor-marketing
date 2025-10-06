@@ -1,6 +1,12 @@
 .feature {
   position: relative;
   padding-top: var(--mantine-spacing-xl);
+
+  @media (max-width: 968px) {
+    display: flex;
+    flex-direction: column;
+  }
+
   /* padding-left: var(--mantine-spacing-xl); */
   /* background-color: #3b3b3b; */
 }
@@ -22,6 +28,11 @@
   display: flex;
   position: relative;
   z-index: 2;
+
+  @media (max-width: 968px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .icon {

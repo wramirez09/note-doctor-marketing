@@ -71,75 +71,71 @@ export function FeaturesGrid() {
   ));
 
   return (
-    <div className="container">
-      <Container size="lg">
-        <Title className={classes.title} id="more">
-          Challenges Physicians Face
-        </Title>
+    <>
+      <div className="container">
+        <Container size="lg">
+          <Title className={classes.title} id="more">
+            Challenges Physicians Often Face
+          </Title>
 
-        {/* <div className="mb-11">
-          <Text className={classes.description}>
-            We comply with the Health Information Technology for Economic and
-            Clinical Health (HITECH) Act, which addresses the security and
-            privacy concerns associated with the electronic transmission of
-            health information.
-          </Text>
-        </div> */}
-      </Container>
-      <Container size={"lg"} className={"mb-11"}>
-        <SimpleGrid
-          mt={60}
-          cols={{ base: 1, sm: 2 }}
-          spacing={{ base: "xl", md: 50 }}
-          verticalSpacing={{ base: "xl", md: 50 }}
-          className="mb-11"
-        >
-          {features}
-        </SimpleGrid>
-        <div>
-          <Text c="white" fz="sm">
-            Article: Prior Authorization Physician Survey
-          </Text>
-          <cite className="text-white dark:text-dark-6">
-            <a href="https://www.ama-assn.org/system/files/prior-authorization-survey.pdf">
-              https://www.ama-assn.org/system/files/prior-authorization-survey.pdf
-            </a>
-          </cite>
-        </div>
-      </Container>
-      <Container size="lg" className="mt-9">
-        <hr className="mb-9 mt-9" />
-        <Title className={classes.title} id="more">
-          How NoteDoctor.AI Helps Physicians
-        </Title>
 
-        <div className="mb-11 mt-9">
-          <List
-            spacing={20}
-            color="white"
-            icon={
-              <ThemeIcon color="#1971c2" size={24} radius="xl">
-                <IconInfoCircle size={16} />
-              </ThemeIcon>
-            }
+        </Container>
+        <Container size={"lg"} className={"mb-11"}>
+          <SimpleGrid
+            mt={60}
+            cols={{ base: 1, sm: 2 }}
+            spacing={{ base: "xl", md: 50 }}
+            verticalSpacing={{ base: "xl", md: 50 }}
+            className="mb-11"
           >
-            <List.Item className="text-white">
-              Clarity upfront – Instantly know required documentation
-            </List.Item>
-            <List.Item className="text-white">
-              Automation that works – Eliminate repetitive tasks and reduce
-              appeals
-            </List.Item>
-            <List.Item className="text-white">
-              Faster approvals – Get patients into treatment sooner
-            </List.Item>
-            <List.Item className="text-white">
-              Practice protection – Free up staff and reduce overhead
-            </List.Item>
-          </List>
-        </div>
-      </Container>
+            {features}
+          </SimpleGrid>
+          <div>
+            <Text c="white" fz="sm">
+              Article: Prior Authorization Physician Survey
+            </Text>
+            <cite className="text-white dark:text-dark-6">
+              <a href="https://www.ama-assn.org/system/files/prior-authorization-survey.pdf">
+                https://www.ama-assn.org/system/files/prior-authorization-survey.pdf
+              </a>
+            </cite>
+          </div>
+        </Container>
+        <Container size="lg" className="mt-9">
+          <hr className="mb-9 mt-9" />
+          <Title className={classes.title} id="more">
+            How NoteDoctor.AI Helps Physicians
+          </Title>
+
+          <div className="mb-11 mt-9">
+            <List
+              spacing={20}
+              color="white"
+              icon={
+                <ThemeIcon color="#1971c2" size={24} radius="xl">
+                  <IconInfoCircle size={16} />
+                </ThemeIcon>
+              }
+            >
+              <List.Item className="text-white">
+                Clarity upfront – Instantly know required documentation
+              </List.Item>
+              <List.Item className="text-white">
+                Automation that works – Eliminate repetitive tasks and reduce
+                appeals
+              </List.Item>
+              <List.Item className="text-white">
+                Faster approvals – Get patients into treatment sooner
+              </List.Item>
+              <List.Item className="text-white">
+                Practice protection – Free up staff and reduce overhead
+              </List.Item>
+            </List>
+          </div>
+        </Container>
+
+      </div>
       <Contact showNewsLetterSignUp={false} />
-    </div>
+    </>
   );
 }
