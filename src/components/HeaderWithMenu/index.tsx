@@ -127,7 +127,7 @@ export function HeaderWithMenu() {
                   <Button
                     className="button-primary"
                     component="a"
-                    href="https://langchain-agent-theta.vercel.app/"
+                    href="https://preauthproduction.vercel.app"
                   >
                     PreAuth App
                   </Button>
