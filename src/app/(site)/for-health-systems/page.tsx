@@ -1,60 +1,60 @@
 import About from "@/components/About";
 // import Breadcrumb from "@/components/Common/Breadcrumb";
-// import { Metadata } from "next";
+import { Metadata } from "next";
 import { Services } from "./services";
 import { Services2 } from "./services2";
 
-// import { StructuredData } from "@/components/StructuredData";
+import { StructuredData } from "@/components/StructuredData";
 
-// export const metadata: Metadata = {
-//   title:
-//     "About NoteDoctorAI | Transforming Healthcare with AI-Powered Innovation",
-//   description:
-//     "Learn about NoteDoctorAI, a pioneer in AI-driven healthcare solutions. Our mission is to revolutionize medical coding with cutting-edge technology, enhancing accuracy, efficiency, and profitability for healthcare organizations globally.",
-//   openGraph: {
-//     type: "website",
-//     url: "https://notedoctor.ai/about",
-//     title:
-//       "About NoteDoctorAI | Transforming Healthcare with AI-Powered Innovation",
-//     description:
-//       "Learn about NoteDoctorAI, a pioneer in AI-driven healthcare solutions. Our mission is to revolutionize medical coding with cutting-edge technology, enhancing accuracy, efficiency, and profitability for healthcare organizations globally.",
-//     images: [
-//       {
-//         url: "https://notedoctor.ai/opengraph-image.jpg",
-//         width: 1200,
-//         height: 630,
-//       },
-//     ],
-//   },
-//   twitter: {
-//     card: "summary_large_image",
-//     title:
-//       "About NoteDoctorAI | Transforming Healthcare with AI-Powered Innovation",
-//     description:
-//       "Learn about NoteDoctorAI, a pioneer in AI-driven healthcare solutions. Our mission is to revolutionize medical coding with cutting-edge technology, enhancing accuracy, efficiency, and profitability for healthcare organizations globally.",
-//     images: ["https://notedoctor.ai/opengraph-image.jpg"],
-//   },
-// };
+export const metadata: Metadata = {
+  title:
+    "AI Platform for Health Systems & Hospitals | NoteDoctor.ai",
+  description:
+    "Support entire health systems with NoteDoctor.ai — AI-powered patient record analytics, trial matching, population insights, operational intelligence & provider tools. Secure, scalable, institution-grade.",
+  openGraph: {
+    type: "website",
+    url: "https://notedoctor.ai/about",
+    title:
+      "AI Platform for Health Systems & Hospitals | NoteDoctor.ai",
+    description:
+      "Support entire health systems with NoteDoctor.ai — AI-powered patient record analytics, trial matching, population insights, operational intelligence & provider tools. Secure, scalable, institution-grade.",
+    images: [
+      {
+        url: "https://notedoctor.ai/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "About NoteDoctorAI | Transforming Healthcare with AI-Powered Innovation",
+    description:
+      "Learn about NoteDoctorAI, a pioneer in AI-driven healthcare solutions. Our mission is to revolutionize medical coding with cutting-edge technology, enhancing accuracy, efficiency, and profitability for healthcare organizations globally.",
+    images: ["https://notedoctor.ai/opengraph-image.jpg"],
+  },
+};
 
-// const structuredData = {
-//   "@context": "https://schema.org",
-//   "@type": "about page",
-//   // headline: metadata.title,
-//   // description: metadata.description,
-//   author: [
-//     {
-//       "@type": "Person",
-//       name: "Mitesh Patel",
-//     },
-//   ],
-//   datePublished: "2022-09-14T09:00:00.000Z",
-// };
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "about page",
+  headline: metadata.title,
+  description: metadata.description,
+  author: [
+    {
+      "@type": "Person",
+      name: "Mitesh Patel",
+    },
+  ],
+  datePublished: "2022-09-14T09:00:00.000Z",
+};
 export const runtime = "edge";
 export const dynamic = "force-dynamic";
 const AboutPage = () => {
   return (
     <main>
-      {/* <StructuredData data={structuredData} /> */}
+      <StructuredData data={structuredData} />
       {/* <Breadcrumb pageName="For Health Systems" /> */}
       <About />
       <Services />

@@ -3,34 +3,34 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import { Button, Container } from "@mantine/core";
 import { motion } from "framer-motion";
-import classes from "./styles.module.css";
+
 import { FeaturesGrid } from "./featuresGrid/Features";
 import { StructuredData } from "@/components/StructuredData";
 
-// const metadata = {
-//   title: "Security Page | Get in Touch for AI-Powered Healthcare Solutions",
-//   description:
-//     "Security | At NoteDoctorAI, safeguarding your data is our top priority. We understand the critical importance of data security in the healthcare industry and are committed to maintaining the highest standards of protection for your sensitive information.",
-// };
+const metadata = {
+  title: "AI Clinical Insight Tools for Physicians | NoteDoctor.ai",
+  description:
+    "Equip your practice with NoteDoctor.ai — analyze patient notes, surface research-based insights, and streamline diagnostic workflows. Trusted, secure, physician-focused AI support (not medical advice).",
+};
 
-// const structuredData = {
-//   "@context": "https://schema.org",
-//   "@type": "security page",
-//   headline: metadata.title,
-//   description: metadata.description,
-//   author: [
-//     {
-//       "@type": "Person",
-//       name: "Mitesh Patel",
-//     },
-//   ],
-//   datePublished: "2022-09-14T09:00:00.000Z",
-// };
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "security page",
+  headline: metadata.title,
+  description: metadata.description,
+  author: [
+    {
+      "@type": "Person",
+      name: "Mitesh Patel",
+    },
+  ],
+  datePublished: "2022-09-14T09:00:00.000Z",
+};
 
-const SecurityPage = () => {
+const PhysiciansPage = () => {
   return (
     <>
-      {/* <StructuredData data={structuredData} /> */}
+      <StructuredData data={structuredData} />
       <Breadcrumb pageName="For Physicians" />
       <motion.div
         initial={{ opacity: 0 }}
@@ -61,4 +61,4 @@ const SecurityPage = () => {
   );
 };
 
-export default SecurityPage;
+export default PhysiciansPage;
