@@ -57,8 +57,6 @@ const AboutPage = () => {
       <StructuredData data={structuredData} />
       {/* <Breadcrumb pageName="For Health Systems" /> */}
       <About />
-      <Services />
-      {/* <hr style={{ opacity: "15%" }} className="mt-5" /> */}
       <Services2 />
     </main>
   );

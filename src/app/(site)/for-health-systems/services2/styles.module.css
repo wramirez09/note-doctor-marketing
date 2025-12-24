@@ -1,7 +1,7 @@
 .feature {
   position: relative;
-  padding-top: var(--mantine-spacing-xl);
-  padding-left: var(--mantine-spacing-xl);
+  padding: var(--mantine-spacing-md);
+
   @media (max-width: $mantine-breakpoint-sm) {
     padding-left: 0;
   }
