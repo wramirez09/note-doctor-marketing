@@ -8,7 +8,6 @@ import { Headline } from "@/components/Headline";
 import { StructuredData } from "@/components/StructuredData";
 import Testimonials from "@/components/Testimonials";
 
-import { getAllPosts } from "@/utils/markdown";
 import { Button, Container, rem, SimpleGrid, Text } from "@mantine/core";
 
 import { Metadata } from "next";
@@ -172,7 +171,7 @@ export default function Home() {
         transition={{ duration: 1.5 }}
       >
         <Container size="lg" >
-          <div className="grid grid-cols-2 gap-6 items-center mb-20 mt-10 md:mt-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center mb-20 mt-10 md:mt-0">
             <div>
               <Headline
                 headline={`Real-Time AI Support for Unmatched Coding Precision`}
@@ -202,7 +201,7 @@ export default function Home() {
         <Container size="lg" className="my-[60px]">
 
 
-          <div className="grid grid-cols-2 gap-1 items-center mb-9 mt-0 justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-1 items-center mb-9 mt-0 justify-center">
 
             <div className="flex flex-col items-center gap-1 ">
               <Image src="/images/ai.png" alt="doctor image" width={600} height={500} />
@@ -222,7 +221,7 @@ export default function Home() {
                 showHr={false}
               />
               <SimpleGrid
-                cols={{ base: 3, sm: 1 }}
+                cols={{ base: 1, md: 3, }}
                 spacing={5}
                 className="mb-7 mt-0 pb-3"
               >

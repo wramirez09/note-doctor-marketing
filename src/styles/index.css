@@ -155,6 +155,7 @@ hr {
 }
 
 
+
 .hero-bg {
   background-image: url('/images/hero-2.png');
   background-size: contain;
@@ -193,4 +194,14 @@ hr {
   mask-image: linear-gradient(to bottom,
       black 0% 100%,
       transparent 50% 100%);
+}
+
+
+@media screen and (max-width: 720px) {
+
+  /* Styles for screens 480px wide or greater */
+  .hero-bg,
+  .hero-history-bg {
+    background-image: none;
+  }
 }
