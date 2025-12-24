@@ -3,7 +3,7 @@ import { IconTruck } from "@tabler/icons-react";
 import classes from "./styles.module.css";
 
 interface FeatureProps extends React.ComponentPropsWithoutRef<"div"> {
-  icon?: React.FC<any>;
+  icon?: any;
   title: string;
   description: string;
 }
