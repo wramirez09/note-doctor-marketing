@@ -8,7 +8,7 @@ const testimonialData: Testimonial[] = [
     name: "Sabo Masties",
     designation: "Founder @ Rolex",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      " We don’t actually know what piece of information the insurer is looking for.",
     image: "/images/testimonials/author-01.png",
     star: 5,
   },
@@ -17,7 +17,7 @@ const testimonialData: Testimonial[] = [
     name: "Margin Gesmu",
     designation: "Founder @ UI Hunter",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "It’s a huge diversion of time and resources.",
     image: "/images/testimonials/author-02.png",
     star: 5,
   },
@@ -26,7 +26,7 @@ const testimonialData: Testimonial[] = [
     name: "William Smith",
     designation: "Founder @ Trorex",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "Prior Auth is a guessing game",
     image: "/images/testimonials/author-03.png",
     star: 5,
   },
@@ -38,13 +38,13 @@ const Testimonials = () => {
       <div className="container px-4">
         <SectionTitle
           subtitle="Testimonials"
-          title="What our Client Say"
+          title="What Physicians Are Saying"
           paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
           width="640px"
           center
         />
 
-        <div className="mt-[60px] flex flex-wrap lg:mt-20 gap-y-8">
+        <div className="mt-[60px] flex flex-wrap lg:mt-20 gap-y-8 min-h-[182px]">
           {testimonialData.map((testimonial, i) => (
             <SingleTestimonial key={i} testimonial={testimonial} />
           ))}

@@ -3,13 +3,8 @@
 import { Container } from "@mantine/core";
 import { motion } from "framer-motion";
 import SectionTitle from "../Common/SectionTitle";
-import SingleFaq from "./SingleFaq";
-import { Blockquote } from "@mantine/core";
-import { IconInfoCircle } from "@tabler/icons-react";
-import classes from "./index.module.css";
-import classNames from "classnames";
 
-const icon = <IconInfoCircle />;
+
 
 const Faq = () => {
   return (
@@ -19,9 +14,7 @@ const Faq = () => {
       transition={{ duration: 1.5 }}
     >
       <section className="container relative z-20 overflow-hidden bg-white pb-8 pt-20 dark:bg-dark lg:pb-[50px] lg:pt-[50px]">
-        <Container className={classes.hrContainer}>
-          <hr />
-        </Container>
+
         <Container size="lg">
           <div className="mt-12 md:px-12">
             <SectionTitle
@@ -31,45 +24,6 @@ const Faq = () => {
               width="640px"
               center
             />
-
-            <div className="-mx-4 mb-7 mt-[60px] flex flex-wrap lg:mt-20">
-              <div className="mb-9 w-full px-4 lg:w-1/2">
-                <Blockquote color="blue" icon={icon} mt="xl" c={"white"}>
-                  We don’t actually know what piece of information the insurer is
-                  looking for.
-                </Blockquote>
-              </div>
-
-              <div className="mb-9 w-full px-4 lg:w-1/2">
-                <Blockquote color="blue" icon={icon} mt="xl" c={"white"}>
-                  It’s a huge diversion of time and resources.
-                </Blockquote>
-              </div>
-              <div className="mb-9 w-full px-4 lg:w-1/2">
-                <Blockquote color="blue" icon={icon} mt="xl" c={"white"}>
-                  Many of us have staff who do nothing but focus on prior
-                  authorization paperwork.
-                </Blockquote>
-              </div>
-              <div className="mb-9 w-full px-4 lg:w-1/2">
-                <Blockquote color="blue" icon={icon} mt="xl" c={"white"}>
-                  Prior Auth is a guessing game
-                </Blockquote>
-              </div>
-            </div>
-            <div className="mb-11 mt-9">
-              <p className="text-white">
-                <strong>
-                  From article: What doctors wish patients knew about prior
-                  authorization
-                </strong>
-              </p>
-              <cite className="text-white dark:text-dark-6">
-                <a href="https://www.ama-assn.org/practice-management/prior-authorization/what-doctors-wish-patients-knew-about-prior-authorization">
-                  https://www.ama-assn.org/practice-management/prior-authorization/what-doctors-wish-patients-knew-about-prior-authorization
-                </a>
-              </cite>
-            </div>
             <SectionTitle
               subtitle="This cycle leaves patients without timely treatment — raising hospitalization risk and worsening outcomes."
               title="&nbsp;"

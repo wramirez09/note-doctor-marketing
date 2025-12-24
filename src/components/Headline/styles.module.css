@@ -1,6 +1,6 @@
 .wrapper {
   position: relative;
-  padding-top: 120px;
+
 
 
   @media (max-width: 915px) {
@@ -29,7 +29,6 @@
 }
 
 .title {
-  text-align: center;
   font-weight: 800;
   font-size: 40px;
   letter-spacing: -1px;
@@ -44,14 +43,15 @@
 
 .highlight {
   color: light-dark(var(--mantine-color-blue-6), var(--mantine-color-blue-4));
+
 }
 
 .description {
-  text-align: center;
 
   @media (max-width: $mantine-breakpoint-xs) {
     text-align: left;
-    font-size: var(--mantine-font-size-md);
+    /* font-size: var(--mantine-font-size-lg); */
+    font-size: 1rem;
   }
 }
 

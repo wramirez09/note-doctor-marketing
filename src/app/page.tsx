@@ -1,18 +1,68 @@
+
 import ScrollUp from "@/components/Common/ScrollUp";
 import Contact from "@/components/Contact";
-import { CTASection } from "@/components/CTASection";
-import Faq from "@/components/Faq";
+import Image from "next/image";
 import Features from "@/components/Features";
 import { Headline } from "@/components/Headline";
-import { Feature } from "@/components/HowItWorksSection";
 
 import { StructuredData } from "@/components/StructuredData";
+import Testimonials from "@/components/Testimonials";
 
 import { getAllPosts } from "@/utils/markdown";
-import { Container, SimpleGrid } from "@mantine/core";
+import { Button, Container, rem, SimpleGrid, Text } from "@mantine/core";
 
-import { IconInfoCircle } from "@tabler/icons-react";
 import { Metadata } from "next";
+import { Dots } from "@/components/Headline/Dots";
+import { Icon, IconCheck, IconProps } from "@tabler/icons-react";
+import { ForwardRefExoticComponent, RefAttributes } from "react";
+
+interface FeatureProps extends React.ComponentPropsWithoutRef<"div"> {
+  icon?: ForwardRefExoticComponent<IconProps & RefAttributes<Icon>>;
+  title: string;
+  description: string;
+  cite?: string;
+  citeLink?: string;
+}
+export function Feature({
+  icon: Icon,
+  title,
+  description,
+  className,
+  cite,
+  citeLink,
+  ...others
+}: FeatureProps) {
+  return (
+    <div  {...others}>
+
+      <div className="flex flex-row items-start justify-start gap-4">
+        {Icon && <Icon
+          style={{ width: rem(20), height: rem(20) }}
+
+          stroke={1.5}
+        />}
+        <div className="mb-4">
+          <Text fw={700} fz="lg" mt={0}>
+            {title}
+          </Text>
+          <Text c="dimmed" fz="sm" className={cite ? "flex flex-col" : ""}>
+            {description}
+            {cite && (
+              <div>
+                <Text c="white" fz="sm">
+                  {cite}
+                </Text>
+                <cite>
+                  <a href={citeLink}>{citeLink}</a>
+                </cite>
+              </div>
+            )}
+          </Text>
+        </div>
+      </div>
+    </div >
+  );
+}
 
 export const metadata: Metadata = {
   title:
@@ -60,17 +110,17 @@ const structuredData = {
 
 const mockdata = [
   {
-    icon: IconInfoCircle,
+    icon: IconCheck,
     title: "Clarifying requirements upfront",
     description: "know exactly what documentation is needed.",
   },
   {
-    icon: IconInfoCircle,
+    icon: IconCheck,
     title: "Confidence with transparency",
     description: "reduce time wasted on appeals.",
   },
   {
-    icon: IconInfoCircle,
+    icon: IconCheck,
     title: "Protecting physicians",
     description: "cut burnout by minimizing administrative overhead.",
   },
@@ -84,43 +134,102 @@ export default function Home() {
       <StructuredData data={structuredData} />
       <ScrollUp />
 
-      <Headline
-        headline="Cut the Red Tape. Deliver Care"
-        subHeadline="Without Delays"
-        desc="Prior authorization wastes valuable time, burdens physicians, and puts patients at risk. NoteDoctor.AI empowers providers with clarity, speed, and compliance — so you can focus on care, not paperwork."
-      // hideBtn
-      />
+      <Container size="xl" className="items-center justify-center my-20 md:mt-10 mb-20 hero-bg">
+
+        <div className="grid grid-cols-1 items-end my-6 mt-[170px]">
+          <><Dots className="dots" style={{ left: 0, top: 0 }} />
+            <Dots className="dots" style={{ left: 60, top: 0 }} />
+            <Dots className="dots" style={{ left: 0, top: 140 }} />
+            <Dots className="dots" style={{ right: 0, top: 60 }} /></>
+          <Headline
+            headline="Cut the Red Tape & Deliver Care"
+            subHeadline=" Without Delays"
+            showHr={false}
+            showDots={false}
+            paddingTop={0}
+            marginTop={0}
+
+
+            desc="Prior authorization wastes valuable time, burdens physicians, and puts patients at risk. NoteDoctor.AI empowers providers with clarity, speed, and compliance — so you can focus on care, not paperwork."
+          // hideBtn
+          />
+          {/* <div>
+            <Image src="/images/hero-2.png" alt="mac image" width={500} height={500} />
+          </div> */}
+        </div>
+
+      </Container>
+
       <Features />
       {/* <About />
       <CallToAction /> */}
       {/* <Pricing /> */}
       {/* <Testimonials /> */}
-      <CTASection
-        title={"Real-Time AI Support for Unmatched Coding Precision"}
-        body={
-          "Minimize errors with real-time AI assistance, providing accurate coding suggestions in seconds. Improve precision and efficiency with automated, intelligent support."
-        }
-      />
-      <Faq />
-      <Headline
-        headline="How NoteDoctor.AI "
-        subHeadline="Helps"
-        desc="NoteDoctor.Ai simplifies prior authorization by:"
-        hideBtn
-      />
-      <Container mt={30} mb={30} size="sm" >
-        <SimpleGrid
-          cols={{ base: 1, sm: 1 }}
-          spacing={5}
-          className="mb-10 mt-1 pb-3"
-        >
-          {items}
-        </SimpleGrid>
+      <Container size="xl" >
+        <div className="grid grid-cols-2 gap-6 items-center mb-20 mt-10 md:mt-0">
+          <div>
+            <Headline
+              headline={`Real-Time AI Support for Unmatched Coding Precision`}
+              subHeadline=""
+              marginTop={0}
+              showDots={false}
+              showHr={false}
+              desc={
+                "Minimize errors with real-time AI assistance, providing accurate coding suggestions in seconds. Improve precision and efficiency with automated, intelligent support."
+              }
+            />
+          </div>
+          <div>
+            <Image src="/images/mac.png" alt="mac image" width={500} height={500} />
+          </div>
+        </div >
+      </Container >
+      <Testimonials />
+
+      <Container size="xl" className="my-[60px]">
+
+
+        <div className="grid grid-cols-2 gap-1 items-center mb-9 mt-0 justify-center">
+
+          <div className="flex flex-col items-center gap-1 ">
+            <Image src="/images/ai.png" alt="doctor image" width={600} height={500} />
+
+          </div>
+          <div>
+            <Headline
+              headline="How NoteDoctor.AI "
+              subHeadline="Helps"
+              desc="NoteDoctor.Ai simplifies prior authorization by:"
+              marginTop={0}
+              btnMarginBottom={0}
+              paddingTop={0}
+              showDots={false}
+              hideBtn={true}
+              centerText={false}
+              showHr={false}
+            />
+            <SimpleGrid
+              cols={{ base: 3, sm: 1 }}
+              spacing={5}
+              className="mb-7 mt-0 pb-3"
+            >
+              {items}
+            </SimpleGrid>
+            <div className="flex justify-start ml-10">
+              <Button component="a" href="/contact">
+                Get Started Today
+              </Button>
+            </div>
+          </div>
+        </div>
       </Container>
+
       {/* <Team /> */}
       {/* <HomeBlogSection posts={posts} /> */}
-      <Contact showNewsLetterSignUp={false} />
+      <section className="bg-gray-1">
+        <Contact showNewsLetterSignUp={false} />
+      </section>
       {/* <Clients /> */}
-    </main>
+    </main >
   );
 }

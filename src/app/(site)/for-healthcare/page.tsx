@@ -53,16 +53,15 @@ const HowItWorks = () => {
   return (
     <>
       <StructuredData data={structuredData} />
-      <section className="container relative z-20 overflow-hidden bg-white pb-8 dark:bg-dark lg:pb-[50px]">
-        <div className="container md:px-12 mb-[60px]">
-          <Breadcrumb pageName="For Healthcare" />
-          <HowItWorksSection
-            headline="The Bigger Picture: "
-            subHeadline="Why This Matters"
-            desc=" Insurers claim success by cutting costs, but often at the expense of care. A 2023 investigation revealed AI-driven instant claim rejections — more than 300,000 denials in two months — without patient files ever being reviewed.This isn’t efficiency. This is harm disguised as savings."
-          />
-        </div>
-      </section>
+
+      <Breadcrumb pageName="For Healthcare" />
+      <HowItWorksSection
+        headline="The Bigger Picture: "
+        subHeadline="Why This Matters"
+        desc=" Insurers claim success by cutting costs, but often at the expense of care. A 2023 investigation revealed AI-driven instant claim rejections — more than 300,000 denials in two months — without patient files ever being reviewed.This isn’t efficiency. This is harm disguised as savings."
+
+      />
+
     </>
   );
 };

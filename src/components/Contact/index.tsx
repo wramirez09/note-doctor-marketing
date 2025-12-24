@@ -54,7 +54,7 @@ const Contact: React.FC<{ showNewsLetterSignUp?: boolean }> = ({
     <section
       id="contact"
       className="overflow-hidden py-16 md:py-20 lg:py-28"
-      style={{ backgroundColor: "#061729" }}
+
     >
       <div className="full-width md:px-12">
         <div
@@ -63,7 +63,7 @@ const Contact: React.FC<{ showNewsLetterSignUp?: boolean }> = ({
           {!isLoading && (
             <div className={`px-4 lg:w-7/12 xl:w-8/12`}>
               <div
-                className="bg-gray-dark mb-12 rounded-sm bg-white px-8 py-11 shadow-three sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]"
+                className="b mb-12 rounded-sm bg-white px-8 py-11 shadow-three sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]"
                 data-wow-delay=".15s
               "
               >

@@ -15,6 +15,6 @@ label span {
 }
 
 .bg-dark,
-:is(.dark .dark\:bg-gray-dark) {
-  background-color: rgb(30 35 46);
+:is(.dark .dark\:b) {
+  /* background-color: rgb(30 35 46); */
 }

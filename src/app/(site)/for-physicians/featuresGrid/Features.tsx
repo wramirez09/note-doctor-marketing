@@ -17,7 +17,6 @@ import {
 import classes from "./featuresGrid.module.css";
 import Contact from "@/components/Contact";
 
-import { IconCircleCheck } from "@tabler/icons-react";
 
 export const MOCKDATA = [
   {
@@ -52,9 +51,9 @@ interface FeatureProps {
 export function Feature({ icon: Icon, title, description }: FeatureProps) {
   return (
     <div>
-      <ThemeIcon variant="light" size={40} radius={40}>
+      {Icon && <ThemeIcon variant="light" size={40} radius={40}>
         <Icon style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
-      </ThemeIcon>
+      </ThemeIcon>}
       <Text mt="lg" size="xl" mb={7} c="white">
         <strong>{title}</strong>
       </Text>

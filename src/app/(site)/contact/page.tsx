@@ -1,7 +1,7 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import Contact from "@/components/Contact";
 import { Metadata } from "next";
-import { NewsletterSignUp } from "../../../components/NewsletterSignUp/index";
+
 import { StructuredData } from "@/components/StructuredData";
 
 export const metadata: Metadata = {
@@ -54,7 +54,7 @@ const ContactPage = () => {
   return (
     <>
       <StructuredData data={structuredData} />
-      <div style={{ backgroundColor: "rgb(17 25 40)" }}>
+      <div>
         <Breadcrumb pageName="Contact Page" />
 
         <Contact showNewsLetterSignUp={false} />
