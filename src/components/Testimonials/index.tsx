@@ -1,6 +1,7 @@
 import { Testimonial } from "@/types/testimonial";
-import SectionTitle from "../Common/SectionTitle";
 import SingleTestimonial from "./SingleTestimonial";
+import { motion } from "framer-motion";
+import { Container, Title, Text } from "@mantine/core";
 
 const testimonialData: Testimonial[] = [
   {
@@ -34,23 +35,29 @@ const testimonialData: Testimonial[] = [
 
 const Testimonials = () => {
   return (
-    <section className="bg-gray-1 py-20 dark:bg-dark-2 md:py-[120px]">
-      <div className="container px-4">
-        <SectionTitle
-          subtitle="Testimonials"
-          title="What Physicians Are Saying"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
-          width="640px"
-          center
-        />
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
+    >
+      <section className="bg-gray-1 py-20 dark:bg-dark-2 md:py-[120px]">
+        <Container size="lg" >
+          <div className="container px-4">
+            <Title>
+              What Physicians Are Saying
+            </Title>
+            <Text>There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+              center</Text>
 
-        <div className="mt-[60px] flex flex-wrap lg:mt-20 gap-y-8 min-h-[182px]">
-          {testimonialData.map((testimonial, i) => (
-            <SingleTestimonial key={i} testimonial={testimonial} />
-          ))}
-        </div>
-      </div>
-    </section>
+            <div className="mt-[60px] flex flex-wrap lg:mt-20 gap-y-8">
+              {testimonialData.map((testimonial, i) => (
+                <SingleTestimonial key={i} testimonial={testimonial} />
+              ))}
+            </div>
+          </div>
+        </Container>
+      </section>
+    </motion.div>
   );
 };
 

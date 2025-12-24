@@ -61,7 +61,7 @@ export function Services2() {
 
   return (
     <div className="lg:mb-[60px] lg:mt-[120px] xl:px-11">
-      <Container mt={30} mb={30} size="xl">
+      <Container mt={30} mb={30} size="lg">
         <SectionTitle
           title={"Cut Costs the Right Way. Improve Member Satisfaction."}
           paragraph={

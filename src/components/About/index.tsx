@@ -1,27 +1,34 @@
 "use client";
 
-// import Image from "next/image";
-import { Container, Text, Button, Group } from "@mantine/core";
-import classes from "./about.module.css";
+import { Button, Container, Text, Title } from "@mantine/core";
 import { AboutFeatures } from "./AboutFeatures/AboutFeatures";
-
+import Image from "next/image";
 const About = () => {
   return (
     <>
-      <div className="container mt-7">
-        <Container size="lg">
-          <h1 className={`${classes.title} max-sm:text-xs`}>
-            Lower Administrative Costs. Improve Patient Outcomes.
-          </h1>
+      <section>
+        <Container size="md" pt={100} >
+          <div className="grid grid-cols-2 items-center gap-1">
+            <div>
+              <Title mb={10}>
+                Lower Administrative Costs.<br /> <span style={{ color: "#228be6" }}>Improve Patient Outcomes.</span>
+              </Title>
 
-          <Text className={classes.description} color="dimmed">
-            Eliminate bottlenecks across your system with smarter prior
-            authorization.
-          </Text>
-          <hr style={{ opacity: "15%" }} className="mt-5" />
-        </Container>
-      </div>
-      <AboutFeatures />
+              <Text color="dimmed" mb={30}>
+                Eliminate bottlenecks across your system with smarter prior
+                authorization.
+              </Text>
+              <Button>Learn More</Button>
+            </div>
+            <div>
+              <Image src="/images/payment.png" alt="mac image" width={700} height={700} />
+            </div>
+          </div>
+        </Container >
+      </section>
+      <section className="bg-gray-1 py-10">
+        <AboutFeatures />
+      </section>
     </>
   );
 };

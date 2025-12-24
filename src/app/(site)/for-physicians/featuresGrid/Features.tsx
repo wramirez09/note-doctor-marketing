@@ -14,8 +14,9 @@ import {
   IconClockExclamation,
   IconInfoCircle,
 } from "@tabler/icons-react";
-import classes from "./featuresGrid.module.css";
 import Contact from "@/components/Contact";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 
 export const MOCKDATA = [
@@ -50,17 +51,18 @@ interface FeatureProps {
 
 export function Feature({ icon: Icon, title, description }: FeatureProps) {
   return (
-    <div>
+    <div className="bg-gray-2 p-6 rounded-md justify center items-center text-center hover:shadow-lg transition-shadow duration-300">
       {Icon && <ThemeIcon variant="light" size={40} radius={40}>
-        <Icon style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
-      </ThemeIcon>}
-      <Text mt="lg" size="xl" mb={7} c="white">
+        < Icon style={{ width: rem(25), height: rem(25) }
+        } stroke={1.5} />
+      </ThemeIcon >}
+      <Text mt="lg" size="lg" mb={7} >
         <strong>{title}</strong>
       </Text>
-      <Text size="md" c="#FFF" lh={1.6}>
+      <Text size="md" lh={1.6}>
         {description}
       </Text>
-    </div>
+    </div >
   );
 }
 
@@ -71,15 +73,16 @@ export function FeaturesGrid() {
 
   return (
     <>
-      <div className="container">
-        <Container size="lg">
-          <Title className={classes.title} id="more">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
+      >
+        <Container size="lg" className={"mb-11 pt-9"}>
+          <Title c="dark" >
             Challenges Physicians Often Face
           </Title>
 
-
-        </Container>
-        <Container size={"lg"} className={"mb-11"}>
           <SimpleGrid
             mt={60}
             cols={{ base: 1, sm: 2 }}
@@ -90,51 +93,67 @@ export function FeaturesGrid() {
             {features}
           </SimpleGrid>
           <div>
-            <Text c="white" fz="sm">
+            <Text c="dimmed" fz="sm">
               Article: Prior Authorization Physician Survey
             </Text>
-            <cite className="text-white dark:text-dark-6">
+            <Text size="xs">
               <a href="https://www.ama-assn.org/system/files/prior-authorization-survey.pdf">
                 https://www.ama-assn.org/system/files/prior-authorization-survey.pdf
               </a>
-            </cite>
+            </Text>
           </div>
         </Container>
-        <Container size="lg" className="mt-9">
-          <hr className="mb-9 mt-9" />
-          <Title className={classes.title} id="more">
-            How NoteDoctor.AI Helps Physicians
-          </Title>
-
-          <div className="mb-11 mt-9">
-            <List
-              spacing={20}
-              color="white"
-              icon={
-                <ThemeIcon color="#1971c2" size={24} radius="xl">
-                  <IconInfoCircle size={16} />
-                </ThemeIcon>
-              }
-            >
-              <List.Item className="text-white">
-                Clarity upfront – Instantly know required documentation
-              </List.Item>
-              <List.Item className="text-white">
-                Automation that works – Eliminate repetitive tasks and reduce
-                appeals
-              </List.Item>
-              <List.Item className="text-white">
-                Faster approvals – Get patients into treatment sooner
-              </List.Item>
-              <List.Item className="text-white">
-                Practice protection – Free up staff and reduce overhead
-              </List.Item>
-            </List>
-          </div>
-        </Container>
-
-      </div>
-      <Contact showNewsLetterSignUp={false} />
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
+      >
+        <section className="bg-gray-1">
+          <Container size="lg" className="mt-9">
+            <div className="mb-11 grid grid-cols-2 items-center gap-3">
+              <div>
+                <Title mb={20} c="dark" variant="h2">
+                  How NoteDoctor.AI Helps Physicians
+                </Title>
+                <List
+                  spacing={20}
+                  color="white"
+                  icon={
+                    <ThemeIcon color="#1971c2" size={24} radius="xl">
+                      <IconInfoCircle size={16} />
+                    </ThemeIcon>
+                  }
+                >
+                  <List.Item>
+                    <Text size="lg">Clarity upfront – Instantly know required documentation</Text>
+                  </List.Item>
+                  <List.Item>
+                    <Text size="lg">Automation that works – Eliminate repetitive tasks and reduce</Text>
+                    appeals
+                  </List.Item>
+                  <List.Item>
+                    <Text size="lg">Faster approvals – Get patients into treatment sooner</Text>
+                  </List.Item>
+                  <List.Item>
+                    <Text size="lg">Practice protection – Free up staff and reduce overhead</Text>
+                  </List.Item >
+                </List>
+              </div>
+              <div>
+                <Image src="/images/chatbot.png" alt="mac image" width={700} height={700} />
+              </div>
+            </div >
+          </Container >
+        </section>
+      </motion.div >
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
+      >
+        <Contact showNewsLetterSignUp={false} />
+      </motion.div>
     </>
   );
 }

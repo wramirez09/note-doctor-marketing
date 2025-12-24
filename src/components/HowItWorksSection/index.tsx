@@ -6,6 +6,7 @@ import { Headline } from "../Headline";
 import { Titledfeatures } from "../Titledfeatures";
 import { ForwardRefExoticComponent, RefAttributes } from "react";
 import Image from "next/image";
+import NewsLatterBox from "../Contact/NewsLetterBox";
 interface FeatureProps extends React.ComponentPropsWithoutRef<"div"> {
   icon?: ForwardRefExoticComponent<IconProps & RefAttributes<Icon>>;
   title: string;
@@ -95,17 +96,17 @@ const HowItWorksSection: React.FC<{
   return (
     <>
       <section className="bg-gray-1 py-10 hero-history-bg">
-        <Container size="xl" className="pt-0">
+        <Container size="lg" className="pt-0">
           <div className="">
             <Headline headline={headline} subHeadline={subHeadline} desc={desc} showHr={false} paddingBottom={100} showDots={false} marginTop={0} colorOverride="white" marginBottom={60} />
           </div>
         </Container >
       </section >
       <section>
-        <Container size={"xl"} className="mb-20 mt-20">
-          <div className="grid grid-cols-2 items-center">
-            <> <Image src="/images/folders.png" alt="mac image" width={600} height={600} /></>
-            <div>
+        <Container size="lg" my={40}>
+          <div className="grid grid-cols-3 items-center">
+            <div className="col-span-1"> <Image src="/images/bad-news.png" alt="mac image" width={500} height={500} /></div>
+            <div className="col-span-2">
               <Title className={`${classes.title} mt-0`} c={"#1971c2"}>
                 The Impact on Healthcare
               </Title>
@@ -127,6 +128,11 @@ const HowItWorksSection: React.FC<{
       </section >
 
       <Titledfeatures />
+      <section className="bg-gray-1 rounded-md py-20">
+        <Container size="md" className="">
+          <NewsLatterBox />
+        </Container>
+      </section>
     </>
   );
 };

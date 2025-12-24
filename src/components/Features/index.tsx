@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import SectionTitle from "../Common/SectionTitle";
 import SingleFeature from "./SingleFeature";
 import featuresData from "./featuresData";
-import { Container, Text } from "@mantine/core";
+import { Container, Text, Title } from "@mantine/core";
 const Features = () => {
   return (
     <motion.div
@@ -13,16 +13,10 @@ const Features = () => {
       transition={{ duration: 1.5 }}
     >
       <section className="bg-gray-1 py-20 dark:bg-dark-2">
-        <Container size="xl">
+        <Container size="lg">
           <section className="pb-8  dark:bg-dark lg:pb-[20px]">
-            <div className="md:px-12">
-              <SectionTitle
-                subtitle="Features"
-                title="The Problem: Prior Authorization is Broken"
-                paragraph=""
-                center
-
-              />
+            <div className="md:px-12 center-text">
+              <Title c={"#228dd2"}>The Problem: Prior Authorization is Broken</Title>
 
               <div className="-mx-4 mt-12 flex flex-wrap md:mt-[70px]">
                 {featuresData.map((feature, i) => (

@@ -69,9 +69,9 @@ export function Titledfeatures() {
   return (
     <>
 
-      <section className="my-20 p-6">
-        <Container size={"xl"}>
-          <hr />
+      <section className="p-6 bg-gray-1">
+        <Container size="lg">
+
           <div className="grid grid-cols-2 items-center justify-center gap-6">
             <div>
               <Title className={classes.title} c={"black"} mb={10} mt={3}>The Bigger Picture</Title>
@@ -91,15 +91,12 @@ export function Titledfeatures() {
                 </a>
               </Text>
             </div>
-            <div>     <Image src="/images/icons-workshop.png" alt="doctor image" width={700} height={600} /></div>
+            <div>     <Image src="/images/big-picture.jpg" alt="doctor image" width={700} height={600} /></div>
           </div>
-          <hr />
-
-
         </Container>
       </section >
-      <section className="mb-40">
-        <Container size={"xl"}>
+      <section className="mb-10">
+        <Container size="lg">
 
           <Title className={classes.title} c={"black"}>How NoteDoctor.AI Helps</Title>
 
@@ -111,11 +108,11 @@ export function Titledfeatures() {
           >
             {features}
           </SimpleGrid>
-          <div className="mt-5 mt-9 flex justify-start">
+          {/* <div className="mt-5 mt-9 flex justify-start">
             <Button component="a" href="/contact">
               Get Started Today
             </Button>
-          </div>
+          </div> */}
         </Container>
       </section >
     </>

@@ -172,3 +172,25 @@ hr {
       black 0% 100%,
       transparent 50% 100%);
 }
+
+.hero-patient-care-bg {
+  background-image: url('/images/patient-care-hero.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  backdrop-filter: blur(30px);
+  mask-image: linear-gradient(to bottom,
+      black 0% 100%,
+      transparent 50% 100%);
+}
+
+.hero-billing-bg {
+  background-image: url('/images/billing.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  backdrop-filter: blur(30px);
+  mask-image: linear-gradient(to bottom,
+      black 0% 100%,
+      transparent 50% 100%);
+}

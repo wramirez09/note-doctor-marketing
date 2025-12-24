@@ -1,4 +1,4 @@
-
+"use client";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Contact from "@/components/Contact";
 import Image from "next/image";
@@ -15,6 +15,7 @@ import { Metadata } from "next";
 import { Dots } from "@/components/Headline/Dots";
 import { Icon, IconCheck, IconProps } from "@tabler/icons-react";
 import { ForwardRefExoticComponent, RefAttributes } from "react";
+import { motion } from "framer-motion";
 
 interface FeatureProps extends React.ComponentPropsWithoutRef<"div"> {
   icon?: ForwardRefExoticComponent<IconProps & RefAttributes<Icon>>;
@@ -64,7 +65,7 @@ function Feature({
   );
 }
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title:
     "AI Health Insights from Your Medical Records | NoteDoctor.ai",
   description:
@@ -127,109 +128,126 @@ const mockdata = [
 ];
 
 export default function Home() {
-  const posts = getAllPosts(["title", "date", "excerpt", "coverImage", "slug"]);
   const items = mockdata.map((item) => <Feature {...item} key={item.title} />);
   return (
     <main>
       <StructuredData data={structuredData} />
-      <ScrollUp />
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
+      >
+        <Container size="lg" className="items-center justify-center my-20 md:mt-10 mb-20 hero-bg">
 
-      <Container size="xl" className="items-center justify-center my-20 md:mt-10 mb-20 hero-bg">
-
-        <div className="grid grid-cols-1 items-end my-6 mt-[170px]">
-          <><Dots className="dots" style={{ left: 0, top: 0 }} />
-            <Dots className="dots" style={{ left: 60, top: 0 }} />
-            <Dots className="dots" style={{ left: 0, top: 140 }} />
-            <Dots className="dots" style={{ right: 0, top: 60 }} /></>
-          <Headline
-            headline="Cut the Red Tape & Deliver Care"
-            subHeadline=" Without Delays"
-            showHr={false}
-            showDots={false}
-            paddingTop={0}
-            marginTop={0}
+          <div className="grid grid-cols-1 items-end my-6 mt-[170px]">
+            <><Dots className="dots" style={{ left: 0, top: 0 }} />
+              <Dots className="dots" style={{ left: 60, top: 0 }} />
+              <Dots className="dots" style={{ left: 0, top: 140 }} />
+              <Dots className="dots" style={{ right: 0, top: 60 }} /></>
+            <Headline
+              headline="Cut the Red Tape & Deliver Care"
+              subHeadline=" Without Delays"
+              showHr={false}
+              showDots={false}
+              paddingTop={0}
+              marginTop={0}
 
 
-            desc="Prior authorization wastes valuable time, burdens physicians, and puts patients at risk. NoteDoctor.AI empowers providers with clarity, speed, and compliance — so you can focus on care, not paperwork."
-          // hideBtn
-          />
-          {/* <div>
+              desc="Prior authorization wastes valuable time, burdens physicians, and puts patients at risk. NoteDoctor.AI empowers providers with clarity, speed, and compliance — so you can focus on care, not paperwork."
+            // hideBtn
+            />
+            {/* <div>
             <Image src="/images/hero-2.png" alt="mac image" width={500} height={500} />
           </div> */}
-        </div>
+          </div>
 
-      </Container>
+        </Container>
+      </motion.div>
 
       <Features />
-      {/* <About />
-      <CallToAction /> */}
-      {/* <Pricing /> */}
-      {/* <Testimonials /> */}
-      <Container size="xl" >
-        <div className="grid grid-cols-2 gap-6 items-center mb-20 mt-10 md:mt-0">
-          <div>
-            <Headline
-              headline={`Real-Time AI Support for Unmatched Coding Precision`}
-              subHeadline=""
-              marginTop={0}
-              showDots={false}
-              showHr={false}
-              desc={
-                "Minimize errors with real-time AI assistance, providing accurate coding suggestions in seconds. Improve precision and efficiency with automated, intelligent support."
-              }
-            />
-          </div>
-          <div>
-            <Image src="/images/mac.png" alt="mac image" width={500} height={500} />
-          </div>
-        </div >
-      </Container >
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
+      >
+        <Container size="lg" >
+          <div className="grid grid-cols-2 gap-6 items-center mb-20 mt-10 md:mt-0">
+            <div>
+              <Headline
+                headline={`Real-Time AI Support for Unmatched Coding Precision`}
+                subHeadline=""
+                marginTop={0}
+                showDots={false}
+                showHr={false}
+                desc={
+                  "Minimize errors with real-time AI assistance, providing accurate coding suggestions in seconds. Improve precision and efficiency with automated, intelligent support."
+                }
+              />
+            </div>
+            <div>
+              <Image src="/images/mac.png" alt="mac image" width={500} height={500} />
+            </div>
+          </div >
+        </Container >
+      </motion.div>
+
       <Testimonials />
 
-      <Container size="xl" className="my-[60px]">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
+      >
+        <Container size="lg" className="my-[60px]">
 
 
-        <div className="grid grid-cols-2 gap-1 items-center mb-9 mt-0 justify-center">
+          <div className="grid grid-cols-2 gap-1 items-center mb-9 mt-0 justify-center">
 
-          <div className="flex flex-col items-center gap-1 ">
-            <Image src="/images/ai.png" alt="doctor image" width={600} height={500} />
+            <div className="flex flex-col items-center gap-1 ">
+              <Image src="/images/ai.png" alt="doctor image" width={600} height={500} />
 
-          </div>
-          <div>
-            <Headline
-              headline="How NoteDoctor.AI "
-              subHeadline="Helps"
-              desc="NoteDoctor.Ai simplifies prior authorization by:"
-              marginTop={0}
-              btnMarginBottom={0}
-              paddingTop={0}
-              showDots={false}
-              hideBtn={true}
-              centerText={false}
-              showHr={false}
-            />
-            <SimpleGrid
-              cols={{ base: 3, sm: 1 }}
-              spacing={5}
-              className="mb-7 mt-0 pb-3"
-            >
-              {items}
-            </SimpleGrid>
-            <div className="flex justify-start ml-10">
-              <Button component="a" href="/contact">
-                Get Started Today
-              </Button>
+            </div>
+            <div>
+              <Headline
+                headline="How NoteDoctor.AI "
+                subHeadline="Helps"
+                desc="NoteDoctor.Ai simplifies prior authorization by:"
+                marginTop={0}
+                btnMarginBottom={0}
+                paddingTop={0}
+                showDots={false}
+                hideBtn={true}
+                centerText={false}
+                showHr={false}
+              />
+              <SimpleGrid
+                cols={{ base: 3, sm: 1 }}
+                spacing={5}
+                className="mb-7 mt-0 pb-3"
+              >
+                {items}
+              </SimpleGrid>
+              <div className="flex justify-start ml-10">
+                <Button component="a" href="/contact">
+                  Get Started Today
+                </Button>
+              </div>
             </div>
           </div>
-        </div>
-      </Container>
+        </Container>
+      </motion.div>
 
-      {/* <Team /> */}
-      {/* <HomeBlogSection posts={posts} /> */}
-      <section className="bg-gray-1">
-        <Contact showNewsLetterSignUp={false} />
-      </section>
-      {/* <Clients /> */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
+      >
+        <section className="bg-gray-1">
+          <Contact showNewsLetterSignUp={false} />
+        </section>
+      </motion.div>
+      <ScrollUp />
     </main >
   );
 }
