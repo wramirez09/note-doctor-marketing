@@ -145,7 +145,7 @@ export default function Home() {
             <div className="col-span-1 md:col-span-2">
               <Headline
                 headline="Cut the Red Tape & Deliver Care"
-                subHeadline=" Without Delays"
+                subHeadline="&nbsp;Without Delays"
                 showHr={false}
                 showDots={false}
                 paddingTop={0}
@@ -169,11 +169,12 @@ export default function Home() {
         transition={{ duration: 1.5 }}
       >
         <Container size="lg" >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center mb-20 mt-10 md:mt-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center mb-20 mt-10 md:mt-0 p-10">
             <div>
               <Headline
                 headline={`Real-Time AI Support for Unmatched Coding Precision`}
                 subHeadline=""
+                paddingTop={0}
                 marginTop={0}
                 showDots={false}
                 showHr={false}
@@ -183,7 +184,7 @@ export default function Home() {
               />
             </div>
             <div>
-              <Image src="/images/mac.png" alt="mac image" width={500} height={500} />
+              <Image src="/images/mac-phone.png" alt="mac image" width={500} height={500} />
             </div>
           </div >
         </Container >
@@ -226,7 +227,7 @@ export default function Home() {
                 {items}
               </SimpleGrid>
               <div className="flex justify-start ml-10">
-                <Button component="a" href="/contact">
+                <Button component="a" href="/contact" className="shadow-md">
                   Get Started Today
                 </Button>
               </div>

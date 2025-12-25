@@ -43,7 +43,7 @@ export const NewsletterSignUp: React.FC<{
                     root: classes.inputWrapper,
                   }}
                 />
-                <Button className={`${classes.control} button-primary`}>
+                <Button className={`${classes.control} button-primary shadow-md`}>
                   {btnText}
                 </Button>
               </div>

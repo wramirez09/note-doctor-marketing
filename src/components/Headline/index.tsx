@@ -71,6 +71,7 @@ export const Headline: React.FC<{
                 size="md"
                 component="a"
                 href="/contact"
+                className="shadow-md"
               >
                 Contact Us
               </Button>

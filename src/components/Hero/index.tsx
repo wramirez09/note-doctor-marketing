@@ -37,7 +37,7 @@ const Hero = () => {
                 <div className="flex w-full items-center justify-center">
                   <Button
                     type="submit"
-                    className="button-primary"
+                    className="button-primary shadow-md"
                     component="a"
                     href="#contact"
                   >

@@ -73,7 +73,7 @@ export function Services() {
         {items}
       </SimpleGrid>
     </Container><Container className="flex items-center justify-center">
-        <Button component="a" href="/contact" className="m-10" size="lg">
+        <Button component="a" href="/contact" className="m-10 shadow-md" size="lg">
           Request a Consultation
         </Button>
       </Container></>

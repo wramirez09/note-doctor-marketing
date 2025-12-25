@@ -133,7 +133,7 @@ const Contact: React.FC<{ showNewsLetterSignUp?: boolean }> = ({
                       </div>
                     </div>
                     <div className="w-full px-4">
-                      <Button className="button-primary" type="submit">
+                      <Button className="button-primary shadow-md" type="submit">
                         Submit
                       </Button>
                     </div>
