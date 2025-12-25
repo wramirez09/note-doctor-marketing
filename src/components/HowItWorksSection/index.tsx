@@ -100,7 +100,7 @@ const HowItWorksSection: React.FC<{
   const isMobile = useMediaQuery(`(max-width: 750px)`);
   return (
     <>
-      <section className="bg-gray-800 py-10 md:hero-history-bg">
+      <section className="xs:bg-gray-800 py-10 hero-history-bg">
         <Container size="lg" className="pt-0">
           <div className="">
             <Headline headline={headline} subHeadline={subHeadline} desc={desc} showHr={false} paddingBottom={`${isMobile ? "20px" : "100px"}`} showDots={false} marginTop={0} colorOverride="white" marginBottom={`${isMobile ? "20px" : "60px"}`} />
