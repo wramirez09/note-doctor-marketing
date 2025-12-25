@@ -11,6 +11,7 @@ import Contact from "../Contact";
 import ContactPage from "@/app/(site)/contact/page";
 import { Sign } from "crypto";
 import { NewsletterSignUp } from "../NewsletterSignUp";
+import { useMediaQuery } from "@mantine/hooks";
 interface FeatureProps extends React.ComponentPropsWithoutRef<"div"> {
   icon?: ForwardRefExoticComponent<IconProps & RefAttributes<Icon>>;
   title: string;
@@ -96,20 +97,20 @@ const HowItWorksSection: React.FC<{
   desc: string;
 }> = ({ headline, subHeadline, desc }) => {
   const items = mockdata.map((item) => <Feature {...item} key={item.title} />);
-
+  const isMobile = useMediaQuery(`(max-width: 750px)`);
   return (
     <>
-      <section className="bg-gray-1 py-10 hero-history-bg">
+      <section className="bg-gray-800 py-10 md:hero-history-bg">
         <Container size="lg" className="pt-0">
           <div className="">
-            <Headline headline={headline} subHeadline={subHeadline} desc={desc} showHr={false} paddingBottom={100} showDots={false} marginTop={0} colorOverride="white" marginBottom={60} />
+            <Headline headline={headline} subHeadline={subHeadline} desc={desc} showHr={false} paddingBottom={`${isMobile ? "20px" : "100px"}`} showDots={false} marginTop={0} colorOverride="white" marginBottom={`${isMobile ? "20px" : "60px"}`} />
           </div>
         </Container >
       </section >
       <section>
         <Container size="lg" my={40}>
-          <div className="grid grid-cols-3 items-center gap-10">
-            <div className="col-span-1 shadow-md"> <Image src="/images/bad-news.png" alt="mac image" width={500} height={500} /></div>
+          <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-0 md:gap-10">
+            <div className="col-span-1 shadow-md"> <Image src="/images/bad-news.png" alt="bad news image" width={500} height={500} /></div>
             <div className="col-span-2">
               <Title className={`${classes.title} mt-0`} c={"#1971c2"}>
                 The Impact on Healthcare

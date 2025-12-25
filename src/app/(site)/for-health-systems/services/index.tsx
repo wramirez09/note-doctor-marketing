@@ -19,7 +19,7 @@ function Feature({
     <div className={`${classes.feature}`} {...others}>
 
       <Card
-        shadow="md"
+        shadow="sm"
         radius="md"
         className="hover:shadow-lg transition-shadow duration-300 bg-gray-1"
         padding="xl">

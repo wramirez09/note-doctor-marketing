@@ -8,8 +8,8 @@ const About = () => {
     <>
       <section>
         <Container size="md" pt={100} >
-          <div className="grid grid-cols-2 items-center gap-1">
-            <div>
+          <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-1 b-2">
+            <div className="xs:mb-5">
               <Title mb={10}>
                 Lower Administrative Costs.<br /> <span style={{ color: "#228be6" }}>Improve Patient Outcomes.</span>
               </Title>

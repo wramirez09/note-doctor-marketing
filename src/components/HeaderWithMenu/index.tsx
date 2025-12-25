@@ -138,7 +138,7 @@ export function HeaderWithMenu() {
                 opened={drawerOpened}
                 onClick={toggleDrawer}
                 hiddenFrom="lg"
-                color="white"
+                color="dark"
               />
             </Group>
           </div>
@@ -210,7 +210,7 @@ export function HeaderWithMenu() {
 
           <Group justify="center" grow pb="xl" px="lg" mt="xl">
             <Button
-              className="button-light"
+              variant="outline"
               component="a"
               href="https://preauthproduction.vercel.app/auth/login"
             >

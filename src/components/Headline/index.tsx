@@ -17,13 +17,13 @@ export const Headline: React.FC<{
   btns?: ButtonsData[];
   hideBtn?: boolean;
   marginTop?: number;
-  marginBottom?: number;
+  marginBottom?: number | string;
   showDots?: boolean;
   showHr?: boolean;
   btnMarginBottom?: string | number;
   centerText?: boolean;
   paddingTop?: number;
-  paddingBottom?: number;
+  paddingBottom?: number | string;
   classOverrides?: string;
   colorOverride?: string;
 }> = ({

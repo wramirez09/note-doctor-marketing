@@ -141,7 +141,7 @@ export default function Home() {
             <Dots className="dots" style={{ left: 60, top: 0 }} />
             <Dots className="dots" style={{ left: 0, top: 140 }} />
             <Dots className="dots" style={{ right: 0, top: 60 }} /></>
-          <div className="grid grid-cols-3 my-6 mt-[170px]">
+          <div className="grid grid-cols-1 md:grid-cols-3 my-6 md:mt-[170px]">
             <div className="col-span-1 md:col-span-2">
               <Headline
                 headline="Cut the Red Tape & Deliver Care"
@@ -183,7 +183,7 @@ export default function Home() {
                 }
               />
             </div>
-            <div>
+            <div className="p-5 shadow-md">
               <Image src="/images/mac-phone.png" alt="mac image" width={500} height={500} />
             </div>
           </div >

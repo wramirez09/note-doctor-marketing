@@ -37,7 +37,7 @@ const PhysiciansPage = () => {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
       >
-        <section className="hero-patient-care-bg py-100">
+        <section className="bg-dark md:hero-patient-care-bg py-100">
           <Container size="lg" className="py-20 md:py-40 text-center">
             <Title c="white" mb={15} order={1} size={60}>
               Less Paperwork. More Patient Care.

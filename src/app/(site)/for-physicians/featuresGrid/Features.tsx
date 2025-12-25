@@ -85,7 +85,7 @@ export function FeaturesGrid() {
 
           <SimpleGrid
             mt={60}
-            cols={{ base: 1, sm: 2 }}
+            cols={{ base: 1, md: 2 }}
             spacing={{ base: "xl", md: 50 }}
             verticalSpacing={{ base: "xl", md: 50 }}
             className="mb-11"
@@ -111,7 +111,7 @@ export function FeaturesGrid() {
       >
         <section className="bg-gray-1">
           <Container size="lg" className="mt-9">
-            <div className="mb-11 grid grid-cols-2 items-center gap-3">
+            <div className="mb-5 md:mb-11 grid grid-cols-1 md:grid-cols-2 items-center gap-3">
               <div>
                 <Title mb={20} c="dark" variant="h2">
                   How NoteDoctor.AI Helps Physicians
@@ -141,7 +141,7 @@ export function FeaturesGrid() {
                 </List>
               </div>
               <div>
-                <Image src="/images/chatbot.png" alt="mac image" width={700} height={700} />
+                <Image src="/images/chatbot.png" alt="chat bot image" width={700} height={700} />
               </div>
             </div >
           </Container >

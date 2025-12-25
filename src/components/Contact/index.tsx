@@ -53,7 +53,7 @@ const Contact: React.FC<{ showNewsLetterSignUp?: boolean }> = ({
   return (
     <section
       id="contact"
-      className="overflow-hidden py-16 md:py-20 lg:py-10"
+      className="overflow-hidden py-5 md:py-20"
 
     >
       <div className="full-width md:px-12">
