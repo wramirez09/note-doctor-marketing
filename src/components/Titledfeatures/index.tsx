@@ -47,7 +47,7 @@ interface FeatureProps {
 
 export function Feature({ icon: Icon, title, description }: FeatureProps) {
   return (
-    <div className="bg-gray-200 dark:bg-dark-7 p-8 rounded-md justify center items-center text-center hover:shadow-lg transition-shadow duration-300">
+    <div className="bg-gray-2 dark:bg-dark-7 p-8 rounded-md justify center items-center text-center hover:shadow-lg transition-shadow duration-300 shadow-md hover:shadow-lg">
       <ThemeIcon variant="light" size={40} radius={40} autoContrast>
         <Icon style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
       </ThemeIcon>
@@ -69,7 +69,7 @@ export function Titledfeatures() {
   return (
     <>
 
-      <section className="p-6 bg-gray-1">
+      <section className="p-6 py-0 bg-gray-1">
         <Container size="lg">
 
           <div className="grid grid-cols-2 items-center justify-center gap-6">

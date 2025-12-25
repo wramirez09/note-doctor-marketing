@@ -7,6 +7,10 @@ import { Titledfeatures } from "../Titledfeatures";
 import { ForwardRefExoticComponent, RefAttributes } from "react";
 import Image from "next/image";
 import NewsLatterBox from "../Contact/NewsLetterBox";
+import Contact from "../Contact";
+import ContactPage from "@/app/(site)/contact/page";
+import { Sign } from "crypto";
+import { NewsletterSignUp } from "../NewsletterSignUp";
 interface FeatureProps extends React.ComponentPropsWithoutRef<"div"> {
   icon?: ForwardRefExoticComponent<IconProps & RefAttributes<Icon>>;
   title: string;
@@ -104,8 +108,8 @@ const HowItWorksSection: React.FC<{
       </section >
       <section>
         <Container size="lg" my={40}>
-          <div className="grid grid-cols-3 items-center">
-            <div className="col-span-1"> <Image src="/images/bad-news.png" alt="mac image" width={500} height={500} /></div>
+          <div className="grid grid-cols-3 items-center gap-10">
+            <div className="col-span-1 shadow-md"> <Image src="/images/bad-news.png" alt="mac image" width={500} height={500} /></div>
             <div className="col-span-2">
               <Title className={`${classes.title} mt-0`} c={"#1971c2"}>
                 The Impact on Healthcare
@@ -115,7 +119,7 @@ const HowItWorksSection: React.FC<{
               <Accordion chevronPosition="right" defaultValue="reset-password" variant="separated" className="mt-6 mb-10 ">
                 {items.map((item, index) => (
                   <Accordion.Item value={item.props.title} key={index}>
-                    <Accordion.Control className="font-semibold bg-gray-2"><Text>{item.props.title}</Text></Accordion.Control>
+                    <Accordion.Control className="font-semibold bg-gray-2 shadow-sm"><Text>{item.props.title}</Text></Accordion.Control>
                     <Accordion.Panel><Text c={"dimmed"}>{item.props.description}</Text></Accordion.Panel>
                   </Accordion.Item>
                 ))}
@@ -129,9 +133,7 @@ const HowItWorksSection: React.FC<{
 
       <Titledfeatures />
       <section className="bg-gray-1 rounded-md py-20">
-        <Container size="md" className="">
-          <NewsLatterBox />
-        </Container>
+        <NewsletterSignUp />
       </section>
     </>
   );

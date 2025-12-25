@@ -15,8 +15,10 @@ const Features = () => {
       <section className="bg-gray-1 py-20 dark:bg-dark-2">
         <Container size="lg">
           <section className="pb-8  dark:bg-dark lg:pb-[20px]">
-            <div className="md:px-12 center-text">
-              <Title c={"#228dd2"}>The Problem: Prior Authorization is Broken</Title>
+            <div className="md:px-12">
+              <div className="center mb-12 text-center">
+                <Title c={"#228dd2"}>The Problem: Prior Authorization is Broken</Title>
+              </div>
 
               <div className="-mx-4 mt-12 flex flex-wrap md:mt-[70px]">
                 {featuresData.map((feature, i) => (

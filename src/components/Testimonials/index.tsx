@@ -46,10 +46,10 @@ const Testimonials = () => {
             <Title>
               What Physicians Are Saying
             </Title>
-            <Text>There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.
+            <Text mb={50}>There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.
               center</Text>
 
-            <div className="mt-[60px] flex flex-wrap lg:mt-20 gap-y-8">
+            <div className="grid grid-cols-3 gap-5">
               {testimonialData.map((testimonial, i) => (
                 <SingleTestimonial key={i} testimonial={testimonial} />
               ))}

@@ -136,28 +136,26 @@ export default function Home() {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
       >
-        <Container size="lg" className="items-center justify-center my-20 md:mt-10 mb-20 hero-bg">
-
-          <div className="grid grid-cols-1 items-end my-6 mt-[170px]">
-            <><Dots className="dots" style={{ left: 0, top: 0 }} />
-              <Dots className="dots" style={{ left: 60, top: 0 }} />
-              <Dots className="dots" style={{ left: 0, top: 140 }} />
-              <Dots className="dots" style={{ right: 0, top: 60 }} /></>
-            <Headline
-              headline="Cut the Red Tape & Deliver Care"
-              subHeadline=" Without Delays"
-              showHr={false}
-              showDots={false}
-              paddingTop={0}
-              marginTop={0}
-
-
-              desc="Prior authorization wastes valuable time, burdens physicians, and puts patients at risk. NoteDoctor.AI empowers providers with clarity, speed, and compliance — so you can focus on care, not paperwork."
-            // hideBtn
-            />
-            {/* <div>
-            <Image src="/images/hero-2.png" alt="mac image" width={500} height={500} />
-          </div> */}
+        <Container size="lg" className="items-center justify-center my-20 md:mt-10 mb-20">
+          <><Dots className="dots" style={{ left: 0, top: 0 }} />
+            <Dots className="dots" style={{ left: 60, top: 0 }} />
+            <Dots className="dots" style={{ left: 0, top: 140 }} />
+            <Dots className="dots" style={{ right: 0, top: 60 }} /></>
+          <div className="grid grid-cols-3 my-6 mt-[170px]">
+            <div className="col-span-1 md:col-span-2">
+              <Headline
+                headline="Cut the Red Tape & Deliver Care"
+                subHeadline=" Without Delays"
+                showHr={false}
+                showDots={false}
+                paddingTop={0}
+                marginTop={0}
+                desc="Prior authorization wastes valuable time, burdens physicians, and puts patients at risk. NoteDoctor.AI empowers providers with clarity, speed, and compliance — so you can focus on care, not paperwork."
+              />
+            </div>
+            <div className="col-span-1">
+              <Image src="/images/hero-2.png" alt="mac image" width={400} height={400} />
+            </div>
           </div>
 
         </Container>
