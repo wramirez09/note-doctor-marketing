@@ -201,7 +201,9 @@ hr {
 
   /* Styles for screens 480px wide or greater */
   .hero-bg,
-  .hero-history-bg {
+  .hero-history-bg,
+  .hero-patient-care-bg,
+  .hero-billing-bg {
     background-image: none;
   }
 }

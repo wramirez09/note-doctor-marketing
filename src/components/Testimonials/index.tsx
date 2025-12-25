@@ -49,7 +49,7 @@ const Testimonials = () => {
             <Text mb={50}>There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.
               center</Text>
 
-            <div className="grid grid-cols-3 gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {testimonialData.map((testimonial, i) => (
                 <SingleTestimonial key={i} testimonial={testimonial} />
               ))}

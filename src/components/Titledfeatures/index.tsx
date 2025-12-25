@@ -72,7 +72,7 @@ export function Titledfeatures() {
       <section className="p-6 py-0 bg-gray-1">
         <Container size="lg">
 
-          <div className="grid grid-cols-2 items-center justify-center gap-6">
+          <div className="grid grid-1 md:grid-cols-2 items-center justify-center gap-6">
             <div>
               <Title className={classes.title} c={"black"} mb={10} mt={3}>The Bigger Picture</Title>
 
