@@ -18,7 +18,7 @@ const About = () => {
                 Eliminate bottlenecks across your system with smarter prior
                 authorization.
               </Text>
-              <Button className="shadow-md">Learn More</Button>
+              <Button className="button-primary shadow-md">Learn More</Button>
             </div>
             <div>
               <Image src="/images/payment.png" alt="mac image" width={700} height={700} />
