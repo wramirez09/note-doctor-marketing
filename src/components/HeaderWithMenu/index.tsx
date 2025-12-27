@@ -125,9 +125,10 @@ export function HeaderWithMenu() {
                     Log in
                   </Button> */}
                   <Button
-                    className="button-primary"
+                    className="button-primary hover:shadow-md"
                     component="a"
                     href="https://preauthproduction.vercel.app"
+
                   >
                     PreAuth App
                   </Button>

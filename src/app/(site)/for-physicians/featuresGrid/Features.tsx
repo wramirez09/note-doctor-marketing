@@ -51,7 +51,7 @@ interface FeatureProps {
 
 export function Feature({ icon: Icon, title, description }: FeatureProps) {
   return (
-    <div className="bg-gray-2 p-6 rounded-md justify center items-center text-center hover:shadow-lg transition-shadow duration-300 shadow-md hover:shadow-lg">
+    <div className="bg-gray-2 py-8 px-20 rounded-md justify center items-center text-center hover:shadow-lg transition-shadow duration-300 shadow-md hover:shadow-lg">
       {Icon && <ThemeIcon variant="light" size={40} radius={40}>
         < Icon style={{ width: rem(25), height: rem(25) }
         } stroke={1.5} />

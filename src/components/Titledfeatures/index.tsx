@@ -82,18 +82,12 @@ export function Titledfeatures() {
                 months — without reviewing patient files. This isn’t cost savings. It’s
                 care denied.
               </Text>
-              <Text className="text-xs text-black" size="xs" mt={60}>
-                From Aritcle: <strong>Standing Up to Prior Authorization</strong>
-              </Text>
-              <Text className="text-xs text-black" size="xs" mt={4}>
-                <a href="https://ashpublications.org/ashclinicalnews/news/7981/Standing-Up-to-Prior-Authorization">
-                  https://ashpublications.org/ashclinicalnews/news/7981/Standing-Up-to-Prior-Authorization
-                </a>
-              </Text>
+              <a href="https://ashpublications.org/ashclinicalnews/news/7981/Standing-Up-to-Prior-Authorization"><Text size="xs" mt={10} c={"blue"}>
+                From Aritcle: Standing Up to Prior Authorization</Text></a>
             </div>
             <div>     <Image src="/images/big-picture.jpg" alt="doctor image" width={700} height={600} /></div>
           </div>
-        </Container>
+        </Container >
       </section >
       <section className="mb-10">
         <Container size="lg">

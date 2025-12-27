@@ -13,7 +13,7 @@ export const NewsletterSignUp: React.FC<{
   mt?: string | number;
 }> = ({
   title = "Transform Your Practice with AI",
-  paragraph = "Sign up to receive exclusive AI healthcare updates and unlock your discount.",
+  paragraph = "Sign up to begin streamlining pre authorizations",
   btnText = "Subscribe",
   width = "680px",
   mt = "120px",
@@ -34,22 +34,14 @@ export const NewsletterSignUp: React.FC<{
               width={width}
               center
             />
-            <div className="flex justify-center">
-              <div className={classes.controls}>
-                <TextInput
-                  placeholder="Your email"
-                  classNames={{
-                    input: classes.input,
-                    root: classes.inputWrapper,
-                  }}
-                />
-                <Button className={`${classes.control} button-primary shadow-md`}>
-                  {btnText}
-                </Button>
-              </div>
+            <div className="flex justify-center mt-3">
+              <Button size="lg" variant="primary" className="shadow-md" component="a" href="https://preauthproduction.vercel.app/" target="_blank">
+                {btnText}
+              </Button>
+
             </div>
           </div>
         </section>
-      </motion.div>
+      </motion.div >
     );
   };

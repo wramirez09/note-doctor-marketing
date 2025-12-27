@@ -7,7 +7,7 @@ const testimonialData: Testimonial[] = [
   {
     id: 1,
     name: "Sabo Masties",
-    designation: "Founder @ Rolex",
+    designation: "M.D",
     content:
       " We don’t actually know what piece of information the insurer is looking for.",
     image: "/images/testimonials/author-01.png",
@@ -16,7 +16,7 @@ const testimonialData: Testimonial[] = [
   {
     id: 2,
     name: "Margin Gesmu",
-    designation: "Founder @ UI Hunter",
+    designation: "M.D",
     content:
       "It’s a huge diversion of time and resources.",
     image: "/images/testimonials/author-02.png",
@@ -25,7 +25,7 @@ const testimonialData: Testimonial[] = [
   {
     id: 3,
     name: "William Smith",
-    designation: "Founder @ Trorex",
+    designation: "Nurse Practitioner",
     content:
       "Prior Auth is a guessing game",
     image: "/images/testimonials/author-03.png",

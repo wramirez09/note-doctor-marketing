@@ -47,7 +47,7 @@ const PhysiciansPage = () => {
               Reclaim your time and reduce burnout with transparent, streamlined
               prior authorization.
             </Text>
-            <Button component="a" href="#more" className="shadow-md" size="lg">
+            <Button component="a" href="https://preauthproduction.vercel.app/" className="shadow-md" size="lg">
               Take Back Your Time
             </Button>
           </Container>

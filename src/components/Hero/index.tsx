@@ -39,7 +39,8 @@ const Hero = () => {
                     type="submit"
                     className="button-primary shadow-md"
                     component="a"
-                    href="#contact"
+                    href="https://preauthproduction.vercel.app/"
+                    target="_blank"
                   >
                     Get Started Today
                   </Button>

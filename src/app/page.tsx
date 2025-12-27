@@ -108,7 +108,7 @@ const structuredData = {
   datePublished: "2022-09-14T09:00:00.000Z",
 };
 
-const mockdata = [
+const data = [
   {
     icon: IconCheck,
     title: "Clarifying requirements upfront",
@@ -127,7 +127,7 @@ const mockdata = [
 ];
 
 export default function Home() {
-  const items = mockdata.map((item) => <Feature {...item} key={item.title} />);
+  const items = data.map((item) => <Feature {...item} key={item.title} />);
   return (
     <main>
       <StructuredData data={structuredData} />
@@ -200,9 +200,9 @@ export default function Home() {
         <Container size="lg" className="my-[60px]">
 
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-1 items-center mb-9 mt-0 justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center mb-9 mt-0 justify-center">
 
-            <div className="flex flex-col items-center gap-1 ">
+            <div className="flex flex-col items-center gap-1 shadow-md p-1">
               <Image src="/images/ai.png" alt="doctor image" width={600} height={500} />
 
             </div>
@@ -220,14 +220,14 @@ export default function Home() {
                 showHr={false}
               />
               <SimpleGrid
-                cols={{ base: 1, md: 3, }}
+                cols={{ base: 1, md: 1, }}
                 spacing={5}
                 className="mb-7 mt-0 pb-3"
               >
                 {items}
               </SimpleGrid>
               <div className="flex justify-start ml-10">
-                <Button component="a" href="/contact" className="shadow-md">
+                <Button component="a" href="https://preauthproduction.vercel.app/" className="shadow-md" target="_blank">
                   Get Started Today
                 </Button>
               </div>
