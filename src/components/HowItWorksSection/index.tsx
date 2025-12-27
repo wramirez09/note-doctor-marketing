@@ -116,7 +116,7 @@ const HowItWorksSection: React.FC<{
 
               {items.map((items) => {
                 return <blockquote className="text-md italic font-semibold text-heading mb-3 flex">
-                  <p>"{items.props.title}"</p>
+                  <p>&quot;{items.props.title}&quot;</p>
                 </blockquote>
               })}
 
