@@ -9,7 +9,7 @@ const testimonialData: Testimonial[] = [
     name: "Sabo Masties",
     designation: "M.D",
     content:
-      " We don’t actually know what piece of information the insurer is looking for.",
+      "We don’t actually know what piece of information the insurer is looking for.",
     image: "/images/testimonials/author-01.png",
     star: 5,
   },

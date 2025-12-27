@@ -72,13 +72,9 @@ export function AboutFeatures() {
         {feature.description}
       </Text>
       {feature.cite && (
-        <p className="mb-3 mt-6 text-xs font-bold ">{feature.cite}</p>
+        <Text component="a" href={feature.citeLink} size="xs" c={"blue"} mt="md">{feature.cite}</Text>
       )}
-      {feature.citeLink && (
-        <cite className="text-xs dark:text-dark-6">
-          <a href={feature.citeLink}>{feature.citeLink}</a>
-        </cite>
-      )}
+
     </Card>
   ));
 

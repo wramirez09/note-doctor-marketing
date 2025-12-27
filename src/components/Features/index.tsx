@@ -28,11 +28,9 @@ const Features = () => {
               <p className="mb-1 block text-lg font-bold text-secondary">
                 The result: wasted time, rising costs, physician burnout, and patient
               </p>
-              <Text c={"gray"} size="xs">
-                <strong>Source:</strong>
-                <a href="https://www.kff.org/medicare/issue-brief/nearly-50-million-prior-authorization-requests-were-sent-to-medicare-advantage-insurers-in-2023/">
-                  https://www.kff.org/medicare/issue-brief/nearly-50-million-prior-authorization-requests-were-sent-to-medicare-advantage-insurers-in-2023/
-                </a>
+              <Text c={"blue"} size="xs" component="a" href="https://www.kff.org/medicare/nearly-50-million-prior-authorization-requests-were-sent-to-medicare-advantage-insurers-in-2023/">
+                <strong>Source:&nbsp;</strong>
+                Medicare Advantage Insurers Made Nearly 50 Million Prior Authorization Determinations in 2023
               </Text>
             </div>
 

@@ -43,14 +43,9 @@ export function Feature({
           <Text c="dimmed" fz="sm" className={cite ? "flex flex-col" : ""}>
             {description}
             {cite && (
-              <div>
-                <Text c="dimmed" fz="sm">
-                  {cite}
-                </Text>
-                <cite>
-                  <a href={citeLink}>{citeLink}</a>
-                </cite>
-              </div>
+              <Text c="blue" fz="sm" component="a" href={citeLink}>
+                {cite}
+              </Text>
             )}
           </Text>
         </div>

@@ -93,13 +93,9 @@ export function FeaturesGrid() {
             {features}
           </SimpleGrid>
           <div>
-            <Text c="dimmed" fz="sm">
-              Article: Prior Authorization Physician Survey
-            </Text>
-            <Text size="xs">
-              <a href="https://www.ama-assn.org/system/files/prior-authorization-survey.pdf">
-                https://www.ama-assn.org/system/files/prior-authorization-survey.pdf
-              </a>
+
+            <Text size="xs" component="a" href="https://www.ama-assn.org/system/files/prior-authorization-survey.pdf" c="blue">
+              2024 AMA prior authorization physician survey
             </Text>
           </div>
         </Container>
