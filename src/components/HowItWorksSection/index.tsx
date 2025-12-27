@@ -59,14 +59,14 @@ const data = [
     icon: IconInfoCircle,
     title: "93% of physicians say prior auth causes care delays",
     description: "",
-    cite: "From article: Harnessing informatic's power to cut physician burdens.",
+    cite: "From article: Harnessing informatic&#39;s power to cut physician burdens.",
     citeLink: "https://www.ama-assn.org/practice-management/prior-authorization/harnessing-informatics-power-cut-physician-burdens",
   },
   {
     icon: IconInfoCircle,
     title: "82% report it leads to treatment abandonment",
     description: "",
-    cite: "From article: Harnessing informatic's power to cut physician burdens.",
+    cite: "From article: Harnessing informatic&#39;s power to cut physician burdens.",
     citeLink: "https://www.ama-assn.org/practice-management/prior-authorization/harnessing-informatics-power-cut-physician-burdens",
   },
   {
@@ -74,7 +74,7 @@ const data = [
     title:
       "29% have seen it result in a serious adverse event, including death",
     description: "In fact, in a December 2024 survey of 1,000 physicians (PDF) that the AMA conducted, 82% reported that prior authorization said it has resulted in care delays, and 29% said it has led to a serious adverse event—including death—for a patient.",
-    cite: "From article: Harnessing informatic's power to cut physician burdens.",
+    cite: "From article: Harnessing informatic&#39;s power to cut physician burdens.",
     citeLink:
       "https://www.ama-assn.org/practice-management/prior-authorization/harnessing-informatics-power-cut-physician-burdens",
   },
@@ -114,13 +114,13 @@ const HowItWorksSection: React.FC<{
               </Title>
 
 
-              {items.map((items) => {
-                return <blockquote className="text-md italic font-semibold text-heading mb-3 flex">
+              {items.map((items, index) => {
+                return <blockquote className="text-md italic font-semibold text-heading mb-3 flex" key={`${index}-${items.props.title}`}>
                   <p>&quot;{items.props.title}&quot;</p>
                 </blockquote>
               })}
 
-              <a href="https://www.ama-assn.org/practice-management/prior-authorization/fixing-prior-auth-nearly-40-prior-authorizations-week-way"><Text size="sm" c={"blue"}>From article: Harnessing informatic's power to cut physician burdens.</Text></a>
+              <a href="https://www.ama-assn.org/practice-management/prior-authorization/fixing-prior-auth-nearly-40-prior-authorizations-week-way"><Text size="sm" c={"blue"}>From article: Harnessing informatic&lsquo;s power to cut physician burdens.</Text></a>
 
 
             </div>
