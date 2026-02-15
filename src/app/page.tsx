@@ -1,20 +1,20 @@
+'use client';
+
 import ScrollUp from "@/components/Common/ScrollUp";
 import Contact from "@/components/Contact";
 import { CTASection } from "@/components/CTASection";
-import Faq from "@/components/Faq";
+import { Faq } from "@/components/Faq";
+
 import Features from "@/components/Features";
 import { Headline } from "@/components/Headline";
 import { Feature } from "@/components/HowItWorksSection";
 
 import { StructuredData } from "@/components/StructuredData";
-
-import { getAllPosts } from "@/utils/markdown";
 import { Container, SimpleGrid } from "@mantine/core";
-
 import { IconInfoCircle } from "@tabler/icons-react";
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
+ const metadata: Metadata = {
   title:
     "AI Health Insights from Your Medical Records | NoteDoctor.ai",
   description:
@@ -77,8 +77,8 @@ const mockdata = [
 ];
 
 export default function Home() {
-  const posts = getAllPosts(["title", "date", "excerpt", "coverImage", "slug"]);
-  const items = mockdata.map((item) => <Feature {...item} key={item.title} />);
+  
+
   return (
     <main>
       <StructuredData data={structuredData} />
