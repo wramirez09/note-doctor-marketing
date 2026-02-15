@@ -1,59 +1,118 @@
 'use client';
 import { Accordion, Blockquote, Container, Title } from '@mantine/core';
+import { IconInfoCircle } from '@tabler/icons-react';
 import classes from './index.module.css';
 import { motion } from 'framer-motion';
 import SectionTitle from '../Common/SectionTitle';
 
-const faqData: {title: string; content: string}[] = [
+const icon = <IconInfoCircle />;
+
+const faqData: {title: string; content: React.ReactNode}[] = [
   {
     title: "What is prior authorization?",
-    content: "Prior authorization is a review process used by health plans and insurance companies to determine whether a requested medical service, procedure, or medication is medically necessary and appropriate based on established clinical guidelines."
+    content: (
+      <>
+        Prior authorization is a review process used by health plans and insurance companies to determine whether a requested medical service, procedure, or medication is medically necessary and appropriate based on established clinical guidelines.
+      </>
+    )
   },
   {
     title: "How is medical necessity determined?",
-    content: "Medical necessity is determined using evidence-based clinical guidelines and standards of care. These guidelines help ensure that treatments are safe, effective, and appropriate for a patient's condition."
+    content: (
+      <>
+        Medical necessity is determined using evidence-based clinical guidelines and standards of care. These guidelines help ensure that treatments are safe, effective, and appropriate for a patient&apos;s condition.
+      </>
+    )
   },
   {
     title: "Which medical necessity guidelines do insurance companies use?",
-    content: "Insurance plans may use one or more of the following guideline sources:\n\nMedicare guidelines, including:\n\nNational Coverage Determinations (NCDs)\n\nLocal Coverage Determinations (LCDs)\n\nMedicare policies\n\nInternal health plan or insurance company policies\n\nThird-party clinical guidelines, commonly from:\n\nMCG (Milliman Care Guidelines)\n\nEvolent\n\nCarelon\nEviCore\n\nInterQual\n\nNational Comprehensive Cancer Network (NCCN)"
+    content: (
+      <>
+        Insurance plans may use one or more of the following guideline sources:
+        <br /><br />
+        <ul>
+          <li><strong>Medicare guidelines</strong>, including:
+            <ul>
+              <li>National Coverage Determinations (NCDs)</li>
+              <li>Local Coverage Determinations (LCDs)</li>
+              <li>Medicare policies</li>
+            </ul>
+          </li>
+          <li><strong>Internal health plan or insurance company policies</strong></li>
+          <li><strong>Third-party clinical guidelines</strong>, commonly from:
+            <ul>
+              <li>MCG (Milliman Care Guidelines)</li>
+              <li>Evolent</li>
+              <li>Carelon</li>
+              <li>EviCore</li>
+              <li>InterQual</li>
+              <li>National Comprehensive Cancer Network (NCCN)</li>
+            </ul>
+          </li>
+        </ul>
+      </>
+    )
   },
   {
     title: "How do insurance plans decide which guideline to use?",
-    content: "Insurance companies follow a guideline hierarchy that varies by plan type.\n\nMedicare and Medicare Advantage plans typically use:\n\nMedicare National Coverage Determinations (NCDs)\n\nMedicare Local Coverage Determinations (LCDs), based on state\n\nMedicare policies, if applicable\n\nInternal health plan or insurance policies\n\nThird-party guidelines (MCG, eviCore, InterQual, Carelon, etc.)\n\nProfessional society guidelines\n\nCommercial insurance plans typically use:\n\nInternal health plan or insurance policies\n\nThird-party guidelines (MCG, eviCore, InterQual, Carelon, etc.)\n\nProfessional society guidelines"
+    content: (
+      <>
+        <h2>Insurance companies follow a guideline hierarchy that varies by plan type.</h2>
+        
+        <h3>Medicare and Medicare Advantage plans typically use:</h3>
+        <ol>
+          <li>Medicare National Coverage Determinations (NCDs)</li>
+          <li>Medicare Local Coverage Determinations (LCDs), based on state</li>
+          <li>Medicare policies, if applicable</li>
+          <li>Internal health plan or insurance policies</li>
+          <li>Third-party guidelines (MCG, eviCore, InterQual, Carelon, etc.)</li>
+          <li>Professional society guidelines</li>
+        </ol>
+        <br />
+        <h3>Commercial insurance plans typically use:</h3>
+        <ol>
+          <li>Internal health plan or insurance policies</li>
+          <li>Third-party guidelines (MCG, eviCore, InterQual, Carelon, etc.)</li>
+          <li>Professional society guidelines</li>
+        </ol>
+      </>
+    )
   },
   {
     title: "How does out-of-network coverage affect prior authorization?",
-    content: "Health plans have in-network providers that are contracted with the insurance company. Members are encouraged to receive care from these providers whenever possible.\n\nOut-of-network services are a common reason for prior authorization denials, especially for referrals. While many referrals are approved, denials often occur when the requested provider is not contracted or considered out-of-network."
+    content: (
+      <>
+        Health plans have <strong>in-network providers</strong> that are contracted with the insurance company. Members are encouraged to receive care from these providers whenever possible.
+        <br /><br />
+        Out-of-network services are a common reason for <strong>prior authorization denials</strong>, especially for referrals. While many referrals are approved, denials often occur when the requested provider is not contracted or considered out-of-network.
+      </>
+    )
   },
   {
     title: "How can providers access prior authorization guidelines?",
-    content: "Providers—including physicians, hospitals, clinics, and advanced practice providers (NPs and PAs)—can access prior authorization and medical necessity guidelines through individual insurance or health plan websites.\n\nCommon challenge:\nGuidelines are often published as large PDF documents, making them difficult to search, interpret, and apply efficiently in clinical workflows."
+    content: (
+      <>
+        Providers—including physicians, hospitals, clinics, and advanced practice providers (NPs and PAs)—can access prior authorization and medical necessity guidelines through individual insurance or health plan websites.
+        <br /><br />
+        <strong>Common challenge:</strong>
+        Guidelines are often published as large PDF documents, making them difficult to search, interpret, and apply efficiently in clinical workflows.
+      </>
+    )
   }
 ]
 
 
 export function Faq() {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1.5 }}
-    >
-      <section className="container relative z-20 overflow-hidden bg-white pb-8 pt-20 dark:bg-dark lg:pb-[50px] lg:pt-[50px]">
-        <Container className={classes.hrContainer}>
-          <hr />
-        </Container>
-        <Container size="lg">
-          <div className="mt-12 md:px-12">
-            <SectionTitle
-              subtitle=""
-              title="What Physicians Are Saying"
-              paragraph=""
-              width="640px"
-              center
-            />
+    <motion.div>
+      <section>
+        <Container size="sm" className={classes.wrapper}>
+          
+          <Title ta="center" className={classes.title}>
+            Frequently Asked Questions
+          </Title>
 
-            <div className="-mx-4 mb-7 mt-[60px] flex flex-wrap lg:mt-20">
+          <div className="-mx-4 mb-7 mt-[60px] flex flex-wrap lg:mt-20">
               <div className="mb-9 w-full px-4 lg:w-1/2">
                 <Blockquote color="blue" icon={icon} mt="xl" c={"white"}>
                   We don’t actually know what piece of information the insurer is
