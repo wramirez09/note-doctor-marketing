@@ -213,6 +213,7 @@ export function HeaderWithMenu() {
               className="button-light"
               component="a"
               href="/auth/https://app.notedoctor.ailogin"
+              target="_blank"
             >
               Log in
             </Button>
