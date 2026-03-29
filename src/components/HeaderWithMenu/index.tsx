@@ -127,7 +127,7 @@ export function HeaderWithMenu() {
                   <Button
                     className="button-primary"
                     component="a"
-                    href="https://preauthproduction.vercel.app"
+                    href="https://app.notedoctor.ai"
                   >
                     PreAuth App
                   </Button>
@@ -212,14 +212,14 @@ export function HeaderWithMenu() {
             <Button
               className="button-light"
               component="a"
-              href="https://preauthproduction.vercel.app/auth/login"
+              href="/auth/https://app.notedoctor.ailogin"
             >
               Log in
             </Button>
             <Button
               className="button-primary"
               component="a"
-              href="https://preauthproduction.vercel.app/auth/sign-up"
+              href="https://app.notedoctor.ai/auth/sign-up"
             >
               Sign up
             </Button>
@@ -228,7 +228,7 @@ export function HeaderWithMenu() {
             <Button
               className="button-primary"
               component="a"
-              href="https://preauthproduction.vercel.app"
+              href="https://app.notedoctor.ai"
             >
               PreAuth App
             </Button>
