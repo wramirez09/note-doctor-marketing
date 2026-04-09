@@ -2,9 +2,56 @@
 
 import { Button } from "@mantine/core";
 import { useTheme } from "next-themes";
+import React from "react";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const NewsLatterBox = () => {
   const { theme } = useTheme();
+  const [isLoading, setIsLoading] = React.useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get("name");
+    const email = formData.get("email");
+
+    const emailData = {
+      name: name,
+      email: email,
+      _subject: "New Newsletter Subscription - Note Doctor Special Offer",
+    };
+
+    try {
+      const response = await fetch(
+        "https://formsubmit.co/ajax/sales@notedoctor.ai",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+          },
+          body: JSON.stringify(emailData),
+        },
+      );
+
+      if (response.ok) {
+        const data = await response.json();
+        toast.success("Successfully subscribed! Check your email for your special discount.");
+        setIsLoading(false);
+        e.currentTarget.reset();
+      } else {
+        toast.error("Failed to subscribe. Please try again.");
+        setIsLoading(false);
+      }
+    } catch (error) {
+      toast.error("There was an error. Please try again.");
+      console.error("Error:", error);
+      setIsLoading(false);
+    }
+  };
 
   return (
     <div className="bg-gray-dark relative z-10 rounded-sm bg-white p-8 shadow-three sm:p-11 lg:p-8 xl:p-11">
@@ -15,21 +62,26 @@ const NewsLatterBox = () => {
         Sign up for our newsletter and enjoy a special discounted rate on your
         first project with us!
       </p>
-      <div>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           name="name"
           placeholder="Enter your name"
           className="dark:text-body-color-dark mb-4 w-full rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+          required
         />
         <input
           type="email"
           name="email"
           placeholder="Enter your email"
           className="dark:text-body-color-dark mb-4 w-full rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+          required
         />
-        <Button className="button-primary">Subscribe</Button>
-      </div>
+        <Button className="button-primary" type="submit" disabled={isLoading}>
+          {isLoading ? "Subscribing..." : "Subscribe"}
+        </Button>
+      </form>
+      <ToastContainer />
 
       <div>
         <span className="absolute left-2 top-7">

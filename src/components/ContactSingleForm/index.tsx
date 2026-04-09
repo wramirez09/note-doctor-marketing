@@ -1,4 +1,59 @@
+"use client";
+
+import React from "react";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const Contact = () => {
+  const [isLoading, setIsLoading] = React.useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    const formData = new FormData(e.currentTarget);
+    const fullName = formData.get("fullName");
+    const email = formData.get("email");
+    const phone = formData.get("phone");
+    const message = formData.get("message");
+
+    const emailData = {
+      name: fullName,
+      email: email,
+      phone: phone,
+      message: message,
+      _subject: "New Contact Form Submission from Note Doctor",
+    };
+
+    try {
+      const response = await fetch(
+        "https://formsubmit.co/ajax/sales@notedoctor.ai",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+          },
+          body: JSON.stringify(emailData),
+        },
+      );
+
+      if (response.ok) {
+        const data = await response.json();
+        toast.success("Message sent successfully! Thank you for contacting us.");
+        setIsLoading(false);
+        e.currentTarget.reset();
+      } else {
+        toast.error("Failed to send message. Please try again.");
+        setIsLoading(false);
+      }
+    } catch (error) {
+      toast.error("There was an error sending your message. Please try again.");
+      console.error("Error:", error);
+      setIsLoading(false);
+    }
+  };
+
   return (
     <section id="contact" className="relative py-20 md:py-[120px]">
       <div className="absolute left-0 top-0 -z-[1] h-full w-full dark:bg-dark"></div>
@@ -75,7 +130,7 @@ const Contact = () => {
               <h3 className="mb-8 text-2xl font-semibold text-dark dark:text-white md:text-[28px] md:leading-[1.42]">
                 Send us a Message
               </h3>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="mb-[22px]">
                   <label
                     htmlFor="fullName"
@@ -88,6 +143,7 @@ const Contact = () => {
                     name="fullName"
                     placeholder="Adam Gelius"
                     className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
+                    required
                   />
                 </div>
                 <div className="mb-[22px]">
@@ -102,6 +158,7 @@ const Contact = () => {
                     name="email"
                     placeholder="example@yourmail.com"
                     className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
+                    required
                   />
                 </div>
                 <div className="mb-[22px]">
@@ -116,6 +173,7 @@ const Contact = () => {
                     name="phone"
                     placeholder="+885 1254 5211 552"
                     className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
+                    required
                   />
                 </div>
                 <div className="mb-[30px]">
@@ -130,14 +188,16 @@ const Contact = () => {
                     rows={1}
                     placeholder="type your message here"
                     className="w-full resize-none border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
+                    required
                   ></textarea>
                 </div>
                 <div className="mb-0">
                   <button
                     type="submit"
-                    className="inline-flex items-center justify-center rounded-md bg-primary px-10 py-3 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-primary/90"
+                    disabled={isLoading}
+                    className="inline-flex items-center justify-center rounded-md bg-primary px-10 py-3 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Send
+                    {isLoading ? "Sending..." : "Send"}
                   </button>
                 </div>
               </form>
@@ -145,6 +205,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </section>
   );
 };

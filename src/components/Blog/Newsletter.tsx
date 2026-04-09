@@ -1,4 +1,53 @@
+"use client";
+
+import React from "react";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const Newsletter = () => {
+  const [isLoading, setIsLoading] = React.useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    const formData = new FormData(e.currentTarget);
+    const email = formData.get("email");
+
+    const emailData = {
+      email: email,
+      _subject: "New Newsletter Subscription - Note Doctor",
+    };
+
+    try {
+      const response = await fetch(
+        "https://formsubmit.co/ajax/sales@notedoctor.ai",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+          },
+          body: JSON.stringify(emailData),
+        },
+      );
+
+      if (response.ok) {
+        const data = await response.json();
+        toast.success("Successfully subscribed to our newsletter!");
+        setIsLoading(false);
+        e.currentTarget.reset();
+      } else {
+        toast.error("Failed to subscribe. Please try again.");
+        setIsLoading(false);
+      }
+    } catch (error) {
+      toast.error("There was an error. Please try again.");
+      console.error("Error:", error);
+      setIsLoading(false);
+    }
+  };
+
   return (
     <div
       className="wow fadeInUp relative mb-12 overflow-hidden rounded-[5px] bg-primary px-11 py-[60px] text-center lg:px-8"
@@ -10,18 +59,22 @@ const Newsletter = () => {
       <p className="mb-5 text-base text-white">
         Enter your email to receive our latest newsletter.
       </p>
-      <form>
+      <form onSubmit={handleSubmit}>
         <input
           type="email"
+          name="email"
           placeholder="Your email address"
           className="mb-4 h-[50px] w-full rounded-md border border-transparent bg-white/10 text-center text-base text-white outline-none placeholder:text-white/60 focus:border-white focus-visible:shadow-none"
+          required
         />
         <input
           type="submit"
-          value="Subscribe Now"
-          className="mb-4 h-[50px] w-full cursor-pointer rounded-md bg-secondary text-center text-sm font-medium text-white transition duration-300 ease-in-out hover:bg-[#0BB489] hover:bg-opacity-90"
+          value={isLoading ? "Subscribing..." : "Subscribe Now"}
+          disabled={isLoading}
+          className="mb-4 h-[50px] w-full cursor-pointer rounded-md bg-secondary text-center text-sm font-medium text-white transition duration-300 ease-in-out hover:bg-[#0BB489] hover:bg-opacity-90 disabled:opacity-50 disabled:cursor-not-allowed"
         />
       </form>
+      <ToastContainer />
       <p className="text-sm font-medium text-white">
         Don&#39;t worry, we don&#39;t spam
       </p>

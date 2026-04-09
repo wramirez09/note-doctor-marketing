@@ -11,41 +11,46 @@ const Contact: React.FC<{ showNewsLetterSignUp?: boolean }> = ({
 }) => {
   const [isLoading, setIsLoading] = React.useState<boolean | undefined>();
 
-  const sendEmail = async (formdata: any) => {
-    console.log({ isLoading });
-    const senderName = formdata.get("name");
-    const senderEmail = formdata.get("email");
-    const senderMessage = formdata.get("message");
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsLoading(true);
 
-    const emailDetails = JSON.stringify({
+    const formData = new FormData(e.currentTarget);
+    const senderName = formData.get("name");
+    const senderEmail = formData.get("email");
+    const senderMessage = formData.get("message");
+
+    const emailData = {
       name: senderName,
       email: senderEmail,
       message: senderMessage,
-    });
+      _subject: "New Contact Form Submission from Note Doctor",
+    };
 
     try {
       const response = await fetch(
-        "https://sendemail-doctorai.azurewebsites.net/api/sendemail?code=-EH4H4t30FS5pZoxRHteBAW8JlU-NBeQoJEiwN371fkmAzFuNPNvIw%3D%3D",
+        "https://formsubmit.co/ajax/sales@notedoctor.ai",
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
+            "Accept": "application/json",
           },
-          body: emailDetails,
+          body: JSON.stringify(emailData),
         },
       );
 
-      if (response.ok || response.status === 200) {
-        toast.success("email submitted, Thank you");
-        const data = await response.text();
+      if (response.ok) {
+        const data = await response.json();
+        toast.success("Message sent successfully! Thank you for contacting us.");
         setIsLoading(false);
-        console.log({ isLoading });
-        return data;
+        e.currentTarget.reset();
       } else {
+        toast.error("Failed to send message. Please try again.");
         setIsLoading(false);
       }
     } catch (error) {
-      toast.error("There was an error");
+      toast.error("There was an error sending your message. Please try again.");
       console.error("Error:", error);
       setIsLoading(false);
     }
@@ -77,12 +82,7 @@ const Contact: React.FC<{ showNewsLetterSignUp?: boolean }> = ({
                   to assist you. Reach out to us through the form below.
                 </p>
 
-                <form
-                  action={(data) => {
-                    sendEmail(data);
-                    setIsLoading(true);
-                  }}
-                >
+                <form onSubmit={handleSubmit}>
                   <div className="-mx-4 flex flex-wrap">
                     <div className="w-full px-4 md:w-1/2">
                       <div className="mb-8">
