@@ -40,18 +40,18 @@ const Contact: React.FC<{ showNewsLetterSignUp?: boolean }> = ({
         },
       );
 
-      if (response.ok) {
-        const data = await response.json();
+      const data = await response.json();
+      
+      if (response.ok && data.success === "true") {
         toast.success("Message sent successfully! Thank you for contacting us.");
-        setIsLoading(false);
         e.currentTarget.reset();
       } else {
-        toast.error("Failed to send message. Please try again.");
-        setIsLoading(false);
+        toast.error(data.message || "Failed to send message. Please try again.");
       }
     } catch (error) {
       toast.error("There was an error sending your message. Please try again.");
       console.error("Error:", error);
+    } finally {
       setIsLoading(false);
     }
   };

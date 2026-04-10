@@ -32,18 +32,18 @@ const Newsletter = () => {
         },
       );
 
-      if (response.ok) {
-        const data = await response.json();
+      const data = await response.json();
+      
+      if (response.ok && data.success === "true") {
         toast.success("Successfully subscribed to our newsletter!");
-        setIsLoading(false);
         e.currentTarget.reset();
       } else {
-        toast.error("Failed to subscribe. Please try again.");
-        setIsLoading(false);
+        toast.error(data.message || "Failed to subscribe. Please try again.");
       }
     } catch (error) {
       toast.error("There was an error. Please try again.");
       console.error("Error:", error);
+    } finally {
       setIsLoading(false);
     }
   };
