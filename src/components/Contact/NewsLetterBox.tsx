@@ -44,7 +44,7 @@ const NewsLatterBox = () => {
         toast.success("Successfully subscribed! Check your email for your special discount.");
         e.currentTarget.reset();
       } else {
-        toast.error(data.message || "Failed to subscribe. Please try again.");
+        console.log("Newsletter subscription failed:", data);
       }
     } catch (error) {
       toast.error("There was an error. Please try again.");

@@ -47,10 +47,10 @@ const Contact: React.FC<{ showNewsLetterSignUp?: boolean }> = ({
         toast.success("Message sent successfully! Thank you for contacting us.");
         e.currentTarget.reset();
       } else {
-        toast.error(data.message || "Failed to send message. Please try again.");
+        console.log("error sending email")
       }
     } catch (error) {
-      toast.error("There was an error sending your message. Please try again.");
+      console.log("error sending email");
       console.error("Error:", error);
     } finally {
       setIsLoading(false);
