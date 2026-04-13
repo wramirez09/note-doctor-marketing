@@ -38,8 +38,9 @@ const NewsLatterBox = () => {
       );
 
       const data = await response.json();
+      console.log("Newsletter response:", data);
       
-      if (data.success === "true") {
+      if (data.success === "true" || data.success === true) {
         toast.success("Successfully subscribed! Check your email for your special discount.");
         e.currentTarget.reset();
       } else {
