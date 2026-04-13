@@ -40,7 +40,7 @@ const Contact = () => {
 
       const data = await response.json();
       
-      if (response.ok && data.success === "true") {
+      if (data.success === "true") {
         toast.success("Message sent successfully! Thank you for contacting us.");
         e.currentTarget.reset();
       } else {

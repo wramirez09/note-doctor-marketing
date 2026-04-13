@@ -34,7 +34,7 @@ const Newsletter = () => {
 
       const data = await response.json();
       
-      if (response.ok && data.success === "true") {
+      if (data.success === "true") {
         toast.success("Successfully subscribed to our newsletter!");
         e.currentTarget.reset();
       } else {
