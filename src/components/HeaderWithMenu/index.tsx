@@ -116,14 +116,7 @@ export function HeaderWithMenu() {
 
               <div className="hidden w-60 max-w-full lg:block">
                 <div className="flex gap-2">
-                  {/* <Button
-                    target="_blank"
-                    className="button-light"
-                    component="a"
-                    href="https://login.microsoftonline.com/5ca01929-328f-421e-99f8-51430e1e6eb5/oauth2/v2.0/authorize?response_type=code+id_token&redirect_uri=https%3A%2F%2Fhealthapp0.azurewebsites.net%2F.auth%2Flogin%2Faad%2Fcallback&client_id=1081de41-c6fa-4089-9725-8f927bba46d3&scope=openid+profile+email&response_mode=form_post&nonce=2aec1ade30c8491291e984738ea5e64f_20241031235734&state="
-                  >
-                    Log in
-                  </Button> */}
+
                   <Button
                     className="button-primary"
                     component="a"
@@ -208,23 +201,6 @@ export function HeaderWithMenu() {
 
           <Divider my="lg" />
 
-          <Group justify="center" grow pb="xl" px="lg" mt="xl">
-            <Button
-              className="button-light"
-              component="a"
-              href="/auth/https://app.notedoctor.ailogin"
-              target="_blank"
-            >
-              Log in
-            </Button>
-            <Button
-              className="button-primary"
-              component="a"
-              href="https://app.notedoctor.ai/auth/sign-up"
-            >
-              Sign up
-            </Button>
-          </Group>
           <Group justify="center" grow pb="xl" px="lg" mt="">
             <Button
               className="button-primary"
