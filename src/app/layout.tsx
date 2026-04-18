@@ -29,22 +29,18 @@ export default function RootLayout({
 
   return (
     <html suppressHydrationWarning={true} className="!scroll-smooth" lang="en">
-      <meta property="og:NoteDoctorAi" content="NoteDoctorAI" />
-      <meta
-        property="og:Meet NoteDoctorAI: Revolutionizing healthcare with AI-driven medical coding solutions. Boost accuracy, streamline efficiency, and drive profitability for healthcare organizations across the globe."
-        content="A brief summary of my page"
-      />
-      <meta property="og:image" content="opengraph-image.jpg" />
-      <meta property="og:url" content="https://notedoctor.ai/" />
-      <meta property="twitter:NoteDoctorAi" content="NoteDoctorAI" />
-      <meta
-        property="twitter:Meet NoteDoctorAI: Revolutionizing healthcare with AI-driven medical coding solutions. Boost accuracy, streamline efficiency, and drive profitability for healthcare organizations across the globe."
-        content="A brief summary of my page"
-      />
-      <meta property="twitter:image" content="opengraph-image.jpg" />
-      <meta property="twitter:url" content="https://notedoctor.ai/" />
       <head>
         <ColorSchemeScript />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="NoteDoctor.AI | AI-Powered Prior Authorization Screening" />
+        <meta property="og:description" content="NoteDoctor.AI streamlines prior authorization screening with AI-driven solutions, helping healthcare providers cut red tape, reduce physician burnout, and deliver patient care without delays." />
+        <meta property="og:image" content="https://notedoctor.ai/images/logo/nd-ai-logo.svg" />
+        <meta property="og:url" content="https://notedoctor.ai/" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="NoteDoctor.AI | AI-Powered Prior Authorization Screening" />
+        <meta name="twitter:description" content="NoteDoctor.AI streamlines prior authorization screening with AI-driven solutions, helping healthcare providers cut red tape, reduce physician burnout, and deliver patient care without delays." />
+        <meta name="twitter:image" content="https://notedoctor.ai/images/logo/nd-ai-logo.svg" />
+        <meta name="twitter:url" content="https://notedoctor.ai/" />
       </head>
       <body>
         {loading ? (
