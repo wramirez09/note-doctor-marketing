@@ -65,14 +65,14 @@ export function HeaderWithMenu() {
                   className={`navbar-logo block w-full ${sticky ? "py-2" : "py-5"}`}
                 >
                   <Image
-                    src={`/images/logo/logo-main.svg`}
+                    src={`/images/logo/nd_logo.svg`}
                     alt="logo"
                     width={140}
                     height={30}
                     className="header-logo w-3/4 dark:hidden"
                   />
                   <Image
-                    src={`/images/logo/logo-main.svg`}
+                    src={`/images/logo/nd_logo.svg`}
                     alt="logo"
                     width={140}
                     height={30}
