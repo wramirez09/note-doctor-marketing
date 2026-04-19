@@ -14,33 +14,26 @@ import { Container, SimpleGrid } from "@mantine/core";
 import { IconInfoCircle } from "@tabler/icons-react";
 import { Metadata } from "next";
 
+const title = "NoteDoctor.AI | AI-Powered Prior Authorization Screening";
+const description =
+  "NoteDoctor.AI streamlines prior authorization screening with AI-driven solutions, helping healthcare providers cut red tape, reduce physician burnout, and deliver patient care without delays.";
+const image = "https://notedoctor.ai/images/logo/nd_logo.svg";
+
 export const metadata: Metadata = {
-  title:
-    "AI Health Insights from Your Medical Records | NoteDoctor.ai",
-  description:
-    "Unlock science-backed health insights with NoteDoctor.ai. Upload your medical records, explore clinical trial data, and get personalized questions to discuss with your doctor. Not medical advice—just smarter health clarity.",
+  title,
+  description,
   openGraph: {
     type: "website",
     url: "https://notedoctor.ai/",
-    title:
-      "AI Health Insights from Your Medical Records | NoteDoctor.ai",
-    description:
-      "Unlock science-backed health insights with NoteDoctor.ai. Upload your medical records, explore clinical trial data, and get personalized questions to discuss with your doctor. Not medical advice—just smarter health clarity.",
-    images: [
-      {
-        url: "https://notedoctor.ai/opengraph-image.jpg",
-        width: 1200,
-        height: 630,
-      },
-    ],
+    title,
+    description,
+    images: [{ url: image }],
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "NoteDoctorAI | Leading AI-Powered Healthcare Solutions for Enhanced Medical Coding Efficiency",
-    description:
-      "Discover NoteDoctorAI, the premier provider of AI-driven solutions for healthcare. Revolutionizing medical coding with advanced technology to improve accuracy, efficiency, and profitability for healthcare organizations worldwide.",
-    images: ["https://notedoctor.ai/opengraph-image.jpg"],
+    title,
+    description,
+    images: [image],
   },
 };
 
