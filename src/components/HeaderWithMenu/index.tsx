@@ -67,15 +67,15 @@ export function HeaderWithMenu() {
                   <Image
                     src={`/images/logo/nd_logo.svg`}
                     alt="logo"
-                    width={40}
-                    height={40}
+                    width={35}
+                    height={35}
                     className="header-logo dark:hidden"
                   />
                   <Image
                     src={`/images/logo/nd_logo.svg`}
                     alt="logo"
-                    width={40}
-                    height={40}
+                    width={35}
+                    height={35}
                     className="header-logo hidden dark:block"
                   />
                 </div>
