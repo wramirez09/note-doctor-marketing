@@ -22,7 +22,7 @@
     "@nextui-org/theme": "^2.2.11",
     "@prisma/client": "^5.11.0",
     "@tabler/icons-react": "^3.21.0",
-    "axios": "^1.6.2",
+    "axios": "^1.13.5",
     "bcrypt": "^5.0.1",
     "classnames": "^2.5.1",
     "date-fns": "^3.4.0",
