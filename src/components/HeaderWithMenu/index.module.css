@@ -4,27 +4,22 @@
   height: 100%;
   padding-left: var(--mantine-spacing-md);
   padding-right: var(--mantine-spacing-md);
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   text-decoration: none;
-  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+  color: rgba(255, 255, 255, 0.8);
   font-weight: 500;
-  font-size: var(--mantine-font-size-lg);
+  font-size: var(--mantine-font-size-sm);
 
   @media (max-width: $mantine-breakpoint-sm) {
     height: rem(42px);
     width: 100%;
   }
-
-  @mixin hover {
-    background-color: light-dark(var(--mantine-color-gray-0),
-        var(--mantine-color-dark-6));
-  }
 }
 
 .link:hover {
   cursor: pointer;
-  color: #1971c2;
+  color: #ffffff;
 }
 
 .dropdownFooter {
@@ -39,7 +34,7 @@
 }
 
 .activeLink {
-  color: #1971c2;
+  color: #ffffff;
 }
 
 .drawerBody {
