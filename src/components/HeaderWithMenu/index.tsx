@@ -3,7 +3,6 @@
 import {
   Box,
   Burger,
-  Button,
   Divider,
   Drawer,
   Group,
@@ -60,78 +59,58 @@ export function HeaderWithMenu() {
               h="100%"
               className={`${classes.group} w-full`}
             >
-              <div onClick={() => router.push("/")}>
-                <div
-                  className={`navbar-logo block w-full ${sticky ? "py-2" : "py-5"}`}
-                >
-                  <Image
-                    src={`/images/logo/nd_logo.svg`}
-                    alt="logo"
-                    width={35}
-                    height={35}
-                    className="header-logo dark:hidden"
-                  />
-                  <Image
-                    src={`/images/logo/nd_logo.svg`}
-                    alt="logo"
-                    width={35}
-                    height={35}
-                    className="header-logo hidden dark:block"
-                  />
+              <Group h="100%" gap={0} align="center">
+                <div onClick={() => router.push("/")}>
+                  <div
+                    className={`navbar-logo block w-full ${sticky ? "py-2" : "py-5"}`}
+                  >
+                    <Image
+                      src={`/images/logo/nd_logo.svg`}
+                      alt="logo"
+                      width={35}
+                      height={35}
+                      className="header-logo dark:hidden"
+                    />
+                    <Image
+                      src={`/images/logo/nd_logo.svg`}
+                      alt="logo"
+                      width={35}
+                      height={35}
+                      className="header-logo hidden dark:block"
+                    />
+                  </div>
                 </div>
-              </div>
 
-              <Group h="100%" gap={0} visibleFrom="lg">
-                <div
-                  className={`${classes.link} ${isActiveLink("/") ? classes.activeLink : ""}`}
-                  onClick={() => router.push("/")}
-                >
-                  Home
-                </div>
-                <div
-                  className={`${classes.link} ${isActiveLink("/for-healthcare") ? classes.activeLink : ""}`}
-                  onClick={() => router.push("/for-healthcare")}
-                >
-                  For Healthcare
-                </div>
-                <div
-                  className={`${classes.link} ${isActiveLink("/for-physicians") ? classes.activeLink : ""}`}
-                  onClick={() => router.push("/for-physicians")}
-                >
-                  For Physicians
-                </div>
-                <div
-                  className={`${classes.link} ${isActiveLink("/for-health-systems") ? classes.activeLink : ""}`}
-                  onClick={() => router.push("/for-health-systems")}
-                >
-                  For Health Systems
-                </div>
-                <div
-                  className={`${classes.link} ${isActiveLink("/pricing") ? classes.activeLink : ""}`}
-                  onClick={() => router.push("/pricing")}
-                >
-                  Pricing
-                </div>
-                <div
-                  className={`${classes.link} ${isActiveLink("/contact") ? classes.activeLink : ""}`}
-                  onClick={() => router.push("/contact")}
-                >
-                  Contact Us
-                </div>
+                <Group h="100%" gap={0} visibleFrom="lg">
+                  <div
+                    className={`${classes.link} ${isActiveLink("/") ? classes.activeLink : ""}`}
+                    onClick={() => router.push("/")}
+                  >
+                    Home
+                  </div>
+                  <div
+                    className={`${classes.link} ${isActiveLink("/pricing") ? classes.activeLink : ""}`}
+                    onClick={() => router.push("/pricing")}
+                  >
+                    Pricing
+                  </div>
+                  <div
+                    className={`${classes.link}`}
+                    onClick={() => router.push("/#contact")}
+                  >
+                    Contact Us
+                  </div>
+                </Group>
               </Group>
 
-              <div className="hidden w-60 max-w-full lg:block">
-                <div className="flex gap-2">
-
-                  <Button
-                    className="button-primary"
-                    component="a"
-                    href="https://app.notedoctor.ai"
-                  >
-                    PreAuth App
-                  </Button>
-
-                </div>
+              <div className="hidden lg:block">
+                <a
+                  href="https://app.notedoctor.ai"
+                  className="text-white text-[15px] font-semibold px-8 py-3.5 rounded-[9px] transition-all hover:-translate-y-0.5 inline-block"
+                  style={{ background: "var(--blue)", boxShadow: "0 0 32px rgba(59,130,246,0.35)" }}
+                >
+                  Subscribe
+                </a>
               </div>
               <Burger
                 opened={drawerOpened}
@@ -169,33 +148,6 @@ export function HeaderWithMenu() {
             Home
           </div>
           <div
-            className={`${classes.link} ${isActiveLink("/for-healthcare") ? classes.activeLink : ""}`}
-            onClick={() => {
-              router.push("/for-healthcare");
-              closeDrawer();
-            }}
-          >
-            For Healthcare
-          </div>
-          <div
-            className={`${classes.link} ${isActiveLink("/for-physicians") ? classes.activeLink : ""}`}
-            onClick={() => {
-              router.push("/for-physicians");
-              closeDrawer();
-            }}
-          >
-            For Physicans
-          </div>
-          <div
-            className={`${classes.link} ${isActiveLink("/for-health-systems") ? classes.activeLink : ""}`}
-            onClick={() => {
-              router.push("/for-health-systems");
-              closeDrawer();
-            }}
-          >
-            For Health Systems
-          </div>
-          <div
             className={`${classes.link} ${isActiveLink("/pricing") ? classes.activeLink : ""}`}
             onClick={() => {
               router.push("/pricing");
@@ -205,9 +157,9 @@ export function HeaderWithMenu() {
             Pricing
           </div>
           <div
-            className={`${classes.link} ${isActiveLink("/contact") ? classes.activeLink : ""}`}
+            className={`${classes.link}`}
             onClick={() => {
-              router.push("/contact");
+              router.push("/#contact");
               closeDrawer();
             }}
           >
@@ -216,14 +168,14 @@ export function HeaderWithMenu() {
 
           <Divider my="lg" />
 
-          <Group justify="center" grow pb="xl" px="lg" mt="">
-            <Button
-              className="button-primary"
-              component="a"
+          <Group justify="center" pb="xl" px="lg">
+            <a
               href="https://app.notedoctor.ai"
+              className="text-white text-[15px] font-semibold px-8 py-3.5 rounded-[9px] transition-all hover:-translate-y-0.5 inline-block"
+              style={{ background: "var(--blue)", boxShadow: "0 0 32px rgba(59,130,246,0.35)" }}
             >
-              PreAuth App
-            </Button>
+              Subscribe
+            </a>
           </Group>
         </ScrollArea>
       </Drawer>

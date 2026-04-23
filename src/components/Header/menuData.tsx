@@ -7,97 +7,16 @@ const menuData: Menu[] = [
     path: "/",
     newTab: false,
   },
-
-  //   // {
-  //   //   id: 3,
-  //   //   title: "Services",
-  //   //   path: "/services",
-  //   //   newTab: false,
-  //   // },
-  //   // {
-  //   //   id: 5,
-  //   //   title: "Solutions",
-  //   //   path: "/solutions",
-  //   //   newTab: false,
-  //   // },
-  //   // {
-  //   //   id: 5,
-  //   //   title: "How it works",
-  //   //   path: "/blogs",
-  //   //   newTab: false,
-  //   // },
-  {
-    id: 6,
-    title: "How it works",
-    // path: "/how-it-works",
-    newTab: false,
-    submenu: [
-      {
-        id: 61,
-        title: "Solutions",
-        path: "/solutions",
-        newTab: false,
-      },
-      {
-        id: 62,
-        title: "Security",
-        path: "/security",
-        newTab: false,
-      },
-      //   // {
-      //   //   id: 63,
-      //   //   title: "Contact Page",
-      //   //   path: "/contact",
-      //   //   newTab: false,
-      //   // },
-      //   // {
-      //   //   id: 64,
-      //   //   title: "Blog Grid Page",
-      //   //   path: "/blogs",
-      //   //   newTab: false,
-      //   // },
-      //   // {
-      //   //   id: 66,
-      //   //   title: "Sign Up Page",
-      //   //   path: "/signup",
-      //   //   newTab: false,
-      //   // },
-      //   // {
-      //   //   id: 67,
-      //   //   title: "Sign In Page",
-      //   //   path: "/signin",
-      //   //   newTab: false,
-      //   // },
-      //   // {
-      //   //   id: 68,
-      //   //   title: "Error Page",
-      //   //   path: "/error",
-      //   //   newTab: false,
-      //   // },
-    ],
-  },
   {
     id: 2,
-    title: "For Healcare",
-    path: "/for-healthcare",
-    newTab: false,
-  },
-  {
-    id: 63,
-    title: "For Physicians",
-    path: "/for-physicians",
-    newTab: false,
-  },
-  {
-    id: 63,
-    title: "For Health Systems",
-    path: "/for-health-systems",
-    newTab: false,
-  },
-  {
-    id: 64,
     title: "Pricing",
     path: "/pricing",
+    newTab: false,
+  },
+  {
+    id: 3,
+    title: "Contact Us",
+    path: "/#contact",
     newTab: false,
   },
 ];

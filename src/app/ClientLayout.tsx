@@ -1,7 +1,7 @@
 "use client";
 
 import PreLoader from "@/components/Common/PreLoader";
-import Footer from "@/components/Footer";
+import Footer from "@/components/home/Footer";
 import { HeaderWithMenu } from "@/components/HeaderWithMenu";
 import ScrollToTop from "@/components/ScrollToTop";
 import { createTheme, MantineProvider } from "@mantine/core";
@@ -24,7 +24,7 @@ export default function ClientLayout({
     <PreLoader />
   ) : (
     <ThemeProvider attribute="class" enableSystem={false} defaultTheme="dark">
-      <MantineProvider theme={theme}>
+      <MantineProvider theme={theme} forceColorScheme="dark">
         <HeaderWithMenu />
         {children}
         <Footer />
