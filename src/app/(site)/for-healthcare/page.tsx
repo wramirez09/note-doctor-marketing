@@ -47,8 +47,6 @@ const structuredData = {
   ],
   datePublished: "2022-09-14T09:00:00.000Z",
 };
-export const runtime = "edge";
-export const dynamic = "force-dynamic";
 const HowItWorks = () => {
   return (
     <>
