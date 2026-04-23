@@ -38,12 +38,13 @@ const NewsLatterBox = () => {
       );
 
       const data = await response.json();
+      console.log("Newsletter response:", data);
       
-      if (response.ok && data.success === "true") {
+      if (data.success === "true" || data.success === true) {
         toast.success("Successfully subscribed! Check your email for your special discount.");
         e.currentTarget.reset();
       } else {
-        toast.error(data.message || "Failed to subscribe. Please try again.");
+        console.log("Newsletter subscription failed:", data);
       }
     } catch (error) {
       toast.error("There was an error. Please try again.");

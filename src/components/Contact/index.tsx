@@ -41,15 +41,16 @@ const Contact: React.FC<{ showNewsLetterSignUp?: boolean }> = ({
       );
 
       const data = await response.json();
+      console.log("Contact form response:", data);
       
-      if (response.ok && data.success === "true") {
+      if (data.success === "true" || data.success === true) {
         toast.success("Message sent successfully! Thank you for contacting us.");
         e.currentTarget.reset();
       } else {
-        toast.error(data.message || "Failed to send message. Please try again.");
+        console.log("error sending email")
       }
     } catch (error) {
-      toast.error("There was an error sending your message. Please try again.");
+      console.log("error sending email");
       console.error("Error:", error);
     } finally {
       setIsLoading(false);

@@ -1,68 +1,43 @@
-"use client";
-
-import PreLoader from "@/components/Common/PreLoader";
-import Footer from "@/components/Footer";
-import { HeaderWithMenu } from "@/components/HeaderWithMenu";
-import ScrollToTop from "@/components/ScrollToTop";
-import { ColorSchemeScript, createTheme, MantineProvider } from "@mantine/core";
+import { ColorSchemeScript } from "@mantine/core";
 import "@mantine/core/styles.css";
-
-import { ThemeProvider } from "next-themes";
-import { useEffect, useState } from "react";
+import { Metadata } from "next";
 import "../styles/index.css";
 import "../styles/prism-vsc-dark-plus.css";
+import ClientLayout from "./ClientLayout";
+
+export const metadata: Metadata = {
+  title: "NoteDoctor.AI | AI-Powered Prior Authorization Screening",
+  description:
+    "NoteDoctor.AI streamlines prior authorization screening with AI-driven solutions, helping healthcare providers cut red tape, reduce physician burnout, and deliver patient care without delays.",
+  openGraph: {
+    type: "website",
+    url: "https://notedoctor.ai/",
+    title: "NoteDoctor.AI | AI-Powered Prior Authorization Screening",
+    description:
+      "NoteDoctor.AI streamlines prior authorization screening with AI-driven solutions, helping healthcare providers cut red tape, reduce physician burnout, and deliver patient care without delays.",
+    images: [{ url: "https://notedoctor.ai/images/logo/nd_logo.svg" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "NoteDoctor.AI | AI-Powered Prior Authorization Screening",
+    description:
+      "NoteDoctor.AI streamlines prior authorization screening with AI-driven solutions, helping healthcare providers cut red tape, reduce physician burnout, and deliver patient care without delays.",
+    images: ["https://notedoctor.ai/images/logo/nd_logo.svg"],
+  },
+};
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const theme = createTheme({
-    /** Put your mantine theme override here */
-  });
-
-  const [loading, setLoading] = useState<boolean>(true);
-
-  useEffect(() => {
-    setTimeout(() => setLoading(false), 1000);
-  }, []);
-
   return (
     <html suppressHydrationWarning={true} className="!scroll-smooth" lang="en">
-      <meta property="og:NoteDoctorAi" content="NoteDoctorAI" />
-      <meta
-        property="og:Meet NoteDoctorAI: Revolutionizing healthcare with AI-driven medical coding solutions. Boost accuracy, streamline efficiency, and drive profitability for healthcare organizations across the globe."
-        content="A brief summary of my page"
-      />
-      <meta property="og:image" content="opengraph-image.jpg" />
-      <meta property="og:url" content="https://notedoctor.ai/" />
-      <meta property="twitter:NoteDoctorAi" content="NoteDoctorAI" />
-      <meta
-        property="twitter:Meet NoteDoctorAI: Revolutionizing healthcare with AI-driven medical coding solutions. Boost accuracy, streamline efficiency, and drive profitability for healthcare organizations across the globe."
-        content="A brief summary of my page"
-      />
-      <meta property="twitter:image" content="opengraph-image.jpg" />
-      <meta property="twitter:url" content="https://notedoctor.ai/" />
       <head>
         <ColorSchemeScript />
       </head>
       <body>
-        {loading ? (
-          <PreLoader />
-        ) : (
-          <ThemeProvider
-            attribute="class"
-            enableSystem={false}
-            defaultTheme="dark"
-          >
-            <MantineProvider theme={theme}>
-              <HeaderWithMenu />
-              {children}
-              <Footer />
-              <ScrollToTop />
-            </MantineProvider>
-          </ThemeProvider>
-        )}
+        <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
   );
