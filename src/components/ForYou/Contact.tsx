@@ -38,9 +38,9 @@ export default function Contact() {
           style={{ background: "linear-gradient(135deg, #0d1a3a 0%, #0c1020 100%)" }}>
           <div className="pointer-events-none absolute -top-24 -left-24 w-[400px] h-[400px] rounded-full bg-[radial-gradient(circle,rgba(59,130,246,0.18),transparent_70%)]" />
           <div className="relative z-10">
-            <p className="text-xs font-semibold tracking-[.12em] uppercase text-blue-400 mb-4">Let's Talk</p>
+            <p className="text-xs font-semibold tracking-[.12em] uppercase text-blue-400 mb-4">Let&apos;s Talk</p>
             <h2 className="text-[clamp(22px,2.5vw,32px)] font-extrabold tracking-[-0.025em] leading-[1.15] mb-3.5">Start a Conversation</h2>
-            <p className="text-[15px] text-white/50 leading-[1.65] mb-8">Tell us about your role and what you're trying to solve — we'll show you exactly how NoteDoctor.AI fits.</p>
+            <p className="text-[15px] text-white/50 leading-[1.65] mb-8">Tell us about your role and what you&apos;re trying to solve — we&apos;ll show you exactly how NoteDoctor.AI fits.</p>
             <ul className="flex flex-col gap-3 list-none">
               {trustPoints.map((point) => (
                 <li key={point} className="flex items-center gap-3 text-[13.5px] text-white/50">
@@ -58,7 +58,7 @@ export default function Contact() {
 
         <div className="bg-[#131929] px-12 py-14">
           <h3 className="text-[20px] font-bold tracking-[-0.01em] mb-1.5">Get in Touch</h3>
-          <p className="text-[14px] text-white/50 mb-7">We'll respond within one business day.</p>
+          <p className="text-[14px] text-white/50 mb-7">We&apos;ll respond within one business day.</p>
 
           <form onSubmit={onSubmit} className="flex flex-col gap-4">
             <div className="grid grid-cols-2 gap-3.5">

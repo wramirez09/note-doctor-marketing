@@ -39,7 +39,7 @@ export default function Problem() {
         <div className="max-w-[1100px] mx-auto">
           <p className="text-xs font-semibold tracking-[.12em] uppercase text-blue-400 mb-3.5">The Impact on Healthcare</p>
           <h2 className="text-[clamp(26px,3vw,42px)] font-extrabold tracking-[-0.025em] leading-[1.12] mb-3">Prior Authorization Is Harming Patients</h2>
-          <p className="text-base leading-[1.65] text-white/50 max-w-[540px]">The data is unambiguous. Administrative delays aren't just inconvenient — they lead to real clinical harm.</p>
+          <p className="text-base leading-[1.65] text-white/50 max-w-[540px]">The data is unambiguous. Administrative delays aren&apos;t just inconvenient — they lead to real clinical harm.</p>
 
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-px rounded-2xl overflow-hidden bg-white/[0.07]">
             {impactStats.map((s) => (
@@ -69,7 +69,7 @@ export default function Problem() {
             <blockquote className="relative z-10 text-xl font-semibold leading-[1.55] max-w-[680px] mb-5">
               Insurers claim success by cutting costs — but a 2023 investigation revealed{" "}
               <span className="text-blue-400">more than 300,000 AI-driven instant claim rejections in just two months,</span>{" "}
-              without patient files ever being reviewed. This isn't efficiency. This is harm disguised as savings.
+              without patient files ever being reviewed. This isn&apos;t efficiency. This is harm disguised as savings.
             </blockquote>
             <cite className="text-[11px] text-white/25 not-italic">
               From: Standing Up to Prior Authorization —{" "}
