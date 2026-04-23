@@ -7,8 +7,6 @@ import { Headline } from "@/components/Headline";
 import { Feature } from "@/components/HowItWorksSection";
 
 import { StructuredData } from "@/components/StructuredData";
-
-import { getAllPosts } from "@/utils/markdown";
 import { Container, SimpleGrid } from "@mantine/core";
 
 import { IconInfoCircle } from "@tabler/icons-react";
@@ -69,7 +67,6 @@ const mockdata = [
 ];
 
 export default function Home() {
-  const posts = getAllPosts(["title", "date", "excerpt", "coverImage", "slug"]);
   const items = mockdata.map((item) => <Feature {...item} key={item.title} />);
   return (
     <main>

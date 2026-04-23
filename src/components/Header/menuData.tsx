@@ -94,5 +94,11 @@ const menuData: Menu[] = [
     path: "/for-health-systems",
     newTab: false,
   },
+  {
+    id: 64,
+    title: "Pricing",
+    path: "/pricing",
+    newTab: false,
+  },
 ];
 export default menuData;

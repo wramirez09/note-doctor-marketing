@@ -107,6 +107,12 @@ export function HeaderWithMenu() {
                   For Health Systems
                 </div>
                 <div
+                  className={`${classes.link} ${isActiveLink("/pricing") ? classes.activeLink : ""}`}
+                  onClick={() => router.push("/pricing")}
+                >
+                  Pricing
+                </div>
+                <div
                   className={`${classes.link} ${isActiveLink("/contact") ? classes.activeLink : ""}`}
                   onClick={() => router.push("/contact")}
                 >
@@ -188,6 +194,15 @@ export function HeaderWithMenu() {
             }}
           >
             For Health Systems
+          </div>
+          <div
+            className={`${classes.link} ${isActiveLink("/pricing") ? classes.activeLink : ""}`}
+            onClick={() => {
+              router.push("/pricing");
+              closeDrawer();
+            }}
+          >
+            Pricing
           </div>
           <div
             className={`${classes.link} ${isActiveLink("/contact") ? classes.activeLink : ""}`}
