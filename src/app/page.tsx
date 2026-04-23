@@ -15,8 +15,7 @@ import { IconInfoCircle } from "@tabler/icons-react";
 import { Metadata } from "next";
 
 const title = "NoteDoctor.AI | Prior authorization screening with AI-driven solutions";
-const description =
-  "NoteDoctor.AI streamlines prior authorization screening with AI-driven solutions, helping healthcare providers cut red tape, reduce physician burnout, and deliver patient care without delays.";
+const description = "NoteDoctor.AI streamlines prior authorization screening with AI-driven solutions, helping healthcare providers cut red tape, reduce physician burnout, and deliver patient care without delays.";
 const image = "https://notedoctor.ai/images/logo/nd_logo.svg";
 
 export const metadata: Metadata = {
