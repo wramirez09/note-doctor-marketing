@@ -26,18 +26,18 @@ function Terminal() {
         <span className="ml-2 text-[12px]" style={{ color: "var(--faint)" }}>NoteDoctor.AI — Auth Screening</span>
       </div>
       <div className="p-5 font-mono text-[12.5px] leading-[1.8]">
-        <p style={{ color: "var(--faint)" }}>// Analyzing prior authorization request…</p>
+        <p style={{ color: "var(--faint)" }}>{"// Analyzing prior authorization request…"}</p>
         <br />
         <p><span style={{ color: "var(--blue-mid)" }}>patient</span><span style={{ color: "var(--faint)" }}>:</span> <span style={{ color: "var(--text)" }}>Jane D., DOB 1962-04-11</span></p>
         <p><span style={{ color: "var(--blue-mid)" }}>procedure</span><span style={{ color: "var(--faint)" }}>:</span> <span style={{ color: "var(--text)" }}>MRI Lumbar Spine (CPT 72148)</span></p>
         <p><span style={{ color: "var(--blue-mid)" }}>payer</span><span style={{ color: "var(--faint)" }}>:</span> <span style={{ color: "var(--text)" }}>Aetna — Commercial PPO</span></p>
         <br />
-        <p style={{ color: "var(--faint)" }}>// Checking payer criteria…</p>
+        <p style={{ color: "var(--faint)" }}>{"// Checking payer criteria…"}</p>
         <p><span className="text-[#4ade80]">✓</span> <span style={{ color: "var(--text)" }}>Diagnosis documented (M54.5)</span></p>
         <p><span className="text-[#4ade80]">✓</span> <span style={{ color: "var(--text)" }}>Conservative therapy &gt; 6 wks confirmed</span></p>
         <p><span className="text-[#fbbf24]">⚠</span> <span className="text-[#fbbf24]">Neurological exam findings missing</span></p>
         <br />
-        <p style={{ color: "var(--faint)" }}>// Recommendation</p>
+        <p style={{ color: "var(--faint)" }}>{"// Recommendation"}</p>
         <p><span style={{ color: "var(--blue-mid)" }}>→</span> <span style={{ color: "var(--text)" }}>Add neuro exam note before submitting</span></p>
         <p><span style={{ color: "var(--blue-mid)" }}>estimated_approval_rate</span><span style={{ color: "var(--faint)" }}>:</span> <span className="text-[#4ade80]">94%</span></p>
       </div>

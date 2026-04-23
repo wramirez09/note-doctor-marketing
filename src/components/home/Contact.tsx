@@ -65,13 +65,13 @@ export default function Contact() {
             style={{ background: "radial-gradient(circle, rgba(59,130,246,0.18), transparent 70%)" }} />
           <div className="relative z-10">
             <p className="text-[12px] font-semibold tracking-[.12em] uppercase mb-4" style={{ color: "var(--blue-mid)" }}>
-              Let's Talk
+              Let&apos;s Talk
             </p>
             <h2 className="text-[clamp(24px,2.5vw,36px)] font-extrabold tracking-[-0.025em] leading-[1.15] mb-4">
               Ready to Start Delivering Care Faster?
             </h2>
             <p className="text-[15px] leading-[1.65] mb-8" style={{ color: "var(--muted)" }}>
-              Tell us about your practice or health system and we'll show you how NoteDoctor.AI fits your workflow.
+              Tell us about your practice or health system and we&apos;ll show you how NoteDoctor.AI fits your workflow.
             </p>
             <ul className="flex flex-col gap-3">
               {trustPoints.map((point) => (
@@ -92,8 +92,8 @@ export default function Contact() {
 
         {/* Right — form */}
         <div className="px-13 py-14 px-12">
-          <h3 className="text-[20px] font-bold tracking-[-0.01em] mb-1.5">Let's Start a Conversation</h3>
-          <p className="text-[14px] mb-7" style={{ color: "var(--muted)" }}>We'll respond within one business day.</p>
+          <h3 className="text-[20px] font-bold tracking-[-0.01em] mb-1.5">Let&apos;s Start a Conversation</h3>
+          <p className="text-[14px] mb-7" style={{ color: "var(--muted)" }}>We&apos;ll respond within one business day.</p>
 
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
             <div className="grid grid-cols-2 gap-3.5">
