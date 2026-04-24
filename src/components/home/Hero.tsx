@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 const stats = [
-  { num: "80M+", label: "Medicare prior auth\nrequests per year" },
-  { num: "40%", label: "Of denials are\ntechnically incorrect" },
+  { num: "50M+", label: "Medicare Advantage prior auth\nrequests per year" },
+  { num: "80%", label: "Of denials later\noverturned on appeal" },
   { num: "2hrs", label: "Average physician time\nlost daily to admin" },
 ];
 
@@ -28,15 +28,14 @@ export default function Hero() {
       </h1>
 
       <p className="text-[18px] leading-[1.7] max-w-[560px] mx-auto mb-11" style={{ color: "var(--muted)" }}>
-        Prior authorization wastes valuable time and burdens physicians. NoteDoctor.AI screens
-        authorizations with speed, accuracy, and zero paperwork.
+        Prior authorization wastes valuable time, burdens physicians, and puts patients at risk. NoteDoctor.AI empowers providers with clarity, speed, and compliance — so you can focus on care, not paperwork.
       </p>
 
       <div className="flex items-center justify-center gap-4 flex-wrap">
         <Link href="#contact"
           className="text-white text-[15px] font-semibold px-8 py-3.5 rounded-[9px] transition-all hover:-translate-y-0.5"
           style={{ background: "var(--blue)", boxShadow: "0 0 32px rgba(59,130,246,0.35)" }}>
-          Get Started Free
+          Get Started Today
         </Link>
         <Link href="#how"
           className="text-[15px] font-medium px-6 py-3.5 rounded-[9px] border transition-all hover:bg-white/5"

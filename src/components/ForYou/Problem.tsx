@@ -67,9 +67,9 @@ export default function Problem() {
           <div className="relative bg-[#131929] border border-white/[0.07] rounded-2xl px-14 py-14 overflow-hidden">
             <div className="pointer-events-none absolute -top-20 -right-20 w-80 h-80 rounded-full bg-[radial-gradient(circle,rgba(59,130,246,0.12),transparent_70%)]" />
             <blockquote className="relative z-10 text-xl font-semibold leading-[1.55] max-w-[680px] mb-5">
-              Insurers claim success by cutting costs — but a 2023 investigation revealed{" "}
-              <span className="text-blue-400">more than 300,000 AI-driven instant claim rejections in just two months,</span>{" "}
-              without patient files ever being reviewed. This isn&apos;t efficiency. This is harm disguised as savings.
+              Insurers claim success by cutting costs, but often at the expense of care. A 2023 investigation revealed{" "}
+              <span className="text-blue-400">AI-driven instant claim rejections — more than 300,000 denials in two months</span>{" "}
+              — without patient files ever being reviewed. This isn&apos;t efficiency. This is harm disguised as savings.
             </blockquote>
             <cite className="text-[11px] text-white/25 not-italic">
               From: Standing Up to Prior Authorization —{" "}

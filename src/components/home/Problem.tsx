@@ -6,8 +6,8 @@ const cards = [
       </svg>
     ),
     title: "A System Overloaded",
-    body: "In 2021, Medicare processed over 80 million prior authorization requests — allowing its denial rate to rise as the system expanded.",
-    stat: "80M+ annual requests",
+    body: "In 2023, Medicare Advantage processed nearly 50 million prior authorization requests.",
+    stat: "50M+ annual requests",
   },
   {
     icon: (
@@ -16,8 +16,8 @@ const cards = [
       </svg>
     ),
     title: "Denials That Don't Hold Up",
-    body: "More than 40% of denials from 2019–2021 were overturned on appeal — showing its denial efforts cut care from those who need it most.",
-    stat: "40% overturned on appeal",
+    body: "More than 80% of denials from 2019–2023 were later overturned on appeal — showing denials often result from missing documentation, not medical necessity.",
+    stat: "80% overturned on appeal",
   },
   {
     icon: (
@@ -27,7 +27,7 @@ const cards = [
       </svg>
     ),
     title: "Patients Left Waiting",
-    body: "Physicians cite authorization delays as their top source of burnout, leading to reduced capacity and delayed treatments.",
+    body: "Physicians and patients still endure weeks of delays, excessive appeals, and denied treatments.",
     stat: "#1 cause of physician burnout",
   },
 ];
@@ -67,9 +67,9 @@ export default function Problem() {
 
         <p className="text-[12px] mt-9 leading-relaxed" style={{ color: "var(--faint)" }}>
           Source:{" "}
-          <a href="https://www.cms.gov/files/document/prior-authorization-report-2021.pdf"
+          <a href="https://www.kff.org/medicare/issue-brief/nearly-50-million-prior-authorization-requests-were-sent-to-medicare-advantage-insurers-in-2023/"
             target="_blank" rel="noopener noreferrer" style={{ color: "var(--muted)" }}>
-            CMS Prior Authorization Report, 2021
+            KFF — Medicare Advantage Prior Authorization, 2023
           </a>
         </p>
       </div>
