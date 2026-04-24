@@ -9,14 +9,16 @@ export default function Footer() {
       <span>© 2026 NoteDoctor.Ai — All rights reserved.</span>
       <div className="flex gap-6">
         {[
-          { label: "Privacy", href: "#" },
-          { label: "Terms", href: "#" },
+          { label: "Privacy", href: "https://app.notedoctor.ai/legal/privacy-policy", external: true },
+          { label: "Terms", href: "https://app.notedoctor.ai/legal/terms-of-service", external: true },
           { label: "Pricing", href: "/pricing" },
           { label: "Contact", href: "#contact" },
-        ].map(({ label, href }) => (
+        ].map(({ label, href, external }) => (
           <Link
             key={label}
             href={href}
+            target={external ? "_blank" : undefined}
+            rel={external ? "noopener noreferrer" : undefined}
             className="no-underline transition-colors hover:text-white"
             style={{ color: "var(--muted)" }}
           >

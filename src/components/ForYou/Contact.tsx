@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const trustPoints = [
   "HIPAA-compliant",
@@ -19,13 +21,38 @@ type FormState = {
 
 export default function Contact() {
   const [form, setForm] = useState<FormState>({ firstName: "", lastName: "", email: "", role: "", message: "" });
+  const [isLoading, setIsLoading] = useState(false);
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
     setForm({ ...form, [e.target.name]: e.target.value });
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(form);
+    setIsLoading(true);
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/sales@notedoctor.ai", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name: `${form.firstName} ${form.lastName}`.trim(),
+          email: form.email,
+          role: form.role,
+          message: form.message,
+          _subject: "New Contact Form Submission from Note Doctor",
+        }),
+      });
+      const data = await response.json();
+      if (data.success === "true" || data.success === true) {
+        toast.success("Message sent successfully! Thank you for contacting us.");
+        setForm({ firstName: "", lastName: "", email: "", role: "", message: "" });
+      } else {
+        toast.error("Something went wrong. Please try again.");
+      }
+    } catch {
+      toast.error("Something went wrong. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const fieldClass =
@@ -91,13 +118,14 @@ export default function Contact() {
               <textarea name="message" rows={3} placeholder="Tell us about your practice or what you'd like to solve…"
                 value={form.message} onChange={onChange} className={fieldClass + " resize-none"} />
             </div>
-            <button type="submit"
-              className="w-full bg-blue-500 hover:bg-blue-600 text-white text-[15px] font-semibold py-3.5 rounded-[9px] border-none cursor-pointer transition-all hover:-translate-y-px mt-1">
-              Send Message
+            <button type="submit" disabled={isLoading}
+              className="w-full bg-blue-500 hover:bg-blue-600 text-white text-[15px] font-semibold py-3.5 rounded-[9px] border-none cursor-pointer transition-all hover:-translate-y-px mt-1 disabled:opacity-50 disabled:cursor-not-allowed">
+              {isLoading ? "Sending…" : "Send Message"}
             </button>
           </form>
         </div>
       </div>
+      <ToastContainer />
     </section>
   );
 }
