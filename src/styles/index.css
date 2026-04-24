@@ -169,3 +169,7 @@ footer {
 hr {
   border-color: rgb(59, 59, 59);
 }
+
+.Toastify__toast-container {
+  z-index: 99999 !important;
+}
