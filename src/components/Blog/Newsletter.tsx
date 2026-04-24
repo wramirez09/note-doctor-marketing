@@ -75,7 +75,7 @@ const Newsletter = () => {
           className="mb-4 h-[50px] w-full cursor-pointer rounded-md bg-secondary text-center text-sm font-medium text-white transition duration-300 ease-in-out hover:bg-[#0BB489] hover:bg-opacity-90 disabled:opacity-50 disabled:cursor-not-allowed"
         />
       </form>
-      <ToastContainer />
+      <ToastContainer style={{ zIndex: 9999 }} />
       <p className="text-sm font-medium text-white">
         Don&#39;t worry, we don&#39;t spam
       </p>

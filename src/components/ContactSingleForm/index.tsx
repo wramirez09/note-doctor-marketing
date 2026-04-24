@@ -206,7 +206,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <ToastContainer />
+      <ToastContainer style={{ zIndex: 9999 }} />
     </section>
   );
 };

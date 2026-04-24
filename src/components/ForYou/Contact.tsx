@@ -125,7 +125,7 @@ export default function Contact() {
           </form>
         </div>
       </div>
-      <ToastContainer />
+      <ToastContainer style={{ zIndex: 9999 }} />
     </section>
   );
 }

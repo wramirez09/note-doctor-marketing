@@ -82,7 +82,7 @@ const NewsLatterBox = () => {
           {isLoading ? "Subscribing..." : "Subscribe"}
         </Button>
       </form>
-      <ToastContainer />
+      <ToastContainer style={{ zIndex: 9999 }} />
 
       <div>
         <span className="absolute left-2 top-7">
