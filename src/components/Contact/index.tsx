@@ -160,7 +160,7 @@ const Contact: React.FC<{ showNewsLetterSignUp?: boolean }> = ({
           )}
         </div>
       </div>
-      <ToastContainer style={{ zIndex: 9999 }} />
+      <ToastContainer style={{ zIndex: 9999, top: "200px" }} />
     </section>
   );
 };
