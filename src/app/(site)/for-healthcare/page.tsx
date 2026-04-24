@@ -6,19 +6,19 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "AI Clinical Insights for Physicians | NoteDoctor.ai for Physicians",
+    "AI Clinical Insights for Physicians | NoteDoctor.Ai for Physicians",
   description:
-    "Empower your practice with NoteDoctor.ai: analyze patient records, discover relevant clinical trials, streamline diagnosis support, and enhance evidence-based care. Trusted, secure, practitioner-focused.",
+    "Empower your practice with NoteDoctor.Ai: analyze patient records, discover relevant clinical trials, streamline diagnosis support, and enhance evidence-based care. Trusted, secure, practitioner-focused.",
   openGraph: {
     type: "website",
-    url: "https://notedoctor.ai/for-healthcare",
+    url: "https://NoteDoctor.Ai/for-healthcare",
     title:
-      "AI Clinical Insights for Physicians | NoteDoctor.ai for Physicians",
+      "AI Clinical Insights for Physicians | NoteDoctor.Ai for Physicians",
     description:
-      "Empower your practice with NoteDoctor.ai: analyze patient records, discover relevant clinical trials, streamline diagnosis support, and enhance evidence-based care. Trusted, secure, practitioner-focused.",
+      "Empower your practice with NoteDoctor.Ai: analyze patient records, discover relevant clinical trials, streamline diagnosis support, and enhance evidence-based care. Trusted, secure, practitioner-focused.",
     images: [
       {
-        url: "https://notedoctor.ai/opengraph-image.jpg",
+        url: "https://NoteDoctor.Ai/opengraph-image.jpg",
         width: 1200,
         height: 630,
       },
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
       "How NoteDoctorAI Works | AI-Driven Medical Coding for Healthcare Efficiency",
     description:
       "Discover how NoteDoctorAI's advanced AI technology revolutionizes medical coding. Learn how our solutions drive efficiency, accuracy, and profitability for healthcare organizations globally.",
-    images: ["https://notedoctor.ai/opengraph-image.jpg"],
+    images: ["https://NoteDoctor.Ai/opengraph-image.jpg"],
   },
 };
 

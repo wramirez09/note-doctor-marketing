@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 const trustPoints = [
-  "HIPAA-compliant, end-to-end encrypted",
+  "HIPAA-compliant",
   "No long-term commitment required",
   "Up and running in under a day",
   "Dedicated onboarding support",
@@ -40,13 +40,13 @@ export default function Contact() {
           <div className="relative z-10">
             <p className="text-xs font-semibold tracking-[.12em] uppercase text-blue-400 mb-4">Let&apos;s Talk</p>
             <h2 className="text-[clamp(22px,2.5vw,32px)] font-extrabold tracking-[-0.025em] leading-[1.15] mb-3.5">Start a Conversation</h2>
-            <p className="text-[15px] text-white/50 leading-[1.65] mb-8">Tell us about your role and what you&apos;re trying to solve — we&apos;ll show you exactly how NoteDoctor.AI fits.</p>
+            <p className="text-[15px] text-white/50 leading-[1.65] mb-8">Tell us about your role and what you&apos;re trying to solve — we&apos;ll show you exactly how NoteDoctor.Ai fits.</p>
             <ul className="flex flex-col gap-3 list-none">
               {trustPoints.map((point) => (
                 <li key={point} className="flex items-center gap-3 text-[13.5px] text-white/50">
                   <span className="shrink-0 w-[18px] h-[18px] rounded-full flex items-center justify-center bg-green-400/[0.12] border border-green-400/30">
                     <svg viewBox="0 0 10 10" width="10" height="10" fill="none">
-                      <polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#4ade80" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+                      <polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#4ade80" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </span>
                   {point}

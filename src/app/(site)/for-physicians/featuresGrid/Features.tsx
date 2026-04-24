@@ -104,7 +104,7 @@ export function FeaturesGrid() {
         <Container size="lg" className="mt-9">
           <hr className="mb-9 mt-9" />
           <Title className={classes.title} id="more">
-            How NoteDoctor.AI Helps Physicians
+            How NoteDoctor.Ai Helps Physicians
           </Title>
 
           <div className="mb-11 mt-9">

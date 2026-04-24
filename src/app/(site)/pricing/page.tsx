@@ -68,17 +68,14 @@ export default function PricingPage() {
     { label: "Real-time payer policy compliance checks", highlight: true },
     { label: "Denial risk flagging before submission", highlight: true },
     { label: "Clinical documentation gap detection", highlight: true },
-    { label: "HIPAA-compliant, end-to-end encrypted", highlight: true },
-    { label: "Email support", highlight: true },
+    { label: "HIPAA-compliant", highlight: true },
+    { label: "PDF export", highlight: true },
   ];
 
   const enterpriseFeatures = [
     { label: "Everything in Pro, plus:" },
-    { label: "EHR / EMR integration", highlight: true },
-    { label: "Dedicated account manager", highlight: true },
-    { label: "SLA guarantee & priority support", highlight: true },
-    { label: "Custom reporting & analytics dashboard", highlight: true },
-    { label: "BAA included", highlight: true },
+    { label: "API access (coming soon)", highlight: true },
+
   ];
 
   const usageExamples = [
@@ -353,8 +350,8 @@ export default function PricingPage() {
             <div className="nd-card-label">For Health Systems</div>
             <div className="nd-card-name">Enterprise</div>
             <div className="nd-card-desc">
-              High-volume practices and health systems with custom integration,
-              SLA, and dedicated support needs.
+              High-volume practices and health systems with custom integration
+              and dedicated support needs.
             </div>
 
             <div>
@@ -379,7 +376,7 @@ export default function PricingPage() {
           <div className="nd-usage-box">
             <h2>How usage pricing works</h2>
             <p>
-              Each time NoteDoctor.AI runs an AI screening — analyzing a note,
+              Each time NoteDoctor.Ai runs an AI screening — analyzing a note,
               checking payer criteria, or flagging a documentation gap — that
               counts as one AI call at{" "}
               <strong style={{ color: "var(--nd-text)" }}>$0.02</strong>. Your

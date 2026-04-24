@@ -6,23 +6,23 @@ import "../styles/prism-vsc-dark-plus.css";
 import ClientLayout from "./ClientLayout";
 
 export const metadata: Metadata = {
-  title: "NoteDoctor.AI | AI-Powered Prior Authorization Screening",
+  title: "NoteDoctor.Ai | AI-Powered Prior Authorization Screening",
   description:
-    "NoteDoctor.AI streamlines prior authorization screening with AI-driven solutions, helping healthcare providers cut red tape, reduce physician burnout, and deliver patient care without delays.",
+    "NoteDoctor.Ai streamlines prior authorization screening with AI-driven solutions, helping healthcare providers cut red tape, reduce physician burnout, and deliver patient care without delays.",
   openGraph: {
     type: "website",
-    url: "https://notedoctor.ai/",
-    title: "NoteDoctor.AI | AI-Powered Prior Authorization Screening",
+    url: "https://NoteDoctor.Ai/",
+    title: "NoteDoctor.Ai | AI-Powered Prior Authorization Screening",
     description:
-      "NoteDoctor.AI streamlines prior authorization screening with AI-driven solutions, helping healthcare providers cut red tape, reduce physician burnout, and deliver patient care without delays.",
-    images: [{ url: "https://notedoctor.ai/images/logo/nd_logo.svg" }],
+      "NoteDoctor.Ai streamlines prior authorization screening with AI-driven solutions, helping healthcare providers cut red tape, reduce physician burnout, and deliver patient care without delays.",
+    images: [{ url: "https://NoteDoctor.Ai/images/logo/nd_logo.svg" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "NoteDoctor.AI | AI-Powered Prior Authorization Screening",
+    title: "NoteDoctor.Ai | AI-Powered Prior Authorization Screening",
     description:
-      "NoteDoctor.AI streamlines prior authorization screening with AI-driven solutions, helping healthcare providers cut red tape, reduce physician burnout, and deliver patient care without delays.",
-    images: ["https://notedoctor.ai/images/logo/nd_logo.svg"],
+      "NoteDoctor.Ai streamlines prior authorization screening with AI-driven solutions, helping healthcare providers cut red tape, reduce physician burnout, and deliver patient care without delays.",
+    images: ["https://NoteDoctor.Ai/images/logo/nd_logo.svg"],
   },
 };
 

@@ -30,7 +30,7 @@ const Hero = () => {
                 />
                 <p className="mx-auto mb-9 max-w-[600px] text-base font-medium text-white sm:text-lg sm:leading-[1.44]">
                   Prior authorization wastes valuable time, burdens physicians,
-                  and puts patients at risk. NoteDoctor.AI empowers providers
+                  and puts patients at risk. NoteDoctor.Ai empowers providers
                   with clarity, speed, and compliance — so you can focus on
                   care, not paperwork.
                 </p>

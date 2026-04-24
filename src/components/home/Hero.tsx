@@ -28,7 +28,7 @@ export default function Hero() {
       </h1>
 
       <p className="text-[18px] leading-[1.7] max-w-[560px] mx-auto mb-11" style={{ color: "var(--muted)" }}>
-        Prior authorization wastes valuable time, burdens physicians, and puts patients at risk. NoteDoctor.AI empowers providers with clarity, speed, and compliance — so you can focus on care, not paperwork.
+        Prior authorization wastes valuable time, burdens physicians, and puts patients at risk. NoteDoctor.Ai empowers providers with clarity, speed, and compliance — so you can focus on care, not paperwork.
       </p>
 
       <div className="flex items-center justify-center gap-4 flex-wrap">

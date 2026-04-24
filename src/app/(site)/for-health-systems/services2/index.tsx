@@ -70,7 +70,7 @@ export function Services2() {
         />
         <hr style={{ opacity: "15%" }} className="mb-9 mt-9" />
         <Title className={classes.title} id="more" size={"large"}>
-          How NoteDoctor.AI Helps Health Plans
+          How NoteDoctor.Ai Helps Health Plans
         </Title>
 
         <SimpleGrid cols={{ base: 1, sm: 2 }} spacing={1}>

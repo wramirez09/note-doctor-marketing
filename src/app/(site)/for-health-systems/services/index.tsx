@@ -64,7 +64,7 @@ export function Services() {
     <div className="lg:mb-[60px] lg:mt-[120px] xl:px-11">
       <Container mt={30} mb={30} size="xl">
         <Title order={2} className={classes.title} ta="center" mt="sm">
-          How NoteDoctor.AI Helps Health Systems
+          How NoteDoctor.Ai Helps Health Systems
         </Title>
         <SimpleGrid cols={{ base: 1, sm: 2 }} spacing={1}>
           {items}

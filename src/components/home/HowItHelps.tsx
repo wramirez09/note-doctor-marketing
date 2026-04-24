@@ -2,7 +2,7 @@ const steps = [
   {
     num: "01",
     title: "Clarifying requirements upfront",
-    body: "NoteDoctor.AI reads payer policies in real time and surfaces exactly what clinical documentation is needed — before you submit. No more back-and-forth.",
+    body: "NoteDoctor.Ai reads payer policies in real time and surfaces exactly what clinical documentation is needed — before you submit. No more back-and-forth.",
   },
   {
     num: "02",
@@ -12,7 +12,7 @@ const steps = [
   {
     num: "03",
     title: "Protecting physicians",
-    body: "By automating documentation checks and reducing rework, NoteDoctor.AI gives physicians hours back each week — and patients move faster.",
+    body: "By automating documentation checks and reducing rework, NoteDoctor.Ai gives physicians hours back each week — and patients move faster.",
   },
 ];
 
@@ -23,7 +23,7 @@ function Terminal() {
         <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
         <span className="w-2.5 h-2.5 rounded-full bg-[#febc2e]" />
         <span className="w-2.5 h-2.5 rounded-full bg-[#28c840]" />
-        <span className="ml-2 text-[12px]" style={{ color: "var(--faint)" }}>NoteDoctor.AI — Auth Screening</span>
+        <span className="ml-2 text-[12px]" style={{ color: "var(--faint)" }}>NoteDoctor.Ai — Auth Screening</span>
       </div>
       <div className="p-5 font-mono text-[12.5px] leading-[1.8]">
         <p style={{ color: "var(--faint)" }}>{"// Analyzing prior authorization request…"}</p>
@@ -51,7 +51,7 @@ export default function HowItHelps() {
       <div className="max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         <div>
           <p className="text-[12px] font-semibold tracking-[.12em] uppercase mb-3.5" style={{ color: "var(--blue-mid)" }}>
-            How NoteDoctor.AI Helps
+            How NoteDoctor.Ai Helps
           </p>
           <h2 className="text-[clamp(28px,3.5vw,44px)] font-extrabold tracking-[-0.025em] leading-[1.12] mb-10">
             Built to Keep Physicians<br />Focused on Care

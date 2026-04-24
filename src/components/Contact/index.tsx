@@ -29,7 +29,7 @@ const Contact: React.FC<{ showNewsLetterSignUp?: boolean }> = ({
 
     try {
       const response = await fetch(
-        "https://formsubmit.co/ajax/sales@notedoctor.ai",
+        "https://formsubmit.co/ajax/sales@NoteDoctor.Ai",
         {
           method: "POST",
           headers: {
@@ -42,7 +42,7 @@ const Contact: React.FC<{ showNewsLetterSignUp?: boolean }> = ({
 
       const data = await response.json();
       console.log("Contact form response:", data);
-      
+
       if (data.success === "true" || data.success === true) {
         toast.success("Message sent successfully! Thank you for contacting us.");
         e.currentTarget.reset();

@@ -9,7 +9,7 @@ import Problem from "@/components/ForYou/Problem";
 const TABS = [
   { id: "healthcare", label: "For Healthcare" },
   { id: "physicians", label: "For Physicians" },
-  { id: "systems",    label: "For Health Systems" },
+  { id: "systems", label: "For Health Systems" },
 ];
 
 export default function ForYouPage() {
@@ -33,7 +33,7 @@ export default function ForYouPage() {
         </h1>
 
         <p className="text-[17px] leading-[1.7] max-w-[540px] mx-auto mb-12 text-white/50">
-          Whether you&apos;re a physician, practice administrator, or health system leader — NoteDoctor.AI eliminates prior authorization friction for everyone.
+          Whether you&apos;re a physician, practice administrator, or health system leader — NoteDoctor.Ai eliminates prior authorization friction for everyone.
         </p>
 
         <div className="inline-flex items-center gap-1.5 p-1.5 rounded-2xl border border-white/[0.07] bg-[#131929] mx-auto">
@@ -53,8 +53,8 @@ export default function ForYouPage() {
       </section>
 
       {active === "healthcare" && <Problem />}
-      {active === "physicians"  && <Physicians />}
-      {active === "systems"     && <HealthSystems />}
+      {active === "physicians" && <Physicians />}
+      {active === "systems" && <HealthSystems />}
 
       <Contact />
     </main>

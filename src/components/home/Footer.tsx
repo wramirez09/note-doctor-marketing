@@ -6,7 +6,7 @@ export default function Footer() {
       className="flex items-center justify-between px-12 py-7 border-t text-[13px]"
       style={{ borderColor: "var(--border)", color: "var(--faint)" }}
     >
-      <span>© 2026 NoteDoctor.AI — All rights reserved.</span>
+      <span>© 2026 NoteDoctor.Ai — All rights reserved.</span>
       <div className="flex gap-6">
         {[
           { label: "Privacy", href: "#" },
