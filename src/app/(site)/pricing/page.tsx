@@ -65,7 +65,7 @@ function UsageExample({ label, calls, cost }: UsageExampleProps) {
 export default function PricingPage() {
   const proFeatures = [
     { label: "AI-driven prior authorization screening", highlight: true },
-    { label: "Real-time payer policy compliance checks", highlight: true },
+
     { label: "Denial risk flagging before submission", highlight: true },
     { label: "Clinical documentation gap detection", highlight: true },
     { label: "HIPAA-compliant", highlight: true },
