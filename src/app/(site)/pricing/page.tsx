@@ -342,7 +342,7 @@ export default function PricingPage() {
 
             <div className="nd-divider" />
             <FeatureList items={proFeatures} />
-            <a href="/subscribe" className="nd-btn-primary">Subscribe — $25 / mo</a>
+            <a href="https://app.notedoctor.ai/auth/sign-up" target="_blank" rel="noopener noreferrer" className="nd-btn-primary">Subscribe — $25 / mo</a>
           </div>
 
           {/* Enterprise */}

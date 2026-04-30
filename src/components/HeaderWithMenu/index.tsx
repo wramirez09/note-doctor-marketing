@@ -84,9 +84,19 @@ export function HeaderWithMenu() {
 
               {/* Right side */}
               <div className="flex items-center gap-3">
-                <div className="hidden lg:block">
+                <div className="hidden lg:flex items-center gap-3">
                   <a
-                    href="https://app.NoteDoctor.Ai"
+                    href="https://app.notedoctor.ai/auth/login"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white text-slate-900 text-[13px] font-semibold px-6 py-1.5 rounded-[9px] transition-all hover:-translate-y-0.5 inline-block"
+                  >
+                    Login
+                  </a>
+                  <a
+                    href="https://app.notedoctor.ai/auth/sign-up"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-white text-[13px] font-semibold px-6 py-1.5 rounded-[9px] transition-all hover:-translate-y-0.5 inline-block"
                     style={{ background: "var(--blue)", boxShadow: "0 0 32px rgba(59,130,246,0.35)" }}
                   >
@@ -161,7 +171,17 @@ export function HeaderWithMenu() {
 
           <Group justify="center" pb="xl" px="lg">
             <a
-              href="https://app.NoteDoctor.Ai"
+              href="https://app.notedoctor.ai/auth/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-slate-900 text-[15px] font-semibold px-8 py-3.5 rounded-[9px] transition-all hover:-translate-y-0.5 inline-block"
+            >
+              Login
+            </a>
+            <a
+              href="https://app.notedoctor.ai/auth/sign-up"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-white text-[15px] font-semibold px-8 py-3.5 rounded-[9px] transition-all hover:-translate-y-0.5 inline-block"
               style={{ background: "var(--blue)", boxShadow: "0 0 32px rgba(59,130,246,0.35)" }}
             >
