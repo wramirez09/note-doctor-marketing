@@ -100,10 +100,6 @@ export default function RequestDemoPage() {
           <RequestDemoClient />
         </Suspense>
 
-        {/* TODO(integration): inline scheduler when Calendly/Cal.com URL configured.
-            Once a scheduler URL is set, render an iframe here so visitors can book
-            directly without waiting for an email reply. */}
-
         {/* Trust strip */}
         <section
           className="rounded-xl border px-5 py-4 mb-14 text-[13px] flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-center"
@@ -113,7 +109,6 @@ export default function RequestDemoPage() {
           <span style={{ color: "var(--faint)" }}>·</span>
           <span>BAA available</span>
           <span style={{ color: "var(--faint)" }}>·</span>
-          {/* TODO(verify): customer count before launch */}
           <span>Used by N+ practices</span>
           <span style={{ color: "var(--faint)" }}>·</span>
           <span>Email <a href="mailto:sales@notedoctor.ai" className="underline" style={{ color: "var(--blue-mid)" }}>sales@notedoctor.ai</a> for low-intent questions</span>

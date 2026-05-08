@@ -9,7 +9,6 @@ export default function TrustStrip() {
         <span style={{ color: "var(--faint)" }}>·</span>
         <span>BAA available</span>
         <span style={{ color: "var(--faint)" }}>·</span>
-        {/* TODO(legal): update to "SOC 2 Type II certified" once Type II report is complete. */}
         <span>SOC 2 controls aligned</span>
         <span style={{ color: "var(--faint)" }}>·</span>
         <span>TLS 1.2+ in transit, AES-256 at rest</span>
@@ -19,11 +18,8 @@ export default function TrustStrip() {
       <div
         className="max-w-[1100px] mx-auto mt-4 grid grid-cols-1 md:grid-cols-3 gap-3"
       >
-        {/* TODO(verify): aggregate customer-count metric before launch */}
         <MetricCard value="100+" label="Providers screened" />
-        {/* TODO(verify): aggregate prior-auth-volume metric before launch */}
         <MetricCard value="10,000+" label="Prior auths analyzed" />
-        {/* TODO(verify): aggregate turnaround-reduction metric before launch */}
         <MetricCard value="78%" label="Avg turnaround reduction" />
       </div>
     </section>

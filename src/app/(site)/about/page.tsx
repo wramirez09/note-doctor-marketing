@@ -155,7 +155,6 @@ export default function AboutPage() {
             Clinicians, engineers, and revenue-cycle operators who have spent
             careers on opposite sides of the prior-auth wall.
           </p>
-          {/* TODO(content): real founder bios, names, headshots, and links. */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {TEAM_PLACEHOLDERS.map((member, i) => (
               <div

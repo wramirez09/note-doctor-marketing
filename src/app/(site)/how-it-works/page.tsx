@@ -44,7 +44,6 @@ export default function HowItWorksPage() {
         <h1 className="text-[clamp(32px,4vw,52px)] font-extrabold tracking-[-0.02em] leading-[1.1] mb-6">
           How NoteDoctor.AI Works
         </h1>
-        {/* TODO(seo-fix): add product screenshots and a short demo video here. */}
         <p className="text-[17px] leading-[1.7] mb-12" style={{ color: "var(--muted)" }}>
           A four-step screening flow that fits between the clinical note and the prior
           authorization submission — no integration project required.
