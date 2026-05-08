@@ -3,7 +3,8 @@ import Hero from "@/components/home/Hero";
 import Problem from "@/components/home/Problem";
 import HowItHelps from "@/components/home/HowItHelps";
 import FAQ from "@/components/home/FAQ";
-import Contact from "@/components/home/Contact";
+import ContactCTA from "@/components/home/ContactCTA";
+import TrustStrip from "@/components/home/TrustStrip";
 import { StructuredData } from "@/components/StructuredData";
 import { faqJsonLd } from "@/lib/faq";
 
@@ -28,8 +29,9 @@ export default function HomePage() {
       <Hero />
       <Problem />
       <HowItHelps />
+      <TrustStrip />
       <FAQ />
-      <Contact />
+      <ContactCTA />
     </main>
   );
 }

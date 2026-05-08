@@ -32,10 +32,10 @@ export default function Hero() {
       </p>
 
       <div className="flex items-center justify-center gap-4 flex-wrap">
-        <Link href="#contact"
+        <Link href="/request-demo?source=hero"
           className="text-white text-[15px] font-semibold px-8 py-3.5 rounded-[9px] transition-all hover:-translate-y-0.5"
           style={{ background: "var(--blue)", boxShadow: "0 0 32px rgba(59,130,246,0.35)" }}>
-          Get Started Today
+          Request a demo
         </Link>
         <Link href="#how"
           className="text-[15px] font-medium px-6 py-3.5 rounded-[9px] border transition-all hover:bg-white/5"
