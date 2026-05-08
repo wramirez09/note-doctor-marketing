@@ -1,6 +1,7 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import { StructuredData } from "@/components/StructuredData";
+import RelatedLinks from "@/components/RelatedLinks";
 
 import { Metadata } from "next";
 
@@ -62,6 +63,11 @@ const HowItWorks = () => {
           />
         </div>
       </section>
+      <RelatedLinks
+        caseStudySlug="sunbelt-orthopedics"
+        comparisonSlug="vs-availity"
+        source="for-healthcare"
+      />
     </>
   );
 };

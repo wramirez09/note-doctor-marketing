@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PhysiciansPage from ".";
+import RelatedLinks from "@/components/RelatedLinks";
 
 const TITLE = "AI Clinical Insight Tools for Physicians";
 const DESCRIPTION =
@@ -14,5 +15,14 @@ export const metadata: Metadata = {
 };
 
 export default function PhysiciansPageWrapper() {
-  return <PhysiciansPage />;
+  return (
+    <>
+      <PhysiciansPage />
+      <RelatedLinks
+        caseStudySlug="midwest-cardiology"
+        comparisonSlug="vs-cohere"
+        source="for-physicians"
+      />
+    </>
+  );
 }

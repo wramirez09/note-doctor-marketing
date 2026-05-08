@@ -13,6 +13,7 @@ export default function Footer() {
           { label: "Pricing", href: "/pricing" },
           { label: "Security", href: "/security" },
           { label: "Case studies", href: "/case-studies" },
+          { label: "Compare", href: "/compare/vs-cohere" },
           { label: "About", href: "/about" },
           { label: "Request demo", href: "/request-demo" },
           { label: "Privacy", href: "https://app.notedoctor.ai/legal/privacy-policy", external: true },

@@ -5,6 +5,7 @@ import { Services } from "./services";
 import { Services2 } from "./services2";
 
 import { StructuredData } from "@/components/StructuredData";
+import RelatedLinks from "@/components/RelatedLinks";
 
 export const metadata: Metadata = {
   title: {
@@ -59,6 +60,11 @@ const AboutPage = () => {
       <Services />
       {/* <hr style={{ opacity: "15%" }} className="mt-5" /> */}
       <Services2 />
+      <RelatedLinks
+        caseStudySlug="regional-health-network"
+        comparisonSlug="vs-cohere"
+        source="for-health-systems"
+      />
     </main>
   );
 };

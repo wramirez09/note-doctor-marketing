@@ -5,6 +5,8 @@ import HowItHelps from "@/components/home/HowItHelps";
 import FAQ from "@/components/home/FAQ";
 import ContactCTA from "@/components/home/ContactCTA";
 import TrustStrip from "@/components/home/TrustStrip";
+import CustomerStories from "@/components/home/CustomerStories";
+import CompareCallout from "@/components/home/CompareCallout";
 import { StructuredData } from "@/components/StructuredData";
 import { faqJsonLd } from "@/lib/faq";
 
@@ -30,6 +32,8 @@ export default function HomePage() {
       <Problem />
       <HowItHelps />
       <TrustStrip />
+      <CompareCallout />
+      <CustomerStories />
       <FAQ />
       <ContactCTA />
     </main>
