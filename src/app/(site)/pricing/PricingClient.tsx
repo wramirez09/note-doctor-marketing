@@ -372,7 +372,7 @@ export default function PricingClient() {
           <div className="nd-usage-box">
             <h2>How usage pricing works</h2>
             <p>
-              Each time NoteDoctor.Ai runs an AI screening — analyzing a note,
+              Each time NoteDoctor.AI runs an AI screening — analyzing a note,
               checking payer criteria, or flagging a documentation gap — that
               counts as one AI call at{" "}
               <strong style={{ color: "var(--nd-text)" }}>$0.02</strong>. Your

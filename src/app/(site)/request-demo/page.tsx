@@ -34,11 +34,11 @@ export default function RequestDemoPage() {
           <p className="text-[15px] leading-[1.7] mb-6" style={{ color: "var(--muted)" }}>
             Email us at{" "}
             <a
-              href="mailto:hello@notedoctor.ai"
+              href="mailto:sales@notedoctor.ai"
               className="underline"
               style={{ color: "var(--blue-mid)" }}
             >
-              hello@notedoctor.ai
+              sales@notedoctor.ai
             </a>{" "}
             or use the contact form.
           </p>

@@ -45,7 +45,7 @@ export function HeaderWithMenu() {
                   className="header-logo"
                 />
                 <span className="text-white text-sm font-semibold tracking-tight">
-                  NoteDoctor.Ai
+                  NoteDoctor.AI
                 </span>
               </div>
 
