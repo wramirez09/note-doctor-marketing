@@ -59,6 +59,9 @@ const faqs: { q: string; a: React.ReactNode }[] = [
   },
 ];
 
+// Note: a server-renderable plain-text version of these FAQs lives at src/lib/faq.ts
+// for JSON-LD (FAQPage) rendering on the homepage.
+
 export default function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
