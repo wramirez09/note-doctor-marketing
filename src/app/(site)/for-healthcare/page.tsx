@@ -5,8 +5,9 @@ import { StructuredData } from "@/components/StructuredData";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title:
-    "AI Clinical Insights for Physicians | NoteDoctor.AI for Physicians",
+  title: {
+    absolute: "AI Clinical Insights for Physicians | NoteDoctor.AI",
+  },
   description:
     "Empower your practice with NoteDoctor.AI: analyze patient records, discover relevant clinical trials, streamline diagnosis support, and enhance evidence-based care. Trusted, secure, practitioner-focused.",
   openGraph: {

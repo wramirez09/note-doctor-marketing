@@ -4,7 +4,7 @@ import Breadcrumb from "@/components/Common/Breadcrumb";
 import { caseStudies } from "@/lib/case-studies";
 import CaseStudyFilters from "./CaseStudyFilters";
 
-const TITLE = "Case Studies — Real Practices, Real Results";
+const TITLE = "Case Studies";
 const DESCRIPTION =
   "How clinics and health systems use NoteDoctor.AI in production. Real-world prior-auth turnaround, denial-rate, and scaling stories — anonymized where required.";
 

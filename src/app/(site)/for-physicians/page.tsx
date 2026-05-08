@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import PhysiciansPage from ".";
 
-const TITLE = "AI Clinical Insight Tools for Physicians | NoteDoctor.AI";
+const TITLE = "AI Clinical Insight Tools for Physicians";
 const DESCRIPTION =
   "Equip your practice with NoteDoctor.AI — analyze patient notes, surface research-based insights, and streamline diagnostic workflows. Trusted, secure, physician-focused AI support.";
 

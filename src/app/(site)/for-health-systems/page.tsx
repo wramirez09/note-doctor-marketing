@@ -7,8 +7,9 @@ import { Services2 } from "./services2";
 import { StructuredData } from "@/components/StructuredData";
 
 export const metadata: Metadata = {
-  title:
-    "AI Platform for Health Systems & Hospitals | NoteDoctor.AI",
+  title: {
+    absolute: "AI Platform for Health Systems & Hospitals | NoteDoctor.AI",
+  },
   description:
     "Support entire health systems with NoteDoctor.AI — AI-powered patient record analytics, trial matching, population insights, operational intelligence & provider tools. Secure, scalable, institution-grade.",
   openGraph: {

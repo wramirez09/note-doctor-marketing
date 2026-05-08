@@ -5,8 +5,9 @@ import { NewsletterSignUp } from "../../../components/NewsletterSignUp/index";
 import { StructuredData } from "@/components/StructuredData";
 
 export const metadata: Metadata = {
-  title:
-    "Contact NoteDoctor.AI | Get in Touch for Support & Partnerships",
+  title: {
+    absolute: "Contact NoteDoctor.AI | Get in Touch for Support & Partnerships",
+  },
   description:
     "Reach out to the NoteDoctor.AI team for support, media inquiries, or partnership opportunities. We’re here to help you explore AI-driven health insights.",
   openGraph: {

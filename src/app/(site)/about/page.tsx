@@ -4,7 +4,7 @@ import Breadcrumb from "@/components/Common/Breadcrumb";
 import { StructuredData } from "@/components/StructuredData";
 
 const SITE_URL = "https://notedoctor.ai";
-const TITLE = "About NoteDoctor.AI";
+const TITLE = "About";
 const DESCRIPTION =
   "Built by clinicians and engineers tired of watching prior authorization get in the way of patient care. NoteDoctor.AI is a provider-first AI screening layer for medical-necessity documentation.";
 

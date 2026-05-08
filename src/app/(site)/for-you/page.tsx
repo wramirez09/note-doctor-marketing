@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import ForYouClient from "./ForYouClient";
 
-const TITLE = "For You — NoteDoctor.AI Solutions by Role";
+const TITLE = "For You — Solutions by Role";
 const DESCRIPTION =
   "Whether you're a physician, practice administrator, or health system leader, NoteDoctor.AI eliminates prior authorization friction for every role in healthcare.";
 

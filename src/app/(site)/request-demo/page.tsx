@@ -7,7 +7,7 @@ import { caseStudies } from "@/lib/case-studies";
 import RequestDemoClient from "./RequestDemoClient";
 
 const SITE_URL = "https://notedoctor.ai";
-const TITLE = "Request a Demo — See NoteDoctor.AI on Your Own Prior Auths";
+const TITLE = "Request a Demo";
 const DESCRIPTION =
   "Bring a denial or a workflow that's eating your team. We'll show you how risk gets flagged before submission. 20 minutes, real prior auths, no slide deck.";
 

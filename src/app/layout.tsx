@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: DEFAULT_TITLE,
-    template: "%s | NoteDoctor.AI",
+    template: "%s — NoteDoctor.AI",
   },
   description: DEFAULT_DESCRIPTION,
   alternates: { canonical: "/" },

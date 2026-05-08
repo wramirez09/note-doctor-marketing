@@ -28,7 +28,7 @@ export async function generateMetadata({
   if (!cmp) return {};
   const url = `/compare/${cmp.slug}`;
   return {
-    title: cmp.title,
+    title: { absolute: cmp.title },
     description: cmp.description,
     alternates: { canonical: url },
     openGraph: {

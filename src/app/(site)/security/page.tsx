@@ -4,7 +4,7 @@ import Breadcrumb from "@/components/Common/Breadcrumb";
 import { StructuredData } from "@/components/StructuredData";
 
 const SITE_URL = "https://notedoctor.ai";
-const TITLE = "Security & Compliance — HIPAA, SOC 2 Controls, BAA";
+const TITLE = "Security & Compliance";
 const DESCRIPTION =
   "How NoteDoctor.AI protects protected health information: HIPAA compliance, BAA, SOC 2-aligned controls, encryption in transit and at rest, and our subprocessor list.";
 

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 
-const TITLE = "How NoteDoctor.AI Works";
+const TITLE = "How it works";
 const DESCRIPTION =
   "How NoteDoctor.AI screens prior authorizations: ingest the note, match payer criteria, surface gaps, and flag denial risk before submission.";
 

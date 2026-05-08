@@ -9,7 +9,7 @@ import { StructuredData } from "@/components/StructuredData";
 import { faqJsonLd } from "@/lib/faq";
 
 export const metadata: Metadata = {
-  title: "NoteDoctor.AI — AI-Powered Prior Authorization Screening",
+  title: { absolute: "NoteDoctor.AI — AI-Powered Prior Authorization Screening" },
   description:
     "Cut prior-auth turnaround from days to minutes. NoteDoctor.AI flags denial risk before submission, built for medical practices. HIPAA-compliant.",
   alternates: { canonical: "/" },
