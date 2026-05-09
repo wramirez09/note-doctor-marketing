@@ -39,13 +39,13 @@ export function HeaderWithMenu() {
               >
                 <Image
                   src="/images/logo/nd_logo.svg"
-                  alt="logo"
+                  alt="NoteDoctor.AI logo"
                   width={35}
                   height={35}
                   className="header-logo"
                 />
                 <span className="text-white text-sm font-semibold tracking-tight">
-                  NoteDoctor.Ai
+                  NoteDoctor.AI
                 </span>
               </div>
 
@@ -69,16 +69,28 @@ export function HeaderWithMenu() {
                   For You
                 </div>
                 <div
+                  className={`${classes.link} ${isActiveLink("/how-it-works") ? classes.activeLink : ""}`}
+                  onClick={() => router.push("/how-it-works")}
+                >
+                  How it works
+                </div>
+                <div
                   className={`${classes.link} ${isActiveLink("/pricing") ? classes.activeLink : ""}`}
                   onClick={() => router.push("/pricing")}
                 >
                   Pricing
                 </div>
                 <div
-                  className={`${classes.link}`}
-                  onClick={() => router.push("/#contact")}
+                  className={`${classes.link} ${isActiveLink("/security") ? classes.activeLink : ""}`}
+                  onClick={() => router.push("/security")}
                 >
-                  Contact Us
+                  Security
+                </div>
+                <div
+                  className={`${classes.link}`}
+                  onClick={() => router.push("/request-demo")}
+                >
+                  Request demo
                 </div>
               </Group>
 
@@ -149,6 +161,15 @@ export function HeaderWithMenu() {
             For You
           </div>
           <div
+            className={`${classes.link} ${isActiveLink("/how-it-works") ? classes.activeLink : ""}`}
+            onClick={() => {
+              router.push("/how-it-works");
+              closeDrawer();
+            }}
+          >
+            How it works
+          </div>
+          <div
             className={`${classes.link} ${isActiveLink("/pricing") ? classes.activeLink : ""}`}
             onClick={() => {
               router.push("/pricing");
@@ -158,13 +179,22 @@ export function HeaderWithMenu() {
             Pricing
           </div>
           <div
-            className={`${classes.link}`}
+            className={`${classes.link} ${isActiveLink("/security") ? classes.activeLink : ""}`}
             onClick={() => {
-              router.push("/#contact");
+              router.push("/security");
               closeDrawer();
             }}
           >
-            Contact Us
+            Security
+          </div>
+          <div
+            className={`${classes.link}`}
+            onClick={() => {
+              router.push("/request-demo");
+              closeDrawer();
+            }}
+          >
+            Request demo
           </div>
 
           <Divider my="lg" />

@@ -5,22 +5,24 @@ import { Services } from "./services";
 import { Services2 } from "./services2";
 
 import { StructuredData } from "@/components/StructuredData";
+import RelatedLinks from "@/components/RelatedLinks";
 
 export const metadata: Metadata = {
-  title:
-    "AI Platform for Health Systems & Hospitals | NoteDoctor.Ai",
+  title: {
+    absolute: "AI Platform for Health Systems & Hospitals | NoteDoctor.AI",
+  },
   description:
-    "Support entire health systems with NoteDoctor.Ai — AI-powered patient record analytics, trial matching, population insights, operational intelligence & provider tools. Secure, scalable, institution-grade.",
+    "Support entire health systems with NoteDoctor.AI — AI-powered patient record analytics, trial matching, population insights, operational intelligence & provider tools. Secure, scalable, institution-grade.",
   openGraph: {
     type: "website",
-    url: "https://NoteDoctor.Ai/about",
+    url: "https://notedoctor.ai/about",
     title:
-      "AI Platform for Health Systems & Hospitals | NoteDoctor.Ai",
+      "AI Platform for Health Systems & Hospitals | NoteDoctor.AI",
     description:
-      "Support entire health systems with NoteDoctor.Ai — AI-powered patient record analytics, trial matching, population insights, operational intelligence & provider tools. Secure, scalable, institution-grade.",
+      "Support entire health systems with NoteDoctor.AI — AI-powered patient record analytics, trial matching, population insights, operational intelligence & provider tools. Secure, scalable, institution-grade.",
     images: [
       {
-        url: "https://NoteDoctor.Ai/opengraph-image.jpg",
+        url: "https://notedoctor.ai/opengraph-image.jpg",
         width: 1200,
         height: 630,
       },
@@ -32,7 +34,7 @@ export const metadata: Metadata = {
       "About NoteDoctorAI | Transforming Healthcare with AI-Powered Innovation",
     description:
       "Learn about NoteDoctorAI, a pioneer in AI-driven healthcare solutions. Our mission is to revolutionize medical coding with cutting-edge technology, enhancing accuracy, efficiency, and profitability for healthcare organizations globally.",
-    images: ["https://NoteDoctor.Ai/opengraph-image.jpg"],
+    images: ["https://notedoctor.ai/opengraph-image.jpg"],
   },
 };
 
@@ -58,6 +60,11 @@ const AboutPage = () => {
       <Services />
       {/* <hr style={{ opacity: "15%" }} className="mt-5" /> */}
       <Services2 />
+      <RelatedLinks
+        caseStudySlug="regional-health-network"
+        comparisonSlug="vs-cohere"
+        source="for-health-systems"
+      />
     </main>
   );
 };

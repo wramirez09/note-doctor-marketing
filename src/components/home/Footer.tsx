@@ -6,13 +6,19 @@ export default function Footer() {
       className="flex items-center justify-between px-12 py-7 border-t text-[13px]"
       style={{ borderColor: "var(--border)", color: "var(--faint)" }}
     >
-      <span>© 2026 NoteDoctor.Ai — All rights reserved.</span>
+      <span>© 2026 NoteDoctor.AI — All rights reserved.</span>
       <div className="flex gap-6">
         {[
+          { label: "How it works", href: "/how-it-works" },
+          { label: "Pricing", href: "/pricing" },
+          { label: "Security", href: "/security" },
+          { label: "Case studies", href: "/case-studies" },
+          { label: "Compare", href: "/compare" },
+          { label: "About", href: "/about" },
+          { label: "Request demo", href: "/request-demo" },
           { label: "Privacy", href: "https://app.notedoctor.ai/legal/privacy-policy", external: true },
           { label: "Terms", href: "https://app.notedoctor.ai/legal/terms-of-service", external: true },
-          { label: "Pricing", href: "/pricing" },
-          { label: "Contact", href: "#contact" },
+          { label: "Contact", href: "/contact" },
         ].map(({ label, href, external }) => (
           <Link
             key={label}

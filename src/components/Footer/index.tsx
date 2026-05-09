@@ -16,7 +16,7 @@ const Footer = () => {
               <Link href="/" className={`${styles.logo} max-w-[160px]`}>
                 <Image
                   src="/images/logo/logo-main.svg"
-                  alt="logo"
+                  alt="NoteDoctor.AI logo"
                   width={140}
                   height={30}
                   className="header-logo w-1/3 mx-6"

@@ -1,38 +1,28 @@
+import type { Metadata } from "next";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import NotFound from "@/components/NotFound";
-// import { Metadata } from "next";
 
-// export const metadata: Metadata = {
-//   title: "404 Page | Play SaaS Starter Kit and Boilerplate for Next.js",
-//   description: "404 Page | Play SaaS Starter Kit and Boilerplate for Next.js",
-//   openGraph: {
-//     type: "website",
-//     url: "https://NoteDoctor.Ai/error",
-//     title: "404 Page | Play SaaS Starter Kit and Boilerplate for Next.js",
-//     description: "404 Page | Play SaaS Starter Kit and Boilerplate for Next.js",
-//     images: [
-//       {
-//         url: "https://NoteDoctor.Ai/opengraph-image.jpg",
-//         width: 1200,
-//         height: 630,
-//       },
-//     ],
-//   },
-//   twitter: {
-//     card: "summary_large_image",
-//     title: "404 Page | Play SaaS Starter Kit and Boilerplate for Next.js",
-//     description: "404 Page | Play SaaS Starter Kit and Boilerplate for Next.js",
-//     images: ["https://NoteDoctor.Ai/opengraph-image.jpg"],
-//   },
-// };
-const ErrorPage = () => {
+const TITLE = "Page Not Found";
+const DESCRIPTION = "The page you were looking for could not be found.";
+
+export const metadata: Metadata = {
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: "/error" },
+  robots: { index: false, follow: false },
+  openGraph: {
+    type: "website",
+    url: "/error",
+    title: TITLE,
+    description: DESCRIPTION,
+  },
+};
+
+export default function ErrorPage() {
   return (
     <>
       <Breadcrumb pageName="404 Page" />
-
       <NotFound />
     </>
   );
-};
-
-export default ErrorPage;
+}

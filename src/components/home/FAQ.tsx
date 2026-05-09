@@ -59,6 +59,9 @@ const faqs: { q: string; a: React.ReactNode }[] = [
   },
 ];
 
+// Note: a server-renderable plain-text version of these FAQs lives at src/lib/faq.ts
+// for JSON-LD (FAQPage) rendering on the homepage.
+
 export default function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
@@ -75,7 +78,7 @@ export default function FAQ() {
             Frequently Asked Questions
           </h2>
           <p className="text-[15px] leading-[1.65]" style={{ color: "var(--muted)" }}>
-            Everything you need to know about prior authorization screening with NoteDoctor.Ai.
+            Everything you need to know about prior authorization screening with NoteDoctor.AI.
           </p>
         </div>
 

@@ -1,13 +1,10 @@
-import Head from "next/head";
+type StructuredDataProps = { data: Record<string, unknown> | Record<string, unknown>[] };
 
-export function StructuredData(data: any) {
+export function StructuredData({ data }: StructuredDataProps) {
   return (
-    <Head>
-      <script
-        key="structured-data"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
-      />
-    </Head>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
   );
 }

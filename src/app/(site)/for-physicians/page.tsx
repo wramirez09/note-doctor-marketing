@@ -1,9 +1,28 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import PhysiciansPage from ".";
-import { StructuredData } from "@/components/StructuredData";
+import RelatedLinks from "@/components/RelatedLinks";
 
-const PhysiciansPageWrapper = () => {
-  return <><StructuredData /><PhysiciansPage /></>;
+const TITLE = "AI Clinical Insight Tools for Physicians";
+const DESCRIPTION =
+  "Equip your practice with NoteDoctor.AI — analyze patient notes, surface research-based insights, and streamline diagnostic workflows. Trusted, secure, physician-focused AI support.";
+
+export const metadata: Metadata = {
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: "/for-physicians" },
+  openGraph: { type: "website", url: "/for-physicians", title: TITLE, description: DESCRIPTION },
+  twitter: { card: "summary_large_image", title: TITLE, description: DESCRIPTION },
 };
 
-export default PhysiciansPageWrapper;
+export default function PhysiciansPageWrapper() {
+  return (
+    <>
+      <PhysiciansPage />
+      <RelatedLinks
+        caseStudySlug="midwest-cardiology"
+        comparisonSlug="vs-cohere"
+        source="for-physicians"
+      />
+    </>
+  );
+}

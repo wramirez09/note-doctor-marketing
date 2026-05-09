@@ -85,7 +85,7 @@ export default function Physicians() {
       <section className="py-20 px-6">
         <div className="max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-start">
           <div>
-            <p className="text-xs font-semibold tracking-[.12em] uppercase text-blue-400 mb-3.5">How NoteDoctor.Ai Helps Physicians</p>
+            <p className="text-xs font-semibold tracking-[.12em] uppercase text-blue-400 mb-3.5">How NoteDoctor.AI Helps Physicians</p>
             <h2 className="text-[clamp(26px,3vw,42px)] font-extrabold tracking-[-0.025em] leading-[1.12] mb-3">Tools Built Around Your Workflow</h2>
             <p className="text-base leading-[1.65] text-white/50 max-w-[420px] mb-10">Stop fighting the system. Let the AI navigate it for you.</p>
 

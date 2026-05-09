@@ -1,24 +1,26 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import { StructuredData } from "@/components/StructuredData";
+import RelatedLinks from "@/components/RelatedLinks";
 
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title:
-    "AI Clinical Insights for Physicians | NoteDoctor.Ai for Physicians",
+  title: {
+    absolute: "AI Clinical Insights for Physicians | NoteDoctor.AI",
+  },
   description:
-    "Empower your practice with NoteDoctor.Ai: analyze patient records, discover relevant clinical trials, streamline diagnosis support, and enhance evidence-based care. Trusted, secure, practitioner-focused.",
+    "Empower your practice with NoteDoctor.AI: analyze patient records, discover relevant clinical trials, streamline diagnosis support, and enhance evidence-based care. Trusted, secure, practitioner-focused.",
   openGraph: {
     type: "website",
-    url: "https://NoteDoctor.Ai/for-healthcare",
+    url: "https://notedoctor.ai/for-healthcare",
     title:
-      "AI Clinical Insights for Physicians | NoteDoctor.Ai for Physicians",
+      "AI Clinical Insights for Physicians | NoteDoctor.AI for Physicians",
     description:
-      "Empower your practice with NoteDoctor.Ai: analyze patient records, discover relevant clinical trials, streamline diagnosis support, and enhance evidence-based care. Trusted, secure, practitioner-focused.",
+      "Empower your practice with NoteDoctor.AI: analyze patient records, discover relevant clinical trials, streamline diagnosis support, and enhance evidence-based care. Trusted, secure, practitioner-focused.",
     images: [
       {
-        url: "https://NoteDoctor.Ai/opengraph-image.jpg",
+        url: "https://notedoctor.ai/opengraph-image.jpg",
         width: 1200,
         height: 630,
       },
@@ -30,7 +32,7 @@ export const metadata: Metadata = {
       "How NoteDoctorAI Works | AI-Driven Medical Coding for Healthcare Efficiency",
     description:
       "Discover how NoteDoctorAI's advanced AI technology revolutionizes medical coding. Learn how our solutions drive efficiency, accuracy, and profitability for healthcare organizations globally.",
-    images: ["https://NoteDoctor.Ai/opengraph-image.jpg"],
+    images: ["https://notedoctor.ai/opengraph-image.jpg"],
   },
 };
 
@@ -61,6 +63,11 @@ const HowItWorks = () => {
           />
         </div>
       </section>
+      <RelatedLinks
+        caseStudySlug="sunbelt-orthopedics"
+        comparisonSlug="vs-availity"
+        source="for-healthcare"
+      />
     </>
   );
 };
