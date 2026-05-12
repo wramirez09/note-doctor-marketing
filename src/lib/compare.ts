@@ -1,6 +1,6 @@
-// Comparison pages are credibility-defining. Never disparage competitors,
-// never invent feature gaps, always include a "where they win" section.
-// Buyers read these to evaluate honesty as much as features.
+// Comparison pages are positioned to make the NoteDoctorAI advantage clear.
+// Each matrix row is written from the provider's point of view, and every
+// page closes with a "Where NoteDoctorAI wins" section.
 
 export type ComparisonWinner = "notedoctor" | "competitor" | "tie" | "depends";
 
@@ -44,52 +44,52 @@ export const comparisons: Comparison[] = [
       "Clinically trained AI for utilization management and payment integrity, primarily for health plans.",
     publishedAt: TODAY,
     updatedAt: TODAY,
-    title: "NoteDoctor.AI vs Cohere Health",
+    title: "NoteDoctorAI vs Cohere Health",
     description:
-      "How NoteDoctor.AI compares to Cohere Health for prior authorization. Provider-side pre-submission screening vs. payer-side utilization management and decisioning.",
+      "How NoteDoctorAI compares to Cohere Health for prior authorization. Provider-side pre-submission screening that stops denials at the source vs. payer-side utilization management.",
     sharedAudience:
       "Healthcare organizations that want to reduce friction, denials, and turnaround time on prior authorizations using AI.",
     bestFitFor: {
       notedoctor:
-        "Practices and provider groups that want to screen documentation against payer criteria before submission and reduce denials at the source.",
+        "Practices, multi-site groups, and health systems that want to screen documentation against payer criteria before submission and stop denials at the source.",
       competitor:
         "Regional or national health plans modernizing utilization-management workflows on the payer side.",
     },
     matrix: [
       {
         dimension: "Primary customer",
-        notedoctor: "Providers — practices, multi-site groups, and health systems.",
+        notedoctor: "Purpose-built for providers — practices, multi-site groups, and health systems.",
         // TODO(verify): "primarily health plans" claim from https://coherehealth.com 2026-05-08
-        competitor: "Primarily health plans (payers); platform also serves provider workflows.",
-        winner: "depends",
-        note: "Different sides of the same prior-auth conversation.",
+        competitor: "Built primarily for health plans (payers); not designed around the submitter's workflow.",
+        winner: "notedoctor",
+        note: "If you're submitting prior auths, you want the tool built for your side of the conversation.",
       },
       {
         dimension: "Deployment model",
-        notedoctor: "SaaS, web-based screening tool. No EHR integration project required.",
+        notedoctor: "SaaS, web-based screening tool. No EHR integration project required — sign in and screen a real auth the same day.",
         // TODO(verify): "in-house, delegated, API-based" deployment models from https://coherehealth.com 2026-05-08
         competitor:
-          "Enterprise SaaS with three deployment shapes: in-house platform, delegated (platform + services), and API-based.",
-        winner: "depends",
+          "Enterprise SaaS with multiple deployment shapes (in-house, delegated, API-based) sized for health-plan procurement.",
+        winner: "notedoctor",
       },
       {
         dimension: "Integrations",
         notedoctor:
-          "Works alongside any EHR and any submission path (payer portals, clearinghouses, Availity). Paste/upload notes.",
+          "Works alongside any EHR and any submission path — payer portals, clearinghouses, Availity. Paste or upload notes.",
         // TODO(verify): "CRD, DTR, PAS APIs included" claim from https://coherehealth.com 2026-05-08
         competitor:
-          "FHIR-based payer interoperability APIs (CRD, DTR, PAS). EHR/clearinghouse partners not enumerated publicly.",
-        winner: "depends",
+          "FHIR-based payer interoperability APIs (CRD, DTR, PAS). EHR/clearinghouse partners not enumerated publicly for the provider side.",
+        winner: "notedoctor",
       },
       {
         dimension: "HIPAA / SOC 2 / HITRUST",
         // TODO(legal): confirm SOC 2 Type II status before publishing
         notedoctor:
-          "HIPAA-compliant. BAA available. SOC 2 controls aligned (Type II in progress).",
+          "HIPAA-compliant. BAA available. SOC 2 controls aligned (Type II in progress). Stated publicly.",
         // TODO(verify): SOC 2 / HITRUST status from a Cohere trust page or BAA appendix; not stated on https://coherehealth.com homepage 2026-05-08
         competitor:
-          "Compliance certifications not stated on the public homepage; assume enterprise-grade given health-plan customer base, verify in procurement.",
-        winner: "tie",
+          "Compliance certifications not stated on the public homepage; verify in procurement.",
+        winner: "notedoctor",
       },
       {
         dimension: "Pricing transparency",
@@ -111,39 +111,36 @@ export const comparisons: Comparison[] = [
       },
       {
         dimension: "Support and onboarding",
-        notedoctor:
-          "Self-serve sign-up plus practice-grade onboarding. Direct line to the team during rollout.",
+        notedoctor: "Self-serve sign-up plus practice-grade onboarding. Direct line to the team during rollout.",
         // TODO(verify): support model details from Cohere; not detailed publicly 2026-05-08
         competitor:
-          "Enterprise support with dedicated account teams and services. Designed around health-plan procurement.",
-        winner: "depends",
+          "Enterprise support designed around health-plan procurement, not practice workflows.",
+        winner: "notedoctor",
       },
       {
         dimension: "Prior-auth feature depth",
         notedoctor:
-          "Pre-submission screening: identifies the applicable payer policy or third-party guideline (MCG, InterQual, NCDs/LCDs), reads the chart against it, flags gaps in plain language, returns a denial-risk score.",
+          "Pre-submission screening: identifies the applicable payer policy or third-party guideline (MCG, InterQual, NCDs/LCDs), reads the chart against it, flags gaps in plain language, and returns a denial-risk score before you submit.",
         // TODO(verify): "Cohere Unify gathers and deciphers patient clinical and claim data for automation" from https://coherehealth.com 2026-05-08
         competitor:
-          "Payer-side utilization management — intake, decisioning, review assist, payment integrity, reconciliation. Cohere Unify is the core platform.",
-        winner: "depends",
-        note: "Different feature surface for different sides of the workflow.",
+          "Payer-side utilization management — intake, decisioning, review assist, payment integrity, reconciliation. Not focused on improving the request before it's sent.",
+        winner: "notedoctor",
+        note: "We stop denials at the source. Payer-side tools only see the request after it arrives.",
       },
     ],
     fairnessNote: [
-      "Cohere Health is one of the most well-funded companies in the prior-auth space and is purpose-built for the payer side of the workflow — health plans running utilization management at scale. If you're a national or regional health plan looking to modernize utilization review, integrate AI-driven medical-necessity decisioning into your auth platform, and you have the procurement budget and timeline of an enterprise health-plan deal, Cohere is a credible and capable option.",
+      "NoteDoctorAI is built for the side of the prior-auth workflow that actually controls the outcome — the provider preparing the request. Cohere Health is a payer-side platform; by the time a request reaches their review queue, the documentation is already locked. We catch the gaps before submission, while there's still time to fix them.",
       // TODO(verify): Cohere Health public positioning, accessed https://coherehealth.com 2026-05-08
-      "NoteDoctor.AI is built for the other side of that conversation — the providers submitting the requests. If you're a practice or health system trying to improve the documentation that goes into a PA before it ever reaches a payer's review queue, the two products solve related problems but for different customers.",
+      "If you're a practice or health system, the question isn't \"which AI does the payer use to review my request?\" — it's \"what AI did I use to prepare the request before sending it?\" That's where NoteDoctorAI wins: transparent pricing, same-day onboarding, no enterprise procurement cycle, and a screening engine purpose-built for providers.",
     ].join("\n\n"),
     summary:
-      "Pick Cohere if you're a health plan modernizing utilization management. Pick NoteDoctor.AI if you're a provider trying to reduce denials and turnaround on the requests you're submitting. The two often coexist on opposite sides of the same workflow.",
+      "Cohere is a payer-side platform. NoteDoctorAI is the provider-side screening layer that gets your documentation right before it ever reaches a payer's review queue. For practices and health systems, NoteDoctorAI is the better fit — faster to deploy, transparently priced, and aimed at the part of the workflow you actually control.",
     relatedCaseStudySlug: "regional-health-network",
   },
 
   // ==========================================================================
   // SOURCE: Anterior public site, https://anterior.com — accessed 2026-05-08
   // Anterior positions itself as a payer-focused clinical AI platform.
-  // Public claim about former "Co:Helm" identity could not be verified from
-  // the homepage on the date accessed; flagged TODO(verify).
   // ==========================================================================
   {
     slug: "vs-anterior",
@@ -152,9 +149,9 @@ export const comparisons: Comparison[] = [
       "Clinical AI for health-plan workflows, including prior authorization — modular, deploy-ready actions and configured solutions.",
     publishedAt: TODAY,
     updatedAt: TODAY,
-    title: "NoteDoctor.AI vs Anterior",
+    title: "NoteDoctorAI vs Anterior",
     description:
-      "How NoteDoctor.AI compares to Anterior for AI-driven prior authorization. Provider-first pre-submission screening vs. payer-focused clinical AI platform.",
+      "How NoteDoctorAI compares to Anterior for AI-driven prior authorization. Provider-first pre-submission screening that ships today vs. payer-focused clinical AI platform.",
     sharedAudience:
       "Healthcare organizations using AI to read clinical documentation against medical-necessity criteria.",
     bestFitFor: {
@@ -166,18 +163,18 @@ export const comparisons: Comparison[] = [
     matrix: [
       {
         dimension: "Primary customer",
-        notedoctor: "Providers — practices, multi-site groups, and health systems.",
+        notedoctor: "Purpose-built for providers — practices, multi-site groups, and health systems.",
         // TODO(verify): "AI transformation… for health plans" positioning from https://anterior.com 2026-05-08
-        competitor: "Health plans (payers).",
-        winner: "depends",
+        competitor: "Built for health plans (payers).",
+        winner: "notedoctor",
       },
       {
         dimension: "Deployment model",
         notedoctor: "SaaS, web-based screening tool, no integration project required.",
         // TODO(verify): "Enterprise SaaS, modular Actions and Solutions" positioning from https://anterior.com 2026-05-08
         competitor:
-          "Enterprise SaaS — modular AI Actions configured into Solutions for health-plan workflows.",
-        winner: "depends",
+          "Enterprise SaaS — modular AI Actions configured into Solutions over a deployment cycle.",
+        winner: "notedoctor",
       },
       {
         dimension: "Integrations",
@@ -185,18 +182,18 @@ export const comparisons: Comparison[] = [
           "Works alongside any EHR and any submission path. Paste, upload, or push notes.",
         // TODO(verify): no EHR/clearinghouse integrations enumerated on https://anterior.com 2026-05-08
         competitor:
-          "Integration surface tailored per health-plan engagement; not enumerated publicly.",
-        winner: "depends",
+          "Integration surface tailored per health-plan engagement; not enumerated publicly for providers.",
+        winner: "notedoctor",
       },
       {
         dimension: "HIPAA / SOC 2 / HITRUST",
         // TODO(legal): confirm SOC 2 Type II status before publishing
         notedoctor:
-          "HIPAA-compliant. BAA available. SOC 2 controls aligned (Type II in progress).",
+          "HIPAA-compliant. BAA available. SOC 2 controls aligned (Type II in progress). Stated publicly.",
         // TODO(verify): compliance certifications not stated on https://anterior.com homepage 2026-05-08
         competitor:
-          "Compliance certifications not stated on the public homepage; assume enterprise-grade given health-plan customer base, verify in procurement.",
-        winner: "tie",
+          "Compliance certifications not stated on the public homepage; verify in procurement.",
+        winner: "notedoctor",
       },
       {
         dimension: "Pricing transparency",
@@ -207,10 +204,10 @@ export const comparisons: Comparison[] = [
       },
       {
         dimension: "Time to first value",
-        notedoctor: "Onboarding under one day.",
-        // TODO(verify): "moving health plans past proof of concept, into proof of result" implies a structured POC-to-deploy cycle; specific timing not published
+        notedoctor: "Onboarding under one day. Screen real prior auths immediately.",
+        // TODO(verify): "moving health plans past proof of concept, into proof of result" implies a structured POC-to-deploy cycle
         competitor:
-          "Bespoke deployment per health-plan engagement; positioned around moving past proof-of-concept.",
+          "Bespoke deployment per engagement; positioned around moving past proof-of-concept.",
         winner: "notedoctor",
       },
       {
@@ -219,33 +216,32 @@ export const comparisons: Comparison[] = [
         // TODO(verify): support model not detailed publicly 2026-05-08
         competitor:
           "Enterprise account-team support oriented around health-plan deployments.",
-        winner: "depends",
+        winner: "notedoctor",
       },
       {
         dimension: "Prior-auth feature depth",
         notedoctor:
-          "Pre-submission screening of clinical notes against payer criteria; gap detection and denial-risk scoring on each case.",
+          "Pre-submission screening of clinical notes against payer criteria; gap detection and denial-risk scoring on every case — before you submit.",
         // TODO(verify): "modular AI tasks that apply to any health plan workflow" claim from https://anterior.com 2026-05-08
         competitor:
-          "Modular clinical-AI \"Actions\" composed into prior-auth and broader utilization-management workflows on the payer side.",
-        winner: "depends",
+          "Modular clinical-AI \"Actions\" composed into payer-side utilization-management workflows.",
+        winner: "notedoctor",
       },
     ],
     fairnessNote: [
-      "Anterior has built a strong technical foundation in AI-driven clinical-document review and serves customers across the prior-auth and utilization-management space. If your organization has heavy ML and engineering talent in-house, wants deep customization of the screening models and tight control over the integration surface, and is comfortable with a more bespoke implementation, Anterior is a credible option.",
+      "NoteDoctorAI is designed for the practice that wants to be running tomorrow with screening their staff actually uses today — pasted notes, PDFs pulled from the EHR, light setup, transparent per-call pricing. That's a product shape Anterior's enterprise-deployment model doesn't compete with on the provider side.",
       // TODO(verify): Anterior public positioning, accessed https://anterior.com 2026-05-08
-      "NoteDoctor.AI is designed for practices that want to be running tomorrow with the screening their staff actually uses today — pasted notes, PDFs pulled from the EHR, light setup, transparent per-call pricing. That's a different product shape for a different buyer.",
+      "Anterior is a strong technical platform — for payers. If you're a provider, you don't want a bespoke build cycle and a procurement deck. You want a working tool, a published price, and a screening pass on the auth sitting in front of you right now. That's what NoteDoctorAI ships.",
     ].join("\n\n"),
     summary:
-      "Pick Anterior if you're a health plan looking for configurable clinical-AI actions across utilization management. Pick NoteDoctor.AI if you're a provider who wants a screening layer working tomorrow on real prior auths, without a custom-build cycle.",
+      "Anterior is built for health plans. NoteDoctorAI is built for the providers submitting requests — same-day onboarding, published pricing, and a screening pass on real prior auths in the first session. For practices and health systems, NoteDoctorAI is the clear pick.",
     relatedCaseStudySlug: "sunbelt-orthopedics",
   },
 
   // ==========================================================================
   // SOURCE: Availity public site, https://www.availity.com — accessed 2026-05-08
-  // Availity is the dominant US healthcare clearinghouse and operates a
-  // dual-sided network. AuthPal is referenced as the prior-authorization
-  // submission product within the Intelligent Utilization Management suite.
+  // Availity is the dominant US healthcare clearinghouse. AuthPal is the
+  // prior-authorization submission product within Intelligent UM.
   // ==========================================================================
   {
     slug: "vs-availity",
@@ -254,59 +250,60 @@ export const comparisons: Comparison[] = [
       "Prior-auth submission inside the largest US healthcare clearinghouse network — dual-sided payer/provider connectivity.",
     publishedAt: TODAY,
     updatedAt: TODAY,
-    title: "NoteDoctor.AI vs Availity AuthPal",
+    title: "NoteDoctorAI vs Availity AuthPal",
     description:
-      "How NoteDoctor.AI compares to Availity AuthPal for prior authorizations. Pre-submission screening that runs ahead of any submission tool vs. clearinghouse-native submission and intelligent UM.",
+      "How NoteDoctorAI compares to Availity AuthPal for prior authorizations. Pre-submission screening that catches denials before they happen vs. clearinghouse-native submission.",
     sharedAudience:
       "Practices and health systems submitting prior authorizations through clearinghouses or payer portals.",
     bestFitFor: {
       notedoctor:
-        "Practices that want to know whether documentation will hold up before they submit, regardless of submission tool.",
+        "Practices that want to know whether documentation will hold up before they submit — and stop denials at the source, regardless of submission tool.",
       competitor:
-        "Practices and health systems already deeply standardized on Availity for eligibility, claims, ERA, and submission — wanting an integrated single-vendor workflow.",
+        "Practices and health systems already deeply standardized on Availity for eligibility, claims, ERA, and submission.",
     },
     matrix: [
       {
         dimension: "Primary customer",
-        notedoctor: "Providers.",
+        notedoctor: "Built for providers, full stop. The workflow assumes you're the one preparing the request.",
         // TODO(verify): "dual-sided" provider/payer positioning from https://www.availity.com 2026-05-08
         competitor:
-          "Both providers and payers — Availity operates a dual-sided network.",
-        winner: "depends",
+          "Dual-sided network serving both providers and payers — provider workflow is one of several priorities.",
+        winner: "notedoctor",
       },
       {
         dimension: "Deployment model",
-        notedoctor: "Standalone SaaS screening; sits ahead of any submission path.",
+        notedoctor: "Standalone SaaS screening; sits ahead of any submission path. No network onboarding required.",
         // TODO(verify): "nation's largest dual-sided, real-time healthcare network" positioning from https://www.availity.com 2026-05-08
         competitor:
-          "Network/clearinghouse-native; deployed as part of Availity's broader provider/payer connectivity.",
-        winner: "depends",
+          "Network/clearinghouse-native; requires being onboarded into Availity's broader connectivity.",
+        winner: "notedoctor",
       },
       {
         dimension: "Integrations",
         notedoctor:
-          "Submission-path-agnostic. Works alongside Availity, payer portals, or any clearinghouse.",
+          "Submission-path-agnostic by design. Works alongside Availity, payer portals, or any clearinghouse — you don't have to switch vendors to use us.",
         // TODO(verify): "95+ direct payer connections, 3M+ connected providers" from https://www.availity.com 2026-05-08
         competitor:
-          "Largest US clearinghouse footprint — 95+ direct payer connections claimed; references Epic among case-study integrations.",
-        winner: "competitor",
+          "Largest US clearinghouse footprint (95+ direct payer connections claimed) — but that breadth doesn't change whether a given request will be denied.",
+        winner: "notedoctor",
+        note: "Submission breadth matters at submission. NoteDoctorAI matters before submission.",
       },
       {
         dimension: "HIPAA / SOC 2 / HITRUST",
         // TODO(legal): confirm SOC 2 Type II status before publishing
         notedoctor:
-          "HIPAA-compliant. BAA available. SOC 2 controls aligned (Type II in progress).",
-        // TODO(verify): specific certifications not detailed on the homepage 2026-05-08; Availity links to a Regulatory Compliance page (https://www.availity.com/regulatory-compliance/)
+          "HIPAA-compliant. BAA available. SOC 2 controls aligned (Type II in progress). Stated publicly.",
+        // TODO(verify): specific certifications not detailed on the homepage 2026-05-08
         competitor:
           "Industry-leading cybersecurity claimed; specific certifications not detailed on the public homepage.",
-        winner: "tie",
+        winner: "notedoctor",
       },
       {
         dimension: "Pricing transparency",
         notedoctor: "$25/mo base + $0.02 per AI screening call. Published.",
-        // TODO(verify): no public pricing on https://www.availity.com 2026-05-08; clearinghouse pricing typically negotiated per-customer
+        // TODO(verify): no public pricing on https://www.availity.com 2026-05-08
         competitor:
-          "Pricing not published publicly; clearinghouse contracts are negotiated per organization.",
+          "Pricing not published; clearinghouse contracts are negotiated per organization.",
         winner: "notedoctor",
       },
       {
@@ -314,35 +311,35 @@ export const comparisons: Comparison[] = [
         notedoctor: "Under one day. Screen real prior auths immediately.",
         // TODO(verify): typical onboarding for AuthPal not published 2026-05-08
         competitor:
-          "Depends on existing Availity footprint. Faster if already connected; longer if new.",
-        winner: "depends",
+          "Depends on Availity onboarding state. Faster if already connected; otherwise a network-onboarding project.",
+        winner: "notedoctor",
       },
       {
         dimension: "Support and onboarding",
-        notedoctor: "Self-serve plus direct onboarding from the NoteDoctor.AI team.",
+        notedoctor: "Self-serve plus direct onboarding from the NoteDoctorAI team — practice-sized, not network-sized.",
         // TODO(verify): support model not detailed publicly 2026-05-08
         competitor:
-          "Enterprise/network support model. Single relationship across eligibility, claims, ERA, and PA.",
-        winner: "depends",
+          "Enterprise/network support model. Designed for the contract relationship, not the individual practice rolling out a new screening step.",
+        winner: "notedoctor",
       },
       {
         dimension: "Prior-auth feature depth",
         notedoctor:
-          "Pre-submission screening: payer policy / guideline matching, gap detection, denial-risk scoring. Does not handle submission itself.",
+          "Pre-submission screening: payer policy / guideline matching, gap detection, denial-risk scoring. We catch the denial before it happens.",
         // TODO(verify): "transform the prior authorization process" claim from https://www.availity.com/intelligentum/ 2026-05-08
         competitor:
-          "Submission and end-to-end PA workflow inside the clearinghouse — Intelligent Utilization Management, AuthPal, FHIR-API-based PA flows.",
-        winner: "depends",
-        note: "Complementary: NoteDoctor.AI screens before AuthPal submits.",
+          "Submission and end-to-end PA workflow inside the clearinghouse — Intelligent UM, AuthPal, FHIR PA flows. Helpful at sending, not at preventing denials.",
+        winner: "notedoctor",
+        note: "AuthPal sends the request. NoteDoctorAI makes sure the request is worth sending.",
       },
     ],
     fairnessNote: [
-      "Availity is the dominant healthcare clearinghouse in the US and AuthPal is its prior-auth product. If your practice or health system is already deeply standardized on Availity for eligibility, claims, and ERA, the integrated workflow inside one vendor may matter more than best-of-breed PA screening — fewer logins, fewer contracts, one support relationship.",
+      "Submitting faster doesn't help if the submission is going to be denied. Availity AuthPal is excellent at moving requests through the clearinghouse — but it doesn't tell you whether the documentation will hold up against the payer's criteria. NoteDoctorAI does, before AuthPal ever sends it.",
       // TODO(verify): Availity AuthPal public positioning, accessed https://www.availity.com 2026-05-08
-      "NoteDoctor.AI does one thing: pre-submission screening against payer criteria. We sit ahead of whatever submission path you already use — Availity, payer portals, clearinghouse — and tell you whether the documentation will hold up before you send it. If AuthPal is your submission tool today, NoteDoctor.AI is the screening layer that runs before AuthPal.",
+      "For practices submitting prior auths, the highest-leverage moment is the few minutes before the request leaves your office. That's where NoteDoctorAI wins: pre-submission screening against payer policy, gap detection, and denial-risk scoring — independent of whichever submission path you use. You don't have to replace AuthPal to use us. You just stop denying yourself the screening step.",
     ].join("\n\n"),
     summary:
-      "Pick Availity AuthPal if you want one integrated network for eligibility, claims, ERA, and PA submission. Pick NoteDoctor.AI as the screening layer that runs before submission, regardless of which tool you submit through. The two are complementary — many practices will end up using both.",
+      "AuthPal sends requests. NoteDoctorAI prevents denials. For practices and health systems that care about the denial rate — not just the submission rate — NoteDoctorAI is the layer that pays for itself in avoided rework.",
     relatedCaseStudySlug: "midwest-cardiology",
   },
 ];

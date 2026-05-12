@@ -41,7 +41,7 @@ const EMPTY: FormState = {
 //    lead-capture endpoint becomes a one-line env-var change with no code edit.
 const LEAD_ENDPOINT =
   process.env.NEXT_PUBLIC_LEAD_ENDPOINT ||
-  "https://formsubmit.co/ajax/sales@notedoctor.ai";
+  "https://formsubmit.co/ajax/sales@NoteDoctorAI";
 
 export default function RequestDemoClient() {
   const params = useSearchParams();
@@ -81,7 +81,7 @@ export default function RequestDemoClient() {
       setError(
         err instanceof Error
           ? err.message
-          : "Something went wrong. Please email sales@notedoctor.ai.",
+          : "Something went wrong. Please email sales@NoteDoctorAI.",
       );
     }
   }

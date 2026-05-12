@@ -9,20 +9,20 @@ import RelatedLinks from "@/components/RelatedLinks";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "AI Platform for Health Systems & Hospitals | NoteDoctor.AI",
+    absolute: "AI Platform for Health Systems & Hospitals | NoteDoctorAI",
   },
   description:
-    "Support entire health systems with NoteDoctor.AI — AI-powered patient record analytics, trial matching, population insights, operational intelligence & provider tools. Secure, scalable, institution-grade.",
+    "Support entire health systems with NoteDoctorAI — AI-powered patient record analytics, trial matching, population insights, operational intelligence & provider tools. Secure, scalable, institution-grade.",
   openGraph: {
     type: "website",
-    url: "https://notedoctor.ai/about",
+    url: "https://NoteDoctorAI/about",
     title:
-      "AI Platform for Health Systems & Hospitals | NoteDoctor.AI",
+      "AI Platform for Health Systems & Hospitals | NoteDoctorAI",
     description:
-      "Support entire health systems with NoteDoctor.AI — AI-powered patient record analytics, trial matching, population insights, operational intelligence & provider tools. Secure, scalable, institution-grade.",
+      "Support entire health systems with NoteDoctorAI — AI-powered patient record analytics, trial matching, population insights, operational intelligence & provider tools. Secure, scalable, institution-grade.",
     images: [
       {
-        url: "https://notedoctor.ai/opengraph-image.jpg",
+        url: "https://NoteDoctorAI/opengraph-image.jpg",
         width: 1200,
         height: 630,
       },
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
       "About NoteDoctorAI | Transforming Healthcare with AI-Powered Innovation",
     description:
       "Learn about NoteDoctorAI, a pioneer in AI-driven healthcare solutions. Our mission is to revolutionize medical coding with cutting-edge technology, enhancing accuracy, efficiency, and profitability for healthcare organizations globally.",
-    images: ["https://notedoctor.ai/opengraph-image.jpg"],
+    images: ["https://NoteDoctorAI/opengraph-image.jpg"],
   },
 };
 

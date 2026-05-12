@@ -102,7 +102,7 @@ export default function HealthSystems() {
 
       <section className="py-20 px-6">
         <div className="max-w-[1100px] mx-auto">
-          <p className="text-xs font-semibold tracking-[.12em] uppercase text-blue-400 mb-3.5">How NoteDoctor.AI Helps Health Systems</p>
+          <p className="text-xs font-semibold tracking-[.12em] uppercase text-blue-400 mb-3.5">How NoteDoctorAI Helps Health Systems</p>
           <h2 className="text-[clamp(26px,3vw,42px)] font-extrabold tracking-[-0.025em] leading-[1.12] mb-3">Cut Costs the Right Way.<br />Improve Member Satisfaction.</h2>
           <p className="text-base leading-[1.65] text-white/50 max-w-[540px]">Streamline prior authorization without sacrificing quality of care — at the scale your system demands.</p>
 

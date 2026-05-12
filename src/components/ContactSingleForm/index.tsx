@@ -27,7 +27,7 @@ const Contact = () => {
 
     try {
       const response = await fetch(
-        "https://formsubmit.co/ajax/sales@NoteDoctor.Ai",
+        "https://formsubmit.co/ajax/sales@NoteDoctorAI",
         {
           method: "POST",
           headers: {

@@ -1,4 +1,4 @@
-# Copy Analysis & Suggestions: NoteDoctor.AI Homepage
+# Copy Analysis & Suggestions: NoteDoctorAI Homepage
 **URL:** https://a6092dfd.note-doctor-marketing.pages.dev/
 **Date:** 2026-05-08
 **Page Type:** Homepage (B2B Healthcare SaaS)
@@ -89,12 +89,12 @@ Whole-site content score (per MARKETING-AUDIT.md) is 78/100; the gap between sit
 ### Hero subhead
 
 **Current:**
-> Prior authorization wastes valuable time, burdens physicians, and puts patients at risk. NoteDoctor.AI empowers providers with clarity, speed, and compliance — so you can focus on care, not paperwork.
+> Prior authorization wastes valuable time, burdens physicians, and puts patients at risk. NoteDoctorAI empowers providers with clarity, speed, and compliance — so you can focus on care, not paperwork.
 
 **Issues:** Names the pain well. Then exits to three abstract nouns ("clarity, speed, compliance"). Final line ("focus on care, not paperwork") is a generic healthcare-marketing cliché.
 
 **Recommended:**
-> Most prior-auth denials are documentation problems, not medical-necessity problems. NoteDoctor.AI reads each chart against the payer's policy or third-party guideline (MCG, InterQual, NCDs/LCDs), flags the gaps in plain language, and returns a denial-risk score before you submit. Built for practices, $25/month plus pay-as-you-go.
+> Most prior-auth denials are documentation problems, not medical-necessity problems. NoteDoctorAI reads each chart against the payer's policy or third-party guideline (MCG, InterQual, NCDs/LCDs), flags the gaps in plain language, and returns a denial-risk score before you submit. Built for practices, $25/month plus pay-as-you-go.
 
 **Why:** Replaces three abstract nouns with three concrete actions (read, flag, return). Names the specific guidelines (MCG, InterQual) that practice staff search for. Surfaces price as a differentiator. The reader leaves the hero understanding *what it does* and *what it costs*.
 
@@ -187,10 +187,10 @@ These are minor; the primary issue with the stats bar is that all three describe
 ### Example 2 — Hero subhead
 
 **Before (current):**
-> Prior authorization wastes valuable time, burdens physicians, and puts patients at risk. NoteDoctor.AI empowers providers with clarity, speed, and compliance — so you can focus on care, not paperwork.
+> Prior authorization wastes valuable time, burdens physicians, and puts patients at risk. NoteDoctorAI empowers providers with clarity, speed, and compliance — so you can focus on care, not paperwork.
 
 **After (recommended):**
-> Most prior-auth denials are documentation problems, not medical-necessity problems. NoteDoctor.AI reads each chart against the payer's policy or third-party guideline (MCG, InterQual, NCDs/LCDs), flags the gaps in plain language, and returns a denial-risk score before you submit. Built for practices, $25/month plus pay-as-you-go.
+> Most prior-auth denials are documentation problems, not medical-necessity problems. NoteDoctorAI reads each chart against the payer's policy or third-party guideline (MCG, InterQual, NCDs/LCDs), flags the gaps in plain language, and returns a denial-risk score before you submit. Built for practices, $25/month plus pay-as-you-go.
 
 **Why:** Three abstract nouns ("clarity, speed, compliance") replaced with three concrete actions (read, flag, return). Names specific guidelines staff search for. Surfaces price.
 
@@ -216,7 +216,7 @@ These are minor; the primary issue with the stats bar is that all three describe
 > Prior authorization is a major source of administrative burden in healthcare, costing time and resources across the industry.
 
 **After (recommended):**
-> A 12-physician cardiology practice spends two full-time coordinators on prior-auth — and most of those hours go to chasing missing documentation, not submitting clean cases. The denials look like medical-necessity disputes. They're not. They're documentation that doesn't quite match the payer's required language: a missing exam finding, a conservative-therapy note that uses the wrong verb, a lab outside the 90-day window. NoteDoctor.AI reads the chart against the payer's rulebook before submission and flags exactly what's missing, in plain language.
+> A 12-physician cardiology practice spends two full-time coordinators on prior-auth — and most of those hours go to chasing missing documentation, not submitting clean cases. The denials look like medical-necessity disputes. They're not. They're documentation that doesn't quite match the payer's required language: a missing exam finding, a conservative-therapy note that uses the wrong verb, a lab outside the 90-day window. NoteDoctorAI reads the chart against the payer's rulebook before submission and flags exactly what's missing, in plain language.
 
 **Why:** Borrows the exact opening of the Midwest cardiology case study. Specific (12-physician, two coordinators, 90-day window). Names the failure mode practice staff recognize. Ends with the mechanism.
 
@@ -225,12 +225,12 @@ These are minor; the primary issue with the stats bar is that all three describe
 ### Example 5 — Meta description (homepage)
 
 **Before (current root layout):**
-> Cut prior-auth turnaround from days to minutes. NoteDoctor.AI flags denial risk before submission, built for medical practices. HIPAA-compliant.
+> Cut prior-auth turnaround from days to minutes. NoteDoctorAI flags denial risk before submission, built for medical practices. HIPAA-compliant.
 
 **Assessment:** Already strong. Don't change without A/B test data.
 
 **Alternate variant for testing:**
-> Catch prior-auth denials before submission. NoteDoctor.AI reads each chart against MCG/InterQual/payer policy and flags documentation gaps in plain language. $25/month. HIPAA-compliant.
+> Catch prior-auth denials before submission. NoteDoctorAI reads each chart against MCG/InterQual/payer policy and flags documentation gaps in plain language. $25/month. HIPAA-compliant.
 
 **Why:** Specific guidelines named (matches search intent of practice staff). Price visible (rare in healthcare AI ads — strong differentiation in SERPs).
 
@@ -243,7 +243,7 @@ See the table in *Headline Recommendations*.
 
 ### Subheadline alternatives (5)
 
-1. *Most prior-auth denials are documentation problems, not medical-necessity problems. NoteDoctor.AI catches the gap before submission.*
+1. *Most prior-auth denials are documentation problems, not medical-necessity problems. NoteDoctorAI catches the gap before submission.*
 2. *We sit ahead of whatever submission path you already use — payer portal, Availity, clearinghouse — and tell you whether the documentation will hold up before you send it.*
 3. *Pre-submission screening against MCG, InterQual, and payer policy. Plain-language gap detection. $25/month.*
 4. *AI screening for prior auths, built for the people submitting them — not the payers reviewing them.*
@@ -259,7 +259,7 @@ See the table in *Headline Recommendations*.
 
 ### Meta description alternatives (3)
 
-1. *Catch prior-auth denials before submission. NoteDoctor.AI reads each chart against MCG/InterQual/payer policy. $25/month + $0.02/call. HIPAA-compliant.*
+1. *Catch prior-auth denials before submission. NoteDoctorAI reads each chart against MCG/InterQual/payer policy. $25/month + $0.02/call. HIPAA-compliant.*
 2. *Pre-submission prior-auth screening for medical practices. Flag denial risk before you submit. Published pricing, no enterprise lock-in. HIPAA-compliant, BAA available.*
 3. *AI-powered prior authorization screening built for providers. Catch documentation gaps before submission. Cut turnaround from days to hours. $25/month.*
 

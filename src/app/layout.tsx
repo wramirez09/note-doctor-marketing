@@ -12,18 +12,18 @@ import Providers from "./providers";
 
 const GA_MEASUREMENT_ID = "G-MD0NMEFZQR";
 
-const SITE_URL = "https://notedoctor.ai";
-const SITE_NAME = "NoteDoctor.AI";
-const DEFAULT_TITLE = "NoteDoctor.AI — AI-Powered Prior Authorization Screening";
+const SITE_URL = "https://NoteDoctorAI";
+const SITE_NAME = "NoteDoctorAI";
+const DEFAULT_TITLE = "NoteDoctorAI — AI-Powered Prior Authorization Screening";
 const DEFAULT_DESCRIPTION =
-  "Cut prior-auth turnaround from days to minutes. NoteDoctor.AI flags denial risk before submission, built for medical practices. HIPAA-compliant.";
+  "Cut prior-auth turnaround from days to minutes. NoteDoctorAI flags denial risk before submission, built for medical practices. HIPAA-compliant.";
 const OG_IMAGE = `${SITE_URL}/opengraph-image.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: DEFAULT_TITLE,
-    template: "%s — NoteDoctor.AI",
+    template: "%s — NoteDoctorAI",
   },
   description: DEFAULT_DESCRIPTION,
   alternates: { canonical: "/" },

@@ -50,7 +50,7 @@ export default function Hero() {
       </h1>
 
       <p className="text-[18px] leading-[1.7] max-w-[640px] mx-auto mb-11" style={{ color: "var(--muted)" }}>
-        Most prior-auth denials are documentation problems, not medical-necessity problems. Paste your note or ask in plain English — NoteDoctor.AI checks the case against the payer&apos;s policy or third-party guidelines (MCG, InterQual, NCDs/LCDs), flags the gaps, and returns a denial-risk score before you submit. Built for practices, $25/month plus pay-as-you-go.
+        Most prior-auth denials are documentation problems, not medical-necessity problems. Paste your note or ask in plain English — NoteDoctorAI checks the case against the payer&apos;s policy or third-party guidelines (MCG, InterQual, NCDs/LCDs), flags the gaps, and returns a denial-risk score before you submit. Built for practices, $25/month plus pay-as-you-go.
       </p>
 
       <div className="flex items-center justify-center gap-4 flex-wrap">

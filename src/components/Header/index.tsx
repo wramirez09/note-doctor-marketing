@@ -34,7 +34,7 @@ const Header = () => {
               <Link href="/" className="navbar-logo block w-full py-4">
                 <Image
                   src="/images/logo/nd-ai-logo.svg"
-                  alt="NoteDoctor.AI logo"
+                  alt="NoteDoctorAI logo"
                   width={140}
                   height={30}
                   className="header-logo w-1/3"

@@ -5,10 +5,10 @@ import { StructuredData } from "@/components/StructuredData";
 import { caseStudies } from "@/lib/case-studies";
 import CaseStudyFilters from "./CaseStudyFilters";
 
-const SITE_URL = "https://notedoctor.ai";
+const SITE_URL = "https://NoteDoctorAI";
 const TITLE = "Case Studies";
 const DESCRIPTION =
-  "How clinics and health systems use NoteDoctor.AI in production. Real-world prior-auth turnaround, denial-rate, and scaling stories — anonymized where required.";
+  "How clinics and health systems use NoteDoctorAI in production. Real-world prior-auth turnaround, denial-rate, and scaling stories — anonymized where required.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -46,7 +46,7 @@ export default function CaseStudiesIndexPage() {
             Real practices, real results.
           </h1>
           <p className="text-[17px] leading-[1.65] max-w-[680px]" style={{ color: "var(--muted)" }}>
-            How cardiology, orthopedic, and multi-specialty groups use NoteDoctor.AI to
+            How cardiology, orthopedic, and multi-specialty groups use NoteDoctorAI to
             screen prior authorizations against payer criteria before submission.
             Customer descriptors are anonymized where required; metrics are sourced
             directly from each customer.
@@ -69,7 +69,7 @@ export default function CaseStudiesIndexPage() {
             className="text-[15px] leading-[1.65] mb-6 max-w-[520px] mx-auto"
             style={{ color: "var(--muted)" }}
           >
-            Bring a recent denial. We&apos;ll walk through how NoteDoctor.AI flags risk
+            Bring a recent denial. We&apos;ll walk through how NoteDoctorAI flags risk
             before submission — 20 minutes, no slide deck.
           </p>
           <Link

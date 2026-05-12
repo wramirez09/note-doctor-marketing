@@ -3,10 +3,10 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import { StructuredData } from "@/components/StructuredData";
 
-const SITE_URL = "https://notedoctor.ai";
+const SITE_URL = "https://NoteDoctorAI";
 const TITLE = "About";
 const DESCRIPTION =
-  "Built by clinicians and engineers tired of watching prior authorization get in the way of patient care. NoteDoctor.AI is a provider-first AI screening layer for medical-necessity documentation.";
+  "Built by clinicians and engineers tired of watching prior authorization get in the way of patient care. NoteDoctorAI is a provider-first AI screening layer for medical-necessity documentation.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -31,7 +31,7 @@ const PRINCIPLES = [
   },
   {
     h: "We explain our screening logic",
-    p: "Every flag NoteDoctor.AI raises maps to a specific guideline or payer-policy criterion. \"Why was this flagged?\" should always have a readable answer.",
+    p: "Every flag NoteDoctorAI raises maps to a specific guideline or payer-policy criterion. \"Why was this flagged?\" should always have a readable answer.",
   },
 ];
 
@@ -63,7 +63,7 @@ export default function AboutPage() {
             className="text-[12px] font-semibold tracking-[.12em] uppercase mb-3"
             style={{ color: "var(--blue-mid)" }}
           >
-            About NoteDoctor.AI
+            About NoteDoctorAI
           </p>
           <h1 className="text-[clamp(32px,4vw,52px)] font-extrabold tracking-[-0.02em] leading-[1.1] mb-5">
             Built by clinicians and engineers tired of watching prior auth get in the way of patient care.
@@ -83,7 +83,7 @@ export default function AboutPage() {
               already decided is appropriate.
             </p>
             <p>
-              NoteDoctor.AI exists to remove the most preventable part of that
+              NoteDoctorAI exists to remove the most preventable part of that
               tax: cases that get denied not because the care is wrong, but
               because the documentation didn&apos;t match the payer&apos;s
               language. We screen the chart against the relevant payer policy
@@ -140,7 +140,7 @@ export default function AboutPage() {
             </p>
             <p>
               <strong style={{ color: "var(--text)" }}>Pre-submission, not post-hoc.</strong>{" "}
-              The most expensive denial is the one you could have caught at intake. NoteDoctor.AI runs ahead of submission, not after the rejection comes back.
+              The most expensive denial is the one you could have caught at intake. NoteDoctorAI runs ahead of submission, not after the rejection comes back.
             </p>
           </div>
         </section>

@@ -1,11 +1,11 @@
 import type { MetadataRoute } from "next";
 import { caseStudies } from "@/lib/case-studies";
-import { comparisons } from "@/lib/compare";
+// import { comparisons } from "@/lib/compare";
 
 // Required by `output: 'export'` so Next.js prerenders sitemap.xml at build time.
 export const dynamic = "force-static";
 
-const SITE_URL = "https://notedoctor.ai";
+const SITE_URL = "https://NoteDoctorAI";
 
 // next.config.js has `trailingSlash: true`, so canonical URLs all end in /.
 // Sitemap <loc> entries must match the canonical exactly or crawlers waste
@@ -14,7 +14,7 @@ const STATIC_PATHS = [
   "/",
   "/about/",
   "/case-studies/",
-  "/compare/",
+  // "/compare/",
   "/contact/",
   "/for-health-systems/",
   "/for-healthcare/",
@@ -43,12 +43,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  const compareEntries = comparisons.map((c) => ({
-    url: `${SITE_URL}/compare/${c.slug}/`,
-    lastModified: now,
-    changeFrequency: "monthly" as const,
-    priority: 0.6,
-  }));
+  // const compareEntries = comparisons.map((c) => ({
+  //   url: `${SITE_URL}/compare/${c.slug}/`,
+  //   lastModified: now,
+  //   changeFrequency: "monthly" as const,
+  //   priority: 0.6,
+  // }));
 
-  return [...staticEntries, ...caseStudyEntries, ...compareEntries];
+  return [...staticEntries, ...caseStudyEntries];
 }

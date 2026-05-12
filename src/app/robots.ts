@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 // Required by `output: 'export'` so Next.js prerenders robots.txt at build time.
 export const dynamic = "force-static";
 
-const SITE_URL = "https://notedoctor.ai";
+const SITE_URL = "https://NoteDoctorAI";
 
 // Note: AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended,
 // Applebot-Extended) are intentionally NOT disallowed. The previous production

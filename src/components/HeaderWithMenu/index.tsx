@@ -39,13 +39,13 @@ export function HeaderWithMenu() {
               >
                 <Image
                   src="/images/logo/nd_logo.svg"
-                  alt="NoteDoctor.AI logo"
+                  alt="NoteDoctorAI logo"
                   width={35}
                   height={35}
                   className="header-logo"
                 />
                 <span className="text-white text-sm font-semibold tracking-tight">
-                  NoteDoctor.AI
+                  NoteDoctorAI
                 </span>
               </div>
 
@@ -98,7 +98,7 @@ export function HeaderWithMenu() {
               <div className="flex items-center gap-3">
                 <div className="hidden lg:flex items-center gap-3">
                   <a
-                    href="https://app.notedoctor.ai/auth/login"
+                    href="https://app.NoteDoctorAI/auth/login"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-white text-slate-900 text-[13px] font-semibold px-6 py-1.5 rounded-[9px] transition-all hover:-translate-y-0.5 inline-block"
@@ -106,7 +106,7 @@ export function HeaderWithMenu() {
                     Login
                   </a>
                   <a
-                    href="https://app.notedoctor.ai/auth/sign-up"
+                    href="https://app.NoteDoctorAI/auth/sign-up"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-white text-[13px] font-semibold px-6 py-1.5 rounded-[9px] transition-all hover:-translate-y-0.5 inline-block"
@@ -201,7 +201,7 @@ export function HeaderWithMenu() {
 
           <Group justify="center" pb="xl" px="lg">
             <a
-              href="https://app.notedoctor.ai/auth/login"
+              href="https://app.NoteDoctorAI/auth/login"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white text-slate-900 text-[15px] font-semibold px-8 py-3.5 rounded-[9px] transition-all hover:-translate-y-0.5 inline-block"
@@ -209,7 +209,7 @@ export function HeaderWithMenu() {
               Login
             </a>
             <a
-              href="https://app.notedoctor.ai/auth/sign-up"
+              href="https://app.NoteDoctorAI/auth/sign-up"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white text-[15px] font-semibold px-8 py-3.5 rounded-[9px] transition-all hover:-translate-y-0.5 inline-block"

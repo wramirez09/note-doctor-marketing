@@ -4,7 +4,7 @@ import { StructuredData } from "@/components/StructuredData";
 
 const TITLE = "How it works";
 const DESCRIPTION =
-  "How NoteDoctor.AI screens prior authorizations: ingest the note, match payer criteria, surface gaps, and flag denial risk before submission.";
+  "How NoteDoctorAI screens prior authorizations: ingest the note, match payer criteria, surface gaps, and flag denial risk before submission.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -18,12 +18,12 @@ const steps = [
   {
     n: "1",
     h: "Drop in a note or auth",
-    p: "Paste a clinical note, upload a PDF, or push from your EHR. NoteDoctor.AI extracts the procedure, diagnosis, and clinical narrative.",
+    p: "Paste a clinical note in the chat, or use our intuitive form UI. NoteDoctorAI extracts the procedure, diagnosis, and clinical narrative.",
   },
   {
     n: "2",
     h: "Match payer criteria",
-    p: "We identify the relevant payer policy or third-party guideline (MCG, InterQual, NCCN, NCDs/LCDs) and align the note against it.",
+    p: "We identify the relevant payer policy(s) or third-party commercial guidelines and align the request against it.",
   },
   {
     n: "3",
@@ -40,7 +40,7 @@ const steps = [
 const howToSchema = {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  name: "How NoteDoctor.AI screens a prior authorization",
+  name: "How NoteDoctorAI screens a prior authorization",
   description: DESCRIPTION,
   totalTime: "PT2M",
   step: steps.map((s, i) => ({
@@ -58,7 +58,7 @@ export default function HowItWorksPage() {
       <Breadcrumb pageName="How it works" />
       <main className="px-6 py-20 max-w-[920px] mx-auto">
         <h1 className="text-[clamp(32px,4vw,52px)] font-extrabold tracking-[-0.02em] leading-[1.1] mb-6">
-          How NoteDoctor.AI Works
+          How NoteDoctorAI Works
         </h1>
         <p className="text-[17px] leading-[1.7] mb-12" style={{ color: "var(--muted)" }}>
           A four-step screening flow that fits between the clinical note and the prior

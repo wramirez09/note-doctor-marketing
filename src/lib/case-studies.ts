@@ -60,7 +60,7 @@ export const caseStudies: CaseStudy[] = [
     headline:
       "From days to hours: how a Midwest cardiology practice got prior-auth out of the way of patient care.",
     subhead:
-      "Cardiac imaging and rhythm-management procedures sit at the top of every payer's prior-auth list. NoteDoctor.AI cut this practice's average turnaround by roughly 78% by flagging documentation gaps before submission.",
+      "Cardiac imaging and rhythm-management procedures sit at the top of every payer's prior-auth list. NoteDoctorAI cut this practice's average turnaround by roughly 78% by flagging documentation gaps before submission.",
     challenge: {
       heading: "The challenge",
       body: [
@@ -72,7 +72,7 @@ export const caseStudies: CaseStudy[] = [
     solution: {
       heading: "What changed",
       body: [
-        "The practice rolled out NoteDoctor.AI as a screening layer ahead of submission, with no EHR integration project required. Coordinators paste or push the clinical note into NoteDoctor.AI alongside the procedure code. The platform identifies the applicable payer policy or third-party guideline (MCG, InterQual, NCCN, NCDs/LCDs), compares the documentation against it line by line, and flags every gap in plain language: \"missing neurological exam findings,\" \"conservative therapy duration not documented,\" \"BMI not in chart in the past 12 months.\"",
+        "The practice rolled out NoteDoctorAI as a screening layer ahead of submission, with no EHR integration project required. Coordinators paste or push the clinical note into NoteDoctorAI alongside the procedure code. The platform identifies the applicable payer policy or third-party guideline (MCG, InterQual, NCCN, NCDs/LCDs), compares the documentation against it line by line, and flags every gap in plain language: \"missing neurological exam findings,\" \"conservative therapy duration not documented,\" \"BMI not in chart in the past 12 months.\"",
         "Each case comes back with a denial-risk score and a readable summary the coordinator can act on. If the chart is clean, the case ships. If something is missing, the coordinator sees exactly what to ask the physician for — often before the patient has even left the office.",
         "Onboarding took less than a day. The practice didn't change their EHR, didn't change their submission portal, and didn't hire additional staff. They added one screening step.",
       ].join("\n\n"),
@@ -105,7 +105,7 @@ export const caseStudies: CaseStudy[] = [
     // TODO(verify): exact quote and approval to publish; replace generic role with attributed name only after written approval
     quote: {
       text:
-        "Before NoteDoctor.AI, our coordinators spent most of their day fighting denials we could have prevented at intake. Now we catch the gap before submission, not three days later.",
+        "Before NoteDoctorAI, our coordinators spent most of their day fighting denials we could have prevented at intake. Now we catch the gap before submission, not three days later.",
       author: "Practice Administrator",
       role: "Practice Administrator",
     },
@@ -124,7 +124,7 @@ export const caseStudies: CaseStudy[] = [
     updatedAt: TODAY,
     headline: "From a 19% denial rate to under 4% — in one quarter.",
     subhead:
-      "Orthopedic surgery and advanced imaging are denial hotspots because conservative-therapy and imaging-history documentation rarely match payer language exactly. NoteDoctor.AI catches the language mismatch at intake, not after.",
+      "Orthopedic surgery and advanced imaging are denial hotspots because conservative-therapy and imaging-history documentation rarely match payer language exactly. NoteDoctorAI catches the language mismatch at intake, not after.",
     challenge: {
       heading: "The challenge",
       body: [
@@ -136,8 +136,8 @@ export const caseStudies: CaseStudy[] = [
     solution: {
       heading: "What changed",
       body: [
-        "NoteDoctor.AI was rolled out across the orthopedic group as a pre-submission screen on every PA request. Each case is mapped to the relevant payer policy or third-party guideline (MCG, InterQual, NCCN where applicable), and the platform reads the chart against the criteria.",
-        "The flagging is specific. For a lumbar spine MRI request, NoteDoctor.AI checks whether conservative-therapy duration is documented (often required to be ≥6 weeks), whether neurological exam findings are present, whether prior imaging history is in the chart, and whether the diagnosis code aligns with the payer's covered indications.",
+        "NoteDoctorAI was rolled out across the orthopedic group as a pre-submission screen on every PA request. Each case is mapped to the relevant payer policy or third-party guideline (MCG, InterQual, NCCN where applicable), and the platform reads the chart against the criteria.",
+        "The flagging is specific. For a lumbar spine MRI request, NoteDoctorAI checks whether conservative-therapy duration is documented (often required to be ≥6 weeks), whether neurological exam findings are present, whether prior imaging history is in the chart, and whether the diagnosis code aligns with the payer's covered indications.",
         "When something is missing, the coordinator sees a plain-language note (\"Conservative therapy duration not documented; payer requires ≥6 weeks\") and can return the chart to the physician for a quick addendum before submission. The chart goes out clean.",
       ].join("\n\n"),
     },
@@ -168,7 +168,7 @@ export const caseStudies: CaseStudy[] = [
     // TODO(verify): exact quote and approval to publish; replace generic role with attributed name only after written approval
     quote: {
       text:
-        "We weren't documenting the wrong things. We were documenting them in the wrong language. NoteDoctor.AI showed us the gap before the payer did.",
+        "We weren't documenting the wrong things. We were documenting them in the wrong language. NoteDoctorAI showed us the gap before the payer did.",
       author: "Director of Revenue Cycle",
       role: "Director of Revenue Cycle",
     },
@@ -188,7 +188,7 @@ export const caseStudies: CaseStudy[] = [
     headline:
       "One workflow, 80+ clinics: scaling prior-auth screening without scaling staff.",
     subhead:
-      "Health systems don't fail at prior auth because of a single bad workflow. They fail because every clinic has its own. NoteDoctor.AI gave a regional system one screening layer across all of them.",
+      "Health systems don't fail at prior auth because of a single bad workflow. They fail because every clinic has its own. NoteDoctorAI gave a regional system one screening layer across all of them.",
     challenge: {
       heading: "The challenge",
       body: [
@@ -199,7 +199,7 @@ export const caseStudies: CaseStudy[] = [
     solution: {
       heading: "What changed",
       body: [
-        "The network deployed NoteDoctor.AI as a network-wide pre-submission screening layer — same workflow at every clinic, regardless of specialty. Coordinators across all 80+ sites now use the same screening interface, generating consistent, payer-aligned documentation checks before submission.",
+        "The network deployed NoteDoctorAI as a network-wide pre-submission screening layer — same workflow at every clinic, regardless of specialty. Coordinators across all 80+ sites now use the same screening interface, generating consistent, payer-aligned documentation checks before submission.",
         "Critically, the platform externalized the institutional knowledge. New coordinators could be productive within days because the screening tool surfaces the same guidelines and gap-detection results regardless of how long the coordinator had been at the network.",
         "The central revenue-cycle team gained a unified view of denial-risk trends across the network. When a payer updated a policy — say, tightening conservative-therapy requirements for lumbar imaging — the network saw it within days through aggregated screening output, not in a quarterly retrospective.",
       ].join("\n\n"),
@@ -211,7 +211,7 @@ export const caseStudies: CaseStudy[] = [
         "The network achieved consistent prior-auth screening across all 80+ clinics within the first phase of rollout, with significantly reduced training time for new coordinators and earlier visibility into payer-policy shifts.",
         // TODO(verify): exact aggregate first-pass and turnaround metrics
         "The central revenue-cycle team reports being able to identify and respond to payer-policy changes in days rather than quarters, and the system as a whole has seen measurable improvements in first-pass approval rates and turnaround time across high-volume codes.",
-        "The change-management approach turned out to be simpler than the network feared. Because NoteDoctor.AI sits ahead of the existing submission workflow rather than replacing it, coordinators kept their EHR, kept their payer portals, and added a single screening step to their day.",
+        "The change-management approach turned out to be simpler than the network feared. Because NoteDoctorAI sits ahead of the existing submission workflow rather than replacing it, coordinators kept their EHR, kept their payer portals, and added a single screening step to their day.",
       ].join("\n\n"),
     },
     metrics: [
@@ -226,7 +226,7 @@ export const caseStudies: CaseStudy[] = [
     // TODO(verify): exact quote and approval to publish; replace generic role with attributed name only after written approval
     quote: {
       text:
-        "We didn't need to replace anything. We needed a single screening layer across 80 clinics, and that's exactly what NoteDoctor.AI gave us.",
+        "We didn't need to replace anything. We needed a single screening layer across 80 clinics, and that's exactly what NoteDoctorAI gave us.",
       author: "VP, Revenue Cycle",
       role: "VP, Revenue Cycle",
     },

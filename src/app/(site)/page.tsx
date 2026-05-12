@@ -7,21 +7,21 @@ import ContactCTA from "@/components/home/ContactCTA";
 import TrustStrip from "@/components/home/TrustStrip";
 import PricingTeaser from "@/components/home/PricingTeaser";
 import CustomerStories from "@/components/home/CustomerStories";
-import CompareCallout from "@/components/home/CompareCallout";
+// import CompareCallout from "@/components/home/CompareCallout";
 import { StructuredData } from "@/components/StructuredData";
 import { faqJsonLd } from "@/lib/faq";
 
 export const metadata: Metadata = {
-  title: { absolute: "NoteDoctor.AI — AI-Powered Prior Authorization Screening" },
+  title: { absolute: "NoteDoctorAI — AI-Powered Prior Authorization Screening" },
   description:
-    "Cut prior-auth turnaround from days to minutes. NoteDoctor.AI flags denial risk before submission, built for medical practices. HIPAA-compliant.",
+    "Cut prior-auth turnaround from days to minutes. NoteDoctorAI flags denial risk before submission, built for medical practices. HIPAA-compliant.",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     url: "/",
-    title: "NoteDoctor.AI — AI-Powered Prior Authorization Screening",
+    title: "NoteDoctorAI — AI-Powered Prior Authorization Screening",
     description:
-      "Cut prior-auth turnaround from days to minutes. NoteDoctor.AI flags denial risk before submission, built for medical practices. HIPAA-compliant.",
+      "Cut prior-auth turnaround from days to minutes. NoteDoctorAI flags denial risk before submission, built for medical practices. HIPAA-compliant.",
   },
 };
 
@@ -34,7 +34,7 @@ export default function HomePage() {
       <HowItHelps />
       <TrustStrip />
       <PricingTeaser />
-      <CompareCallout />
+      {/* <CompareCallout /> */}
       <CustomerStories />
       <FAQ />
       <ContactCTA />

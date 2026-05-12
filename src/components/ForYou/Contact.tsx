@@ -30,7 +30,7 @@ export default function Contact() {
     e.preventDefault();
     setIsLoading(true);
     try {
-      const response = await fetch("https://formsubmit.co/ajax/sales@notedoctor.ai", {
+      const response = await fetch("https://formsubmit.co/ajax/sales@NoteDoctorAI", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
@@ -67,7 +67,7 @@ export default function Contact() {
           <div className="relative z-10">
             <p className="text-xs font-semibold tracking-[.12em] uppercase text-blue-400 mb-4">Let&apos;s Talk</p>
             <h2 className="text-[clamp(22px,2.5vw,32px)] font-extrabold tracking-[-0.025em] leading-[1.15] mb-3.5">Start a Conversation</h2>
-            <p className="text-[15px] text-white/50 leading-[1.65] mb-8">Tell us about your role and what you&apos;re trying to solve — we&apos;ll show you exactly how NoteDoctor.AI fits.</p>
+            <p className="text-[15px] text-white/50 leading-[1.65] mb-8">Tell us about your role and what you&apos;re trying to solve — we&apos;ll show you exactly how NoteDoctorAI fits.</p>
             <ul className="flex flex-col gap-3 list-none">
               {trustPoints.map((point) => (
                 <li key={point} className="flex items-center gap-3 text-[13.5px] text-white/50">

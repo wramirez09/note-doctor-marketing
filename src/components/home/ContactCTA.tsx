@@ -49,11 +49,11 @@ export default function ContactCTA() {
         <p className="text-[13px]" style={{ color: "var(--muted)" }}>
           Lower-intent question? Email{" "}
           <a
-            href="mailto:sales@notedoctor.ai"
+            href="mailto:sales@NoteDoctorAI"
             className="underline"
             style={{ color: "var(--blue-mid)" }}
           >
-            sales@notedoctor.ai
+            sales@NoteDoctorAI
           </a>{" "}
           and we&apos;ll respond same day.
         </p>

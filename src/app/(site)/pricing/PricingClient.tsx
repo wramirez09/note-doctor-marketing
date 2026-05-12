@@ -338,7 +338,7 @@ export default function PricingClient() {
 
             <div className="nd-divider" />
             <FeatureList items={proFeatures} />
-            <a href="https://app.notedoctor.ai/auth/sign-up" target="_blank" rel="noopener noreferrer" className="nd-btn-primary">Subscribe — $25 / mo</a>
+            <a href="https://app.NoteDoctorAI/auth/sign-up" target="_blank" rel="noopener noreferrer" className="nd-btn-primary">Subscribe — $25 / mo</a>
           </div>
 
           {/* Enterprise */}
@@ -363,13 +363,15 @@ export default function PricingClient() {
             <div className="nd-divider" />
             <FeatureList items={enterpriseFeatures} />
             <a href="/contact" className="nd-btn-ghost">Contact Sales</a>
+            {/* Comparison link disabled — restore when compare pages relaunch.
             <p style={{ fontSize: 12, color: "var(--nd-faint)", marginTop: 14, textAlign: "center" }}>
               Comparing enterprise options? See{" "}
               <a href="/compare/vs-cohere" style={{ color: "var(--nd-muted)", textDecoration: "underline" }}>
-                NoteDoctor.AI vs Cohere
+                NoteDoctorAI vs Cohere
               </a>
               .
             </p>
+            */}
           </div>
 
         </div>
@@ -379,7 +381,7 @@ export default function PricingClient() {
           <div className="nd-usage-box">
             <h2>How usage pricing works</h2>
             <p>
-              Each time NoteDoctor.AI runs an AI screening — analyzing a note,
+              Each time NoteDoctorAI runs an AI screening — analyzing a note,
               checking payer criteria, or flagging a documentation gap — that
               counts as one AI call at{" "}
               <strong style={{ color: "var(--nd-text)" }}>$0.02</strong>. Your

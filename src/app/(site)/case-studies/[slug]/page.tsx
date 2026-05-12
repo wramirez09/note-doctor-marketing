@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import { StructuredData } from "@/components/StructuredData";
 import { caseStudies, getCaseStudy } from "@/lib/case-studies";
-import { getComparison } from "@/lib/compare";
+// import { getComparison } from "@/lib/compare";
 
 const PERSONA_LABELS: Record<string, string> = {
   "/for-physicians": "For physicians",
@@ -13,7 +13,7 @@ const PERSONA_LABELS: Record<string, string> = {
   "/for-you": "Solutions by role",
 };
 
-const SITE_URL = "https://notedoctor.ai";
+const SITE_URL = "https://NoteDoctorAI";
 
 type Params = { slug: string };
 
@@ -63,9 +63,13 @@ export default async function CaseStudyPage({
   const study = getCaseStudy(slug);
   if (!study) notFound();
 
-  const relatedComparison = study.relatedComparisonSlug
-    ? getComparison(study.relatedComparisonSlug)
-    : undefined;
+  // Compare pages are disabled — restore lookup when they relaunch.
+  // const relatedComparison = study.relatedComparisonSlug
+  //   ? getComparison(study.relatedComparisonSlug)
+  //   : undefined;
+  const relatedComparison = undefined as
+    | { slug: string; competitor: string }
+    | undefined;
   const personaLabel = study.relatedPersonaPath
     ? PERSONA_LABELS[study.relatedPersonaPath]
     : undefined;
@@ -77,8 +81,8 @@ export default async function CaseStudyPage({
     description: study.subhead,
     datePublished: study.publishedAt,
     dateModified: study.updatedAt,
-    author: { "@type": "Organization", name: "NoteDoctor.AI" },
-    publisher: { "@type": "Organization", name: "NoteDoctor.AI" },
+    author: { "@type": "Organization", name: "NoteDoctorAI" },
+    publisher: { "@type": "Organization", name: "NoteDoctorAI" },
     mainEntityOfPage: `${SITE_URL}/case-studies/${study.slug}`,
     about: study.specialty,
   };
@@ -271,7 +275,7 @@ export default async function CaseStudyPage({
                     Comparing alternatives
                   </p>
                   <h3 className="text-[16px] font-semibold mb-2">
-                    NoteDoctor.AI vs {relatedComparison.competitor}
+                    NoteDoctorAI vs {relatedComparison.competitor}
                   </h3>
                   <span
                     className="text-[12px] font-semibold"
@@ -294,7 +298,7 @@ export default async function CaseStudyPage({
           }}
         >
           <h2 className="text-[24px] font-semibold mb-3">
-            See NoteDoctor.AI on your own prior auths.
+            See NoteDoctorAI on your own prior auths.
           </h2>
           <p
             className="text-[15px] leading-[1.65] mb-6 max-w-[520px] mx-auto"

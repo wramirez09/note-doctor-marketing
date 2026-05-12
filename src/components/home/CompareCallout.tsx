@@ -30,7 +30,7 @@ export default function CompareCallout() {
                 className="text-[11px] font-semibold uppercase tracking-[.12em] mb-3"
                 style={{ color: "var(--muted)" }}
               >
-                NoteDoctor.AI vs
+                NoteDoctorAI vs
               </p>
               <h3 className="text-[18px] font-semibold mb-3">{c.competitor}</h3>
               <p

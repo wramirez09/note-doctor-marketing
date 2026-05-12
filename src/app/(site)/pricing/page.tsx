@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import PricingClient from "./PricingClient";
 import { StructuredData } from "@/components/StructuredData";
 
-const SITE_URL = "https://notedoctor.ai";
+const SITE_URL = "https://NoteDoctorAI";
 
 const TITLE = "Pricing";
 const DESCRIPTION =
@@ -30,7 +30,7 @@ const serviceSchema = {
   "@type": "Service",
   name: "AI-powered prior authorization screening",
   serviceType: "Prior authorization screening",
-  provider: { "@type": "Organization", name: "NoteDoctor.AI", url: SITE_URL },
+  provider: { "@type": "Organization", name: "NoteDoctorAI", url: SITE_URL },
   description: DESCRIPTION,
   areaServed: "United States",
   audience: {

@@ -1,5 +1,5 @@
-# Marketing Audit: NoteDoctor.AI
-**URL:** https://a6092dfd.note-doctor-marketing.pages.dev/ (Cloudflare Pages preview of `dev` branch — post content/SSR overhaul; not yet on production `notedoctor.ai`)
+# Marketing Audit: NoteDoctorAI
+**URL:** https://a6092dfd.note-doctor-marketing.pages.dev/ (Cloudflare Pages preview of `dev` branch — post content/SSR overhaul; not yet on production `NoteDoctorAI`)
 **Date:** 2026-05-08
 **Business Type:** SaaS (B2B healthcare; provider-side prior-authorization screening)
 **Overall Marketing Score: 77/100 (Grade: B)**
@@ -8,7 +8,7 @@
 
 ## Executive Summary
 
-NoteDoctor.AI's marketing site has crossed a structural threshold. The recently-merged `feat/content-real-copy` and SSR-foundation work transformed the site from a client-shell (rendering only a preloader to crawlers) into a fully prerendered, schema-marked, real-content site with a defensible conversion funnel and credible mid-funnel content. The score moves from a baseline near 67 to **77/100, Grade B** — well above average for an early-stage healthcare SaaS, but five points short of the brief's 82+ target.
+NoteDoctorAI's marketing site has crossed a structural threshold. The recently-merged `feat/content-real-copy` and SSR-foundation work transformed the site from a client-shell (rendering only a preloader to crawlers) into a fully prerendered, schema-marked, real-content site with a defensible conversion funnel and credible mid-funnel content. The score moves from a baseline near 67 to **77/100, Grade B** — well above average for an early-stage healthcare SaaS, but five points short of the brief's 82+ target.
 
 **Biggest strength: trust and credibility infrastructure.** The site does the things most early-stage AI companies skip and most healthcare buyers demand. A real Security page with explicit certification status (HIPAA + BAA + SOC 2 controls aligned + TLS/AES detail). Three full-length case studies with clinical-language detail (CPT codes, MCG/InterQual references, payer-policy mechanics) that signal domain understanding. Three comparison pages with researched 8-row matrices, sourced from competitor sites, and — rare — a "Where {competitor} wins" fairness section that buyers read to evaluate honesty as much as features. Hero stats now cite KFF directly. Pricing is published. The Org/SoftwareApp/Article/BreadcrumbList/AboutPage/ContactPage/WebPage JSON-LD on every route is unusually thorough.
 
@@ -123,7 +123,7 @@ Conservative estimate of monthly revenue lift from implementing all recommendati
 - **Trust strip near the form** (HIPAA, BAA, "Used by N+ practices", sales@ mailto) is the right pattern.
 
 **What's not:**
-- **Lead endpoint not configured.** `NEXT_PUBLIC_LEAD_ENDPOINT` is unset; `RequestDemoClient` falls back to a logged warning + user-facing error pointing them to `mailto:sales@notedoctor.ai`. **Today, every form submission is a silent failure for the user and a missed lead for the team.** This is the single highest-leverage fix in the audit.
+- **Lead endpoint not configured.** `NEXT_PUBLIC_LEAD_ENDPOINT` is unset; `RequestDemoClient` falls back to a logged warning + user-facing error pointing them to `mailto:sales@NoteDoctorAI`. **Today, every form submission is a silent failure for the user and a missed lead for the team.** This is the single highest-leverage fix in the audit.
 - **No inline scheduler.** Calendly/Cal.com would lift form-completion-to-meeting-booked rate by 2-3× (industry benchmark). The TODO(integration) marker for this was removed in the JSX-cleanup pass; the slot is still available.
 - **Pricing is one click away.** The strongest competitive differentiator (published price vs Cohere/Anterior/Availity opaque enterprise pricing) is hidden behind a nav click. Surface it on the homepage.
 - **Hero secondary CTA broken.** `#how` anchor doesn't match any element ID on the homepage.
@@ -141,9 +141,9 @@ Conservative estimate of monthly revenue lift from implementing all recommendati
 - **Sitemap dynamic.** `app/sitemap.ts` returns 18 routes (12 static + 3 case studies + 3 comparisons), all with `lastModified`, priority weighting (1.0 home, 0.7 static, 0.6 dynamic).
 - **robots.txt does NOT block AI crawlers.** No GPTBot/ClaudeBot/PerplexityBot/Google-Extended/Applebot-Extended disallows. Critical given the rise of AI-search referrals.
 - **Per-page canonical alternates** and OG metadata.
-- **Title template** `%s — NoteDoctor.AI` with `title.absolute` for pages that already include the brand.
+- **Title template** `%s — NoteDoctorAI` with `title.absolute` for pages that already include the brand.
 - **External link signal.** Hero stats now link out to KFF, which is a quality referent.
-- **Zero `NoteDoctor.Ai` (mixed-case) variants** in user-visible HTML; canonical brand and lowercase domain are clean.
+- **Zero `NoteDoctorAI` (mixed-case) variants** in user-visible HTML; canonical brand and lowercase domain are clean.
 
 **What's not:**
 - **No `/blog` route.** `markdown/blogs/` exists in repo, gray-matter is installed, but no Next.js route renders it. This is the biggest organic-traffic gap.
@@ -216,9 +216,9 @@ Conservative estimate of monthly revenue lift from implementing all recommendati
 
 ## Competitor Comparison
 
-NoteDoctor.AI's three published comparison pages already do this work in depth. The summary table below is from the buyer's-eye-view rather than feature-by-feature parity.
+NoteDoctorAI's three published comparison pages already do this work in depth. The summary table below is from the buyer's-eye-view rather than feature-by-feature parity.
 
-| Factor | NoteDoctor.AI | Cohere Health | Anterior | Availity AuthPal |
+| Factor | NoteDoctorAI | Cohere Health | Anterior | Availity AuthPal |
 |---|---|---|---|---|
 | Primary customer | Provider | Payer | Payer | Both |
 | Headline clarity | 7/10 | 8/10 | 6/10 | 7/10 |
@@ -230,7 +230,7 @@ NoteDoctor.AI's three published comparison pages already do this work in depth. 
 | Comparison-page presence | **9/10** | 5/10 | 5/10 | 5/10 |
 | Site search-engine readiness | **8/10** | 7/10 | 6/10 | 8/10 |
 
-**Where NoteDoctor.AI clearly wins:** pricing transparency, time-to-value clarity, compliance disclosure depth, and the existence of fair comparison pages. **Where it lags:** trust signals (logos, named customers, press, analyst coverage). The competitive positioning is healthier than the brand maturity.
+**Where NoteDoctorAI clearly wins:** pricing transparency, time-to-value clarity, compliance disclosure depth, and the existence of fair comparison pages. **Where it lags:** trust signals (logos, named customers, press, analyst coverage). The competitive positioning is healthier than the brand maturity.
 
 ---
 

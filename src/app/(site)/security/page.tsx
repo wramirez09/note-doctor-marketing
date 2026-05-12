@@ -3,10 +3,10 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import { StructuredData } from "@/components/StructuredData";
 
-const SITE_URL = "https://notedoctor.ai";
+const SITE_URL = "https://NoteDoctorAI";
 const TITLE = "Security & Compliance";
 const DESCRIPTION =
-  "How NoteDoctor.AI protects protected health information: HIPAA compliance, BAA, SOC 2-aligned controls, encryption in transit and at rest, and our subprocessor list.";
+  "How NoteDoctorAI protects protected health information: HIPAA compliance, BAA, SOC 2-aligned controls, encryption in transit and at rest, and our subprocessor list.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -92,7 +92,7 @@ export default function SecurityPage() {
             Healthcare-grade by default.
           </h1>
           <p className="text-[17px] leading-[1.65]" style={{ color: "var(--muted)" }}>
-            NoteDoctor.AI is HIPAA-compliant from day one, supports BAAs for every
+            NoteDoctorAI is HIPAA-compliant from day one, supports BAAs for every
             customer, and is built around SOC 2-aligned operational controls. This
             page is the short version. The full security packet — control inventory,
             subprocessor list, audit status — is available on request.
@@ -179,7 +179,7 @@ export default function SecurityPage() {
               See pricing
             </Link>
             <a
-              href="mailto:sales@notedoctor.ai?subject=Security%20packet%20request"
+              href="mailto:sales@NoteDoctorAI?subject=Security%20packet%20request"
               className="inline-block text-[15px] font-medium px-6 py-3 rounded-[9px] border transition-all hover:bg-white/5"
               style={{ color: "var(--text)", borderColor: "var(--border)" }}
             >

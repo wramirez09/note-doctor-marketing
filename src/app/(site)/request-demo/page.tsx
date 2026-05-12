@@ -6,7 +6,7 @@ import { StructuredData } from "@/components/StructuredData";
 import { caseStudies } from "@/lib/case-studies";
 import RequestDemoClient from "./RequestDemoClient";
 
-const SITE_URL = "https://notedoctor.ai";
+const SITE_URL = "https://NoteDoctorAI";
 const TITLE = "Request a Demo";
 const DESCRIPTION =
   "Bring a denial or a workflow that's eating your team. We'll show you how risk gets flagged before submission. 20 minutes, real prior auths, no slide deck.";
@@ -28,7 +28,7 @@ const STEPS = [
   {
     n: "2",
     h: "Live demo on your own auths",
-    p: "Bring a recent denial or a procedure that always seems to come back. We'll run it through NoteDoctor.AI on the call.",
+    p: "Bring a recent denial or a procedure that always seems to come back. We'll run it through NoteDoctorAI on the call.",
   },
   {
     n: "3",
@@ -60,7 +60,7 @@ export default function RequestDemoPage() {
             Request a demo
           </p>
           <h1 className="text-[clamp(32px,4vw,52px)] font-extrabold tracking-[-0.02em] leading-[1.1] mb-5">
-            See NoteDoctor.AI screen a prior auth in 20 minutes.
+            See NoteDoctorAI screen a prior auth in 20 minutes.
           </h1>
           <p className="text-[18px] leading-[1.65]" style={{ color: "var(--muted)" }}>
             Bring a denial or a workflow that&apos;s eating your team — we&apos;ll show
@@ -111,7 +111,7 @@ export default function RequestDemoPage() {
           <span style={{ color: "var(--faint)" }}>·</span>
           <span>SOC 2 controls aligned</span>
           <span style={{ color: "var(--faint)" }}>·</span>
-          <span>Email <a href="mailto:sales@notedoctor.ai" className="underline" style={{ color: "var(--blue-mid)" }}>sales@notedoctor.ai</a> for low-intent questions</span>
+          <span>Email <a href="mailto:sales@NoteDoctorAI" className="underline" style={{ color: "var(--blue-mid)" }}>sales@NoteDoctorAI</a> for low-intent questions</span>
         </section>
 
         {/* Read a case study */}

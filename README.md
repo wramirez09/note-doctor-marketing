@@ -1,16 +1,16 @@
-# NoteDoctor.Ai — Marketing Site
+# NoteDoctorAI — Marketing Site
 
 > **Cut the Red Tape. Deliver Care Without Delays.**
 
-Marketing website for NoteDoctor.Ai — an AI-powered prior authorization screening solution that empowers physicians and health systems with clarity, speed, and compliance.
+Marketing website for NoteDoctorAI — an AI-powered prior authorization screening solution that empowers physicians and health systems with clarity, speed, and compliance.
 
-![NoteDoctor.Ai Hero](screenshot.png)
+![NoteDoctorAI Hero](screenshot.png)
 
 ---
 
 ## About
 
-Prior authorization wastes valuable time, burdens physicians, and puts patients at risk. NoteDoctor.Ai streamlines the PA process so providers can focus on care, not paperwork.
+Prior authorization wastes valuable time, burdens physicians, and puts patients at risk. NoteDoctorAI streamlines the PA process so providers can focus on care, not paperwork.
 
 **Key stats driving the mission:**
 - **50M+** Medicare Advantage prior auth requests per year
