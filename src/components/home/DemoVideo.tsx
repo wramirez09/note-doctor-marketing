@@ -79,7 +79,6 @@ export default function DemoVideo({ src }: DemoVideoProps) {
             playsInline
             muted
             loop
-            autoPlay
             controls
             preload="metadata"
           >
