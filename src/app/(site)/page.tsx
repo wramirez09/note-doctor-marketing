@@ -12,7 +12,7 @@ export default function HomePage() {
     <main className="relative z-10">
       <Hero />
       <Problem />
-      <DemoVideo src="https://res.cloudinary.com/diyenxuol/video/upload/v1779047155/voice_over_app_demo_taiirs.mp4" />
+      <DemoVideo cloudName="diyenxuol" publicId="Introvideo_tvoo2t" />
       <HowItHelps />
       <FAQ />
       <Contact />
