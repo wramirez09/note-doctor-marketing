@@ -6,9 +6,9 @@ import "../styles/prism-vsc-dark-plus.css";
 import Script from "next/script";
 import ClientLayout from "./ClientLayout";
 
-// Google Analytics 4 — NoteDoctor.Ai property (G-1KNYQ7B4DL). Loaded only in
-// production so local dev doesn't pollute the property.
-const GA_MEASUREMENT_ID = "G-1KNYQ7B4DL";
+// Google Analytics 4 — NoteDoctorAi_Marketing account/property (G-XR7VW0E6ZF).
+// Loaded only in production so local dev doesn't pollute the property.
+const GA_MEASUREMENT_ID = "G-XR7VW0E6ZF";
 const isProduction = process.env.NODE_ENV === "production";
 
 export const metadata: Metadata = {
