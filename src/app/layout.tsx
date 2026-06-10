@@ -3,7 +3,13 @@ import "@mantine/core/styles.css";
 import { Metadata } from "next";
 import "../styles/index.css";
 import "../styles/prism-vsc-dark-plus.css";
+import Script from "next/script";
 import ClientLayout from "./ClientLayout";
+
+// Google Analytics 4 — NoteDoctor.Ai property (G-1KNYQ7B4DL). Loaded only in
+// production so local dev doesn't pollute the property.
+const GA_MEASUREMENT_ID = "G-1KNYQ7B4DL";
+const isProduction = process.env.NODE_ENV === "production";
 
 export const metadata: Metadata = {
   title: "NoteDoctor.Ai | AI-Powered Prior Authorization Screening",
@@ -35,6 +41,23 @@ export default function RootLayout({
     <html suppressHydrationWarning={true} className="!scroll-smooth" lang="en">
       <head>
         <ColorSchemeScript />
+        {isProduction && (
+          <>
+            {/* Google tag (gtag.js) */}
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="gtag-init" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_MEASUREMENT_ID}');
+              `}
+            </Script>
+          </>
+        )}
       </head>
       <body>
         <ClientLayout>{children}</ClientLayout>
