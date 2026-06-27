@@ -8,9 +8,9 @@ import { FeaturesGrid } from "./featuresGrid/Features";
 import { StructuredData } from "@/components/StructuredData";
 
 const metadata = {
-  title: "AI Clinical Insight Tools for Physicians | NoteDoctor.Ai",
+  title: "AI Clinical Insight Tools for Physicians | NoteDoctorAi",
   description:
-    "Equip your practice with NoteDoctor.Ai — analyze patient notes, surface research-based insights, and streamline diagnostic workflows. Trusted, secure, physician-focused AI support (not medical advice).",
+    "Equip your practice with NoteDoctorAi — analyze patient notes, surface research-based insights, and streamline diagnostic workflows. Trusted, secure, physician-focused AI support (not medical advice).",
 };
 
 const structuredData = {

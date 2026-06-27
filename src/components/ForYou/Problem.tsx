@@ -2,25 +2,25 @@
 
 const SearchIcon = () => (
   <svg className="w-4 h-4 stroke-blue-400" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+    <circle cx="11" cy="11" r="8" /><path d="M21 21l-4.35-4.35" />
   </svg>
 );
 
 const WorkflowIcon = () => (
   <svg className="w-4 h-4 stroke-blue-400" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M17 3l4 4-4 4"/><path d="M3 7h18"/><path d="M7 21l-4-4 4-4"/><path d="M21 17H3"/>
+    <path d="M17 3l4 4-4 4" /><path d="M3 7h18" /><path d="M7 21l-4-4 4-4" /><path d="M21 17H3" />
   </svg>
 );
 
 const BoltIcon = () => (
   <svg className="w-4 h-4 stroke-blue-400" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
   </svg>
 );
 
 const ShieldIcon = () => (
   <svg className="w-4 h-4 stroke-blue-400" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
   </svg>
 );
 
@@ -50,10 +50,10 @@ const impactStats = [
 ];
 
 const benefits = [
-  { icon: SearchIcon,   title: "Clarity upfront",      body: "Know exactly what documentation is required before you submit — no guesswork, no callbacks." },
-  { icon: WorkflowIcon, title: "Smarter workflows",    body: "Reduce denials and avoid the endless appeals cycle that wastes staff time and delays care." },
-  { icon: BoltIcon,     title: "Faster approvals",     body: "Move patients to treatment sooner by catching documentation gaps before submission, not after denial." },
-  { icon: ShieldIcon,   title: "Physician protection", body: "Cut burnout by reducing the administrative burden that pushes good physicians out of practice." },
+  { icon: SearchIcon, title: "Clarity upfront", body: "Know exactly what documentation is required before you submit — no guesswork, no callbacks." },
+  { icon: WorkflowIcon, title: "Smarter workflows", body: "Reduce denials and avoid the endless appeals cycle that wastes staff time and delays care." },
+  { icon: BoltIcon, title: "Faster approvals", body: "Move patients to treatment sooner by catching documentation gaps before submission, not after denial." },
+  { icon: ShieldIcon, title: "Physician protection", body: "Cut burnout by reducing the administrative burden that pushes good physicians out of practice." },
 ];
 
 export default function Problem() {
@@ -106,7 +106,7 @@ export default function Problem() {
 
       <section className="py-20 px-6 bg-[#0f1522]">
         <div className="max-w-[1100px] mx-auto">
-          <p className="text-xs font-semibold tracking-[.12em] uppercase text-blue-400 mb-3.5">How NoteDoctor.Ai Helps</p>
+          <p className="text-xs font-semibold tracking-[.12em] uppercase text-blue-400 mb-3.5">How NoteDoctorAi Helps</p>
           <h2 className="text-[clamp(26px,3vw,42px)] font-extrabold tracking-[-0.025em] leading-[1.12] mb-3">Turning the System in Your Favor</h2>
           <p className="text-base leading-[1.65] text-white/50 max-w-[540px]">We give providers the tools to navigate prior authorization the right way — the first time.</p>
 

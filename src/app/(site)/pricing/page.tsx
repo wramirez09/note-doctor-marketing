@@ -342,7 +342,7 @@ export default function PricingPage() {
 
             <div className="nd-divider" />
             <FeatureList items={proFeatures} />
-            <a href="https://app.notedoctor.ai/auth/sign-up" target="_blank" rel="noopener noreferrer" className="nd-btn-primary">Subscribe — $25 / mo</a>
+            <a href="https://app.NoteDoctorAi/auth/sign-up" target="_blank" rel="noopener noreferrer" className="nd-btn-primary">Subscribe — $25 / mo</a>
           </div>
 
           {/* Enterprise */}
@@ -376,7 +376,7 @@ export default function PricingPage() {
           <div className="nd-usage-box">
             <h2>How usage pricing works</h2>
             <p>
-              Each time NoteDoctor.Ai runs an AI screening — analyzing a note,
+              Each time NoteDoctorAi runs an AI screening — analyzing a note,
               checking payer criteria, or flagging a documentation gap — that
               counts as one AI call at{" "}
               <strong style={{ color: "var(--nd-text)" }}>$0.02</strong>. Your
