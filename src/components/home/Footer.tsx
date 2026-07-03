@@ -6,11 +6,11 @@ export default function Footer() {
       className="flex items-center justify-between px-12 py-7 border-t text-[13px]"
       style={{ borderColor: "var(--border)", color: "var(--faint)" }}
     >
-      <span>© 2026 NoteDoctorAi — All rights reserved.</span>
+      <span>© 2026 NoteDoctor.AI — All rights reserved.</span>
       <div className="flex gap-6">
         {[
-          { label: "Privacy", href: "https://app.NoteDoctorAi/legal/privacy-policy", external: true },
-          { label: "Terms", href: "https://app.NoteDoctorAi/legal/terms-of-service", external: true },
+          { label: "Privacy", href: "https://app.NoteDoctor.AI/legal/privacy-policy", external: true },
+          { label: "Terms", href: "https://app.NoteDoctor.AI/legal/terms-of-service", external: true },
           { label: "Pricing", href: "/pricing" },
           { label: "Contact", href: "#contact" },
         ].map(({ label, href, external }) => (

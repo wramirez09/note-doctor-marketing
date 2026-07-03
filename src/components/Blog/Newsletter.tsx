@@ -21,7 +21,7 @@ const Newsletter = () => {
 
     try {
       const response = await fetch(
-        "https://formsubmit.co/ajax/sales@NoteDoctorAi",
+        "https://formsubmit.co/ajax/sales@NoteDoctor.AI",
         {
           method: "POST",
           headers: {

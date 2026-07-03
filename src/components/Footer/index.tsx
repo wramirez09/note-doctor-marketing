@@ -21,7 +21,7 @@ const Footer = () => {
                   height={30}
                   className="header-logo w-1/3 mx-6"
                 />
-                
+
               </Link>
               <div className="-mx-3 flex items-center">
                 {/* <a
@@ -74,7 +74,7 @@ const Footer = () => {
                     <path d="M16.0276 4.96777C15.6432 4.96777 15.318 5.29304 15.318 5.67745C15.318 6.06186 15.6432 6.38713 16.0276 6.38713C16.412 6.38713 16.7373 6.06186 16.7373 5.67745C16.7373 5.29304 16.4416 4.96777 16.0276 4.96777Z" />
                   </svg>
                 </a> */}
-                <a href="https://www.linkedin.com/company/103390058" className="px-3 text-gray-7 hover:text-white"><IconBrandLinkedin stroke={2} /></a>  
+                <a href="https://www.linkedin.com/company/103390058" className="px-3 text-gray-7 hover:text-white"><IconBrandLinkedin stroke={2} /></a>
               </div>
             </div>
           </div>
@@ -82,7 +82,7 @@ const Footer = () => {
             className={`${styles.copyContainer} flex w-full items-center justify-end px-4 max-sm:justify-center sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2`}
           >
             <p className="text-right text-xs text-white">
-              ©2024 NoteDoctorAI. All Rights Reserved
+              ©2024 NoteDoctor.AI. All Rights Reserved
             </p>
           </div>
         </div>

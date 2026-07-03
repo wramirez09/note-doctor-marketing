@@ -6,19 +6,19 @@ import { StructuredData } from "@/components/StructuredData";
 
 export const metadata: Metadata = {
   title:
-    "Contact NoteDoctorAi | Get in Touch for Support & Partnerships",
+    "Contact NoteDoctor.AI | Get in Touch for Support & Partnerships",
   description:
-    "Reach out to the NoteDoctorAi team for support, media inquiries, or partnership opportunities. We’re here to help you explore AI-driven health insights.",
+    "Reach out to the NoteDoctor.AI team for support, media inquiries, or partnership opportunities. We’re here to help you explore AI-driven health insights.",
   openGraph: {
     type: "website",
-    url: "https://NoteDoctorAi/contact",
+    url: "https://NoteDoctor.AI/contact",
     title:
-      "Contact NoteDoctorAi | Get in Touch for Support & Partnerships",
+      "Contact NoteDoctor.AI | Get in Touch for Support & Partnerships",
     description:
-      "Reach out to the NoteDoctorAi team for support, media inquiries, or partnership opportunities. We’re here to help you explore AI-driven health insights.",
+      "Reach out to the NoteDoctor.AI team for support, media inquiries, or partnership opportunities. We’re here to help you explore AI-driven health insights.",
     images: [
       {
-        url: "https://NoteDoctorAi/opengraph-image.jpg",
+        url: "https://NoteDoctor.AI/opengraph-image.jpg",
         width: 1200,
         height: 630,
       },
@@ -27,10 +27,10 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Contact NoteDoctorAi | Get in Touch for Support & Partnerships",
+      "Contact NoteDoctor.AI | Get in Touch for Support & Partnerships",
     description:
-      "Reach out to the NoteDoctorAi team for support, media inquiries, or partnership opportunities. We’re here to help you explore AI-driven health insights.",
-    images: ["https://NoteDoctorAi/opengraph-image.jpg"],
+      "Reach out to the NoteDoctor.AI team for support, media inquiries, or partnership opportunities. We’re here to help you explore AI-driven health insights.",
+    images: ["https://NoteDoctor.AI/opengraph-image.jpg"],
   },
 };
 

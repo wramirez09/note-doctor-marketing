@@ -24,7 +24,7 @@ export function CTASection({ title, body, onClick }: CTASectionProps) {
               className={` button-primary ml-0 max-xs:w-full`}
               size="md"
               component="a"
-              href="/how-it-works"
+              href="/#how"
             >
               Learn More
             </Button>

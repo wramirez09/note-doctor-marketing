@@ -7,12 +7,12 @@ import NotFound from "@/components/NotFound";
 //   description: "404 Page | Play SaaS Starter Kit and Boilerplate for Next.js",
 //   openGraph: {
 //     type: "website",
-//     url: "https://NoteDoctorAi/error",
+//     url: "https://NoteDoctor.AI/error",
 //     title: "404 Page | Play SaaS Starter Kit and Boilerplate for Next.js",
 //     description: "404 Page | Play SaaS Starter Kit and Boilerplate for Next.js",
 //     images: [
 //       {
-//         url: "https://NoteDoctorAi/opengraph-image.jpg",
+//         url: "https://NoteDoctor.AI/opengraph-image.jpg",
 //         width: 1200,
 //         height: 630,
 //       },
@@ -22,7 +22,7 @@ import NotFound from "@/components/NotFound";
 //     card: "summary_large_image",
 //     title: "404 Page | Play SaaS Starter Kit and Boilerplate for Next.js",
 //     description: "404 Page | Play SaaS Starter Kit and Boilerplate for Next.js",
-//     images: ["https://NoteDoctorAi/opengraph-image.jpg"],
+//     images: ["https://NoteDoctor.AI/opengraph-image.jpg"],
 //   },
 // };
 const ErrorPage = () => {

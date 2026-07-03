@@ -84,13 +84,13 @@ const mockdata = [
   //   icon: IconNumber5,
   //   title: "Export with Ease",
   //   description:
-  //     "Once the coding masterpiece is complete, NoteDoctorAI offers seamless export capabilities in PDF or Word format.. Share your findings with ease, whether it's for collaboration, review, or presentation purposes.",
+  //     "Once the coding masterpiece is complete, NoteDoctor.AI offers seamless export capabilities in PDF or Word format.. Share your findings with ease, whether it's for collaboration, review, or presentation purposes.",
   // },
   // {
   //   icon: IconNumber6,
   //   title: "Experience the Magic",
   //   description:
-  //     "Embark on your coding journey with NoteDoctorAI and unlock the full potential of your coding workflow. Say goodbye to complexity and hello to seamless efficiency, accuracy, and productivity.",
+  //     "Embark on your coding journey with NoteDoctor.AI and unlock the full potential of your coding workflow. Say goodbye to complexity and hello to seamless efficiency, accuracy, and productivity.",
   // },
 ];
 

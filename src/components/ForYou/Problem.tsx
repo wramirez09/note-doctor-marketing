@@ -106,7 +106,7 @@ export default function Problem() {
 
       <section className="py-20 px-6 bg-[#0f1522]">
         <div className="max-w-[1100px] mx-auto">
-          <p className="text-xs font-semibold tracking-[.12em] uppercase text-blue-400 mb-3.5">How NoteDoctorAi Helps</p>
+          <p className="text-xs font-semibold tracking-[.12em] uppercase text-blue-400 mb-3.5">How NoteDoctor.AI Helps</p>
           <h2 className="text-[clamp(26px,3vw,42px)] font-extrabold tracking-[-0.025em] leading-[1.12] mb-3">Turning the System in Your Favor</h2>
           <p className="text-base leading-[1.65] text-white/50 max-w-[540px]">We give providers the tools to navigate prior authorization the right way — the first time.</p>
 

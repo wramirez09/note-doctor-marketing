@@ -75,7 +75,7 @@ export default function FAQ() {
             Frequently Asked Questions
           </h2>
           <p className="text-[15px] leading-[1.65]" style={{ color: "var(--muted)" }}>
-            Everything you need to know about prior authorization screening with NoteDoctorAi.
+            Everything you need to know about prior authorization screening with NoteDoctor.AI.
           </p>
         </div>
 

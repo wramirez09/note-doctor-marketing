@@ -39,7 +39,7 @@ export default function DemoVideo({ publicId, cloudName }: DemoVideoProps) {
         aiHighlightsGraph: true,
         hdr: true,
         controls: true,
-        title: "NoteDoctorAi",
+        title: "NoteDoctor.AI",
         posterOptions: {
           url: `https://res.cloudinary.com/${cloudName}/video/upload/f_jpg,so_25p/${publicId}`,
         },

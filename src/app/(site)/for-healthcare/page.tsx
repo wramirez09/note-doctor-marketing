@@ -6,19 +6,19 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "AI Clinical Insights for Physicians | NoteDoctorAi for Physicians",
+    "AI Clinical Insights for Physicians | NoteDoctor.AI for Physicians",
   description:
-    "Empower your practice with NoteDoctorAi: analyze patient records, discover relevant clinical trials, streamline diagnosis support, and enhance evidence-based care. Trusted, secure, practitioner-focused.",
+    "Empower your practice with NoteDoctor.AI: analyze patient records, discover relevant clinical trials, streamline diagnosis support, and enhance evidence-based care. Trusted, secure, practitioner-focused.",
   openGraph: {
     type: "website",
-    url: "https://NoteDoctorAi/for-healthcare",
+    url: "https://NoteDoctor.AI/for-healthcare",
     title:
-      "AI Clinical Insights for Physicians | NoteDoctorAi for Physicians",
+      "AI Clinical Insights for Physicians | NoteDoctor.AI for Physicians",
     description:
-      "Empower your practice with NoteDoctorAi: analyze patient records, discover relevant clinical trials, streamline diagnosis support, and enhance evidence-based care. Trusted, secure, practitioner-focused.",
+      "Empower your practice with NoteDoctor.AI: analyze patient records, discover relevant clinical trials, streamline diagnosis support, and enhance evidence-based care. Trusted, secure, practitioner-focused.",
     images: [
       {
-        url: "https://NoteDoctorAi/opengraph-image.jpg",
+        url: "https://NoteDoctor.AI/opengraph-image.jpg",
         width: 1200,
         height: 630,
       },
@@ -27,10 +27,10 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "How NoteDoctorAI Works | AI-Driven Medical Coding for Healthcare Efficiency",
+      "How NoteDoctor.AI Works | AI-Driven Medical Coding for Healthcare Efficiency",
     description:
-      "Discover how NoteDoctorAI's advanced AI technology revolutionizes medical coding. Learn how our solutions drive efficiency, accuracy, and profitability for healthcare organizations globally.",
-    images: ["https://NoteDoctorAi/opengraph-image.jpg"],
+      "Discover how NoteDoctor.AI's advanced AI technology revolutionizes medical coding. Learn how our solutions drive efficiency, accuracy, and profitability for healthcare organizations globally.",
+    images: ["https://NoteDoctor.AI/opengraph-image.jpg"],
   },
 };
 

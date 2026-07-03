@@ -85,7 +85,7 @@ export function AboutFeatures() {
     <section className="bgAlt container mt-12 lg:px-[60px]">
       <Group justify="center">
         <Badge variant="filled" size="lg">
-          NoteDoctorAI
+          NoteDoctor.AI
         </Badge>
       </Group>
 

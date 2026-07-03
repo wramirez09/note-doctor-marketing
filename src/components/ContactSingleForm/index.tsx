@@ -27,7 +27,7 @@ const Contact = () => {
 
     try {
       const response = await fetch(
-        "https://formsubmit.co/ajax/sales@NoteDoctorAi",
+        "https://formsubmit.co/ajax/sales@NoteDoctor.AI",
         {
           method: "POST",
           headers: {
@@ -92,7 +92,7 @@ const Contact = () => {
                       Our Email
                     </h3>
                     <p className="text-base text-body-color dark:text-dark-6">
-                      Sales@NoteDoctorAI
+                      Sales@NoteDoctor.AI
                     </p>
                   </div>
                 </div>
@@ -112,7 +112,7 @@ const Contact = () => {
                       How Can We Help?
                     </h3>
                     <p className="text-base text-body-color dark:text-dark-6">
-                      Sales@NoteDoctorAI
+                      Sales@NoteDoctor.AI
                     </p> */}
                     {/* <p className="mt-1 text-base text-body-color dark:text-dark-6">
                       contact@yourdomain.com

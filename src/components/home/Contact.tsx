@@ -24,7 +24,7 @@ export default function Contact() {
     setIsLoading(true);
 
     try {
-      const response = await fetch("https://formsubmit.co/ajax/sales@NoteDoctorAi", {
+      const response = await fetch("https://formsubmit.co/ajax/sales@NoteDoctor.AI", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
@@ -71,7 +71,7 @@ export default function Contact() {
               Ready to Start Delivering Care Faster?
             </h2>
             <p className="text-[15px] leading-[1.65] mb-8" style={{ color: "var(--muted)" }}>
-              Tell us about your practice or health system and we&apos;ll show you how NoteDoctorAi fits your workflow.
+              Tell us about your practice or health system and we&apos;ll show you how NoteDoctor.AI fits your workflow.
             </p>
             <ul className="flex flex-col gap-3">
               {trustPoints.map((point) => (

@@ -1,4 +1,4 @@
-# NoteDoctorAi — Real Content & Conversion Infrastructure
+# NoteDoctor.AI — Real Content & Conversion Infrastructure
 
 **Use:** Paste the prompt below into Claude Code while in `/Users/williamramirez/repos/note-doctor-marketing` (on a fresh branch off `dev`).
 
@@ -78,12 +78,12 @@ Report:
    `src/app/(site)/request-demo/page.tsx` — what's shippable, what's stub.
 
 5. Existing form-submit pattern: search for `fetch(`, `nodemailer`,
-   `Resend`, `Loops`, `mailto:`, `app.NoteDoctorAi/api`. Where do
+   `Resend`, `Loops`, `mailto:`, `app.NoteDoctor.AI/api`. Where do
    forms post today? Is there a centralized lead-capture endpoint?
 
-6. Brand string usage: count occurrences of `NoteDoctorAi` vs
-   `NoteDoctorAi` vs `NoteDoctorAi` across the repo. Identify which
-   is canonical (per `src/app/layout.tsx` it should be `NoteDoctorAi`).
+6. Brand string usage: count occurrences of `NoteDoctor.AI` vs
+   `NoteDoctor.AI` vs `NoteDoctor.AI` across the repo. Identify which
+   is canonical (per `src/app/layout.tsx` it should be `NoteDoctor.AI`).
 
 7. Confirm whether a Calendly / Chili Piper / SavvyCal / Cal.com link
    exists anywhere — search for `calendly`, `chilipiper`, `savvycal`,
@@ -277,7 +277,7 @@ Add this comment hardcoded at the top of the template:
     the contact email for low-intent inquiries).
 
   - **Build a real `/request-demo` page.** Currently thin. New layout:
-    - Hero: "See NoteDoctorAi screen a prior auth in 20 minutes"
+    - Hero: "See NoteDoctor.AI screen a prior auth in 20 minutes"
     - Subhead: real value prop ("Bring a denial or a workflow that's
       eating your team — we'll show you how risk gets flagged before
       submission")
@@ -355,7 +355,7 @@ Edit `src/app/(site)/security/page.tsx`:
 ### 2f. Brand consistency pass
 
 Search-and-replace across the codebase: any user-facing string
-containing `NoteDoctorAi` or `NoteDoctorAi` becomes `NoteDoctorAi`.
+containing `NoteDoctor.AI` or `NoteDoctor.AI` becomes `NoteDoctor.AI`.
 Do NOT change identifiers, package names, URLs, env var names, or
 git history. Only user-visible copy in JSX/MDX/strings.
 
@@ -365,9 +365,9 @@ Confirm before mass-replace by reporting count and sample.
 
 In `src/app/layout.tsx`, update the title template so the homepage
 title doesn't double up. Current produces:
-  "NoteDoctorAi — AI-Powered Prior Authorization Screening | NoteDoctorAi"
+  "NoteDoctor.AI — AI-Powered Prior Authorization Screening | NoteDoctor.AI"
 
-Better: change `title.template` to `"%s — NoteDoctorAi"` and on
+Better: change `title.template` to `"%s — NoteDoctor.AI"` and on
 each page set the title without the brand suffix. The homepage's
 own `metadata.title` should be the full brand+tagline string and
 should NOT pass through the template (use `title: { absolute: '...' }`
@@ -407,7 +407,7 @@ Inputs (defaults shown):
   - Practice size (Solo / 2-10 / 11-50 / 50+)
 
 Live output:
-  - Hours/month spent on PAs (current vs. with NoteDoctorAi)
+  - Hours/month spent on PAs (current vs. with NoteDoctor.AI)
   - $/month staff cost (current vs. with)
   - $/month revenue recovered from denial-rate reduction
   - Total estimated annual impact (hero number)
@@ -533,7 +533,7 @@ markers must be preserved or expanded.
 **headline:** From days to hours: how a Midwest cardiology practice
 got prior-auth out of the way of patient care.
 **subhead:** Cardiac imaging and rhythm-management procedures sit at
-the top of every payer's prior-auth list. NoteDoctorAi cut this
+the top of every payer's prior-auth list. NoteDoctor.AI cut this
 practice's average turnaround by ~78% by flagging documentation
 gaps before submission.
 
@@ -564,9 +564,9 @@ gaps before submission.
 > before they hit submit.
 
 **Solution (heading: "What changed"):**
-> The practice rolled out NoteDoctorAi as a screening layer
+> The practice rolled out NoteDoctor.AI as a screening layer
 > ahead of submission, with no EHR integration project required.
-> Coordinators paste or push the clinical note into NoteDoctorAi
+> Coordinators paste or push the clinical note into NoteDoctor.AI
 > alongside the procedure code. The platform identifies the
 > applicable payer policy or third-party guideline (MCG,
 > InterQual, NCCN, NCDs/LCDs), compares the documentation
@@ -615,7 +615,7 @@ gaps before submission.
   - { label: "Implementation time", before: "—", after: "Under 1 day" }
 
 **quote (only with TODOs):**
-  - text: "Before NoteDoctorAi, our coordinators spent most of
+  - text: "Before NoteDoctor.AI, our coordinators spent most of
     their day fighting denials we could have prevented at
     intake. Now we catch the gap before submission, not three
     days later."
@@ -639,7 +639,7 @@ gaps before submission.
 **headline:** From a 19% denial rate to under 4% — in one quarter.
 **subhead:** Orthopedic surgery and advanced imaging are denial
 hotspots because conservative-therapy and imaging-history
-documentation rarely match payer language exactly. NoteDoctorAi
+documentation rarely match payer language exactly. NoteDoctor.AI
 catches the language mismatch at intake, not after.
 
 **Challenge (heading: "The challenge"):**
@@ -665,14 +665,14 @@ catches the language mismatch at intake, not after.
 > entirely.
 
 **Solution (heading: "What changed"):**
-> NoteDoctorAi was rolled out across the orthopedic group as
+> NoteDoctor.AI was rolled out across the orthopedic group as
 > a pre-submission screen on every PA request. Each case is
 > mapped to the relevant payer policy or third-party guideline
 > (MCG, InterQual, NCCN where applicable), and the platform
 > reads the chart against the criteria.
 >
 > The flagging is specific. For a lumbar spine MRI request,
-> NoteDoctorAi checks whether conservative therapy duration
+> NoteDoctor.AI checks whether conservative therapy duration
 > is documented (often required to be ≥6 weeks), whether
 > neurological exam findings are present, whether prior
 > imaging history is in the chart, and whether the diagnosis
@@ -710,7 +710,7 @@ catches the language mismatch at intake, not after.
 
 **quote (only with TODOs):**
   - text: "We weren't documenting the wrong things. We were
-    documenting them in the wrong language. NoteDoctorAi
+    documenting them in the wrong language. NoteDoctor.AI
     showed us the gap before the payer did."
     // TODO(verify): exact quote and approval to publish
   - author: "Director of Revenue Cycle"
@@ -733,7 +733,7 @@ across 80+ clinics
 screening without scaling staff.
 **subhead:** Health systems don't fail at prior auth because of
 a single bad workflow. They fail because every clinic has its
-own. NoteDoctorAi gave a regional system one screening layer
+own. NoteDoctor.AI gave a regional system one screening layer
 across all of them.
 
 **Challenge (heading: "The challenge"):**
@@ -757,7 +757,7 @@ across all of them.
 > the head of the senior coordinator at each clinic.
 
 **Solution (heading: "What changed"):**
-> The network deployed NoteDoctorAi as a network-wide
+> The network deployed NoteDoctor.AI as a network-wide
 > pre-submission screening layer — same workflow at every
 > clinic, regardless of specialty. Coordinators across all
 > 80+ sites now use the same screening interface,
@@ -793,7 +793,7 @@ across all of them.
 > // TODO(verify): exact aggregate first-pass and turnaround metrics
 >
 > The change-management approach turned out to be simpler
-> than the network feared. Because NoteDoctorAi sits
+> than the network feared. Because NoteDoctor.AI sits
 > ahead of the existing submission workflow rather than
 > replacing it, coordinators kept their EHR, kept their
 > payer portals, and added a single screening step to
@@ -811,7 +811,7 @@ across all of them.
 **quote (only with TODOs):**
   - text: "We didn't need to replace anything. We needed
     a single screening layer across 80 clinics, and that's
-    exactly what NoteDoctorAi gave us."
+    exactly what NoteDoctor.AI gave us."
     // TODO(verify): exact quote and approval to publish
   - author: "VP, Revenue Cycle"
     // TODO(verify): name and approval to attribute
@@ -833,7 +833,7 @@ across all of them.
 > a credible and capable option.
 > // TODO(verify): Cohere Health public positioning, accessed [date]
 >
-> NoteDoctorAi is built for the other side of that
+> NoteDoctor.AI is built for the other side of that
 > conversation — the providers submitting the requests.
 > If you're a practice or health system trying to improve
 > the documentation that goes into a PA before it ever
@@ -851,7 +851,7 @@ across all of them.
 > Anterior is a credible option.
 > // TODO(verify): Anterior public positioning, accessed [date]
 >
-> NoteDoctorAi is designed for practices that want to be
+> NoteDoctor.AI is designed for practices that want to be
 > running tomorrow with the screening their staff actually
 > uses today — pasted notes, PDFs pulled from the EHR,
 > light setup, transparent per-call pricing. That's a
@@ -867,12 +867,12 @@ across all of them.
 > contracts, one support relationship.
 > // TODO(verify): Availity AuthPal public positioning, accessed [date]
 >
-> NoteDoctorAi does one thing: pre-submission screening
+> NoteDoctor.AI does one thing: pre-submission screening
 > against payer criteria. We sit ahead of whatever
 > submission path you already use — Availity, payer
 > portals, clearinghouse — and tell you whether the
 > documentation will hold up before you send it. If
-> AuthPal is your submission tool today, NoteDoctorAi
+> AuthPal is your submission tool today, NoteDoctor.AI
 > is the screening layer that runs before AuthPal.
 
 ---
@@ -891,7 +891,7 @@ Begin with Phase 1.
 5. Phase 2 will produce one PR with multiple commits.
 6. After merge to `dev` and Cloudflare Pages deploys it, verify by visiting the new preview URL and walking the case studies, comparison pages, and ROI calculator.
 7. Then merge `dev` → `main` to ship to production.
-8. Re-run `/market audit https://NoteDoctorAi/` for the post-content score.
+8. Re-run `/market audit https://NoteDoctor.AI/` for the post-content score.
 
 ## TODO categories the prompt will leave behind
 

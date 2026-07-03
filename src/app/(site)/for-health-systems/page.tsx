@@ -8,19 +8,19 @@ import { StructuredData } from "@/components/StructuredData";
 
 export const metadata: Metadata = {
   title:
-    "AI Platform for Health Systems & Hospitals | NoteDoctorAi",
+    "AI Platform for Health Systems & Hospitals | NoteDoctor.AI",
   description:
-    "Support entire health systems with NoteDoctorAi — AI-powered patient record analytics, trial matching, population insights, operational intelligence & provider tools. Secure, scalable, institution-grade.",
+    "Support entire health systems with NoteDoctor.AI — AI-powered patient record analytics, trial matching, population insights, operational intelligence & provider tools. Secure, scalable, institution-grade.",
   openGraph: {
     type: "website",
-    url: "https://NoteDoctorAi/about",
+    url: "https://NoteDoctor.AI/about",
     title:
-      "AI Platform for Health Systems & Hospitals | NoteDoctorAi",
+      "AI Platform for Health Systems & Hospitals | NoteDoctor.AI",
     description:
-      "Support entire health systems with NoteDoctorAi — AI-powered patient record analytics, trial matching, population insights, operational intelligence & provider tools. Secure, scalable, institution-grade.",
+      "Support entire health systems with NoteDoctor.AI — AI-powered patient record analytics, trial matching, population insights, operational intelligence & provider tools. Secure, scalable, institution-grade.",
     images: [
       {
-        url: "https://NoteDoctorAi/opengraph-image.jpg",
+        url: "https://NoteDoctor.AI/opengraph-image.jpg",
         width: 1200,
         height: 630,
       },
@@ -29,10 +29,10 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "About NoteDoctorAI | Transforming Healthcare with AI-Powered Innovation",
+      "About NoteDoctor.AI | Transforming Healthcare with AI-Powered Innovation",
     description:
-      "Learn about NoteDoctorAI, a pioneer in AI-driven healthcare solutions. Our mission is to revolutionize medical coding with cutting-edge technology, enhancing accuracy, efficiency, and profitability for healthcare organizations globally.",
-    images: ["https://NoteDoctorAi/opengraph-image.jpg"],
+      "Learn about NoteDoctor.AI, a pioneer in AI-driven healthcare solutions. Our mission is to revolutionize medical coding with cutting-edge technology, enhancing accuracy, efficiency, and profitability for healthcare organizations globally.",
+    images: ["https://NoteDoctor.AI/opengraph-image.jpg"],
   },
 };
 

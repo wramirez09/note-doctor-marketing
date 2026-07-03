@@ -89,7 +89,7 @@ export function Titledfeatures() {
         </cite>
       </div>
 
-      <Title className={classes.title}>How NoteDoctorAi Helps</Title>
+      <Title className={classes.title}>How NoteDoctor.AI Helps</Title>
 
       <SimpleGrid
         mt={60}
