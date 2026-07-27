@@ -27,7 +27,7 @@ Prior authorization wastes valuable time, burdens physicians, and puts patients 
 | Language | TypeScript 5 |
 | Styling | Tailwind CSS 3, Mantine 7, Framer Motion |
 | Icons | FontAwesome 6, Tabler Icons |
-| Auth | NextAuth.js 4 + Prisma |
+| Auth | NextAuth.js 4
 | Payments | Stripe |
 | Email | Nodemailer |
 | Blog | Markdown + gray-matter + Remark |
@@ -116,8 +116,7 @@ src/
 └── styles/
 markdown/
 └── blogs/                    # Blog posts (Markdown)
-prisma/
-└── schema.prisma             # DB schema (auth models)
+
 ```
 
 ---
