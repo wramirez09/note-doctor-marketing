@@ -55,7 +55,7 @@ export default function ApiBanner() {
         subscription.
       </span>
       <span className="sm:hidden">
-        <b className="font-bold">The NoteDoctor.AI API is live</b>
+        <b className="font-bold">The NoteDoctor.AI API is now live</b>
       </span>
 
       <Link
