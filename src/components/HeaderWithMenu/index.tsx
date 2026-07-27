@@ -24,7 +24,11 @@ export function HeaderWithMenu() {
 
   return (
     <Box>
-      <header className="ud-header fixed left-0 top-0 z-[999] flex w-full items-center bg-[#050508] border-b border-white/10">
+      {/* top offset tracks the sitewide ApiBanner, which sits above the header */}
+      <header
+        className="ud-header fixed left-0 z-[999] flex w-full items-center bg-[#050508] border-b border-white/10"
+        style={{ top: "var(--api-banner-h, 0px)" }}
+      >
         <div className="container px-6 lg:px-12">
           <div className="container relative flex items-center max-sm:p-0">
             <Group

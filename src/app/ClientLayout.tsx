@@ -1,5 +1,6 @@
 "use client";
 
+import ApiBanner from "@/components/ApiBanner";
 import PreLoader from "@/components/Common/PreLoader";
 import Footer from "@/components/home/Footer";
 import { HeaderWithMenu } from "@/components/HeaderWithMenu";
@@ -25,8 +26,10 @@ export default function ClientLayout({
   ) : (
     <ThemeProvider attribute="class" enableSystem={false} defaultTheme="dark">
       <MantineProvider theme={theme} forceColorScheme="dark">
+        <ApiBanner />
         <HeaderWithMenu />
-        {children}
+        {/* Shifts page content down by the banner's height while it is showing. */}
+        <div style={{ paddingTop: "var(--api-banner-h, 0px)" }}>{children}</div>
         <Footer />
         <ScrollToTop />
       </MantineProvider>

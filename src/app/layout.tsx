@@ -38,7 +38,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html suppressHydrationWarning={true} className="!scroll-smooth !scroll-pt-24" lang="en">
+    // scroll-padding-top lives in index.css so it can track the ApiBanner height
+    <html suppressHydrationWarning={true} className="!scroll-smooth" lang="en">
       <head>
         <ColorSchemeScript />
         {isProduction && (

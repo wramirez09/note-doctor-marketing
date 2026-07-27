@@ -18,6 +18,12 @@
   --faint:     rgba(240, 244, 255, 0.25);
 }
 
+/* Jump links land below the fixed header. --api-banner-h is set by ApiBanner
+   while the sitewide announcement is showing, which pushes the header down. */
+html {
+  scroll-padding-top: calc(6rem + var(--api-banner-h, 0px));
+}
+
 body {
   font-family: "Inter", sans-serif;
   background-color: var(--bg) !important;

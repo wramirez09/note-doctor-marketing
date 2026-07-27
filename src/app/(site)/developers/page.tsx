@@ -1,11 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-
-// Where the "Get an API key" buttons land. Keys are issued from the app
-// dashboard; login is the entry point until a deep link to key management exists.
-const API_KEYS_URL = "https://app.NoteDoctor.AI/auth/login";
-// TODO: repoint at the developer docs once they are published.
-const DOCS_URL = "/#contact";
+import { API_KEYS_URL, DOCS_URL } from "@/config/apiLaunch";
 
 export const metadata: Metadata = {
   title: "NoteDoctor.AI | Developer Platform — Screening API",
@@ -121,9 +116,9 @@ const apis = [
       </>
     ),
     endpoints: [
-      { verb: "POST", path: "/v1/agents/runs" },
-      { verb: "GET", path: "/v1/agents/runs/:id" },
-      { verb: "GET", path: "/v1/agents/runs/:id/events" },
+      { verb: "POST", endpoint: "/v1/agents/runs" },
+      { verb: "GET", endpoint: "/v1/agents/runs/:id" },
+      { verb: "GET", endpoint: "/v1/agents/runs/:id/events" },
     ],
   },
   {
@@ -132,9 +127,9 @@ const apis = [
     body: "Ask questions over a case in natural language and stream answers back — grounded in the note, the payer policy, and the run's findings.",
     icon: <path d="M21 12a8 8 0 0 1-8 8H8l-4 3v-5.5A8 8 0 0 1 13 4a8 8 0 0 1 8 8z" />,
     endpoints: [
-      { verb: "POST", path: "/v1/chat/completions" },
-      { verb: "GET", path: "/v1/chat/threads/:id" },
-      { verb: "POST", path: "/v1/chat/threads" },
+      { verb: "POST", endpoint: "/v1/chat/completions" },
+      { verb: "GET", endpoint: "/v1/chat/threads/:id" },
+      { verb: "POST", endpoint: "/v1/chat/threads" },
     ],
   },
 ];
@@ -316,7 +311,7 @@ export default function DevelopersPage() {
                 <div className="flex flex-col gap-1.5 mt-auto pt-1.5">
                   {api.endpoints.map((ep) => (
                     <div
-                      key={`${ep.verb} ${ep.path}`}
+                      key={`${ep.verb} ${ep.endpoint}`}
                       className="flex items-center gap-2.5 font-mono text-[12px] rounded-md border px-2.5 py-2"
                       style={{ background: "rgba(255,255,255,0.03)", borderColor: "var(--border)", color: "var(--text)" }}
                     >
@@ -326,7 +321,7 @@ export default function DevelopersPage() {
                       >
                         {ep.verb}
                       </span>
-                      {ep.path}
+                      {ep.endpoint}
                     </div>
                   ))}
                 </div>
