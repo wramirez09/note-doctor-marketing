@@ -75,6 +75,12 @@ export function HeaderWithMenu() {
                   Pricing
                 </div>
                 <div
+                  className={`${classes.link} ${isActiveLink("/developers") ? classes.activeLink : ""}`}
+                  onClick={() => router.push("/developers")}
+                >
+                  Developers
+                </div>
+                <div
                   className={`${classes.link}`}
                   onClick={() => router.push("/#contact")}
                 >
@@ -156,6 +162,15 @@ export function HeaderWithMenu() {
             }}
           >
             Pricing
+          </div>
+          <div
+            className={`${classes.link} ${isActiveLink("/developers") ? classes.activeLink : ""}`}
+            onClick={() => {
+              router.push("/developers");
+              closeDrawer();
+            }}
+          >
+            Developers
           </div>
           <div
             className={`${classes.link}`}
