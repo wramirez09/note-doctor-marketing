@@ -43,7 +43,7 @@ export default function ApiBanner() {
 
   return (
     <div
-      className="fixed left-0 top-0 z-[1000] flex w-full items-center justify-center gap-3.5 px-6 text-[14px] text-white flex-wrap"
+      className="hidden sm:flex fixed left-0 top-0 z-[1000] w-full items-center justify-center gap-3.5 px-6 text-[14px] text-white flex-wrap"
       style={{ height: BANNER_HEIGHT, background: "linear-gradient(90deg,#2f86d5,#238dd2 60%,#1c79b8)" }}
     >
       <span className="text-[10.5px] font-bold tracking-[.08em] uppercase rounded-full px-2.5 py-1" style={{ background: "rgba(255,255,255,0.2)" }}>
