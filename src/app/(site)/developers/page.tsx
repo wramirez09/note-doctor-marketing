@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { API_KEYS_URL, DOCS_URL } from "@/config/apiLaunch";
+import { API_KEYS_URL, DOCS_URL, MCP_ENDPOINT_URL, MCP_GUIDE_URL } from "@/config/apiLaunch";
 
 export const metadata: Metadata = {
   title: "NoteDoctor.AI | Developer Platform — Screening API",
   description:
-    "Send a case from your EHR or internal tools and get an authorization-readiness determination back over HTTPS, with scoped keys and a full sandbox. Included with your NoteDoctor.AI plan.",
+    "Send a case from your EHR or internal tools and get an authorization-readiness determination back over HTTPS, with scoped keys and a full sandbox. Connect Claude, Cursor or any MCP client to the same engine. Included with your NoteDoctor.AI plan.",
 };
 
 function CheckCircleIcon() {
@@ -209,6 +209,83 @@ const trust = [
   },
 ];
 
+/* ── MCP ──────────────────────────────────────────────────────────────────── */
+
+/**
+ * The tools the MCP server registers, grouped the way a reader cares about
+ * them rather than the way the code files are split. `scope` is the API-key
+ * scope each one requires — MCP reuses `agents` / `chat` rather than adding an
+ * `mcp` scope, so every key already issued works.
+ */
+const mcpTools = [
+  {
+    name: "run_prior_auth_screening",
+    scope: "agents",
+    body: "The whole determination in one call: is prior auth required, the criteria behind it, CPT/ICD-10 codes, documentation to gather, and the policies cited.",
+  },
+  {
+    name: "medicare_multi_search",
+    scope: "agents · chat",
+    body: "Search NCDs, LCDs and Local Coverage Articles together — the same corpora the agent researches.",
+  },
+  {
+    name: "commercial_guidelines_search",
+    scope: "agents · chat",
+    body: "Search commercial payer medical policy for the guideline that governs a service.",
+  },
+  {
+    name: "policy_content_extractor",
+    scope: "agents · chat",
+    body: "Pull the criteria text out of a payer policy document you already have a URL for.",
+  },
+  {
+    name: "whoami · usage",
+    scope: "no scope",
+    body: "Confirm which org, environment and scopes a key carries, and what it has spent this month.",
+  },
+];
+
+const mcpHighlights: React.ReactNode[] = [
+  <>
+    Remote server — one URL, no package to install or host
+  </>,
+  <>
+    Uses the API key you already have, with the same{" "}
+    <span className="font-mono">agents</span> / <span className="font-mono">chat</span> scopes
+  </>,
+  "A tool your key cannot use is never listed, so it can't be called and refused",
+  "Test keys work the same way, against the same sandbox",
+];
+
+function McpConnectSample() {
+  return (
+    <div
+      className="rounded-xl overflow-hidden border"
+      style={{ background: "rgba(0,0,0,0.4)", borderColor: "var(--border)", boxShadow: "0 24px 60px -30px rgba(0,0,0,0.7)" }}
+    >
+      <div className="flex items-center gap-2 px-3.5 py-2.5 border-b" style={{ background: "rgba(255,255,255,0.03)", borderColor: "var(--border)" }}>
+        <span className="font-mono text-[11.5px] px-2.5 py-1 rounded-md" style={{ background: "rgba(255,255,255,0.08)", color: "var(--text)" }}>
+          claude code
+        </span>
+        <span className="font-mono text-[11.5px] px-2.5 py-1 rounded-md" style={{ color: "var(--faint)" }}>
+          any mcp client
+        </span>
+      </div>
+      <pre className="m-0 p-[18px] font-mono text-[12.7px] leading-[1.75] overflow-x-auto tracking-[-0.01em]" style={{ color: "var(--text)" }}>
+<span style={{ color: C.c }}># Add the server once — it is remote, so there is nothing to install</span>{"\n"}
+claude mcp add --transport http <span style={{ color: C.k }}>notedoctor</span> \{"\n"}
+{"  "}{MCP_ENDPOINT_URL} \{"\n"}
+{"  "}--header <span style={{ color: C.s }}>&quot;Authorization: Bearer $ND_API_KEY&quot;</span>{"\n\n"}
+<span style={{ color: C.c }}># Then just ask, in whatever client you connected</span>{"\n"}
+<span style={{ color: C.p }}>&gt;</span> Does BCBS TX require prior auth for a lumbar MRI{"\n"}
+{"  "}on a patient with 6 weeks of failed conservative therapy?{"\n\n"}
+<span style={{ color: C.c }}># =&gt; run_prior_auth_screening → determination, criteria,</span>{"\n"}
+<span style={{ color: C.c }}>#    codes, documentation checklist, policies cited</span>
+      </pre>
+    </div>
+  );
+}
+
 /* ── Page ─────────────────────────────────────────────────────────────────── */
 
 export default function DevelopersPage() {
@@ -327,6 +404,98 @@ export default function DevelopersPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── MCP ── */}
+      <section className="px-6 py-20 border-y" style={{ background: "var(--bg2)", borderColor: "var(--border)" }} id="mcp">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="flex items-center gap-3 flex-wrap mb-3">
+            <p className="text-[12px] font-semibold tracking-[.12em] uppercase" style={{ color: "var(--blue-mid)" }}>
+              Model Context Protocol
+            </p>
+            <span
+              className="inline-flex items-center gap-1.5 text-[10px] font-bold tracking-[.06em] uppercase px-2.5 py-1 rounded-full"
+              style={{ color: "#4ade80", background: "rgba(74,222,128,0.12)" }}
+            >
+              <span className="w-[5px] h-[5px] rounded-full" style={{ background: "#4ade80" }} />
+              Available now
+            </span>
+          </div>
+
+          <h2 className="text-[clamp(26px,3vw,34px)] font-bold tracking-[-0.022em] mb-3">
+            Or skip the integration entirely
+          </h2>
+          <p className="text-[15.5px] leading-[1.65] max-w-[62ch]" style={{ color: "var(--muted)" }}>
+            The same engine is published as an MCP server, so Claude Code, Claude Desktop, Cursor and any other MCP
+            client can research coverage and run a full screening directly. Point your client at one URL with your
+            existing API key — there is no SDK, no package to install, and nothing to deploy.
+          </p>
+
+          <div className="grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-12 lg:gap-14 items-start mt-9">
+            <div>
+              <div className="grid grid-cols-1 gap-2.5">
+                {mcpTools.map((tool) => (
+                  <div
+                    key={tool.name}
+                    className="rounded-xl border px-4 py-3.5"
+                    style={{ background: "var(--bg-card)", borderColor: "var(--border)" }}
+                  >
+                    <div className="flex items-center gap-2.5 flex-wrap">
+                      <span className="font-mono text-[12.5px] font-semibold" style={{ color: "var(--text)" }}>
+                        {tool.name}
+                      </span>
+                      <span
+                        className="ml-auto font-mono text-[10px] font-semibold rounded-md px-1.5 py-0.5 whitespace-nowrap"
+                        style={{ color: "var(--blue-mid)", background: "var(--blue-dim)" }}
+                      >
+                        {tool.scope}
+                      </span>
+                    </div>
+                    <p className="text-[13.5px] leading-[1.6] mt-1.5" style={{ color: "var(--muted)" }}>
+                      {tool.body}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="flex flex-wrap gap-3 mt-7">
+                <Button href={MCP_GUIDE_URL}>How to leverage it</Button>
+                <Button href={API_KEYS_URL} variant="secondary">
+                  Get an API key
+                </Button>
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-4">
+              <McpConnectSample />
+
+              <ul className="flex flex-col gap-3.5 p-0 list-none">
+                {mcpHighlights.map((feat, i) => (
+                  <li key={i} className="flex gap-2.5 items-start text-[14.5px] leading-[1.55]" style={{ color: "var(--text)" }}>
+                    <span style={{ color: "var(--blue-mid)" }}>
+                      <CheckIcon />
+                    </span>
+                    <span>{feat}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div
+            className="flex gap-3 items-start rounded-lg border px-4 py-3.5 mt-8 text-[13.5px] leading-[1.6]"
+            style={{ background: "rgba(251,191,36,0.08)", borderColor: "rgba(251,191,36,0.25)", color: "#fbbf24" }}
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className="w-[17px] h-[17px] shrink-0 mt-0.5">
+              <path d="M12 9v4M12 17h.01" />
+              <path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" />
+            </svg>
+            <span>
+              Send clinical details only — no names, dates of birth or member IDs. A tool call travels into your MCP
+              client&apos;s model context, which is outside your BAA with us.
+            </span>
           </div>
         </div>
       </section>

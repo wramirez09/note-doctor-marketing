@@ -1,6 +1,7 @@
 "use client";
 
 import ApiAnnouncement from "@/components/home/ApiAnnouncement";
+import McpAnnouncement from "@/components/home/McpAnnouncement";
 import Hero from "@/components/home/Hero";
 import Problem from "@/components/home/Problem";
 import DemoVideo from "@/components/home/DemoVideo";
@@ -14,6 +15,7 @@ export default function HomePage() {
       <Hero />
       {/* Swap for <ApiCallout /> (components/home/ApiCallout) for the compact card treatment. */}
       <ApiAnnouncement />
+      <McpAnnouncement />
       <Problem />
       <DemoVideo cloudName="diyenxuol" publicId="Introvideo_tvoo2t" />
       <HowItHelps />

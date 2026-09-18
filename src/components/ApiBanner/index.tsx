@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { BANNER_DISMISS_KEY, DEVELOPERS_URL } from "@/config/apiLaunch";
+import { BANNER_DISMISS_KEY, MCP_GUIDE_URL } from "@/config/apiLaunch";
 
 const BANNER_HEIGHT = 44;
 
@@ -51,18 +51,18 @@ export default function ApiBanner() {
       </span>
 
       <span className="max-sm:hidden">
-        <b className="font-bold">The NoteDoctor.AI API is live</b> — screening and chat endpoints, included with your
-        subscription.
+        <b className="font-bold">NoteDoctor.AI now speaks MCP</b> — connect Claude, Cursor or any MCP client to the
+        screening engine.
       </span>
       <span className="sm:hidden">
-        <b className="font-bold">The NoteDoctor.AI API is now live</b>
+        <b className="font-bold">NoteDoctor.AI now speaks MCP</b>
       </span>
 
       <Link
-        href={DEVELOPERS_URL}
+        href={MCP_GUIDE_URL}
         className="inline-flex items-center gap-1.5 font-bold text-white underline underline-offset-[3px] whitespace-nowrap"
       >
-        Explore the API
+        See how
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5">
           <path d="M5 12h14M13 6l6 6-6 6" />
         </svg>
