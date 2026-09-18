@@ -21,11 +21,12 @@ export default function Hero() {
       </div>
 
       <h1 className="text-[clamp(40px,5.5vw,72px)] font-extrabold leading-[1.08] tracking-[-0.03em] max-w-[820px] mx-auto mb-6">
-        Cut the{" "}
         {/* Same gradient treatment and step as the blue below (Tailwind's
-            400 → 500), in red — so the two halves read as one device. */}
+            400 → 500), in red — so the two halves read as one device. The
+            whole clause carries it, so the ramp runs the length of the
+            sentence rather than restarting on two words. */}
         <span className="bg-gradient-to-br from-[#f87171] to-[#ef4444] bg-clip-text text-transparent">
-          Red Tape.
+          Cut the Red Tape.
         </span>{" "}
         <span className="bg-gradient-to-br from-[#60a5fa] to-[#3b82f6] bg-clip-text text-transparent">
           Deliver Care Without Delays.
