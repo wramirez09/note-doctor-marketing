@@ -17,9 +17,9 @@ function CheckCircleIcon() {
   );
 }
 
-function CheckIcon() {
+function CheckIcon({ className = "w-[17px] h-[17px] shrink-0 mt-0.5" }: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-[17px] h-[17px] shrink-0 mt-0.5">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
       <path d="M20 6 9 17l-5-5" />
     </svg>
   );
@@ -468,14 +468,27 @@ export default function DevelopersPage() {
               </div>
             </div>
 
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col">
               <McpConnectSample />
 
-              <ul className="flex flex-col gap-3.5 p-0 list-none">
+              {/* Set apart from the sample above it rather than stacked tight:
+                  these four lines are the argument, and the code is the proof. */}
+              <ul className="flex flex-col gap-4 p-0 mt-9 list-none">
                 {mcpHighlights.map((feat, i) => (
-                  <li key={i} className="flex gap-2.5 items-start text-[14.5px] leading-[1.55]" style={{ color: "var(--text)" }}>
-                    <span style={{ color: "var(--blue-mid)" }}>
-                      <CheckIcon />
+                  <li
+                    key={i}
+                    className="flex gap-3 items-start text-[15.5px] leading-[1.5] font-medium"
+                    style={{ color: "var(--text)" }}
+                  >
+                    <span
+                      className="w-[22px] h-[22px] rounded-full grid place-items-center shrink-0 mt-px border"
+                      style={{
+                        background: "var(--blue-dim)",
+                        borderColor: "rgba(59,130,246,0.3)",
+                        color: "var(--blue-mid)",
+                      }}
+                    >
+                      <CheckIcon className="w-[12px] h-[12px]" />
                     </span>
                     <span>{feat}</span>
                   </li>
