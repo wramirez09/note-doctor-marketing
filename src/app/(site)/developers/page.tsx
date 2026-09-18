@@ -501,7 +501,7 @@ export default function DevelopersPage() {
       </section>
 
       {/* ── Steps ── */}
-      <section className="px-6 pb-20">
+      <section className="px-6 pt-20 pb-20">
         <div className="max-w-[1100px] mx-auto">
           <p className="text-[12px] font-semibold tracking-[.12em] uppercase mb-3" style={{ color: "var(--blue-mid)" }}>
             How it works
