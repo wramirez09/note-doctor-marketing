@@ -6,13 +6,50 @@ import {
   Divider,
   Drawer,
   Group,
+  Menu,
   ScrollArea,
   rem,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
+import { DEVELOPERS_URL, MCP_GUIDE_URL } from "@/config/apiLaunch";
 import classes from "./index.module.css";
+
+/**
+ * The two developer surfaces. Both live under /developers, so the parent is a
+ * menu rather than a link — there is no "/developers overview" worth a third
+ * entry, and sending the parent somewhere the children don't cover would make
+ * the third click a surprise.
+ */
+const DEVELOPER_LINKS = [
+  {
+    href: DEVELOPERS_URL,
+    label: "API",
+    body: "REST endpoints, keys and scopes",
+  },
+  {
+    href: MCP_GUIDE_URL,
+    label: "MCP",
+    body: "Connect Claude, Cursor or any MCP client",
+  },
+];
+
+function ChevronIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="w-3 h-3 ml-1.5 shrink-0"
+    >
+      <path d="m6 9 6 6 6-6" />
+    </svg>
+  );
+}
 
 export function HeaderWithMenu() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
@@ -21,6 +58,8 @@ export function HeaderWithMenu() {
   const router = useRouter();
 
   const isActiveLink = (path: string) => pathUrl === path;
+  // Either developer page lights the parent up.
+  const isDeveloperSection = pathUrl?.startsWith(DEVELOPERS_URL) ?? false;
 
   return (
     <Box>
@@ -77,12 +116,49 @@ export function HeaderWithMenu() {
                 >
                   Pricing
                 </div>
-                <div
-                  className={`${classes.link} ${isActiveLink("/developers") ? classes.activeLink : ""}`}
-                  onClick={() => router.push("/developers")}
+                <Menu
+                  trigger="click-hover"
+                  openDelay={80}
+                  closeDelay={160}
+                  position="bottom"
+                  offset={0}
+                  withinPortal
+                  radius="md"
+                  styles={{
+                    dropdown: {
+                      background: "#0b1020",
+                      border: "1px solid rgba(255,255,255,0.12)",
+                      padding: 6,
+                    },
+                  }}
                 >
-                  Developers
-                </div>
+                  <Menu.Target>
+                    <div
+                      className={`${classes.link} ${isDeveloperSection ? classes.activeLink : ""}`}
+                    >
+                      Developers
+                      <ChevronIcon />
+                    </div>
+                  </Menu.Target>
+                  <Menu.Dropdown>
+                    {DEVELOPER_LINKS.map((item) => (
+                      <Menu.Item
+                        key={item.href}
+                        onClick={() => router.push(item.href)}
+                        styles={{
+                          item: {
+                            background: isActiveLink(item.href)
+                              ? "rgba(59,130,246,0.14)"
+                              : "transparent",
+                          },
+                        }}
+                      >
+                        <div className="text-[13.5px] font-semibold text-white">{item.label}</div>
+                        <div className="text-[12px] mt-0.5 text-white/55">{item.body}</div>
+                      </Menu.Item>
+                    ))}
+                  </Menu.Dropdown>
+                </Menu>
                 <div
                   className={`${classes.link}`}
                   onClick={() => router.push("/#contact")}
@@ -166,15 +242,25 @@ export function HeaderWithMenu() {
           >
             Pricing
           </div>
+          {/* No dropdown in the drawer: there is room to just show both, and a
+              tap-to-expand would hide the MCP page behind an extra tap. */}
           <div
-            className={`${classes.link} ${isActiveLink("/developers") ? classes.activeLink : ""}`}
-            onClick={() => {
-              router.push("/developers");
-              closeDrawer();
-            }}
+            className={`${classes.link} ${isDeveloperSection ? classes.activeLink : ""} !pb-1 !cursor-default`}
           >
             Developers
           </div>
+          {DEVELOPER_LINKS.map((item) => (
+            <div
+              key={item.href}
+              className={`${classes.link} ${isActiveLink(item.href) ? classes.activeLink : ""} !pl-8 !py-2 !text-[13px]`}
+              onClick={() => {
+                router.push(item.href);
+                closeDrawer();
+              }}
+            >
+              {item.label}
+            </div>
+          ))}
           <div
             className={`${classes.link}`}
             onClick={() => {
