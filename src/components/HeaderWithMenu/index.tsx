@@ -63,9 +63,13 @@ export function HeaderWithMenu() {
 
   return (
     <Box>
-      {/* top offset tracks the sitewide ApiBanner, which sits above the header */}
+      {/* Top offset tracks the ApiBanner, which sits above the header and
+          publishes its height as --api-banner-h. Read as a variable rather
+          than hardcoded, so the header closes the gap on every page the
+          banner does not render on. */}
       <header
-        className="ud-header fixed left-0 z-[999] flex w-full items-center bg-[#050508] border-b border-white/10 lg:top-12"
+        className="ud-header fixed left-0 z-[999] flex w-full items-center bg-[#050508] border-b border-white/10"
+        style={{ top: "var(--api-banner-h, 0px)" }}
       >
         <div className="container px-6 lg:px-12">
           <div className="container relative flex items-center max-sm:p-0">

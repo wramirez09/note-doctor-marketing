@@ -1,33 +1,67 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { BANNER_DISMISS_KEY, MCP_GUIDE_URL } from "@/config/apiLaunch";
 
 const BANNER_HEIGHT = 44;
 
+/** Matches the `hidden sm:flex` below — the bar does not render under 640px. */
+const SM_QUERY = "(min-width: 640px)";
+
 /**
- * Slim sitewide announcement bar. Sits above the fixed site header and
+ * Slim announcement bar on the home page. Sits above the fixed site header and
  * publishes its own height as `--api-banner-h` so HeaderWithMenu can offset
  * itself and page content can shift down by the same amount.
+ *
+ * Home only: it advertises one thing, and a reader who has already navigated
+ * into the site has either taken it or not. The variable is what makes that
+ * safe to do — every consumer of the offset reads it, so the bar disappearing
+ * closes the space it occupied rather than leaving a gap.
  */
 export default function ApiBanner() {
-  // Start hidden: localStorage is only readable after mount, and rendering the
-  // bar before that check would flash it at users who already dismissed it.
+  // Start hidden: localStorage and matchMedia are only readable after mount,
+  // and rendering the bar before that check would flash it at users who
+  // already dismissed it.
   const [visible, setVisible] = useState(false);
+  const pathname = usePathname();
+  const onHome = pathname === "/";
 
   useEffect(() => {
+    const setOffset = (px: number) =>
+      document.documentElement.style.setProperty("--api-banner-h", `${px}px`);
+
+    if (!onHome) {
+      setVisible(false);
+      setOffset(0);
+      return;
+    }
+
     let dismissed = false;
     try {
       dismissed = window.localStorage.getItem(BANNER_DISMISS_KEY) === "1";
     } catch {
       // Private mode / storage disabled — show the bar, just don't remember.
     }
-    if (!dismissed) {
-      setVisible(true);
-      document.documentElement.style.setProperty("--api-banner-h", `${BANNER_HEIGHT}px`);
+    if (dismissed) {
+      setOffset(0);
+      return;
     }
-  }, []);
+
+    setVisible(true);
+
+    // The offset has to track the same breakpoint the bar renders at, or a
+    // phone reserves 44px for a bar that is not on screen.
+    const mq = window.matchMedia(SM_QUERY);
+    const sync = () => setOffset(mq.matches ? BANNER_HEIGHT : 0);
+    sync();
+    mq.addEventListener("change", sync);
+    return () => {
+      mq.removeEventListener("change", sync);
+      setOffset(0);
+    };
+  }, [onHome]);
 
   const dismiss = () => {
     setVisible(false);
