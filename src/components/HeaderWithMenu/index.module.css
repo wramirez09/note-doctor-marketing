@@ -7,7 +7,7 @@
   padding-top: 1rem;
   padding-bottom: 1rem;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgb(var(--ink-rgb) / 0.8);
   font-weight: 500;
   font-size: var(--mantine-font-size-sm);
 
@@ -19,7 +19,7 @@
 
 .link:hover {
   cursor: pointer;
-  color: #ffffff;
+  color: var(--text);
 }
 
 .dropdownFooter {
@@ -34,15 +34,15 @@
 }
 
 .activeLink {
-  color: #ffffff;
+  color: var(--text);
 }
 
 .drawerBody {
-  background-color: rgb(17 25 40);
+  background-color: var(--bg2);
 }
 
 .drawerHeader {
-  background-color: rgb(17 25 40) !important;
+  background-color: var(--bg2) !important;
 }
 
 .group {

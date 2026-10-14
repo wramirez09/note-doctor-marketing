@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import Script from "next/script";
+import { Reveal } from "@/components/motion/Reveal";
 
 type DemoVideoProps = {
   publicId: string;
@@ -81,35 +82,41 @@ export default function DemoVideo({ publicId, cloudName }: DemoVideoProps) {
         />
 
         <div className="relative max-w-[1100px] mx-auto text-center">
-          <div
-            className="inline-flex items-center gap-2 text-[12px] font-semibold tracking-[.12em] uppercase rounded-full px-4 py-1.5 mb-6 border"
-            style={{
-              color: "var(--blue-mid)",
-              background: "var(--blue-dim)",
-              borderColor: "rgba(59,130,246,0.2)",
-            }}
-          >
-            <span
-              className="w-1.5 h-1.5 rounded-full"
-              style={{ background: "var(--blue)", boxShadow: "0 0 6px var(--blue)" }}
-            />
-            Product Demo
-          </div>
+          <Reveal>
+            <div
+              className="inline-flex items-center gap-2 text-[12px] font-semibold tracking-[.12em] uppercase rounded-full px-4 py-1.5 mb-6 border"
+              style={{
+                color: "var(--blue-mid)",
+                background: "var(--blue-dim)",
+                borderColor: "rgba(59,130,246,0.2)",
+              }}
+            >
+              <span
+                className="w-1.5 h-1.5 rounded-full"
+                style={{ background: "var(--blue)", boxShadow: "0 0 6px var(--blue)" }}
+              />
+              Product Demo
+            </div>
+          </Reveal>
 
-          <h2 className="text-[clamp(28px,3.5vw,44px)] font-extrabold tracking-[-0.025em] leading-[1.12] mb-4">
-            See NoteDoctor{" "}
-            <span className="bg-gradient-to-br from-[#60a5fa] to-[#3b82f6] bg-clip-text text-transparent">
-              in action
-            </span>
-          </h2>
-          <p
-            className="text-[16px] leading-[1.65] max-w-[560px] mx-auto mb-6"
-            style={{ color: "var(--muted)" }}
-          >
-            Watch a prior authorization get drafted in under two minutes — the same workflow saving physicians hours every week.
-          </p>
+          <Reveal delay={0.06}>
+            <h2 className="text-[clamp(28px,3.5vw,44px)] font-extrabold tracking-[-0.025em] leading-[1.12] mb-4">
+              See NoteDoctor{" "}
+              <span className="bg-gradient-to-br from-[var(--grad-from)] to-[var(--grad-to)] bg-clip-text text-transparent">
+                in action
+              </span>
+            </h2>
+          </Reveal>
+          <Reveal delay={0.12}>
+            <p
+              className="text-[16px] leading-[1.65] max-w-[560px] mx-auto mb-6"
+              style={{ color: "var(--muted)" }}
+            >
+              Watch a prior authorization get drafted in under two minutes — the same workflow saving physicians hours every week.
+            </p>
+          </Reveal>
 
-          <div
+          <Reveal delay={0.18} y={40}
             className="relative mx-auto rounded-2xl overflow-hidden border"
             style={{
               maxWidth: "960px",
@@ -123,9 +130,9 @@ export default function DemoVideo({ publicId, cloudName }: DemoVideoProps) {
               className="cld-video-player cld-fluid"
               playsInline
             />
-          </div>
+          </Reveal>
 
-          <div className="mt-10">
+          <Reveal delay={0.24} className="mt-10">
             <a
               href="#contact"
               className="inline-block text-white text-[15px] font-semibold px-8 py-3.5 rounded-[9px] transition-all hover:-translate-y-0.5"
@@ -136,7 +143,7 @@ export default function DemoVideo({ publicId, cloudName }: DemoVideoProps) {
             >
               Get Started Today
             </a>
-          </div>
+          </Reveal>
         </div>
       </section>
     </>

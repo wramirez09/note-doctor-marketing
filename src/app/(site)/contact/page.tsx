@@ -51,7 +51,7 @@ const ContactPage = () => {
   return (
     <>
       <StructuredData data={structuredData} />
-      <div style={{ backgroundColor: "rgb(17 25 40)" }}>
+      <div style={{ backgroundColor: "var(--bg2)" }}>
         <Breadcrumb pageName="Contact Page" />
 
         <Contact showNewsLetterSignUp={false} />

@@ -1,25 +1,27 @@
 "use client";
 
+import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
+
 const SearchIcon = () => (
-  <svg className="w-4 h-4 stroke-blue-400" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg className="w-4 h-4 stroke-accent" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <circle cx="11" cy="11" r="8" /><path d="M21 21l-4.35-4.35" />
   </svg>
 );
 
 const WorkflowIcon = () => (
-  <svg className="w-4 h-4 stroke-blue-400" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg className="w-4 h-4 stroke-accent" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M17 3l4 4-4 4" /><path d="M3 7h18" /><path d="M7 21l-4-4 4-4" /><path d="M21 17H3" />
   </svg>
 );
 
 const BoltIcon = () => (
-  <svg className="w-4 h-4 stroke-blue-400" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg className="w-4 h-4 stroke-accent" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
   </svg>
 );
 
 const ShieldIcon = () => (
-  <svg className="w-4 h-4 stroke-blue-400" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg className="w-4 h-4 stroke-accent" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
   </svg>
 );
@@ -59,70 +61,76 @@ const benefits = [
 export default function Problem() {
   return (
     <>
-      <section className="py-20 px-6 bg-[#0f1522]">
+      <section className="py-20 px-6 bg-canvas-alt">
         <div className="max-w-[1100px] mx-auto">
-          <p className="text-xs font-semibold tracking-[.12em] uppercase text-blue-400 mb-3.5">The Impact on Healthcare</p>
-          <h2 className="text-[clamp(26px,3vw,42px)] font-extrabold tracking-[-0.025em] leading-[1.12] mb-3">Prior Authorization Is Harming Patients</h2>
-          <p className="text-base leading-[1.65] text-white/50 max-w-[540px]">The data is unambiguous. Administrative delays aren&apos;t just inconvenient — they lead to real clinical harm.</p>
+          <Reveal>
+            <p className="text-xs font-semibold tracking-[.12em] uppercase text-accent mb-3.5">The Impact on Healthcare</p>
+            <h2 className="text-[clamp(26px,3vw,42px)] font-extrabold tracking-[-0.025em] leading-[1.12] mb-3">Prior Authorization Is Harming Patients</h2>
+            <p className="text-base leading-[1.65] text-[var(--muted)] max-w-[540px]">The data is unambiguous. Administrative delays aren&apos;t just inconvenient — they lead to real clinical harm.</p>
+          </Reveal>
 
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-px rounded-2xl overflow-hidden bg-white/[0.07]">
+          <Reveal className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-px rounded-2xl overflow-hidden bg-ink/[0.07]">
             {impactStats.map((s) => (
-              <div key={s.num} className="bg-[#131929] p-10">
-                <div className="text-[42px] font-extrabold tracking-[-0.03em] leading-none mb-2 text-blue-400">{s.num}</div>
+              <div key={s.num} className="bg-surface p-10">
+                <div className="text-[42px] font-extrabold tracking-[-0.03em] leading-none mb-2 text-accent">{s.num}</div>
                 <div className="text-base font-semibold mb-1.5">{s.label}</div>
-                <div className="text-[13.5px] text-white/50 leading-relaxed">{s.body}</div>
+                <div className="text-[13.5px] text-[var(--muted)] leading-relaxed">{s.body}</div>
                 {s.source && (
                   <a href={s.source.href} target="_blank" rel="noopener noreferrer"
-                    className="inline-block mt-3 text-[11px] text-white/25 leading-relaxed hover:text-white/40 transition-colors">
+                    className="inline-block mt-3 text-[11px] text-[var(--faint)] leading-relaxed hover:text-ink/40 transition-colors">
                     {s.source.text}
                   </a>
                 )}
               </div>
             ))}
-          </div>
+          </Reveal>
         </div>
       </section>
 
       <section className="py-20 px-6">
         <div className="max-w-[1100px] mx-auto">
-          <p className="text-xs font-semibold tracking-[.12em] uppercase text-blue-400 mb-3.5">The Bigger Picture</p>
-          <h2 className="text-[clamp(26px,3vw,42px)] font-extrabold tracking-[-0.025em] leading-[1.12] mb-8">Why This Matters</h2>
+          <Reveal>
+            <p className="text-xs font-semibold tracking-[.12em] uppercase text-accent mb-3.5">The Bigger Picture</p>
+            <h2 className="text-[clamp(26px,3vw,42px)] font-extrabold tracking-[-0.025em] leading-[1.12] mb-8">Why This Matters</h2>
+          </Reveal>
 
-          <div className="relative bg-[#131929] border border-white/[0.07] rounded-2xl px-14 py-14 overflow-hidden">
+          <Reveal className="relative bg-surface border border-ink/[0.07] rounded-2xl px-14 py-14 overflow-hidden">
             <div className="pointer-events-none absolute -top-20 -right-20 w-80 h-80 rounded-full bg-[radial-gradient(circle,rgba(59,130,246,0.12),transparent_70%)]" />
             <blockquote className="relative z-10 text-xl font-semibold leading-[1.55] max-w-[680px] mb-5">
               Insurers claim success by cutting costs, but often at the expense of care. A 2023 investigation revealed{" "}
-              <span className="text-blue-400">AI-driven instant claim rejections — more than 300,000 denials in two months</span>{" "}
+              <span className="text-accent">AI-driven instant claim rejections — more than 300,000 denials in two months</span>{" "}
               — without patient files ever being reviewed. This isn&apos;t efficiency. This is harm disguised as savings.
             </blockquote>
-            <cite className="text-[11px] text-white/25 not-italic">
+            <cite className="text-[11px] text-[var(--faint)] not-italic">
               From: Standing Up to Prior Authorization —{" "}
               <a href="https://ashpublications.org/ashclinicalnews/news/7981/Standing-Up-to-Prior-Authorization"
-                target="_blank" rel="noopener noreferrer" className="hover:text-white/40 transition-colors">ashpublications.org</a>
+                target="_blank" rel="noopener noreferrer" className="hover:text-ink/40 transition-colors">ashpublications.org</a>
             </cite>
-          </div>
+          </Reveal>
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-[#0f1522]">
+      <section className="py-20 px-6 bg-canvas-alt">
         <div className="max-w-[1100px] mx-auto">
-          <p className="text-xs font-semibold tracking-[.12em] uppercase text-blue-400 mb-3.5">How NoteDoctor.AI Helps</p>
-          <h2 className="text-[clamp(26px,3vw,42px)] font-extrabold tracking-[-0.025em] leading-[1.12] mb-3">Turning the System in Your Favor</h2>
-          <p className="text-base leading-[1.65] text-white/50 max-w-[540px]">We give providers the tools to navigate prior authorization the right way — the first time.</p>
+          <Reveal>
+            <p className="text-xs font-semibold tracking-[.12em] uppercase text-accent mb-3.5">How NoteDoctor.AI Helps</p>
+            <h2 className="text-[clamp(26px,3vw,42px)] font-extrabold tracking-[-0.025em] leading-[1.12] mb-3">Turning the System in Your Favor</h2>
+            <p className="text-base leading-[1.65] text-[var(--muted)] max-w-[540px]">We give providers the tools to navigate prior authorization the right way — the first time.</p>
+          </Reveal>
 
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <RevealGroup className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
             {benefits.map((b) => (
-              <div key={b.title} className="flex gap-4 items-start">
+              <RevealItem key={b.title} className="flex gap-4 items-start">
                 <div className="shrink-0 w-8 h-8 rounded-lg flex items-center justify-center bg-blue-500/10 border border-blue-500/25">
                   <b.icon />
                 </div>
                 <div>
                   <h3 className="text-[15px] font-bold tracking-[-0.01em] mb-1">{b.title}</h3>
-                  <p className="text-[13.5px] text-white/50 leading-relaxed">{b.body}</p>
+                  <p className="text-[13.5px] text-[var(--muted)] leading-relaxed">{b.body}</p>
                 </div>
-              </div>
+              </RevealItem>
             ))}
-          </div>
+          </RevealGroup>
         </div>
       </section>
     </>

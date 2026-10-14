@@ -5,6 +5,7 @@
 'use client';
 
 import React from "react";
+import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
 
 
 
@@ -16,7 +17,7 @@ function CheckIcon() {
       <svg viewBox="0 0 10 10" width={10} height={10}>
         <polyline
           points="1.5,5 4,7.5 8.5,2.5"
-          stroke="#60a5fa"
+          stroke="var(--nd-blue-mid)"
           strokeWidth="1.5"
           fill="none"
           strokeLinecap="round"
@@ -89,17 +90,20 @@ export default function PricingPage() {
       <style jsx global>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-        :root {
-          --nd-bg:        #0c0f1a;
-          --nd-bg-card:   #131929;
-          --nd-bg-card2:  #0f1522;
-          --nd-border:    rgba(255,255,255,0.07);
-          --nd-blue:      #3b82f6;
-          --nd-blue-glow: rgba(59,130,246,0.18);
-          --nd-blue-mid:  #60a5fa;
-          --nd-text:      #f0f4ff;
-          --nd-muted:     rgba(240,244,255,0.5);
-          --nd-faint:     rgba(240,244,255,0.25);
+        /* Aliases of the sitewide theme tokens (styles/index.css), so the page
+           follows Classic / Midnight. Set on .nd-root rather than :root so they
+           resolve against the active theme class. */
+        .nd-root {
+          --nd-bg:        var(--bg);
+          --nd-bg-card:   var(--bg-card);
+          --nd-bg-card2:  var(--bg2);
+          --nd-border:    var(--border);
+          --nd-blue:      var(--blue);
+          --nd-blue-glow: var(--blue-glow);
+          --nd-blue-mid:  var(--blue-mid);
+          --nd-text:      var(--text);
+          --nd-muted:     var(--muted);
+          --nd-faint:     var(--faint);
         }
 
         .nd-root {
@@ -116,7 +120,7 @@ export default function PricingPage() {
           content: '';
           position: fixed;
           inset: 0;
-          background-image: radial-gradient(circle, rgba(59,130,246,0.12) 1px, transparent 1px);
+          background-image: radial-gradient(circle, var(--dot) 1px, transparent 1px);
           background-size: 32px 32px;
           pointer-events: none;
           z-index: 0;
@@ -159,6 +163,14 @@ export default function PricingPage() {
           margin: 0 auto;
           position: relative; z-index: 1;
         }
+        /* Scroll-reveal wrapper: it carries the animation transform so the
+           card's own hover lift below isn't overridden, and takes the card's
+           flex sizing; the card stretches to fill it. */
+        .nd-card-slot {
+          display: flex;
+          flex: 1 1 320px;
+          max-width: 420px;
+        }
         .nd-card {
           background: var(--nd-bg-card);
           border: 1px solid var(--nd-border);
@@ -171,12 +183,12 @@ export default function PricingPage() {
         }
         .nd-card:hover {
           transform: translateY(-4px);
-          box-shadow: 0 24px 60px rgba(0,0,0,.4);
+          box-shadow: var(--shadow-lift);
         }
         .nd-card.nd-featured {
           border-color: var(--nd-blue);
           box-shadow: 0 0 0 1px var(--nd-blue), 0 12px 48px var(--nd-blue-glow);
-          background: linear-gradient(145deg, #131d35 0%, #0f1522 100%);
+          background: var(--featured-bg);
         }
         .nd-badge {
           position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
@@ -207,7 +219,7 @@ export default function PricingPage() {
           display: flex; align-items: center; gap: 8px;
           font-size: 14px; color: var(--nd-muted);
           padding: 10px 14px;
-          background: rgba(255,255,255,0.04);
+          background: var(--surface);
           border: 1px solid var(--nd-border);
           border-radius: 8px;
           margin-top: 14px;
@@ -282,7 +294,7 @@ export default function PricingPage() {
           gap: 16px;
         }
         .nd-usage-ex {
-          background: rgba(255,255,255,0.03);
+          background: var(--surface);
           border: 1px solid var(--nd-border);
           border-radius: 10px;
           padding: 18px 20px;
@@ -305,75 +317,85 @@ export default function PricingPage() {
 
         {/* HERO */}
         <section className="nd-hero">
-          <span className="nd-eyebrow">Pricing</span>
-          <h1>
-            Simple pricing.<br />
-            <span>No surprises.</span>
-          </h1>
-          <p>
-            One straightforward plan — a flat monthly base plus pay-as-you-go
-            usage. Only pay for what you actually use.
-          </p>
+          <Reveal immediate>
+            <span className="nd-eyebrow">Pricing</span>
+          </Reveal>
+          <Reveal immediate delay={0.12}>
+            <h1>
+              Simple pricing.<br />
+              <span>No surprises.</span>
+            </h1>
+          </Reveal>
+          <Reveal immediate delay={0.24}>
+            <p>
+              One straightforward plan — a flat monthly base plus pay-as-you-go
+              usage. Only pay for what you actually use.
+            </p>
+          </Reveal>
         </section>
 
         {/* CARDS */}
-        <div className="nd-cards-wrap">
+        <RevealGroup immediate delay={0.3} className="nd-cards-wrap">
 
           {/* Pro */}
-          <div className="nd-card nd-featured">
-            <div className="nd-badge">Most Popular</div>
-            <div className="nd-card-label">Core Plan</div>
-            <div className="nd-card-name">NoteDoctor Pro</div>
-            <div className="nd-card-desc">
-              Everything you need to screen prior authorizations, catch denials
-              before they happen, and keep patients moving.
-            </div>
-
-            <div>
-              <div className="nd-price-row">
-                <div className="nd-price-dollar">$25</div>
-                <div className="nd-price-period">/ month</div>
+          <RevealItem className="nd-card-slot">
+            <div className="nd-card nd-featured">
+              <div className="nd-badge">Most Popular</div>
+              <div className="nd-card-label">Core Plan</div>
+              <div className="nd-card-name">NoteDoctor Pro</div>
+              <div className="nd-card-desc">
+                Everything you need to screen prior authorizations, catch denials
+                before they happen, and keep patients moving.
               </div>
-              <div className="nd-price-usage">
-                <div className="nd-dot" />
-                <div>+ <strong>$0.02</strong> per AI screening call</div>
-              </div>
-            </div>
 
-            <div className="nd-divider" />
-            <FeatureList items={proFeatures} />
-            <a href="https://app.NoteDoctor.AI/auth/sign-up" target="_blank" rel="noopener noreferrer" className="nd-btn-primary">Subscribe — $25 / mo</a>
-          </div>
+              <div>
+                <div className="nd-price-row">
+                  <div className="nd-price-dollar">$25</div>
+                  <div className="nd-price-period">/ month</div>
+                </div>
+                <div className="nd-price-usage">
+                  <div className="nd-dot" />
+                  <div>+ <strong>$0.02</strong> per AI screening call</div>
+                </div>
+              </div>
+
+              <div className="nd-divider" />
+              <FeatureList items={proFeatures} />
+              <a href="https://app.NoteDoctor.AI/auth/sign-up" target="_blank" rel="noopener noreferrer" className="nd-btn-primary">Subscribe — $25 / mo</a>
+            </div>
+          </RevealItem>
 
           {/* Enterprise */}
-          <div className="nd-card">
-            <div className="nd-card-label">For Health Systems</div>
-            <div className="nd-card-name">Enterprise</div>
-            <div className="nd-card-desc">
-              High-volume practices and health systems with custom integration
-              and dedicated support needs.
-            </div>
-
-            <div>
-              <div className="nd-price-row" style={{ marginBottom: 14 }}>
-                <div className="nd-price-dollar" style={{ fontSize: 38 }}>Custom</div>
+          <RevealItem className="nd-card-slot">
+            <div className="nd-card">
+              <div className="nd-card-label">For Health Systems</div>
+              <div className="nd-card-name">Enterprise</div>
+              <div className="nd-card-desc">
+                High-volume practices and health systems with custom integration
+                and dedicated support needs.
               </div>
-              <div className="nd-price-usage">
-                <div className="nd-dot" style={{ background: "#60a5fa" }} />
-                <div>Volume pricing on AI calls available</div>
+
+              <div>
+                <div className="nd-price-row" style={{ marginBottom: 14 }}>
+                  <div className="nd-price-dollar" style={{ fontSize: 38 }}>Custom</div>
+                </div>
+                <div className="nd-price-usage">
+                  <div className="nd-dot" style={{ background: "var(--nd-blue-mid)" }} />
+                  <div>Volume pricing on AI calls available</div>
+                </div>
               </div>
+
+              <div className="nd-divider" />
+              <FeatureList items={enterpriseFeatures} />
+              <a href="/contact" className="nd-btn-ghost">Contact Sales</a>
             </div>
+          </RevealItem>
 
-            <div className="nd-divider" />
-            <FeatureList items={enterpriseFeatures} />
-            <a href="/contact" className="nd-btn-ghost">Contact Sales</a>
-          </div>
-
-        </div>
+        </RevealGroup>
 
         {/* USAGE EXPLAINER */}
         <div className="nd-usage-explainer">
-          <div className="nd-usage-box">
+          <Reveal className="nd-usage-box">
             <h2>How usage pricing works</h2>
             <p>
               Each time NoteDoctor.AI runs an AI screening — analyzing a note,
@@ -388,7 +410,7 @@ export default function PricingPage() {
                 <UsageExample key={ex.label} {...ex} />
               ))}
             </div>
-          </div>
+          </Reveal>
         </div>
 
         {/* FOOTER NOTE */}

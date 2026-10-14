@@ -32,7 +32,7 @@ function Button({
   const style =
     variant === "primary"
       ? { background: "var(--blue)", color: "#fff", borderColor: "transparent", boxShadow: "0 0 32px rgba(59,130,246,0.35)" }
-      : { background: "rgba(255,255,255,0.04)", color: "var(--text)", borderColor: "var(--border)" };
+      : { background: "var(--surface)", color: "var(--text)", borderColor: "var(--border)" };
 
   return href.startsWith("http") ? (
     <a href={href} target="_blank" rel="noopener noreferrer" className={base} style={style}>
@@ -50,8 +50,8 @@ const C = { c: "#64748b", k: "var(--blue-mid)", s: "#4ade80", n: "#fbbf24", p: "
 function Code({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div
-      className="rounded-xl overflow-hidden border my-5"
-      style={{ background: "rgba(0,0,0,0.4)", borderColor: "var(--border)" }}
+      className="midnight rounded-xl overflow-hidden border my-5"
+      style={{ background: "var(--code-bg)", borderColor: "var(--border)" }}
     >
       <div className="px-3.5 py-2.5 border-b" style={{ background: "rgba(255,255,255,0.03)", borderColor: "var(--border)" }}>
         <span className="font-mono text-[11.5px]" style={{ color: "var(--faint)" }}>
@@ -83,7 +83,7 @@ function P({ children }: { children: React.ReactNode }) {
 
 function Mono({ children }: { children: React.ReactNode }) {
   return (
-    <span className="font-mono text-[13.5px] px-1 py-0.5 rounded" style={{ background: "rgba(255,255,255,0.06)", color: "var(--text)" }}>
+    <span className="font-mono text-[13.5px] px-1 py-0.5 rounded" style={{ background: "var(--surface-strong)", color: "var(--text)" }}>
       {children}
     </span>
   );
@@ -192,7 +192,7 @@ export default function McpGuidePage() {
 
           <h1 className="text-[clamp(30px,4.2vw,46px)] font-extrabold leading-[1.1] tracking-[-0.03em] mb-5">
             Leveraging the{" "}
-            <span className="bg-gradient-to-br from-[#60a5fa] to-[#3b82f6] bg-clip-text text-transparent">MCP server.</span>
+            <span className="bg-gradient-to-br from-[var(--grad-from)] to-[var(--grad-to)] bg-clip-text text-transparent">MCP server.</span>
           </h1>
 
           <p className="text-[17.5px] leading-[1.6] max-w-[64ch]" style={{ color: "var(--muted)" }}>
@@ -408,7 +408,7 @@ claude mcp add --transport http <span style={{ color: C.k }}>notedoctor</span> \
           <H2 id="phi">What not to send</H2>
           <div
             className="flex gap-3 items-start rounded-lg border px-4 py-3.5 my-5 text-[14px] leading-[1.6]"
-            style={{ background: "rgba(251,191,36,0.08)", borderColor: "rgba(251,191,36,0.25)", color: "#fbbf24" }}
+            style={{ background: "color-mix(in srgb, var(--warn) 8%, transparent)", borderColor: "color-mix(in srgb, var(--warn) 25%, transparent)", color: "var(--warn)" }}
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className="w-[18px] h-[18px] shrink-0 mt-0.5">
               <path d="M12 9v4M12 17h.01" />
@@ -428,7 +428,7 @@ claude mcp add --transport http <span style={{ color: C.k }}>notedoctor</span> \
 
           {/* CTA */}
           <div
-            className="relative rounded-3xl border text-center px-6 py-14 mt-16 overflow-hidden"
+            className="midnight relative rounded-3xl border text-center px-6 py-14 mt-16 overflow-hidden"
             style={{ background: "linear-gradient(160deg, #131d35 0%, #0f1522 100%)", borderColor: "rgba(59,130,246,0.25)" }}
           >
             <div

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Reveal } from "@/components/motion/Reveal";
 
 const trustPoints = [
   "HIPAA-compliant",
@@ -50,16 +51,16 @@ export default function Contact() {
     }
   };
 
-  const inputClass = "w-full bg-white/[0.04] border rounded-lg text-[14px] px-3.5 py-2.5 outline-none transition-colors focus:border-[#3b82f6] placeholder:text-[rgba(240,244,255,0.25)]";
+  const inputClass = "w-full bg-ink/[0.04] border rounded-lg text-[14px] px-3.5 py-2.5 outline-none transition-colors focus:border-[#3b82f6] placeholder:text-[var(--faint)]";
   const inputStyle = { borderColor: "var(--border)", color: "var(--text)" };
 
   return (
     <section className="py-20 px-6" id="contact">
-      <div className="max-w-[1100px] mx-auto rounded-3xl overflow-hidden border grid grid-cols-1 md:grid-cols-2"
+      <Reveal y={40} className="max-w-[1100px] mx-auto rounded-3xl overflow-hidden border grid grid-cols-1 md:grid-cols-2"
         style={{ background: "var(--bg-card)", borderColor: "var(--border)" }}>
 
         {/* Left */}
-        <div className="relative px-14 py-16 overflow-hidden"
+        <div className="midnight relative px-14 py-16 overflow-hidden"
           style={{ background: "linear-gradient(135deg, #0d1a3a 0%, #0c1020 100%)" }}>
           <div className="pointer-events-none absolute -top-24 -left-24 w-[400px] h-[400px] rounded-full"
             style={{ background: "radial-gradient(circle, rgba(59,130,246,0.18), transparent 70%)" }} />
@@ -118,7 +119,7 @@ export default function Contact() {
             <div className="flex flex-col gap-1.5">
               <label className="text-[12px] font-semibold tracking-[.06em] uppercase" style={{ color: "var(--muted)" }}>I am a…</label>
               <select name="role" value={form.role} onChange={handleChange}
-                className={inputClass} style={{ ...inputStyle, background: "rgba(255,255,255,0.04)" }}>
+                className={inputClass} style={{ ...inputStyle, background: "var(--surface)" }}>
                 <option value="">Select role</option>
                 <option>Physician</option>
                 <option>Practice Administrator</option>
@@ -143,7 +144,7 @@ export default function Contact() {
             </button>
           </form>
         </div>
-      </div>
+      </Reveal>
       <ToastContainer style={{ zIndex: 9999, top: "200px" }} />
     </section>
   );

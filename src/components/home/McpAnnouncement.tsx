@@ -25,7 +25,7 @@ export default function McpAnnouncement() {
 
           <h2 className="text-[clamp(26px,3.4vw,34px)] font-extrabold leading-[1.12] tracking-[-0.03em] mt-4 mb-3.5">
             Don&apos;t want to build anything?{" "}
-            <span className="bg-gradient-to-br from-[#60a5fa] to-[#3b82f6] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-br from-[var(--grad-from)] to-[var(--grad-to)] bg-clip-text text-transparent">
               Just ask your assistant.
             </span>
           </h2>
@@ -60,8 +60,8 @@ export default function McpAnnouncement() {
         </div>
 
         <div
-          className="rounded-xl overflow-hidden border"
-          style={{ background: "rgba(0,0,0,0.4)", borderColor: "var(--border)", boxShadow: "0 24px 60px -30px rgba(0,0,0,0.7)" }}
+          className="midnight rounded-xl overflow-hidden border"
+          style={{ background: "var(--code-bg)", borderColor: "var(--border)", boxShadow: "0 24px 60px -30px rgba(0,0,0,0.7)" }}
         >
           <div
             className="flex items-center gap-2 px-3.5 py-2.5 border-b"

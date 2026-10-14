@@ -1,7 +1,9 @@
+import { Reveal } from "@/components/motion/Reveal";
+
 const cards = [
   {
     icon: (
-      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#60a5fa" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" style={{ color: "var(--blue-mid)" }} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
       </svg>
     ),
@@ -11,7 +13,7 @@ const cards = [
   },
   {
     icon: (
-      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#60a5fa" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" style={{ color: "var(--blue-mid)" }} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
       </svg>
     ),
@@ -21,7 +23,7 @@ const cards = [
   },
   {
     icon: (
-      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#60a5fa" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" style={{ color: "var(--blue-mid)" }} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
         <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
       </svg>
@@ -36,7 +38,7 @@ export default function Problem() {
   return (
     <section className="py-24 px-6" style={{ background: "var(--bg2)" }}>
       <div className="max-w-[1100px] mx-auto">
-        <div className="mb-14">
+        <Reveal className="mb-14">
           <p className="text-[12px] font-semibold tracking-[.12em] uppercase mb-3.5" style={{ color: "var(--blue-mid)" }}>
             The Problem
           </p>
@@ -46,9 +48,9 @@ export default function Problem() {
           <p className="text-[16px] leading-[1.65] max-w-[520px]" style={{ color: "var(--muted)" }}>
             A system designed to manage costs has become a major barrier to patient care — wasting time, raising costs, and burning out physicians.
           </p>
-        </div>
+        </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-px rounded-2xl overflow-hidden" style={{ background: "var(--border)" }}>
+        <Reveal className="grid grid-cols-1 md:grid-cols-3 gap-px rounded-2xl overflow-hidden" style={{ background: "var(--border)" }}>
           {cards.map((c) => (
             <div key={c.title} className="p-11" style={{ background: "var(--bg-card)" }}>
               <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-6 border"
@@ -63,7 +65,7 @@ export default function Problem() {
               </span>
             </div>
           ))}
-        </div>
+        </Reveal>
 
         <p className="text-[12px] mt-9 leading-relaxed" style={{ color: "var(--faint)" }}>
           Source:{" "}

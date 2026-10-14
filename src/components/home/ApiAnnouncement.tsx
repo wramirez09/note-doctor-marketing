@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { API_KEYS_URL, DEVELOPERS_URL } from "@/config/apiLaunch";
+import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
 
 const apis = [
   {
@@ -32,7 +33,7 @@ export default function ApiAnnouncement() {
       />
 
       <div className="relative max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-14 items-center">
-        <div>
+        <Reveal>
           <div
             className="inline-flex items-center gap-2 text-[12px] font-semibold tracking-[.12em] uppercase rounded-full px-4 py-1.5 border"
             style={{ color: "var(--blue-mid)", background: "var(--blue-dim)", borderColor: "rgba(59,130,246,0.2)" }}
@@ -43,7 +44,7 @@ export default function ApiAnnouncement() {
 
           <h2 className="text-[clamp(28px,3.8vw,38px)] font-extrabold leading-[1.1] tracking-[-0.03em] mt-4 mb-3.5">
             The screening engine is{" "}
-            <span className="bg-gradient-to-br from-[#60a5fa] to-[#3b82f6] bg-clip-text text-transparent">now an API.</span>
+            <span className="bg-gradient-to-br from-[var(--grad-from)] to-[var(--grad-to)] bg-clip-text text-transparent">now an API.</span>
           </h2>
 
           <p className="text-[17px] leading-[1.6] max-w-[52ch]" style={{ color: "var(--muted)" }}>
@@ -86,47 +87,48 @@ export default function ApiAnnouncement() {
             <Link
               href={DEVELOPERS_URL}
               className="inline-flex items-center justify-center h-[46px] px-[22px] rounded-[9px] text-[15px] font-semibold no-underline border transition-all hover:-translate-y-0.5"
-              style={{ background: "rgba(255,255,255,0.04)", borderColor: "var(--border)", color: "var(--text)" }}
+              style={{ background: "var(--surface)", borderColor: "var(--border)", color: "var(--text)" }}
             >
               Explore the API
             </Link>
           </div>
-        </div>
+        </Reveal>
 
         {/* API rows */}
-        <div className="flex flex-col gap-3">
+        <RevealGroup delay={0.1} className="flex flex-col gap-3">
           {apis.map((api) => (
-            <Link
-              key={api.name}
-              href={DEVELOPERS_URL}
-              className="flex gap-3.5 items-start rounded-2xl border px-5 py-[18px] no-underline transition-all hover:-translate-y-0.5"
-              style={{ background: "var(--bg-card)", borderColor: "var(--border)" }}
-            >
-              <span
-                className="w-[38px] h-[38px] rounded-[10px] grid place-items-center shrink-0 border"
-                style={{ background: "var(--blue-dim)", borderColor: "rgba(59,130,246,0.25)", color: "var(--blue-mid)" }}
+            <RevealItem key={api.name}>
+              <Link
+                href={DEVELOPERS_URL}
+                className="flex gap-3.5 items-start rounded-2xl border px-5 py-[18px] no-underline transition-all hover:-translate-y-0.5"
+                style={{ background: "var(--bg-card)", borderColor: "var(--border)" }}
               >
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className="w-[19px] h-[19px]">
-                  {api.icon}
-                </svg>
-              </span>
-              <div>
-                <h3 className="flex items-center gap-2.5 text-[16px] font-bold tracking-[-0.012em] mb-1" style={{ color: "var(--text)" }}>
-                  {api.name}
-                  <span
-                    className="font-mono text-[10.5px] font-semibold rounded-md px-1.5 py-0.5"
-                    style={{ color: "var(--blue-mid)", background: "var(--blue-dim)" }}
-                  >
-                    {api.scope}
-                  </span>
-                </h3>
-                <p className="text-[13.5px] leading-[1.6]" style={{ color: "var(--muted)" }}>
-                  {api.body}
-                </p>
-              </div>
-            </Link>
+                <span
+                  className="w-[38px] h-[38px] rounded-[10px] grid place-items-center shrink-0 border"
+                  style={{ background: "var(--blue-dim)", borderColor: "rgba(59,130,246,0.25)", color: "var(--blue-mid)" }}
+                >
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className="w-[19px] h-[19px]">
+                    {api.icon}
+                  </svg>
+                </span>
+                <div>
+                  <h3 className="flex items-center gap-2.5 text-[16px] font-bold tracking-[-0.012em] mb-1" style={{ color: "var(--text)" }}>
+                    {api.name}
+                    <span
+                      className="font-mono text-[10.5px] font-semibold rounded-md px-1.5 py-0.5"
+                      style={{ color: "var(--blue-mid)", background: "var(--blue-dim)" }}
+                    >
+                      {api.scope}
+                    </span>
+                  </h3>
+                  <p className="text-[13.5px] leading-[1.6]" style={{ color: "var(--muted)" }}>
+                    {api.body}
+                  </p>
+                </div>
+              </Link>
+            </RevealItem>
           ))}
-        </div>
+        </RevealGroup>
       </div>
     </section>
   );

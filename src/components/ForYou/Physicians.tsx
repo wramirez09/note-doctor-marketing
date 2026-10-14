@@ -1,7 +1,9 @@
 "use client";
 
+import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
+
 const CalendarTimeIcon = () => (
-  <svg className="w-5 h-5 stroke-blue-400" viewBox="0 0 24 24" fill="none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+  <svg className="w-5 h-5 stroke-accent" viewBox="0 0 24 24" fill="none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
     <path d="M11.795 21h-6.795a2 2 0 0 1-2-2v-12a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4" />
     <circle cx="18" cy="18" r="4" />
     <path d="M15 3v4" /><path d="M7 3v4" /><path d="M3 11h16" />
@@ -10,7 +12,7 @@ const CalendarTimeIcon = () => (
 );
 
 const UsersGroupIcon = () => (
-  <svg className="w-5 h-5 stroke-blue-400" viewBox="0 0 24 24" fill="none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+  <svg className="w-5 h-5 stroke-accent" viewBox="0 0 24 24" fill="none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
     <path d="M10 13a2 2 0 1 0 4 0a2 2 0 0 0-4 0" />
     <path d="M8 21v-1a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1" />
     <path d="M15 5a2 2 0 1 0 4 0a2 2 0 0 0-4 0" />
@@ -21,13 +23,13 @@ const UsersGroupIcon = () => (
 );
 
 const FlameIcon = () => (
-  <svg className="w-5 h-5 stroke-blue-400" viewBox="0 0 24 24" fill="none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+  <svg className="w-5 h-5 stroke-accent" viewBox="0 0 24 24" fill="none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
     <path d="M12 12c2-2.96 0-7-1-8 0 3.038-1.773 4.741-3 6-1.226 1.26-2 3.24-2 5a6 6 0 1 0 12 0c0-1.532-1.056-3.94-2-5-1.786 3-2.791 3-4 2z" />
   </svg>
 );
 
 const ClockExclamationIcon = () => (
-  <svg className="w-5 h-5 stroke-blue-400" viewBox="0 0 24 24" fill="none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+  <svg className="w-5 h-5 stroke-accent" viewBox="0 0 24 24" fill="none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
     <circle cx="12" cy="12" r="9" />
     <path d="M12 7v5" /><path d="M12 17v.01" />
   </svg>
@@ -56,62 +58,68 @@ const metrics = [
 export default function Physicians() {
   return (
     <>
-      <section className="py-20 px-6 bg-[#0f1522]">
+      <section className="py-20 px-6 bg-canvas-alt">
         <div className="max-w-[1100px] mx-auto">
-          <p className="text-xs font-semibold tracking-[.12em] uppercase text-blue-400 mb-3.5">Challenges Physicians Face</p>
-          <h2 className="text-[clamp(26px,3vw,42px)] font-extrabold tracking-[-0.025em] leading-[1.12] mb-3">Less Paperwork.<br />More Patient Care.</h2>
-          <p className="text-base leading-[1.65] text-white/50 max-w-[540px]">Reclaim your time and reduce burnout with transparent, streamlined prior authorization.</p>
+          <Reveal>
+            <p className="text-xs font-semibold tracking-[.12em] uppercase text-accent mb-3.5">Challenges Physicians Face</p>
+            <h2 className="text-[clamp(26px,3vw,42px)] font-extrabold tracking-[-0.025em] leading-[1.12] mb-3">Less Paperwork.<br />More Patient Care.</h2>
+            <p className="text-base leading-[1.65] text-[var(--muted)] max-w-[540px]">Reclaim your time and reduce burnout with transparent, streamlined prior authorization.</p>
+          </Reveal>
 
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-px rounded-2xl overflow-hidden bg-white/[0.07]">
+          <Reveal className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-px rounded-2xl overflow-hidden bg-ink/[0.07]">
             {challenges.map((c) => (
-              <div key={c.title} className="bg-[#131929] p-9">
+              <div key={c.title} className="bg-surface p-9">
                 <div className="w-11 h-11 rounded-xl flex items-center justify-center bg-blue-500/10 border border-blue-500/20 mb-5">
                   <c.icon />
                 </div>
                 <h3 className="text-base font-bold tracking-[-0.01em] mb-1.5">{c.title}</h3>
-                <p className="text-[13.5px] text-white/50 leading-relaxed">{c.body}</p>
+                <p className="text-[13.5px] text-[var(--muted)] leading-relaxed">{c.body}</p>
                 {c.source && (
                   <a href={c.source.href} target="_blank" rel="noopener noreferrer"
-                    className="inline-block mt-3 text-[11px] text-white/25 hover:text-white/40 transition-colors leading-relaxed">
+                    className="inline-block mt-3 text-[11px] text-[var(--faint)] hover:text-ink/40 transition-colors leading-relaxed">
                     {c.source.text}
                   </a>
                 )}
               </div>
             ))}
-          </div>
+          </Reveal>
         </div>
       </section>
 
       <section className="py-20 px-6">
         <div className="max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-start">
           <div>
-            <p className="text-xs font-semibold tracking-[.12em] uppercase text-blue-400 mb-3.5">How NoteDoctor.AI Helps Physicians</p>
-            <h2 className="text-[clamp(26px,3vw,42px)] font-extrabold tracking-[-0.025em] leading-[1.12] mb-3">Tools Built Around Your Workflow</h2>
-            <p className="text-base leading-[1.65] text-white/50 max-w-[420px] mb-10">Stop fighting the system. Let the AI navigate it for you.</p>
+            <Reveal>
+              <p className="text-xs font-semibold tracking-[.12em] uppercase text-accent mb-3.5">How NoteDoctor.AI Helps Physicians</p>
+              <h2 className="text-[clamp(26px,3vw,42px)] font-extrabold tracking-[-0.025em] leading-[1.12] mb-3">Tools Built Around Your Workflow</h2>
+              <p className="text-base leading-[1.65] text-[var(--muted)] max-w-[420px] mb-10">Stop fighting the system. Let the AI navigate it for you.</p>
+            </Reveal>
 
-            <ul className="flex flex-col gap-4 list-none">
-              {checkItems.map((item) => (
-                <li key={item.strong} className="flex items-start gap-3.5 text-[15px] leading-relaxed">
-                  <div className="shrink-0 mt-0.5 w-5 h-5 rounded-full flex items-center justify-center bg-blue-500/15 border border-blue-500/30">
-                    <svg className="w-3 h-3" viewBox="0 0 12 12" fill="none">
-                      <polyline points="1.5,6 4.5,9 10.5,3" stroke="#60a5fa" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </div>
-                  <span><strong>{item.strong}</strong>{item.rest}</span>
-                </li>
-              ))}
-            </ul>
+            <Reveal delay={0.1}>
+              <ul className="flex flex-col gap-4 list-none">
+                {checkItems.map((item) => (
+                  <li key={item.strong} className="flex items-start gap-3.5 text-[15px] leading-relaxed">
+                    <div className="shrink-0 mt-0.5 w-5 h-5 rounded-full flex items-center justify-center bg-blue-500/15 border border-blue-500/30">
+                      <svg className="w-3 h-3" viewBox="0 0 12 12" fill="none">
+                        <polyline points="1.5,6 4.5,9 10.5,3" className="stroke-accent" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </div>
+                    <span><strong>{item.strong}</strong>{item.rest}</span>
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
           </div>
 
-          <div className="flex flex-col gap-5 pt-5">
+          <RevealGroup delay={0.1} className="flex flex-col gap-5 pt-5">
             {metrics.map((m) => (
-              <div key={m.num} className="bg-[#131929] border border-white/[0.07] rounded-2xl px-7 py-8">
-                <div className="text-[40px] font-extrabold text-blue-400 tracking-[-0.03em] leading-none mb-1.5">{m.num}</div>
+              <RevealItem key={m.num} className="bg-surface border border-ink/[0.07] rounded-2xl px-7 py-8">
+                <div className="text-[40px] font-extrabold text-accent tracking-[-0.03em] leading-none mb-1.5">{m.num}</div>
                 <div className="text-[15px] font-semibold mb-1">{m.label}</div>
-                <div className="text-[13px] text-white/50">{m.sub}</div>
-              </div>
+                <div className="text-[13px] text-[var(--muted)]">{m.sub}</div>
+              </RevealItem>
             ))}
-          </div>
+          </RevealGroup>
         </div>
       </section>
     </>
