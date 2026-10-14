@@ -11,7 +11,7 @@
 }
 
 label span {
-  color: #fff !important;
+  color: var(--text) !important;
 }
 
 .bg-dark,

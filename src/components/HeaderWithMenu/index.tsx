@@ -12,6 +12,7 @@ import {
 import { useDisclosure } from "@mantine/hooks";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
+import ThemeSwitcher from "@/components/ThemeSwitcher";
 import classes from "./index.module.css";
 
 export function HeaderWithMenu() {
@@ -26,8 +27,8 @@ export function HeaderWithMenu() {
     <Box>
       {/* top offset tracks the sitewide ApiBanner, which sits above the header */}
       <header
-        className="ud-header fixed left-0 z-[999] flex w-full items-center bg-[#050508] border-b border-white/10"
-        style={{ top: "var(--api-banner-h, 0px)" }}
+        className="ud-header fixed left-0 z-[999] flex w-full items-center border-b backdrop-blur"
+        style={{ top: "var(--api-banner-h, 0px)", background: "var(--header-bg)", borderColor: "var(--border)" }}
       >
         <div className="container px-6 lg:px-12">
           <div className="container relative flex items-center max-sm:p-0">
@@ -48,7 +49,7 @@ export function HeaderWithMenu() {
                   height={35}
                   className="header-logo"
                 />
-                <span className="text-white text-sm font-semibold tracking-tight">
+                <span className="text-sm font-semibold tracking-tight" style={{ color: "var(--text)" }}>
                   NoteDoctor.AI
                 </span>
               </div>
@@ -95,11 +96,13 @@ export function HeaderWithMenu() {
               {/* Right side */}
               <div className="flex items-center gap-3">
                 <div className="hidden lg:flex items-center gap-3">
+                  <ThemeSwitcher />
                   <a
                     href="https://app.NoteDoctor.AI/auth/login"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-white text-slate-900 text-[13px] font-semibold px-6 py-1.5 rounded-[9px] transition-all hover:-translate-y-0.5 inline-block"
+                    className="text-[13px] font-semibold px-6 py-1.5 rounded-[9px] transition-all hover:-translate-y-0.5 inline-block"
+                    style={{ background: "var(--text)", color: "var(--bg)" }}
                   >
                     Login
                   </a>
@@ -117,7 +120,7 @@ export function HeaderWithMenu() {
                   opened={drawerOpened}
                   onClick={toggleDrawer}
                   hiddenFrom="lg"
-                  color="white"
+                  color="var(--text)"
                 />
               </div>
             </Group>
@@ -188,12 +191,17 @@ export function HeaderWithMenu() {
 
           <Divider my="lg" />
 
+          <Group justify="center" pb="lg" px="lg">
+            <ThemeSwitcher showLabels />
+          </Group>
+
           <Group justify="center" pb="xl" px="lg">
             <a
               href="https://app.NoteDoctor.AI/auth/login"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white text-slate-900 text-[15px] font-semibold px-8 py-3.5 rounded-[9px] transition-all hover:-translate-y-0.5 inline-block"
+              className="text-[15px] font-semibold px-8 py-3.5 rounded-[9px] transition-all hover:-translate-y-0.5 inline-block"
+              style={{ background: "var(--text)", color: "var(--bg)" }}
             >
               Login
             </a>

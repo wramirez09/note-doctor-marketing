@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { API_KEYS_URL, DOCS_URL } from "@/config/apiLaunch";
+import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
 
 export const metadata: Metadata = {
   title: "NoteDoctor.AI | Developer Platform — Screening API",
@@ -39,7 +40,7 @@ function Button({
   const style =
     variant === "primary"
       ? { background: "var(--blue)", color: "#fff", borderColor: "transparent", boxShadow: "0 0 32px rgba(59,130,246,0.35)" }
-      : { background: "rgba(255,255,255,0.04)", color: "var(--text)", borderColor: "var(--border)" };
+      : { background: "var(--surface)", color: "var(--text)", borderColor: "var(--border)" };
 
   return href.startsWith("http") ? (
     <a href={href} target="_blank" rel="noopener noreferrer" className={base} style={style}>
@@ -58,9 +59,10 @@ const C = { c: "#64748b", k: "var(--blue-mid)", s: "#4ade80", n: "#fbbf24", p: "
 
 function CodeSample() {
   return (
+    // Stays dark in Classic too: .midnight scopes the Midnight tokens to the panel.
     <div
-      className="rounded-xl overflow-hidden border"
-      style={{ background: "rgba(0,0,0,0.4)", borderColor: "var(--border)", boxShadow: "0 24px 60px -30px rgba(0,0,0,0.7)" }}
+      className="midnight rounded-xl overflow-hidden border"
+      style={{ background: "var(--code-bg)", borderColor: "var(--border)", boxShadow: "0 24px 60px -30px rgba(0,0,0,0.7)" }}
     >
       <div className="flex items-center gap-2 px-3.5 py-2.5 border-b" style={{ background: "rgba(255,255,255,0.03)", borderColor: "var(--border)" }}>
         {["curl", "node", "python"].map((tab, i) => (
@@ -221,7 +223,7 @@ export default function DevelopersPage() {
           style={{ background: "radial-gradient(ellipse at 50% 30%, rgba(59,130,246,0.18) 0%, transparent 70%)" }}
         />
         <div className="relative max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-16 items-center">
-          <div>
+          <Reveal immediate>
             <div
               className="inline-flex items-center gap-2 text-[12px] font-semibold tracking-[.12em] uppercase rounded-full px-4 py-1.5 border"
               style={{ color: "var(--blue-mid)", background: "var(--blue-dim)", borderColor: "rgba(59,130,246,0.2)" }}
@@ -232,7 +234,7 @@ export default function DevelopersPage() {
 
             <h1 className="text-[clamp(32px,4.6vw,52px)] font-extrabold leading-[1.08] tracking-[-0.03em] mt-6 mb-5">
               The screening engine,{" "}
-              <span className="bg-gradient-to-br from-[#60a5fa] to-[#3b82f6] bg-clip-text text-transparent">now an API.</span>
+              <span className="bg-gradient-to-br from-[var(--grad-from)] to-[var(--grad-to)] bg-clip-text text-transparent">now an API.</span>
             </h1>
 
             <p className="text-[17.5px] leading-[1.6] max-w-[60ch]" style={{ color: "var(--muted)" }}>
@@ -262,26 +264,30 @@ export default function DevelopersPage() {
                 Read the docs
               </Button>
             </div>
-          </div>
+          </Reveal>
 
-          <CodeSample />
+          <Reveal immediate delay={0.2}>
+            <CodeSample />
+          </Reveal>
         </div>
       </section>
 
       {/* ── Two APIs ── */}
       <section className="px-6 py-20">
         <div className="max-w-[1100px] mx-auto">
-          <p className="text-[12px] font-semibold tracking-[.12em] uppercase mb-3" style={{ color: "var(--blue-mid)" }}>
-            What&apos;s shipping
-          </p>
-          <h2 className="text-[clamp(26px,3vw,34px)] font-bold tracking-[-0.022em] mb-3">Two APIs, two scopes</h2>
-          <p className="text-[15.5px] leading-[1.65] max-w-[58ch]" style={{ color: "var(--muted)" }}>
-            Every key you issue is scoped to exactly what the integration needs — nothing more.
-          </p>
+          <Reveal>
+            <p className="text-[12px] font-semibold tracking-[.12em] uppercase mb-3" style={{ color: "var(--blue-mid)" }}>
+              What&apos;s shipping
+            </p>
+            <h2 className="text-[clamp(26px,3vw,34px)] font-bold tracking-[-0.022em] mb-3">Two APIs, two scopes</h2>
+            <p className="text-[15.5px] leading-[1.65] max-w-[58ch]" style={{ color: "var(--muted)" }}>
+              Every key you issue is scoped to exactly what the integration needs — nothing more.
+            </p>
+          </Reveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-[18px] mt-9">
+          <RevealGroup className="grid grid-cols-1 md:grid-cols-2 gap-[18px] mt-9">
             {apis.map((api) => (
-              <div
+              <RevealItem
                 key={api.name}
                 className="rounded-2xl border p-6 flex flex-col gap-3.5"
                 style={{ background: "var(--bg-card)", borderColor: "var(--border)" }}
@@ -313,11 +319,11 @@ export default function DevelopersPage() {
                     <div
                       key={`${ep.verb} ${ep.endpoint}`}
                       className="flex items-center gap-2.5 font-mono text-[12px] rounded-md border px-2.5 py-2"
-                      style={{ background: "rgba(255,255,255,0.03)", borderColor: "var(--border)", color: "var(--text)" }}
+                      style={{ background: "var(--surface)", borderColor: "var(--border)", color: "var(--text)" }}
                     >
                       <span
                         className="font-bold text-[10.5px] tracking-[.06em]"
-                        style={{ color: ep.verb === "POST" ? "#4ade80" : "var(--blue-mid)" }}
+                        style={{ color: ep.verb === "POST" ? "var(--ok)" : "var(--blue-mid)" }}
                       >
                         {ep.verb}
                       </span>
@@ -325,23 +331,25 @@ export default function DevelopersPage() {
                     </div>
                   ))}
                 </div>
-              </div>
+              </RevealItem>
             ))}
-          </div>
+          </RevealGroup>
         </div>
       </section>
 
       {/* ── Steps ── */}
       <section className="px-6 pb-20">
         <div className="max-w-[1100px] mx-auto">
-          <p className="text-[12px] font-semibold tracking-[.12em] uppercase mb-3" style={{ color: "var(--blue-mid)" }}>
-            How it works
-          </p>
-          <h2 className="text-[clamp(26px,3vw,34px)] font-bold tracking-[-0.022em]">Live in an afternoon</h2>
+          <Reveal>
+            <p className="text-[12px] font-semibold tracking-[.12em] uppercase mb-3" style={{ color: "var(--blue-mid)" }}>
+              How it works
+            </p>
+            <h2 className="text-[clamp(26px,3vw,34px)] font-bold tracking-[-0.022em]">Live in an afternoon</h2>
+          </Reveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-9">
+          <RevealGroup className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-9">
             {steps.map((step) => (
-              <div key={step.num} className="pt-5 border-t-2" style={{ borderColor: "rgba(59,130,246,0.3)" }}>
+              <RevealItem key={step.num} className="pt-5 border-t-2" style={{ borderColor: "rgba(59,130,246,0.3)" }}>
                 <div className="font-mono text-[12px] font-bold tracking-[.06em]" style={{ color: "var(--blue-mid)" }}>
                   {step.num}
                 </div>
@@ -349,16 +357,16 @@ export default function DevelopersPage() {
                 <p className="text-[14px] leading-[1.65]" style={{ color: "var(--muted)" }}>
                   {step.body}
                 </p>
-              </div>
+              </RevealItem>
             ))}
-          </div>
+          </RevealGroup>
         </div>
       </section>
 
       {/* ── Key management ── */}
       <section className="px-6 py-20 border-y" style={{ background: "var(--bg2)", borderColor: "var(--border)" }}>
         <div className="max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-12 lg:gap-14 items-center">
-          <div>
+          <Reveal>
             <p className="text-[12px] font-semibold tracking-[.12em] uppercase mb-3" style={{ color: "var(--blue-mid)" }}>
               Key management
             </p>
@@ -380,10 +388,10 @@ export default function DevelopersPage() {
             </ul>
 
             <Button href={API_KEYS_URL}>Open key management</Button>
-          </div>
+          </Reveal>
 
           {/* keys mock */}
-          <div
+          <Reveal delay={0.12}
             className="rounded-2xl border overflow-hidden"
             style={{ background: "var(--bg-card)", borderColor: "var(--border)", boxShadow: "0 22px 50px -28px rgba(0,0,0,0.6)" }}
           >
@@ -407,13 +415,13 @@ export default function DevelopersPage() {
                       className="inline-flex items-center gap-1.5 text-[9.5px] font-bold tracking-[.05em] uppercase px-2 py-0.5 rounded-full"
                       style={
                         k.env === "live"
-                          ? { color: "#4ade80", background: "rgba(74,222,128,0.12)" }
-                          : { color: "#fbbf24", background: "rgba(251,191,36,0.12)" }
+                          ? { color: "var(--ok)", background: "var(--ok-dim)" }
+                          : { color: "var(--warn)", background: "var(--warn-dim)" }
                       }
                     >
                       <span
                         className="w-[5px] h-[5px] rounded-full"
-                        style={{ background: k.env === "live" ? "#4ade80" : "#fbbf24" }}
+                        style={{ background: k.env === "live" ? "var(--ok)" : "var(--warn)" }}
                       />
                       {k.env}
                     </span>
@@ -425,7 +433,7 @@ export default function DevelopersPage() {
 
                 <span
                   className="font-mono text-[11.5px] rounded-md border px-2 py-1 whitespace-nowrap justify-self-start"
-                  style={{ background: "rgba(255,255,255,0.03)", borderColor: "var(--border)", color: "var(--muted)" }}
+                  style={{ background: "var(--surface)", borderColor: "var(--border)", color: "var(--muted)" }}
                 >
                   {k.token}
                 </span>
@@ -443,21 +451,23 @@ export default function DevelopersPage() {
                 </div>
               </div>
             ))}
-          </div>
+          </Reveal>
         </div>
       </section>
 
       {/* ── Trust ── */}
       <section className="px-6 py-20">
         <div className="max-w-[1100px] mx-auto">
-          <p className="text-[12px] font-semibold tracking-[.12em] uppercase mb-3" style={{ color: "var(--blue-mid)" }}>
-            Trust
-          </p>
-          <h2 className="text-[clamp(26px,3vw,34px)] font-bold tracking-[-0.022em]">Built for PHI from the first request</h2>
+          <Reveal>
+            <p className="text-[12px] font-semibold tracking-[.12em] uppercase mb-3" style={{ color: "var(--blue-mid)" }}>
+              Trust
+            </p>
+            <h2 className="text-[clamp(26px,3vw,34px)] font-bold tracking-[-0.022em]">Built for PHI from the first request</h2>
+          </Reveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-[18px] mt-8">
+          <RevealGroup className="grid grid-cols-1 md:grid-cols-3 gap-[18px] mt-8">
             {trust.map((t) => (
-              <div key={t.title} className="rounded-2xl border p-[22px]" style={{ background: "var(--bg-card)", borderColor: "var(--border)" }}>
+              <RevealItem key={t.title} className="rounded-2xl border p-[22px]" style={{ background: "var(--bg-card)", borderColor: "var(--border)" }}>
                 <span
                   className="w-[34px] h-[34px] rounded-[9px] grid place-items-center border mb-3.5"
                   style={{ background: "var(--blue-dim)", borderColor: "rgba(59,130,246,0.25)", color: "var(--blue-mid)" }}
@@ -470,13 +480,13 @@ export default function DevelopersPage() {
                 <p className="text-[13.5px] leading-[1.6]" style={{ color: "var(--muted)" }}>
                   {t.body}
                 </p>
-              </div>
+              </RevealItem>
             ))}
-          </div>
+          </RevealGroup>
 
-          <div
+          <Reveal
             className="flex gap-3 items-start rounded-lg border px-4 py-3.5 mt-5 text-[13.5px] leading-[1.6]"
-            style={{ background: "rgba(251,191,36,0.08)", borderColor: "rgba(251,191,36,0.25)", color: "#fbbf24" }}
+            style={{ background: "color-mix(in srgb, var(--warn) 8%, transparent)", borderColor: "color-mix(in srgb, var(--warn) 25%, transparent)", color: "var(--warn)" }}
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className="w-[17px] h-[17px] shrink-0 mt-0.5">
               <path d="M12 9v4M12 17h.01" />
@@ -486,14 +496,14 @@ export default function DevelopersPage() {
               Build against the sandbox first. Test keys run simulated cases that never contain real PHI and never reach a
               payer — same request and response shapes as Live.
             </span>
-          </div>
+          </Reveal>
         </div>
       </section>
 
       {/* ── CTA ── */}
       <section className="px-6 pb-24">
-        <div
-          className="relative max-w-[1100px] mx-auto rounded-3xl border text-center px-6 py-16 overflow-hidden"
+        <Reveal
+          className="midnight relative max-w-[1100px] mx-auto rounded-3xl border text-center px-6 py-16 overflow-hidden"
           style={{ background: "linear-gradient(160deg, #131d35 0%, #0f1522 100%)", borderColor: "rgba(59,130,246,0.25)" }}
         >
           <div
@@ -514,7 +524,7 @@ export default function DevelopersPage() {
               </Button>
             </div>
           </div>
-        </div>
+        </Reveal>
       </section>
     </main>
   );

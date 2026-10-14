@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import React from "react";
+import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
 
 const faqs: { q: string; a: React.ReactNode }[] = [
   {
@@ -67,7 +68,7 @@ export default function FAQ() {
       <div className="max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-20 items-start">
 
         {/* Sidebar */}
-        <div>
+        <Reveal>
           <p className="text-[12px] font-semibold tracking-[.12em] uppercase mb-3.5" style={{ color: "var(--blue-mid)" }}>
             FAQ
           </p>
@@ -77,16 +78,16 @@ export default function FAQ() {
           <p className="text-[15px] leading-[1.65]" style={{ color: "var(--muted)" }}>
             Everything you need to know about prior authorization screening with NoteDoctor.AI.
           </p>
-        </div>
+        </Reveal>
 
         {/* Accordion */}
-        <div>
+        <RevealGroup stagger={0.06}>
           {faqs.map((faq, i) => (
-            <div key={i} className="border-b" style={{ borderColor: "var(--border)" }}>
+            <RevealItem key={i} className="border-b" style={{ borderColor: "var(--border)" }}>
               {i === 0 && <div className="border-t" style={{ borderColor: "var(--border)" }} />}
               <button
                 onClick={() => setOpen(open === i ? null : i)}
-                className="w-full flex items-center justify-between gap-4 py-5 text-left text-[15px] font-medium transition-colors hover:text-[#60a5fa]"
+                className="w-full flex items-center justify-between gap-4 py-5 text-left text-[15px] font-medium transition-colors hover:text-accent"
                 style={{ color: "var(--text)" }}
               >
                 {faq.q}
@@ -112,9 +113,9 @@ export default function FAQ() {
               >
                 {faq.a}
               </div>
-            </div>
+            </RevealItem>
           ))}
-        </div>
+        </RevealGroup>
       </div>
     </section>
   );

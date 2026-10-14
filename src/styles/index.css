@@ -4,7 +4,43 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Theme tokens. :root is Classic (light, the default); .dark is Midnight.
+   next-themes puts the class on <html>, so Tailwind's dark: variant follows too.
+   .midnight re-applies the Midnight tokens to one subtree, for panels that stay
+   dark in every theme (code samples, the contact and CTA feature panels). */
 :root {
+  color-scheme: light;
+  --bg:        #f6f8fc;
+  --bg2:       #eef2f9;
+  --bg-card:   #ffffff;
+  --border:    rgba(15, 23, 42, 0.1);
+  --blue:      #2563eb;
+  --blue-mid:  #2563eb;
+  --blue-glow: rgba(37, 99, 235, 0.14);
+  --blue-dim:  rgba(37, 99, 235, 0.08);
+  --text:      #0b1220;
+  --muted:     rgba(11, 18, 32, 0.62);
+  --faint:     rgba(11, 18, 32, 0.42);
+  /* channels for Tailwind's ink color, so ink/50 etc. keep their alpha */
+  --ink-rgb:   11 18 32;
+  --grad-from: #3b82f6;
+  --grad-to:   #1d4ed8;
+  --surface:   rgba(15, 23, 42, 0.03);
+  --surface-strong: rgba(15, 23, 42, 0.06);
+  --header-bg: rgba(255, 255, 255, 0.92);
+  --dot:       rgba(37, 99, 235, 0.09);
+  --code-bg:   #0b0f19;
+  --ok:        #15803d;
+  --ok-dim:    rgba(21, 128, 61, 0.1);
+  --warn:      #b45309;
+  --warn-dim:  rgba(180, 83, 9, 0.1);
+  --shadow-lift: 0 24px 60px rgba(15, 23, 42, 0.12);
+  --featured-bg: linear-gradient(145deg, #eaf1ff 0%, #ffffff 100%);
+}
+
+.dark,
+.midnight {
+  color-scheme: dark;
   --bg:        #0c0f1a;
   --bg2:       #0f1522;
   --bg-card:   #131929;
@@ -16,6 +52,31 @@
   --text:      #f0f4ff;
   --muted:     rgba(240, 244, 255, 0.5);
   --faint:     rgba(240, 244, 255, 0.25);
+  --ink-rgb:   255 255 255;
+  --grad-from: #60a5fa;
+  --grad-to:   #3b82f6;
+  --surface:   rgba(255, 255, 255, 0.04);
+  --surface-strong: rgba(255, 255, 255, 0.08);
+  --header-bg: #050508;
+  --dot:       rgba(59, 130, 246, 0.1);
+  --code-bg:   rgba(0, 0, 0, 0.4);
+  --ok:        #4ade80;
+  --ok-dim:    rgba(74, 222, 128, 0.12);
+  --warn:      #fbbf24;
+  --warn-dim:  rgba(251, 191, 36, 0.12);
+  --shadow-lift: 0 24px 60px rgba(0, 0, 0, 0.4);
+  --featured-bg: linear-gradient(145deg, #131d35 0%, #0f1522 100%);
+}
+
+/* Inherited text color was resolved at <body>, so a scoped panel resets it. */
+.midnight {
+  color: var(--text);
+}
+
+/* The translucent code background assumes a dark page beneath it; on Classic
+   the panel sits on white, so give it the opaque color it renders as on Midnight. */
+:root:not(.dark) .midnight {
+  --code-bg: #0b0f19;
 }
 
 /* Jump links land below the fixed header. --api-banner-h is set by ApiBanner
@@ -36,7 +97,7 @@ body::before {
   content: '';
   position: fixed;
   inset: 0;
-  background-image: radial-gradient(circle, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+  background-image: radial-gradient(circle, var(--dot) 1px, transparent 1px);
   background-size: 36px 36px;
   pointer-events: none;
   z-index: 0;
@@ -159,7 +220,7 @@ body::before {
 }
 
 footer {
-  border-top: 1px solid #3b3b3b;
+  border-top: 1px solid var(--border);
 }
 
 .button-light {
@@ -173,7 +234,7 @@ footer {
 }
 
 hr {
-  border-color: rgb(59, 59, 59);
+  border-color: var(--border);
 }
 
 .Toastify__toast-container {
