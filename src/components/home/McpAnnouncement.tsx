@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { MCP_ENDPOINT_URL, MCP_GUIDE_URL } from "@/config/apiLaunch";
+import { Reveal } from "@/components/motion/Reveal";
 
 const clients = ["Claude Code", "Claude Desktop", "Cursor", "any MCP client"];
 
@@ -14,7 +15,7 @@ export default function McpAnnouncement() {
   return (
     <section className="relative px-6 py-16 overflow-hidden">
       <div className="relative max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-10 lg:gap-14 items-center">
-        <div>
+        <Reveal>
           <div
             className="inline-flex items-center gap-2 text-[12px] font-semibold tracking-[.12em] uppercase rounded-full px-4 py-1.5 border"
             style={{ color: "var(--blue-mid)", background: "var(--blue-dim)", borderColor: "rgba(59,130,246,0.2)" }}
@@ -57,9 +58,9 @@ export default function McpAnnouncement() {
               How to leverage it
             </Link>
           </div>
-        </div>
+        </Reveal>
 
-        <div
+        <Reveal delay={0.15}
           className="midnight rounded-xl overflow-hidden border"
           style={{ background: "var(--code-bg)", borderColor: "var(--border)", boxShadow: "0 24px 60px -30px rgba(0,0,0,0.7)" }}
         >
@@ -83,7 +84,7 @@ claude mcp add --transport http <span style={{ color: "var(--blue-mid)" }}>noted
 {"  "}after 6 weeks of failed conservative therapy?{"\n\n"}
 <span style={{ color: "#64748b" }}># =&gt; determination · criteria · codes · documentation</span>
           </pre>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

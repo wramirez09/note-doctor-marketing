@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { API_KEYS_URL, DEVELOPERS_URL, MCP_ENDPOINT_URL } from "@/config/apiLaunch";
+import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
 
 export const metadata: Metadata = {
   title: "NoteDoctor.AI | Leveraging the MCP Server",
@@ -182,56 +183,64 @@ export default function McpGuidePage() {
           style={{ background: "radial-gradient(ellipse at 50% 30%, rgba(59,130,246,0.16) 0%, transparent 70%)" }}
         />
         <div className="relative max-w-[820px] mx-auto">
-          <Link
-            href={DEVELOPERS_URL}
-            className="inline-flex items-center gap-1.5 text-[13.5px] no-underline mb-6"
-            style={{ color: "var(--blue-mid)" }}
-          >
-            ← Developer platform
-          </Link>
+          <Reveal immediate>
+            <Link
+              href={DEVELOPERS_URL}
+              className="inline-flex items-center gap-1.5 text-[13.5px] no-underline mb-6"
+              style={{ color: "var(--blue-mid)" }}
+            >
+              ← Developer platform
+            </Link>
+          </Reveal>
 
-          <h1 className="text-[clamp(30px,4.2vw,46px)] font-extrabold leading-[1.1] tracking-[-0.03em] mb-5">
-            Leveraging the{" "}
-            <span className="bg-gradient-to-br from-[var(--grad-from)] to-[var(--grad-to)] bg-clip-text text-transparent">MCP server.</span>
-          </h1>
+          <Reveal immediate delay={0.12}>
+            <h1 className="text-[clamp(30px,4.2vw,46px)] font-extrabold leading-[1.1] tracking-[-0.03em] mb-5">
+              Leveraging the{" "}
+              <span className="bg-gradient-to-br from-[var(--grad-from)] to-[var(--grad-to)] bg-clip-text text-transparent">MCP server.</span>
+            </h1>
+          </Reveal>
 
-          <p className="text-[17.5px] leading-[1.6] max-w-[64ch]" style={{ color: "var(--muted)" }}>
-            A guide to connecting an MCP client to NoteDoctor.AI and getting real coverage answers out of it — what each
-            tool does, when to reach for it, and what belongs in a request.
-          </p>
+          <Reveal immediate delay={0.24}>
+            <p className="text-[17.5px] leading-[1.6] max-w-[64ch]" style={{ color: "var(--muted)" }}>
+              A guide to connecting an MCP client to NoteDoctor.AI and getting real coverage answers out of it — what each
+              tool does, when to reach for it, and what belongs in a request.
+            </p>
+          </Reveal>
 
-          <div className="flex flex-wrap gap-3 mt-8">
+          <Reveal immediate delay={0.36} className="flex flex-wrap gap-3 mt-8">
             <Button href={API_KEYS_URL}>Get an API key</Button>
             <Button href={DEVELOPERS_URL} variant="secondary">
               See the REST API
             </Button>
-          </div>
+          </Reveal>
         </div>
       </section>
 
       <section className="px-6 pb-24">
         <div className="max-w-[820px] mx-auto">
           {/* Contents */}
-          <nav
-            className="rounded-2xl border p-5"
-            style={{ background: "var(--bg-card)", borderColor: "var(--border)" }}
-          >
-            <p className="text-[11.5px] font-semibold tracking-[.12em] uppercase mb-3" style={{ color: "var(--faint)" }}>
-              On this page
-            </p>
-            <ol className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 p-0 m-0 list-none">
-              {contents.map(([id, label], i) => (
-                <li key={id} className="text-[14px]">
-                  <span className="font-mono text-[11.5px] mr-2" style={{ color: "var(--blue-mid)" }}>
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <a href={`#${id}`} className="no-underline hover:underline" style={{ color: "var(--text)" }}>
-                    {label}
-                  </a>
-                </li>
-              ))}
-            </ol>
-          </nav>
+          <Reveal>
+            <nav
+              className="rounded-2xl border p-5"
+              style={{ background: "var(--bg-card)", borderColor: "var(--border)" }}
+            >
+              <p className="text-[11.5px] font-semibold tracking-[.12em] uppercase mb-3" style={{ color: "var(--faint)" }}>
+                On this page
+              </p>
+              <ol className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 p-0 m-0 list-none">
+                {contents.map(([id, label], i) => (
+                  <li key={id} className="text-[14px]">
+                    <span className="font-mono text-[11.5px] mr-2" style={{ color: "var(--blue-mid)" }}>
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <a href={`#${id}`} className="no-underline hover:underline" style={{ color: "var(--text)" }}>
+                      {label}
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </nav>
+          </Reveal>
 
           {/* ── 01 ── */}
           <H2 id="what-it-is">What it is</H2>
@@ -312,9 +321,9 @@ claude mcp add --transport http <span style={{ color: C.k }}>notedoctor</span> \
             key is not scoped for is never listed, so it cannot be called and refused.
           </P>
 
-          <div className="flex flex-col gap-2.5 my-6">
+          <RevealGroup stagger={0.1} className="flex flex-col gap-2.5 my-6">
             {tools.map((t) => (
-              <div
+              <RevealItem
                 key={t.name}
                 className="rounded-xl border px-4 py-3.5"
                 style={{ background: "var(--bg-card)", borderColor: "var(--border)" }}
@@ -336,9 +345,9 @@ claude mcp add --transport http <span style={{ color: C.k }}>notedoctor</span> \
                 <p className="text-[13px] leading-[1.55] mt-1.5" style={{ color: "var(--faint)" }}>
                   <b style={{ color: "var(--muted)" }}>Reach for it when:</b> {t.when}
                 </p>
-              </div>
+              </RevealItem>
             ))}
-          </div>
+          </RevealGroup>
 
           {/* ── 04 ── */}
           <H2 id="choosing">Which tool to reach for</H2>
@@ -427,7 +436,7 @@ claude mcp add --transport http <span style={{ color: C.k }}>notedoctor</span> \
           </P>
 
           {/* CTA */}
-          <div
+          <Reveal
             className="midnight relative rounded-3xl border text-center px-6 py-14 mt-16 overflow-hidden"
             style={{ background: "linear-gradient(160deg, #131d35 0%, #0f1522 100%)", borderColor: "rgba(59,130,246,0.25)" }}
           >
@@ -449,7 +458,7 @@ claude mcp add --transport http <span style={{ color: C.k }}>notedoctor</span> \
                 </Button>
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
     </main>
