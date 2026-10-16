@@ -34,7 +34,7 @@ export default function ClientLayout({
 }
 
 function Site({ children }: { children: React.ReactNode }) {
-  const theme = createTheme({ fontFamily: '"Google Sans Flex", sans-serif' });
+  const theme = createTheme({});
   const { resolvedTheme } = useTheme();
 
   return (

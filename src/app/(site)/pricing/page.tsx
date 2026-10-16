@@ -1,6 +1,7 @@
 // app/pricing/page.tsx  (or pages/pricing.tsx for Pages Router)
 // Drop this file into your Next.js project.
 // Requires: Tailwind CSS is NOT needed — styles are inline/CSS Modules via <style jsx global>
+// For Google Fonts, add  { family: 'Inter', weights: [300,400,500,600,700] } to next/font or your _document.
 'use client';
 
 import React from "react";
@@ -87,6 +88,8 @@ export default function PricingPage() {
   return (
     <>
       <style jsx global>{`
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
         /* Aliases of the sitewide theme tokens (styles/index.css), so the page
            follows Classic / Midnight. Set on .nd-root rather than :root so they
            resolve against the active theme class. */
@@ -104,7 +107,7 @@ export default function PricingPage() {
         }
 
         .nd-root {
-          font-family: 'Google Sans Flex', sans-serif;
+          font-family: 'Inter', sans-serif;
           background: var(--nd-bg);
           color: var(--nd-text);
           min-height: 100vh;
