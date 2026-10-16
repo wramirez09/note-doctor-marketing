@@ -70,12 +70,12 @@ export default function PricingPage() {
     { label: "Clinical documentation gap detection", highlight: true },
     { label: "HIPAA-compliant", highlight: true },
     { label: "PDF export", highlight: true },
+    { label: "API and MCP access", highlight: true },
   ];
 
   const enterpriseFeatures = [
     { label: "Everything in Pro, plus:" },
-    { label: "API access (coming soon)", highlight: true },
-
+    { label: "Higher rate limits and usage caps for high-volume teams", highlight: true },
   ];
 
   const usageExamples = [

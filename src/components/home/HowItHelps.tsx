@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
 
 const steps = [
@@ -18,7 +19,7 @@ const steps = [
   },
 ];
 
-function Terminal() {
+function Screenshot() {
   return (
     // Stays dark in Classic too: .midnight scopes the Midnight tokens to the panel.
     <div className="midnight rounded-xl overflow-hidden border" style={{ background: "var(--code-bg)", borderColor: "var(--border)" }}>
@@ -26,23 +27,20 @@ function Terminal() {
         <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
         <span className="w-2.5 h-2.5 rounded-full bg-[#febc2e]" />
         <span className="w-2.5 h-2.5 rounded-full bg-[#28c840]" />
-        <span className="ml-2 text-[12px]" style={{ color: "var(--faint)" }}>NoteDoctor.AI — Auth Screening</span>
+        <span className="ml-2 text-[12px]" style={{ color: "var(--faint)" }}>NoteDoctor.AI — Required Documentation</span>
       </div>
-      <div className="p-5 font-mono text-[12.5px] leading-[1.8]">
-        <p style={{ color: "var(--faint)" }}>{"// Analyzing prior authorization request…"}</p>
-        <br />
-        <p><span style={{ color: "var(--blue-mid)" }}>patient</span><span style={{ color: "var(--faint)" }}>:</span> <span style={{ color: "var(--text)" }}>Jane D., DOB 1962-04-11</span></p>
-        <p><span style={{ color: "var(--blue-mid)" }}>procedure</span><span style={{ color: "var(--faint)" }}>:</span> <span style={{ color: "var(--text)" }}>MRI Lumbar Spine (CPT 72148)</span></p>
-        <p><span style={{ color: "var(--blue-mid)" }}>payer</span><span style={{ color: "var(--faint)" }}>:</span> <span style={{ color: "var(--text)" }}>Aetna — Commercial PPO</span></p>
-        <br />
-        <p style={{ color: "var(--faint)" }}>{"// Checking payer criteria…"}</p>
-        <p><span className="text-[var(--ok)]">✓</span> <span style={{ color: "var(--text)" }}>Diagnosis documented (M54.5)</span></p>
-        <p><span className="text-[var(--ok)]">✓</span> <span style={{ color: "var(--text)" }}>Conservative therapy &gt; 6 wks confirmed</span></p>
-        <p><span className="text-[var(--warn)]">⚠</span> <span className="text-[var(--warn)]">Neurological exam findings missing</span></p>
-        <br />
-        <p style={{ color: "var(--faint)" }}>{"// Recommendation"}</p>
-        <p><span style={{ color: "var(--blue-mid)" }}>→</span> <span style={{ color: "var(--text)" }}>Add neuro exam note before submitting</span></p>
-        <p><span style={{ color: "var(--blue-mid)" }}>estimated_approval_rate</span><span style={{ color: "var(--faint)" }}>:</span> <span className="text-[var(--ok)]">94%</span></p>
+      {/* Cropped to the top-left of the checklist so the text stays legible at
+          this size; the fade hides where the long lines are cut off. */}
+      <div className="relative">
+        <Image
+          src="/images/product/required-docs.webp"
+          alt="NoteDoctor.AI required documentation checklist for a knee arthroscopy request"
+          width={620}
+          height={392}
+          className="block w-full h-auto"
+        />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4"
+          style={{ background: "linear-gradient(to right, transparent, #121a2e)" }} />
       </div>
     </div>
   );
@@ -83,7 +81,7 @@ export default function HowItHelps() {
           style={{ background: "var(--bg-card)", borderColor: "var(--border)" }}>
           <div className="pointer-events-none absolute -bottom-20 -right-20 w-64 h-64 rounded-full"
             style={{ background: "radial-gradient(circle, rgba(59,130,246,0.15), transparent 70%)" }} />
-          <Terminal />
+          <Screenshot />
         </Reveal>
       </div>
     </section>
