@@ -417,33 +417,35 @@ export default function DevelopersPage() {
       {/* ── MCP ── */}
       <section className="px-6 py-20 border-y" style={{ background: "var(--bg2)", borderColor: "var(--border)" }} id="mcp">
         <div className="max-w-[1100px] mx-auto">
-          <div className="flex items-center gap-3 flex-wrap mb-3">
-            <p className="text-[12px] font-semibold tracking-[.12em] uppercase" style={{ color: "var(--blue-mid)" }}>
-              Model Context Protocol
-            </p>
-            <span
-              className="inline-flex items-center gap-1.5 text-[10px] font-bold tracking-[.06em] uppercase px-2.5 py-1 rounded-full"
-              style={{ color: "var(--ok)", background: "var(--ok-dim)" }}
-            >
-              <span className="w-[5px] h-[5px] rounded-full" style={{ background: "var(--ok)" }} />
-              Available now
-            </span>
-          </div>
+          <Reveal>
+            <div className="flex items-center gap-3 flex-wrap mb-3">
+              <p className="text-[12px] font-semibold tracking-[.12em] uppercase" style={{ color: "var(--blue-mid)" }}>
+                Model Context Protocol
+              </p>
+              <span
+                className="inline-flex items-center gap-1.5 text-[10px] font-bold tracking-[.06em] uppercase px-2.5 py-1 rounded-full"
+                style={{ color: "var(--ok)", background: "var(--ok-dim)" }}
+              >
+                <span className="w-[5px] h-[5px] rounded-full" style={{ background: "var(--ok)" }} />
+                Available now
+              </span>
+            </div>
 
-          <h2 className="text-[clamp(26px,3vw,34px)] font-bold tracking-[-0.022em] mb-3">
-            Or skip the integration entirely
-          </h2>
-          <p className="text-[15.5px] leading-[1.65] max-w-[62ch]" style={{ color: "var(--muted)" }}>
-            The same engine is published as an MCP server, so Claude Code, Claude Desktop, Cursor and any other MCP
-            client can research coverage and run a full screening directly. Point your client at one URL with your
-            existing API key — there is no SDK, no package to install, and nothing to deploy.
-          </p>
+            <h2 className="text-[clamp(26px,3vw,34px)] font-bold tracking-[-0.022em] mb-3">
+              Or skip the integration entirely
+            </h2>
+            <p className="text-[15.5px] leading-[1.65] max-w-[62ch]" style={{ color: "var(--muted)" }}>
+              The same engine is published as an MCP server, so Claude Code, Claude Desktop, Cursor and any other MCP
+              client can research coverage and run a full screening directly. Point your client at one URL with your
+              existing API key — there is no SDK, no package to install, and nothing to deploy.
+            </p>
+          </Reveal>
 
           <div className="grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-12 lg:gap-14 items-start mt-9">
             <div>
-              <div className="grid grid-cols-1 gap-2.5">
+              <RevealGroup className="grid grid-cols-1 gap-2.5" stagger={0.1}>
                 {mcpTools.map((tool) => (
-                  <div
+                  <RevealItem
                     key={tool.name}
                     className="rounded-xl border px-4 py-3.5"
                     style={{ background: "var(--bg-card)", borderColor: "var(--border)" }}
@@ -462,48 +464,52 @@ export default function DevelopersPage() {
                     <p className="text-[13.5px] leading-[1.6] mt-1.5" style={{ color: "var(--muted)" }}>
                       {tool.body}
                     </p>
-                  </div>
+                  </RevealItem>
                 ))}
-              </div>
+              </RevealGroup>
 
-              <div className="flex flex-wrap gap-3 mt-7">
+              <Reveal className="flex flex-wrap gap-3 mt-7">
                 <Button href={MCP_GUIDE_URL}>How to leverage it</Button>
                 <Button href={API_KEYS_URL} variant="secondary">
                   Get an API key
                 </Button>
-              </div>
+              </Reveal>
             </div>
 
             <div className="flex flex-col">
-              <McpConnectSample />
+              <Reveal delay={0.12}>
+                <McpConnectSample />
+              </Reveal>
 
               {/* Set apart from the sample above it rather than stacked tight:
                   these four lines are the argument, and the code is the proof. */}
-              <ul className="flex flex-col gap-4 p-0 mt-9 list-none">
-                {mcpHighlights.map((feat, i) => (
-                  <li
-                    key={i}
-                    className="flex gap-3 items-start text-[15.5px] leading-[1.5] font-medium"
-                    style={{ color: "var(--text)" }}
-                  >
-                    <span
-                      className="w-[22px] h-[22px] rounded-full grid place-items-center shrink-0 mt-px border"
-                      style={{
-                        background: "var(--blue-dim)",
-                        borderColor: "rgba(59,130,246,0.3)",
-                        color: "var(--blue-mid)",
-                      }}
+              <Reveal delay={0.12}>
+                <ul className="flex flex-col gap-4 p-0 mt-9 list-none">
+                  {mcpHighlights.map((feat, i) => (
+                    <li
+                      key={i}
+                      className="flex gap-3 items-start text-[15.5px] leading-[1.5] font-medium"
+                      style={{ color: "var(--text)" }}
                     >
-                      <CheckIcon className="w-[12px] h-[12px]" />
-                    </span>
-                    <span>{feat}</span>
-                  </li>
-                ))}
-              </ul>
+                      <span
+                        className="w-[22px] h-[22px] rounded-full grid place-items-center shrink-0 mt-px border"
+                        style={{
+                          background: "var(--blue-dim)",
+                          borderColor: "rgba(59,130,246,0.3)",
+                          color: "var(--blue-mid)",
+                        }}
+                      >
+                        <CheckIcon className="w-[12px] h-[12px]" />
+                      </span>
+                      <span>{feat}</span>
+                    </li>
+                  ))}
+                </ul>
+              </Reveal>
             </div>
           </div>
 
-          <div
+          <Reveal
             className="flex gap-3 items-start rounded-lg border px-4 py-3.5 mt-8 text-[13.5px] leading-[1.6]"
             style={{ background: "color-mix(in srgb, var(--warn) 8%, transparent)", borderColor: "color-mix(in srgb, var(--warn) 25%, transparent)", color: "var(--warn)" }}
           >
@@ -515,7 +521,7 @@ export default function DevelopersPage() {
               Send clinical details only — no names, dates of birth or member IDs. A tool call travels into your MCP
               client&apos;s model context, which is outside your BAA with us.
             </span>
-          </div>
+          </Reveal>
         </div>
       </section>
 
